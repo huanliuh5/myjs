@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //清空元素
+            $("button").eq(0).click(function () {
+                //第一种清空：empty();
+//                $("ul").empty();
+
+                //第一种清空：html("");
+                $("ul").html("");
+            })
+
+            //删除指定元素。（自杀）
+            $("button").eq(1).click(function () {
+                //remove();调用者本身会自杀。（自己删除自己）
+                $("#box").remove();
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>清空元素</button>
+    <button>删除元素</button>
+    <ul>
+        <li>我是原生土著li1</li>
+        <li id="box">我是原生土著li2</li>
+        <li>我是原生土著li3</li>
+    </ul>
+</body>
+</html>

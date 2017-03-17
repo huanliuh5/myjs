@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        input {
+            display: block;
+            margin: 10px;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //需求1：鼠标在input中的情况下，按回车插入条光标跳转到下一个input按钮中
+            $("input").on("keyup", function (e) {
+                //判断回车建是多少数字
+//                alert(e.keyCode);
+                if(e.keyCode === 13){
+                    //光标跳转到下一个input中。
+                    $(this).next().focus();
+                }
+            });
+
+            //需求2：鼠标放在input中的情况下，里面的所有内容被选定
+            $("input").mouseenter(function () {
+                //内容全部被选定
+                $(this).select();
+            });
+
+        })
+    </script>
+
+
+</head>
+<body>
+    <input type="text" value="我是input的内容"/>
+    <input type="text" value="我是input的内容"/>
+    <input type="text" value="我是input的内容"/>
+    <input type="text" value="我是input的内容"/>
+    <input type="text" value="我是input的内容"/>
+
+</body>
+</html>

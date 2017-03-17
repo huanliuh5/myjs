@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                //6种添加方法
+
+                //第一种：append(); 在调用者的所有子元素的最后面添加新元素
+                var newJQ1 = $("<li>我是append添加的li</li>")
+                $("ul").append(newJQ1);
+
+                //第一种（下）：appendTo(); 在调用者的所有子元素的最后面添加新元素
+                //被添加者和调用者与append位置想法
+                var newJQ11 = $("<li>我是appendTo添加的li</li>")
+                newJQ11.appendTo($("ul"));
+
+                //第二种：prepend();在调用者的所有子元素的最前面添加新元素
+                var newJQ2 = $("<li>我是prepend添加的li</li>")
+                $("ul").prepend(newJQ2);
+
+                //第二种（下）：appendTo(); 在调用者的所有子元素的最前面添加新元素
+                //被添加者和调用者与prepend位置想法
+                var newJQ22 = $("<li>我是prependTo添加的li</li>")
+                newJQ22.prependTo($("ul"));
+
+
+                //操作兄弟元素
+                //第三种：after();把某个元素以兄弟元素的形式添加到调用者之后
+                var newJQ3 = $("<li>我是after添加的li</li>");
+                $("#box").after(newJQ3);
+
+                //第三种：before();把某个元素以兄弟元素的形式添加到调用者之前
+                var newJQ4 = $("<li>我是before添加的li</li>");
+                $("#box").before(newJQ4);
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <button>添加元素</button>
+    <ul>
+        <li id="box">我是原生土著li</li>
+    </ul>
+</body>
+</html>

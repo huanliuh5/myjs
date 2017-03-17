@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //字符串的不可变行，导致新创建出的li在内存中产生了一块新的空间。
+            //原来被绑定好事件的li，被新的字符串层叠掉了。新的li没有被获取和绑定事件过！
+            $("li").mouseover(function () {
+                alert(1);
+            })
+            $("button").click(function () {
+                //第一种：html();
+                $("ul").html($("ul").html()+"<li>我是html方法创建出来的li</li>");
+
+                //第二种：$("<li>我是$创建出来的li</li>")
+                //创建出来的对象是jquery对象
+                console.log($("<li>我是$创建出来的li</li>"));
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <button>创建元素</button>
+    <ul>
+        <li>我是原生土著li</li>
+    </ul>
+</body>
+</html>

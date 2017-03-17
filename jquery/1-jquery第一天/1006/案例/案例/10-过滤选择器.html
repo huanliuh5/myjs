@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        $(function () {
+            //隔行变色（odd和even）；
+            var jqOdd = $("ul li:odd");
+            jqOdd.css("background","red");
+
+            var jqEven = $("ul li:even");
+            jqEven.css("background","blue");
+
+            //eq(索引值);
+            var jqEq = $("ul li:eq(0)");
+            jqEq.css("background","green");
+
+            //eq(索引值);
+            var jqEq = $("ul li:last");
+            jqEq.css("background","green");
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>班长今天老帅了，嗷嗷帅......</li>
+    <li>班长今天老帅了，嗷嗷帅......</li>
+    <li>班长今天老帅了，嗷嗷帅......</li>
+    <li>班长今天老帅了，嗷嗷帅......</li>
+    <li>班长今天老帅了，嗷嗷帅......</li>
+    <li>班长今天老帅了，嗷嗷帅......</li>
+    <li>班长今天老帅了，嗷嗷帅......</li>
+    <li>班长今天老帅了，嗷嗷帅......</li>
+</ul>
+</body>
+</html>

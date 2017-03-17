@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            //find() ，jquery对象调用后，查找他的所有的后代元素，子子孙孙
+            $("ul").find("li").css("background","pink");
+
+            //children()，jquery对象调用后，查找他的所有的子元素。亲儿子
+            $("ul").children("li").css("background","red");
+
+            //eq();他查找的不是后代元素。而是调用者数组中的某一个
+            //是去他的对象中找，而不是去的对象中的子元素中找
+            $("ul").children("li").eq(0).css("background","yellow");
+
+            //siblings();返回调用者的所有指定的兄弟jquery对象
+            $("ul").children("li").eq(0).siblings("li").css("background","green");
+
+
+            //parent();返回调用者的父元素jquery对象
+            console.log($("ul").children("li").eq(0).parent("ul"));
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>不练金丹不坐禅，不做商贾不种田。闲来写段helloworld，不使人间造孽钱.....</li>
+    <span>我是滥竽充数的span标签</span>
+    <li>不练金丹不坐禅，不做商贾不种田。闲来写段helloworld，不使人间造孽钱.....</li>
+    <li>不练金丹不坐禅，不做商贾不种田。闲来写段helloworld，不使人间造孽钱.....</li>
+    <span>我是滥竽充数的span标签</span>
+    <li>不练金丹不坐禅，不做商贾不种田。闲来写段helloworld，不使人间造孽钱.....</li>
+    <li>不练金丹不坐禅，不做商贾不种田。闲来写段helloworld，不使人间造孽钱.....</li>
+    <ol>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ol>
+</ul>
+</body>
+</html>

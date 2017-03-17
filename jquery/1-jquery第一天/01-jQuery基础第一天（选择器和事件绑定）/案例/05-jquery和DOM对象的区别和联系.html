@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        $(document).ready(function () {
+
+            //js中的DOM对象和jQuery中的对象，区别在也，把js对象穿上一层jquery的外衣。
+
+            //获取js中的DOM对象
+            var divArr = document.getElementsByTagName("div");
+            var claArr = document.getElementsByClassName("box");
+            var idbox = document.getElementById("box");
+
+            console.log(divArr);
+            console.log(claArr);
+            console.dir(idbox);
+
+            //获取jQuery对象
+            var jqDiv = $("div");//通过标签名获取jquery对象
+            var jqCla = $(".box");//通过类名获取jquery对象
+            var jqId = $("#box");//通过ID获取jquery对象
+
+            console.log(jqDiv);
+            console.log(jqCla);
+            console.log(jqId);
+
+            console.log(idbox === jqId[0]);
+
+        })
+    </script>
+</head>
+<body>
+
+    <div class="box"></div>
+    <div id="box"></div>
+    <div class="box"></div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            float: left;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //利用each为每一个元素设置不同的透明度
+            $("div").each(function (index,element) {
+                //console.log(index+"---"+element);  原生JS对象
+                //console.log($("div").eq(index));
+                //索引值从0开始，所以+1
+//                $("div").eq(index).css("opacity",(index+1)/10);
+                $(element).css("opacity",(index+1)/10);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>我的透明度是0.1</div>
+    <div>我的透明度是0.2</div>
+    <div>我的透明度是0.3</div>
+    <div>我的透明度是0.4</div>
+    <div>我的透明度是0.5</div>
+    <div>我的透明度是0.6</div>
+    <div>我的透明度是0.7</div>
+    <div>我的透明度是0.8</div>
+    <div>我的透明度是0.9</div>
+    <div>我的透明度是1</div>
+</body>
+</html>

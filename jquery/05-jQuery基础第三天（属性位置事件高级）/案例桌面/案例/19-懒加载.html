@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            height: 5000px;
+            background-color: pink;
+        }
+        img {
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script src="jquery.lazyload.min.js"></script>
+    <script>
+        $(function () {
+            $("img.lazy").lazyload();
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+
+    <!--<img src="04.jpg" alt=""/>-->
+    <!--第一步，把图片修改为懒加载模式-->
+    <img class="lazy" data-original="04.jpg">
+</body>
+</html>

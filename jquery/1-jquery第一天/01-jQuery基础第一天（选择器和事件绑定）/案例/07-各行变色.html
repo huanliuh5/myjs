@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        $(document).ready(function () {
+            //获取jquery对象
+            var jqLi = $("li");//length
+            //用for循环遍历jqLi，单数一种颜色，双数另一种颜色
+            for(var i=0;i<jqLi.length;i++){
+                //判断单数
+                if(i%2 === 0){
+                    //把jquery对象转换成js的DOM对象
+                    jqLi[i].style.background = "red";
+                }else{
+                    //把jquery对象转换成js的DOM对象
+                    jqLi.get(i).style.background = "blue";
+                }
+            }
+
+            //jquery对象没有办法调用js的DOM对象的属性和方法。
+//            jqLi.style.background = "red";//无法调用
+            //如果想要调用，先转换成js的DOM对象
+//            jqLi[0].style.background = "red";
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你海淀.....</li>
+    <li>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你海淀.....</li>
+    <li>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你海淀.....</li>
+    <li>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你海淀.....</li>
+    <li>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你海淀.....</li>
+    <li>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你海淀.....</li>
+    <li>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你海淀.....</li>
+</ul>
+</body>
+</html>

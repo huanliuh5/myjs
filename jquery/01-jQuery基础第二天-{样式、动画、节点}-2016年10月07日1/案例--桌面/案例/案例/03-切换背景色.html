@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: 10px 0;
+        }
+        .current {
+            background-color: red;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        jQuery(function () {
+            //需求：点击button按钮，判断div这个盒子上是否存在current这个类名，不存在就添加，存在就删除
+            //获取button
+            $("button").click(function () {
+//                //判断div上是否有current类
+//                if($("div").hasClass("current")){
+//                    //存在就删除
+//                    $("div").removeClass("current");
+//                }else{
+//                    //存在就删除
+//                    $("div").addClass("current");
+//                }
+                //有类删除，没类添加
+                $("div").toggleClass("current");
+            });
+        })
+    </script>
+</head>
+<body>
+    <button>切换</button>
+    <div></div>
+</body>
+</html>

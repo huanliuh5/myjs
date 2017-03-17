@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //原生JS绑定
+            document.onclick = function (event) {
+                event = event || window.event;
+                console.log(event)
+                console.log(event.target)
+            }
+
+            $(document).click(function (e) {
+                console.log(e);
+                console.log(event.target)
+            });
+
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

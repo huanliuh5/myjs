@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 10px 0;
+            background-color: pink;
+        }
+        .current {
+            background-color: red;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            $("button").eq(0).click(function () {
+                //判断类名是否存在
+                alert($("div").hasClass("current"));
+                //点击第一个按钮，给div添加类
+                $("div").addClass("current");
+            });
+
+            $("button").eq(1).click(function () {
+                //判断类名是否存在
+                alert($("div").hasClass("current"));
+                //点击第二个按钮，给div删除类
+                $("div").removeClass("current");
+            });
+
+        })
+    </script>
+</head>
+<body>
+
+    <button>添加类</button>
+    <button>删除类</button>
+    <div class="aaa"></div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            height: 5000px;
+        }
+        .box2 {
+            width: 300px;
+            height: 300px;
+            margin: 10px 0;
+            position: relative;
+            background-color: pink;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            left: 100px;
+            top: 180px;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //绑定事件
+
+            //offset
+            $("button").eq(0).click(function () {
+                //获取，距离页面的最顶端的距离
+                alert($(".box1").offset().top)
+            });
+
+            $("button").eq(1).click(function () {
+                //赋值，距离页面的最顶端的距离。
+                $(".box1").offset({"top":100});
+            });
+
+
+            //positon:只读
+            $("button").eq(2).click(function () {
+                //赋值，距离父系盒子中带有定位的盒子的距离。
+                alert($(".box1").position().top);
+            });
+
+            $("button").eq(3).click(function () {
+                //赋值，距离父系盒子中带有定位的盒子的距离。
+                $(".box1").position({"top":0});
+//                $(".box1").css("top",0);
+            });
+
+            //scroll：页面被卷去的部分。
+            $("button").eq(4).click(function () {
+                //赋值，距离父系盒子中带有定位的盒子的距离。
+                alert($(document).scrollTop());
+            });
+
+            $("button").eq(5).click(function () {
+                //赋值，距离父系盒子中带有定位的盒子的距离。
+                $(document).scrollTop(0);
+            });
+        })
+    </script>
+</head>
+<body>
+
+    <div class="box2">
+        <div class="box1"></div>
+    </div>
+    <button>offset.top获取值</button>
+    <button>offset.top赋值</button>
+    <button>position.top获取值</button>
+    <button>position.top赋值</button>
+    <button>scrollTop获取</button>
+    <button>scrollTop赋值</button>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            margin: 10px 0;
+            display: none;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        jQuery(document).ready(function () {
+            //第一种；   带参，一个参数，数值，毫秒值。
+//            $("button:eq(0)").click(function () {
+//                //显示盒子
+//                $("div").show(1000);  //所有属性在1秒内变为初始化值。display: block;
+//            });
+
+            //第二种；   带参，一个参数，字符串，slow,normal,fast。600/400/200
+//            $("button:eq(0)").click(function () {
+//                //显示盒子
+//                $("div").show("normal");  //所有属性在1秒内变为初始化值。display: block;
+//            });
+
+//            //第三种；   带参，两个参数，时间和回调函数
+//            $("button:eq(0)").click(function () {
+//                //显示盒子
+//                $("div").show(1000, function () {
+//                    alert("动画执行完毕！");
+//                    $("div").hide();
+//                });  //所有属性在1秒内变为初始化值。display: block;
+//            });
+
+            //第四种；  无参，类似$("div").css("display","block");
+            $("button:eq(0)").click(function () {
+                //显示盒子
+                $("div").show();  //所有属性在1秒内变为初始化值。display: block;
+//                $("div").css("display","block");  //所有属性在1秒内变为初始化值。display: block;
+            });
+
+
+            //第一种；   带参，一个参数，数值，毫秒值。
+//            $("button:eq(1)").click(function () {
+//                //显示盒子
+//                $("div").hide(1000);  //所有属性在1秒内变为初始化值。display: block;
+//            });
+
+            //第二种；   带参，一个参数，字符串，slow,normal,fast。600/400/200
+//            $("button:eq(1)").click(function () {
+//                //显示盒子
+//                $("div").hide("fast");  //所有属性在1秒内变为初始化值。display: block;
+//            });
+
+//            //第三种；   带参，两个参数，时间和回调函数
+//            $("button:eq(1)").click(function () {
+//                //显示盒子
+//                $("div").hide(1000, function () {
+//                    alert("动画执行完毕！");
+//                    $("div").show();
+//                });  //所有属性在1秒内变为初始化值。display: block;
+//            });
+
+            //第四种；  无参，类似$("div").css("display","none");
+            $("button:eq(1)").click(function () {
+                //显示盒子
+                $("div").hide();  //所有属性在1秒内变为初始化值。display: block;
+//                $("div").css("display","none");  //所有属性在1秒内变为初始化值。display: block;
+            });
+
+
+            //第一种；   带参，一个参数，数值，毫秒值。
+//            $("button:eq(2)").click(function () {
+//                //显示盒子
+//                $("div").toggle(1000);  //切换
+//            });
+
+            //第二种；   带参，一个参数，字符串，slow,normal,fast。600/400/200
+//            $("button:eq(2)").click(function () {
+//                //显示盒子
+//                $("div").toggle("fast");  //切换
+//            });
+
+            //第三种；   带参，两个参数，时间和回调函数
+//            $("button:eq(2)").click(function () {
+//                //显示盒子
+//                $("div").toggle(1000, function () {
+//                    alert("动画执行完毕！");
+//                });  //切换
+//            });
+
+            //第四种；  无参
+            $("button:eq(2)").click(function () {
+                //显示盒子
+                $("div").toggle();  //切换
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+
+    <div></div>
+
+</body>
+</html>

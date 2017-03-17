@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 10px;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //通过标签获取元素
+            var jqDiv = $("div");
+            jqDiv.css("background","red");//传递两个参数，第一个是属性，第二个是值。
+
+            //通过类名获取元素
+            var jqCla = $(".box");
+            jqCla.css("background","yellow");
+
+
+            //通过类名获取元素
+            var jqId = $("#box");
+            jqId.css("background","black");
+
+        })
+    </script>
+</head>
+<body>
+
+    <div></div>
+    <div class="box"></div>
+    <div id="box"></div>
+    <div class="box"></div>
+    <div></div>
+
+</body>
+</html>

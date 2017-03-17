@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        // 模拟从后台拿到的数据
+        var data = [{
+            name: "传智播客",
+            url: "http://www.itcast.cn",
+            type: "IT最强培训机构"
+        }, {
+            name: "黑马程序员",
+            url: "http://www.itheima.com",
+            type: "大学生IT培训机构"
+        }, {
+            name: "传智前端学院",
+            url: "http://web.itcast.cn",
+            type: "前端的黄埔军校"
+        }];
+
+        //入口函数
+        $(document).ready(function () {
+            //需求：点击按钮，创建数组元素个数个tr,然后里面放三个td，td的内容由数组中的元素内容决定。然后在添加到tbody中。
+            //步骤：
+            //1.获取相关元素，绑定事件。创建一个空字符串。
+            //2.利用for循环创建多个tr,然后里面放入td，td中放入内容
+            //3.把字符串设置为tbody的内容（html(str)）
+
+
+            //1.获取相关元素，绑定事件。创建一个空字符串。
+            $("#j_btnGetData").click(function () {
+                //每次点击后内容清空
+                var str = "";
+                //2.利用for循环创建多个tr,然后里面放入td，td中放入内容
+                for(var i=0;i<data.length;i++){
+//                    str += "<tr>";
+//                    str += "<td>1</td>"
+//                    str += "<td>2</td>"
+//                    str += "<td>3</td>"
+//                    str += "</tr>";
+                    str += "<tr><td>"+data[i].name+"</td><td>"+data[i].url+"</td><td>"+data[i].type+"</td></tr>"
+                }
+                //3.把字符串设置为tbody的内容（html(str)）
+                $("#j_tbData").html(str);
+
+            });
+
+        })
+
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="获取数据" id="j_btnGetData"/>
+
+    <table>
+        <thead>
+            <tr>
+                <th>标题</th>
+                <th>地址</th>
+                <th>说明</th>
+            </tr>
+        </thead>
+        <tbody id="j_tbData">
+
+        </tbody>
+    </table>
+
+</body>
+</html>

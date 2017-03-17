@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>防腾讯固定导航栏</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(window).load(function () {
+            //需求：鼠标滑动后，页面被卷去的顶部大于第一个图片的高，那么把第二个图片固定到最顶端。然后下面的盒子给一个margin-top,值和第二张图片一样高。
+                    //回来的时候小于高后所有还原。
+            //步骤：
+            //1.获取事件源，绑定事件。
+            //2.判断被卷去的头部的高
+            //3.大于第一个图片的高，给第二张图片加定位，第三张图片加margin-top
+            //4.小于或等于第一个图片的高，给第二张图片去定位，第三张图片去margin-top
+
+            //1.获取事件源，绑定事件。
+            $(document).scroll(function () {
+                //2.判断被卷去的头部的高
+                if($(document).scrollTop()>$(".top").height()){
+                    //3.大于第一个图片的高，给第二张图片加定位，第三张图片加margin-top
+                    $(".nav").css({"position":"fixed","top":0});
+                    $(".main").css({"margin-top":$(".nav").height()});
+                }else{
+                    //4.小于或等于第一个图片的高，给第二张图片去定位，第三张图片去margin-top
+                    $(".nav").css({"position":"static"});
+                    $(".main").css({"margin-top":0});
+                }
+            });
+
+        })
+    </script>
+
+</head>
+
+<body>
+
+    <div class="top">
+        <img src="images/top.png"/>
+    </div>
+
+    <div class="nav">
+        <img src="images/nav.png"/>
+    </div>
+
+    <div class="main">
+        <img src="images/main.png"/>
+    </div>
+
+</body>
+</html>

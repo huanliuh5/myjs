@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //隔行变色
+            $("ul li:odd").css("background","red");
+            $("ul li:even").css("background","yellow");
+
+            //鼠标放上去显示另外一个颜色，移开回复原来的颜色。
+            //计数器
+            var color = "";
+            $("ul>li").mouseover(function () {
+                //鼠标放到行内后，立刻记录颜色。
+                color = $(this).css("background");//css(),两个参数是设置，一个参数是获取
+                //鼠标放到谁上面让谁变色。用this
+                $(this).css("background","blue");
+            });
+
+            //移开回复原来的颜色。
+            $("ul>li").mouseout(function () {
+                //鼠标放到谁上面让谁变色。用this
+                $(this).css("background",color);
+            });
+        })
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li>北京股指 --- 97.35% ---- 150.35%</li>
+        <li>上海股指 --- 97.35% ---- 150.35%</li>
+        <li>广州股指 --- 97.35% ---- 150.35%</li>
+        <li>深圳股指 --- 97.35% ---- 150.35%</li>
+        <li>北京股指 --- 97.35% ---- 150.35%</li>
+        <li>上海股指 --- 97.35% ---- 150.35%</li>
+        <li>广州股指 --- 97.35% ---- 150.35%</li>
+        <li>深圳股指 --- 97.35% ---- 150.35%</li>
+    </ul>
+
+</body>
+</html>

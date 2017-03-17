@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            height: 100px;
+            background-color: pink;
+            margin: 10px 0;
+            display: none;
+        }
+    </style>
+
+    <!--体验jQuery-->
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+//        //入口函数（页面上所有元素加载完毕，触动这个事件）
+//        window.onload = function () {
+//            //需求：点击按钮，显示盒子并设置内容。
+//            //步骤：
+//            //1.获取按钮和对应的盒子。
+//            //2.绑定事件，给按钮绑定事件
+//            //3.显示盒子，设置内容
+//
+//            //1.获取按钮和对应的盒子。
+//            var btn = document.getElementsByTagName("button")[0];
+//            var divArr = document.getElementsByTagName("div");
+//            //2.绑定事件，给按钮绑定事件
+//            btn.onclick = function () {
+//                //3.显示盒子，设置内容
+//                //用for循环操作
+//                for(var i=0;i<divArr.length;i++){
+//                    divArr[i].style.display = "block";
+//                    divArr[i].innerHTML = "今天天气好晴朗！";
+//                }
+//            }
+//        }
+
+        $(document).ready(function () {
+            //需求：点击按钮，显示盒子并设置内容。
+            //步骤：
+            //1.获取按钮和对应的盒子。
+            //2.绑定事件，给按钮绑定事件
+            //3.显示盒子，设置内容
+
+            //1.获取按钮和对应的盒子。
+            var jqBtn = $("button");
+            var jqDiv = $("div");
+            //2.绑定事件，给按钮绑定事件
+            jqBtn.click(function () {
+//                alert("我是jquery绑定的事件！");
+                //3.显示盒子，设置内容
+//                jqDiv.show();
+//                jqDiv.html("今天天气很不好，我很伤心......");
+                //jQuery特点：1.连式编程。  2.隐式迭代(隐式循环)。
+                jqDiv.show().html("今天天气很不好，我很伤心......");
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+    <button>显示盒子设置文字</button>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</body>
+</html>

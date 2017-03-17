@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1
+            }
+            50% {
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes blink {
+            0%,
+            100% {
+                opacity: 1
+            }
+            50% {
+                opacity: 0
+            }
+        }
+
+        @-moz-keyframes blink {
+            0%,
+            100% {
+                opacity: 1
+            }
+            50% {
+                opacity: 0
+            }
+        }
+
+        .wrap {
+            width: 1000px;
+            text-align: center;
+            margin: 100px auto 0;
+        }
+
+        .wrap h1 {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        .word {
+            font-weight: 700;
+        }
+
+        .typed-cursor {
+            opacity: 1;
+            -webkit-animation: blink .7s infinite;
+            -moz-animation: blink .7s infinite;
+            animation: blink .7s infinite;
+            display: none;
+        }
+
+        .saySection {
+            margin-top: 50px;
+        }
+
+        .saySection input {
+            font-size: 30px;
+        }
+
+        .saySection .txtSay {
+            padding-left: 10px;
+        }
+
+        .saySection .btnSay {
+            display: inline-block;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        $(function () {
+            //需求1：页面加载的时候，一个一个的加载文字。
+            //步骤：
+            //1.显示插入条光标，然后定义一个字符串。
+            //2.把字符串变成数组。
+            //3.在把数组中的元素一个一个的添加到一个新字符串中。
+            //4.利用定时器，每隔一段时间更新页面的内容。
+            //5.隐藏光标
+
+            //1.显示插入条光标，然后定义一个字符串。
+            $(".typed-cursor").show();
+            var str1 = "红鲤鱼与绿鲤鱼与驴";
+            //2.把字符串变成数组。
+            var arr = str1.split("");
+//            console.log(arr);
+//            console.log(arr.join(""));
+            var newStr = "";
+            var num = 0;
+            var timer = null;
+            //4.利用定时器，每隔一段时间更新页面的内容。
+            timer = setInterval(function () {
+                //bug:数组中不存在的内容也别输出了
+                //判断，如果内容为undefined就清除定时器。
+                //num的值等于数组的长度了。
+                if(arr[num]===undefined){
+                    clearInterval(timer);
+                    //隐藏光标//5.隐藏光标
+
+                    $(".typed-cursor").hide();
+                    return;
+                }
+                //3.在把数组中的元素一个一个的添加到一个新字符串中。
+                newStr += arr[num];
+                //放进word中
+                $(".word").text(newStr);
+                num ++;
+//                arr.shift();
+            },300);
+
+            //需求2：点击say的时候，一个一个的加载input标签中的文字，覆盖原有文字。
+            //同理：
+            $("#btnSay").click(function () {
+                //把上面的在来一次
+                //1.显示插入条光标，然后定义一个字符串。
+                $(".typed-cursor").show();
+                var str1 = $("#inValue").val();
+                //2.把字符串变成数组。
+                var arr = str1.split("");
+//            console.log(arr);
+//            console.log(arr.join(""));
+                var newStr = "";
+                var num = 0;
+                var timer = null;
+                //4.利用定时器，每隔一段时间更新页面的内容。
+                timer = setInterval(function () {
+                    //bug:数组中不存在的内容也别输出了
+                    //判断，如果内容为undefined就清除定时器。
+                    //num的值等于数组的长度了。
+                    if(arr[num]===undefined){
+                        clearInterval(timer);
+                        //隐藏光标//5.隐藏光标
+                        $("#inValue").val("");
+                        $(".typed-cursor").hide();
+                        return;
+                    }
+                    //3.在把数组中的元素一个一个的添加到一个新字符串中。
+                    newStr += arr[num];
+                    //放进word中
+                    $(".word").text(newStr);
+                    num ++;
+//                arr.shift();
+                },300);
+            });
+
+        })
+    </script>
+
+
+</head>
+
+<body>
+
+    <div class="wrap">
+        <h1>
+            You want to say ： <span class="word"></span><span class="typed-cursor">|</span> ！
+        </h1>
+
+        <div class="saySection">
+            <input type="text" id="inValue" class="txtSay"/>
+            <input type="button" value="Say" id="btnSay" class="btnSay"/>
+        </div>
+    </div>
+
+</body>
+</html>

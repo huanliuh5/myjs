@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //既能获取又可以赋值，而且只是宽高，不需要单位。
+
+            //绑定事件
+            $("button:eq(0)").click(function () {
+                //获取高度
+                //不带单位
+                alert($("div").height());
+                alert($("div").css("height"));
+            });
+
+            $("button:eq(1)").click(function () {
+                //设置高度
+                //不带单位
+                $("div").height(200);
+//                $("div").css("height",300);
+            });
+
+            $("button:eq(2)").click(function () {
+                //获取高度
+                //不带单位
+                alert($("div").width());
+                alert($("div").css("width"));
+            });
+
+            $("button:eq(3)").click(function () {
+                //设置高度
+                //不带单位
+//                $("div").width(200);
+                $("div").css("width",300);
+            });
+
+        })
+    </script>
+</head>
+<body>
+<button>height()获取</button>
+<button>height()设置</button>
+<button>width()获取</button>
+<button>width()设置</button>
+<div></div>
+</body>
+</html>

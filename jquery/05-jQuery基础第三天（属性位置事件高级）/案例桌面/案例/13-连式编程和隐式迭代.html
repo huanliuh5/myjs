@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+
+        $.fn.aaa = function (){
+            //连式编程原理，把调用者用jquery包起来，返回，这样儿下次再调用方法的时候就利用返回值的API
+            return $(this);
+            //浅层理解。底层返回了一个this。
+
+            //有的时候我们找啊找，找啊找.....找乱了。jquery为我们提供了一个方法，在使用太多选择器后，不在是初始的元素的时候，想返回初始元素。end();
+            $("div").next().siblings("div").find("ul").children("li").end();//这个时候就返回了初始化的div
+        }
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

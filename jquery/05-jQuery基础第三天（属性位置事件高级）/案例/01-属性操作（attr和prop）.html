@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        jQuery(document).ready(function () {
+            //自定义属性(jquery不支持直接绑定自定义属性)
+//            $("div").title = 111;
+//            console.log($("div").title);
+
+            //自定义属性
+            //自定义属性和为属性赋值都是两个参数。
+            //获取属性值，直接属性参数。
+            $("div").attr("aaa",111);
+            console.log($("div").attr("aaa"));
+
+            //删除属性
+            $("div").removeAttr("aaa");
+            
+            //prop和attr的区别和联系
+            $("button").click(function () {
+
+                //两个方法第一次使用谁都没有问题。
+//                $("input").attr("checked",true);
+                $("input").prop("checked",true);
+
+                //区别在于attr是一次性的。
+            });
+            
+
+        })
+    </script>
+</head>
+<body>
+
+<button>选中</button>
+<input type="checkbox"/>
+<div></div>
+
+</body>
+</html>

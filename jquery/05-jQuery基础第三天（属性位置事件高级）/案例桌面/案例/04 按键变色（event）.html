@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .wrap {
+            width: 400px;
+            height: 400px;
+            margin: 100px auto 0;
+        }
+
+        .wrap h1 {
+            text-align: center;
+        }
+
+        .wrap div {
+            width: 400px;
+            height: 300px;
+            background: pink;
+            font-size: 30px;
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        jQuery(function () {
+            //需求：按下键盘，获取按键的Unicode编码值，然后根据值给定div背景色。然后把值赋值给span
+            $(document).on("keyup", function (e) {
+//                alert(e.keyCode);
+
+                //给盒子上色
+                switch (e.keyCode){
+                    case 80:
+                        //获取盒子，给定背景色
+                        $("#bgChange").css("background-color","pink");
+                        break;
+                    case 82:
+                        //获取盒子，给定背景色
+                        $("#bgChange").css("background-color","red");
+                        break;
+                    case 66:
+                        //获取盒子，给定背景色
+                        $("#bgChange").css("background-color","blue");
+                        break;
+                    case 71:
+                        //获取盒子，给定背景色
+                        $("#bgChange").css("background-color","green");
+                        break;
+                    case 89:
+                        //获取盒子，给定背景色
+                        $("#bgChange").css("background-color","yellow");
+                        break;
+                    case 79:
+                        //获取盒子，给定背景色
+                        $("#bgChange").css("background-color","orange");
+                        break;
+                    default :
+                        //获取盒子，给定背景色
+                        alert("没事儿别乱敲！！！");
+                        return;
+                }
+
+                //给span赋值
+                $("#keyCodeSpan").text(e.keyCode);
+            });
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>按键改变颜色</h1>
+
+        <div id="bgChange">keyCode为：<span id="keyCodeSpan"></span></div>
+    </div>
+</body>
+
+</html>

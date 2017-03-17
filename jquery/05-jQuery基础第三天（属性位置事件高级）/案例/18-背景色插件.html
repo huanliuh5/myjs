@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: black;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script src="jquery.color.js"></script>
+    <script>
+        $(function () {
+            //变色
+            $("button").on("click", function () {
+                $("div").animate({"width":300,"background-color":"red"},1500);
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <button>变色</button>
+    <div></div>
+</body>
+</html>

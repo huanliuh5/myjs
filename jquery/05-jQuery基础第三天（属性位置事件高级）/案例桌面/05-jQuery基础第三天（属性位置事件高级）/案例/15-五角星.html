@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>五角星评分案例</title>
+    <style>
+        .comment {
+            font-size: 40px;
+            color: red;
+        }
+
+        .comment li {
+            float: left;
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        jQuery(document).ready(function () {
+            //道具（实心和空心的五角星）
+            var kongxin = "☆";
+            var shixin = "★";
+
+            //需求1：鼠标放入哪个li上面，他和他之前的所有li更改内容成为实心五角星。他之后的变为空心。
+            //获取事件源，绑定事件
+            $(".comment li").on("mouseenter", function () {
+                //他和他之前的所有li更改内容成为实心五角星。他之后的变为空心。
+//                $(this).text(shixin).prevAll("li").text(shixin);
+//                $(this).nextAll("li").text(kongxin);
+
+                //连式编程：核心：end():
+                $(this).text(shixin).prevAll("li").text(shixin).end().nextAll("li").text(kongxin);
+            });
+
+            $(".comment li").on("mouseleave", function () {
+                //全部变白。
+                if($(".current").length !== 0){
+                    $(".current").text(shixin).prevAll("li").text(shixin).end().nextAll("li").text(kongxin);
+                }else{
+                    $(".comment li").text(kongxin);
+                }
+            });
+
+            //需求2：鼠标点击哪个li上面，被点击的和他之前的变为实心，他之后的变为空心。而且影响鼠标移开后恢复的位置。
+            //技术点：用类名做标记。点击后加类名。当鼠标移开的时候，带有类名的之前所有的盒子为实心内容。后面的为空心内容。
+                //点击只负责加类名。其他逻辑交给移开后的事件。
+            $(".comment li").on("click", function () {
+                //全部变白。
+//                $(this).text(shixin).prevAll("li").text(shixin).end().nextAll("li").text(kongxin);
+                $(this).addClass("current").siblings("li").removeClass("current");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <ul class="comment">
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="checkDemo.css"/>
+    </head>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        //入口函数
+        $(function () {
+            //需求1:点击添加数据按钮，显示模态框和添加数据的盒子。
+            //需求2:点击X所在的盒子，隐藏模态框和添加数据的盒子。
+            //需求3:点击get所在的a链接，删除a链接所在的td所在的tr。
+            //需求4:点击添加所在的按钮，把本页面生成的内容组合成一个tr放入tbody中。
+
+
+            //需求1:点击添加数据按钮，显示模态框和添加数据的盒子。
+            $("#j_btnAddData").click(function () {
+                //显示模态框和添加数据的盒子。
+                $("#j_mask").toggle();
+                $("#j_formAdd").show();
+            });
+            //需求2:点击X所在的盒子，隐藏模态框和添加数据的盒子。
+            $("#j_hideFormAdd").click(function () {
+                //显示模态框和添加数据的盒子。
+                $("#j_mask").toggle();
+                $("#j_formAdd").hide();
+            });
+            //需求3:点击get所在的a链接，删除a链接所在的td所在的tr。
+            $("a.get").click(function () {
+                //删除a链接所在的td所在的tr
+                $(this).parent("td").parent("tr").remove();
+            });
+            //需求4:点击添加所在的按钮，把本页面生成的内容组合成一个tr放入tbody中。
+            //点击添加所在的按钮（为添加按钮绑定事件）
+            $("#j_btnAdd").click(function () {
+                //bug3：添加数据之前，先看一看用户是否输入内容
+                if($("#j_txtLesson").val()===""){
+                    alert("课程名称不能为空！");
+                    return;
+                }
+                //把添加盒子中的内容组合成一个tr添加到tbody中
+                //1.创建tr
+                var jqTr = $("<tr></tr>");
+                //2.为tr创建内容
+                var con1 = $("#j_txtLesson").val();
+                var con2 = $("#j_txtBelSch").val();
+                jqTr.html('<td>'+con1+'</td><td>'+con2+'</td><td><a href="javascrip:;" class="get">GET</a></td>')
+                //3.把tr放入tbody中
+                $("#j_tb").append(jqTr);
+
+                //bug1:添加完毕之后，隐藏模态框和添加数据的盒子。
+                $("#j_mask").toggle();
+                $("#j_formAdd").hide();
+                //bug2:添加完毕之后，清空添加的内容。
+                $("#j_txtLesson").val("");
+
+                //bug4：新创建的a链接不能删除所在的tr。
+                //解决办法：在此绑定事件。
+                jqTr.find("a").click(function () {
+                    //删除a链接所在的td所在的tr
+                    $(this).parent("td").parent("tr").remove();
+                });
+            });
+
+        })
+    </script>
+
+
+<body>
+<div class="wrap">
+    <div>
+        <input type="button" value="添加数据" id="j_btnAddData" class="btnAdd"/>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <!-- <th><input type="checkbox" id="j_cbAll" /></th> -->
+                <th>课程名称</th>
+                <th>所属学院</th>
+                <th>已学会</th>
+            </tr>
+        </thead>
+        <tbody id="j_tb">
+            <tr>
+                <!-- <td><input type="checkbox"/></td> -->
+                <td>JavaScript</td>
+                <td>传智播客-前端与移动开发学院</td>
+                <td><a href="javascrip:;" class="get">GET</a></td>
+            </tr>
+            <tr>
+                <!-- <td><input type="checkbox"/></td> -->
+                <td>css</td>
+                <td>传智播客-前端与移动开发学院</td>
+                <td><a href="javascrip:;" class="get">GET</a></td>
+            </tr>
+            <tr>
+                <!-- <td><input type="checkbox"/></td> -->
+                <td>html</td>
+                <td>传智播客-前端与移动开发学院</td>
+                <td><a href="javascrip:;" class="get">GET</a></td>
+            </tr>
+            <tr>
+                <!-- <td><input type="checkbox"/></td> -->
+                <td>jQuery</td>
+                <td>传智播客-前端与移动开发学院</td>
+                <td><a href="javascrip:;" class="get">GET</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="j_mask" class="mask"></div>
+<div id="j_formAdd" class="form-add">
+    <div class="form-add-title">
+        <span>添加数据</span>
+
+        <div id="j_hideFormAdd">x</div>
+    </div>
+    <div class="form-item">
+        <label class="lb" for="j_txtLesson">课程名称：</label>
+        <input class="txt" type="text" id="j_txtLesson" placeholder="请输入课程名称">
+    </div>
+    <div class="form-item">
+        <label class="lb" for="j_txtBelSch">所属学院：</label>
+        <input class="txt" type="text" id="j_txtBelSch" value="传智播客-前端与移动开发学院">
+    </div>
+    <div class="form-submit">
+        <input type="button" value="添加" id="j_btnAdd">
+    </div>
+</div>
+
+</body>
+
+</html>

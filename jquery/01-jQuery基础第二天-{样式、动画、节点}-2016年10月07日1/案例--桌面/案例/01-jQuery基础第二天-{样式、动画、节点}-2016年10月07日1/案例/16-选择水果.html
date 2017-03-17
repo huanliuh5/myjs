@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        select {
+            width: 160px;
+            height: 220px;
+            font-size: 16px;
+            background-color: #82ff48;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //入口函数
+        jQuery(document).ready(function () {
+            //需求1：点击第一个按钮，左侧select标签中所有的子元素，添加入右侧select标签中。第二个同理（相反）。
+            $("button:eq(0)").click(function () {
+                //让左侧select中所有标签添加到右侧select中。
+                $("#sel2").append($("#sel1").children("option"));
+            });
+            //第二个按钮同理
+            $("button:eq(1)").click(function () {
+                //让左侧select中所有标签添加到右侧select中。
+                $("#sel1").append($("#sel2").children("option"));
+            });
+
+            //需求2：点击第三个按钮，左侧select标签中被选定的所有子元素，添加入右侧select标签中。第四个同理（相反）。
+            $("button:eq(2)").click(function () {
+                //让左侧select中所有标签添加到右侧select中。
+                $("#sel2").append($("#sel1").children("option:selected"));
+            });
+            //第二个按钮同理
+            $("button:eq(3)").click(function () {
+                //让左侧select中所有标签添加到右侧select中。
+                $("#sel1").append($("#sel2").children("option:selected"));
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    <select id="sel1" size="10" multiple>
+        <option value="">香蕉</option>
+        <option value="">苹果</option>
+        <option value="">鸭梨</option>
+        <option value="">葡萄</option>
+    </select>
+
+    <button>>>></button>
+    <button><<<</button>
+    <button>></button>
+    <button><</button>
+
+    <select id="sel2" size="10" multiple>
+
+    </select>
+
+</body>
+</html>

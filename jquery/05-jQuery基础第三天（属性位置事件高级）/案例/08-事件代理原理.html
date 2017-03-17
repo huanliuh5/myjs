@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li {
+            margin: 10px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //绑定事件(无法为新创建的li绑定事件)
+//            var liArr = document.getElementsByTagName("li");
+//            for(var i=0;i<liArr.length;i++){
+//                liArr[i].onclick = function () {
+//                    alert("执行li方法！");
+//                }
+//            }
+
+            var ul = document.getElementsByTagName("ul")[0];
+            var btn = document.getElementsByTagName("button")[0];
+            //我们要利用冒泡绑定事件。这样儿新产生的li也有这个事件。
+            ul.onclick = function (event) {
+                //约束，只有点击li才执行。
+                event = event || window.event;
+//                alert(event.target.tagName);
+                if(event.target.tagName === "LI"){
+                    alert("执行li方法！");
+                }
+            }
+
+            //生成li
+            btn.onclick = function () {
+                for(var i=0;i<3;i++){
+                    var newLi = document.createElement("li");
+                    newLi.innerHTML = "我是开发新大陆探索来的li......";
+                    ul.appendChild(newLi);
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+    <button>生成</button>
+    <ul>
+        <li>我是原生土著li</li>
+        <span>我是span</span>
+        <li>我是原生土著li</li>
+        <li>我是原生土著li</li>
+        <span>我是span</span>
+        <li>我是原生土著li</li>
+    </ul>
+
+</body>
+</html>
