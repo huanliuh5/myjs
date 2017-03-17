@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width:200px;
+            height:100px;
+            background-color: pink;
+            margin-top: 50px;
+            position: absolute;
+        }
+
+    </style>
+
+</head>
+<body>
+<input type="button" value="移动到400" id="btn1"/>
+<div id="dv"></div>
+
+<script>
+
+    function my$(id) {
+        return document.getElementById(id);
+    }
+
+    //匀速动画,每次移动的步数都是相同的
+
+    function animate(element,target) {
+        clearInterval(element.setId);
+        element.setId=setInterval(function () {
+            var current=element.offsetLeft;
+            var step=10;//表象解决了bug
+            step=current<target?step:-step;
+            current+=step;
+            element.style.left=current+"px";
+            if(current==target){
+                clearInterval(element.setId);
+            }
+            console.log("current:"+current+",target:"+target+",step:"+step);
+        },20);
+    }
+
+    my$("btn1").onclick=function () {
+        animate(my$("dv"),400);
+    };
+
+</script>
+
+</body>
+</html>

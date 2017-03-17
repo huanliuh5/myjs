@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        十六进制的值:
+//                #f42d5a
+//        0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+//        1.制作一个数组,16个值
+//        2.产生随机数
+//        3.把随机数作为索引放在数组中
+//        4.循环的方式生成6个
+
+
+//            var s="";
+//            for(var i=0;i<10;i++){
+//                s+=i;
+//            }
+//console.log(s);
+
+
+
+        //定义函数,该函数的作用是产生一个随机的十六进制的字符串
+        function getRandomColor() {
+            var str="#";
+            var arr=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+            //var arr="0123456789abcdef";
+            for(var i=0;i<6;i++){
+                var random=parseInt(Math.random()*16);
+                str+=arr[random];
+            }
+            return str;//把十六进制的值返回
+        }
+        console.log(getRandomColor());
+        //作业:该作业2遍,
+        //作业:随机点击系统
+        //console.log(parseInt(Math.random()*5));
+    </script>
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+
+</script>
+</body>
+</html>

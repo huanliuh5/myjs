@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div{
+            width: 200px;
+            height:100px;
+            background-color: yellow;
+            margin-bottom: 20px;
+        }
+        .cls{
+            border:2px solid red;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="显示值" id="btn"/>
+<div id="dv1"class="cls" abc="12345a"></div>
+
+<div id="dv"class="cls"></div>
+<script>
+
+    /*
+    * 如何在操作DOM的代码中直接为元素添加属性并赋值
+    * setAttribute();方法,参数1：属性的名字,参数2:属性的值
+    *
+    * */
+//    document.getElementById("btn").onclick=function () {
+//        var divObj=document.getElementById("dv");
+//        divObj.setAttribute("index","10");
+//    };
+</script>
+
+
+<script>
+
+    //在标签中添加的自定义属性，通过DOM操作的方式是不能直接获取自定义属性中的值
+
+    /*
+    * 如何获取标签中自己定义属性的值
+    * getAttribute()方法,参数是属性的名字,返回值是该属性的值
+    *
+    * */
+
+//    document.getElementById("btn").onclick=function () {
+//        var divObj=document.getElementById("dv");
+//        console.log(divObj.className);//显示层应用的类样式
+//        //console.log(divObj.abc);//显示自定义属性中的值
+//        console.log(divObj.getAttribute("abc"));
+//    };
+</script>
+</body>
+</html>

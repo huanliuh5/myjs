@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+        }
+        .cls{
+            width: 300px;
+            height:200px;
+            background-color: green;;
+            border:2px solid red;
+        }
+    </style>
+    <script>
+        /*
+        *  设置元素的样式:
+        *  对象.style.属性的名字=值;
+        *  对象.className=值
+        *
+        *
+        * */
+    </script>
+</head>
+<body>
+<input type="button" value="设置样式" id="btn"/>
+<div id="dv">
+
+</div>
+<script>
+    //点击按钮设置层的样式:两种方式
+//    document.getElementById("btn").onclick=function () {
+//      var divObj=document.getElementById("dv");
+//        //style.属性
+////        divObj.style.width="300px";
+////        divObj.style.height="200px";
+////        divObj.style.backgroundColor="green";
+////        divObj.style.border="2px solid red";
+//        //className
+//        divObj.className="cls";
+//    };
+
+    //封装一个函数,该函数的作用是通过id获取元素
+//    function my$(id) {
+//        return document.getElementById(id);
+//    }
+//    my$("btn").onclick=function () {
+//      my$("dv").className="cls";
+//    };
+
+</script>
+
+<script src="common.js"></script>
+<script>
+        my$("btn").onclick=function () {
+              my$("dv").className="cls";
+        };
+</script>
+
+</body>
+</html>

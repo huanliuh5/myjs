@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        /*取消图片底部3像素距离*/
+        .box {
+            width: 300px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            border: 1px solid red;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box ul li {
+            float: left;
+        }
+
+        .box ul {
+            width: 1500px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="screen">
+    <ul>
+        <li><img src="imagess/01.jpg" alt=""/></li>
+        <li><img src="imagess/02.jpg" alt=""/></li>
+        <li><img src="imagess/03.jpg" alt=""/></li>
+        <li><img src="imagess/04.jpg" alt=""/></li>
+        <li><img src="imagess/01.jpg" alt=""/></li>
+    </ul>
+</div>
+<script>
+    function my$(id) {
+        return document.getElementById(id);
+    }
+
+    //获取id为screen的层
+    var screen=my$("screen");
+    var setId=null;
+    //鼠标进入
+    screen.onmouseover=function () {
+        //停止计时器
+        clearInterval(setId);
+    };
+    //鼠标离开
+    screen.onmouseout=function(){
+        //继续开始
+        setId=setInterval(f1,50);
+    };
+
+
+
+
+    //获取每次图片移动的宽度
+    var imgWidth=screen.offsetWidth;
+    //获取ul
+    var ul=screen.children[0];
+    setId=setInterval(f1,50);
+    function f1() {
+        //获取ul的当前的位置
+        var current=ul.offsetLeft;
+        //每次移动9像素
+        var step=-9;
+        current=current+step;
+        if(current<-1200){
+            ul.style.left=0+"px";
+        }else{
+            ul.style.left=current+"px";
+        }
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #outer {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            position: relative;
+        }
+        
+        #inner {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btnOffset").click(function () {
+
+                //offset:获取的是元素相对于浏览器最左上角的位置
+                //{top: 20, left: 0}
+                console.log($("#inner").offset().top);
+            });
+
+            $("#btnSet").click(function () {
+                // 如果没有定位，会设置position:relative的定位
+                // offset(ob)设置定位
+                $("#inner").offset({top: 100, left: 100});
+            });
+
+
+            $("#btnPosition").click(function () {
+
+                //获取相对于有定位的父盒子的位置。
+                var result = $("#inner").position();
+                console.log(result);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="获取位置" id="btnOffset">
+<input type="button" value="设置位置" id="btnSet">
+<input type="button" value="position获取位置" id="btnPosition">
+<div id="outer">
+    <div id="inner">
+    </div>
+</div>
+</body>
+</html>

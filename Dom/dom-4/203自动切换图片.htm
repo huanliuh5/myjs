@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        img
+        {
+            border: 3px solid #ffffff;
+        }
+        .red
+        {
+            border: 3px solid #ff0000;
+            }
+    </style>
+    <script type="text/javascript">
+        onload = function () {
+            var imgs = document.getElementById("dv1").getElementsByTagName("img");
+            var length = imgs.length;
+            var i = 0;
+            setInterval(function () {
+                imgs[i].className = "red";
+                // 将上一个干掉
+                imgs[i == 0 ? length - 1 : i - 1].className = "";
+
+                i = (i == length - 1 ? 0 : i + 1);
+            }, 500);
+        };
+    </script>
+</head>
+<body>
+    <div id="dv1">
+        <a href="#">
+            <img src="images/default.jpg" border="0" width="100" /></a> <a href="#">
+                <img src="images/default.jpg" border="0" width="100" /></a> <a href="#">
+                    <img src="images/default.jpg" border="0" width="100" /></a> <a href="#">
+                        <img src="images/default.jpg" border="0" width="100" /></a> <a href="#">
+                            <img src="images/default.jpg" border="0" width="100" /></a>
+        <a href="#">
+            <img src="images/default.jpg" border="0" width="100" /></a>
+    </div>
+</body>
+</html>

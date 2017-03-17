@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body style="background-color: black">
+<img src="images/liuyan.jpg" id="img1"/>
+<script src="common.js"></script>
+<script>
+    //获取到图片
+    var imgObj=document.getElementById("img1");
+    //图片需要脱离文档流
+    imgObj.style.position="absolute";
+    //为document注册点击事件
+    document.onclick=function (e) {
+        //设置图片的left 和top
+        //imgObj.style.left=e.pageX+"px";
+        //imgObj.style.top=e.pageY+"px";
+
+        imgObj.style.left=eventTools.getPageX(e)+"px";
+        imgObj.style.top=eventTools.getPageY(e)+"px";
+    };
+
+
+</script>
+</body>
+</html>

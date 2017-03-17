@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #dv1{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+<div id="dv1">
+
+</div>
+<script>
+    //验证offset系列中的值能获取,能不能赋值
+    //获取层获取层的宽和高
+    var dvObj=document.getElementById("dv1");
+    dvObj.offsetWidth="300px";
+    console.log(dvObj.offsetWidth);//宽度
+    console.log(dvObj.offsetHeight);
+    dvObj.offsetHeight="1000";
+
+    //总结:offset系列中
+    /*
+    * offsetLeft
+    * offsetTop
+    * offsetWidth
+    * offsetHeight
+    * 以上这些属性的值都是可读不可写(能够获取-能够读取到,不可写:不能赋值--不能设置)
+    *
+    *
+    * */
+
+</script>
+
+
+</body>
+</html>

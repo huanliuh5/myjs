@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <style>
+
+        #dv1{
+            width: 150px;
+            height:150px;
+            background-color: red;
+        }
+        #dv2{
+            width: 100px;
+            height:100px;
+            background-color: green;
+        }
+        #dv3{
+            width: 80px;
+            height:80px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body id="bd">
+
+<div id="dv1">
+    <div id="dv2">
+        <div id="dv3">
+
+        </div>
+    </div>
+</div>
+<script src="common.js"></script>
+<script>
+
+    //事件冒泡:从里到外,依次被触发
+    //事件捕获:从外到里.依次被触发
+    //几乎不用事件捕获,都是在用事件冒泡
+
+    //addEventListener方法的第三个参数:是布尔类型
+    /*
+    * 如果第三个参数的值为:false则表示的是事件冒泡(常用)
+    * 如果第三个参数的值为:true则表示的是事件捕获(不怎用)
+    *
+    * */
+        var objs=[my$("dv1"),my$("dv2"),my$("dv3")];
+        objs.forEach(function (item) {//item就是每一个元素
+            item.addEventListener("click",function () {
+                console.log(this.id);
+            },true);
+        });
+</script>
+
+
+</body>
+</html>

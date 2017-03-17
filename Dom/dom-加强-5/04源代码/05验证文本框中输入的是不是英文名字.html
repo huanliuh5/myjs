@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="text" value="" id="txt"/>
+<script>
+    function my$(id) {
+        return document.getElementById(id);
+    }
+
+    //onchange事件原意是内容改变则触发事件,但是经过测试,修改后鼠标点一下其他的地方可以触发
+
+    my$("txt").onblur=function () {
+        //文本框的内容是不是名字:this.value是字符串
+        var reg=/^[a-zA-Z]+$/;
+        //如果输入的是英文的字母文本框背景色为红色,否则恢复默认颜色
+        if(reg.test(this.value)){//true
+            this.style.backgroundColor="red";
+        }else{//false
+            this.style.backgroundColor="";
+        }
+
+    };
+
+
+
+</script>
+
+</body>
+</html>

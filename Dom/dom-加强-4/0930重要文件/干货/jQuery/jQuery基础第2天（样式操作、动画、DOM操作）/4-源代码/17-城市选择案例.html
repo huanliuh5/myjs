@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        select {
+            width: 200px;
+            background-color: teal;
+            height: 200px;
+            font-size: 20px;
+        }
+
+        .btn-box {
+            width: 30px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //1. 给btn-sel-all注册事件，option全部右移
+            $("#btn-sel-all").click(function () {
+                var $option = $("#src-city>option");
+                $("#tar-city").append($option);
+            });
+            //2. 给btn-sel-none注册事件，option全部左移
+            $("#btn-sel-none").click(function () {
+                var $opiton = $("#tar-city>option");
+                $("#src-city").append($opiton);
+            });
+            //3. 给btn-sel注册事件，选中的option右移
+            $("#btn-sel").click(function () {
+                var $option = $("#src-city>option:selected");
+                $("#tar-city").append($option);
+            });
+            //4. 给btn-back注册事件,选中option的左移
+            $("#btn-back").click(function () {
+                var $opiton = $("#tar-city>option:selected");
+                $("#src-city").append($opiton);
+            });
+        });
+    </script>
+</head>
+
+<body>
+<h1>城市选择：</h1>
+<select id="src-city" name="src-city" multiple>
+    <option value="1">北京</option>
+    <option value="2">上海</option>
+    <option value="3">深圳</option>
+    <option value="4">广州</option>
+    <option value="5">南昌</option>
+</select>
+<div class="btn-box">
+    <!--实体字符-->
+    <button id="btn-sel-all"> &gt;&gt; </button>
+    <button id="btn-sel-none"> &lt;&lt; </button>
+    <button id="btn-sel"> &gt;</button>
+    <button id="btn-back"> &lt; </button>
+</div>
+<select id="tar-city" name="tar-city" multiple>
+</select>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #F7F7F7;
+		}
+
+		.cube {
+			width: 400px;
+			height: 400px;
+			margin: 100px auto;
+
+			/*perspective: 1000px;*/
+
+			transform: rotateX(30deg) rotateY(45deg);
+
+			transform-style: preserve-3d;
+
+			position: relative;
+		}
+
+		.front, .back, .left, .right, .top, .bottom {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			line-height: 400px;
+			font-size: 40px;
+
+			/*opacity: 0.5;*/
+
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.front {
+			background-color: red;
+			transform: translateZ(200px);
+		}
+
+		.back {
+			background-color: orange;
+			transform: translateZ(-200px);
+		}
+
+		.left {
+			background-color: pink;
+			transform: rotateY(90deg) translateZ(-200px);
+		}
+
+		.right {
+			background-color: green;
+			transform: rotateY(90deg) translateZ(200px);
+		}
+
+		.top {
+			background-color: blue;
+			transform: rotateX(90deg) translateZ(200px);
+		}
+
+		.bottom {
+			background-color: yellow;
+			transform: rotateX(90deg) translateZ(-200px);
+		}
+	</style>
+</head>
+<body>
+	<!-- 立方体 -->
+	<div class="cube">
+		<div class="front">front</div>
+		<div class="back">back</div>
+		<div class="left">left</div>
+		<div class="right">right</div>
+		<div class="top">top</div>
+		<div class="bottom">bottom</div>
+	</div>
+</body>
+</html>

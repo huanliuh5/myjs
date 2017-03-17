@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var Person = function () {
+            var name;
+            var age;
+            this.setname = function (n) {
+                this.name = n;
+                return this;
+            };
+
+            this.getName = function () {
+                return this.name;
+            }
+
+            this.setAge = function (a) {
+                this.age = a;
+                return this;
+            }
+
+            this.getAge = function () {
+                return this.a;
+            }
+
+
+        };
+
+        var p = new Person();
+        //p.setname("zs").setAge(18).setname("ls").setAge(19);
+        //p.setAge(18);
+        var result = p.setname("zs").setAge(18).getName();
+
+        console.log(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

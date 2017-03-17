@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //css(name, value)
+            // name:需要需要的样式名  value:对应的样式值
+
+
+            //id选择器
+            //格式：$("#id")
+            $("#slg").css("fontSize", "32px");
+
+            //类选择器
+            //格式：$(".class");
+            $(".tz").css("font-size", "24px");
+
+            //标签选择器
+            //格式：$("tagName")
+            $("li").css("background-color", "pink");
+
+
+            //并集选择器
+            //格式：$("selector1,seletor2");
+            //$(".hf").css("backgroundColor", "white");
+            //$(".wsy").css("backgroundColor", "white");
+            $(".hf,.wsy").css("backgroundColor", "white");
+
+
+            //交集选择器
+            //格式：$("selector1selector2")
+            $("li.nj").css("backgroundColor", "gray");
+        });
+    </script>
+
+</head>
+<body>
+<div>
+    <ul>
+        <li id="slg">fjj</li>
+    </ul>
+
+    <!-- 独立团 -->
+    <ul id="dlt">
+        <li class="tz">独立团团长-李云龙</li>
+        <li>狙击手</li>
+        <li>士兵</li>
+        <li>士兵</li>
+        <li>士兵</li>
+        <li class="hf">伙夫</li>
+        <li class="wsy">卫生员</li>
+
+    </ul>
+
+    <!-- 358团 -->
+    <ul id="t358">
+        <li class="tz">358团团长-楚云飞</li>
+        <li>狙击手</li>
+        <li class="nj">士兵</li>
+        <li>士兵</li>
+        <li>士兵</li>
+        <li class="hf">伙夫</li>
+        <li class="wsy">卫生员</li>
+    </ul>
+</div>
+<div>
+    <p class="nj">老百姓</p>
+    <p class="nj">老百姓</p>
+</div>
+</body>
+</html>

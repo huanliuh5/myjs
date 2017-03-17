@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <style>
+
+        #dv1{
+            width: 150px;
+            height:150px;
+            background-color: red;
+        }
+        #dv2{
+            width: 100px;
+            height:100px;
+            background-color: green;
+        }
+        #dv3{
+            width: 80px;
+            height:80px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body id="bd">
+
+<div id="dv1">
+    <div id="dv2">
+        <div id="dv3">
+
+        </div>
+    </div>
+</div>
+<script src="common.js"></script>
+<script>
+
+    /*
+    * 事件的三个阶段:
+    * 1------事件捕获阶段
+    * 2------事件目标阶段
+    * 3------事件冒泡阶段
+    *
+    *
+    * 事件一般情况 ：只有两个会一起出现
+    * //捕获和目标
+    * //冒泡和目标
+    * */
+
+//        var objs=[my$("dv1"),my$("dv2"),my$("dv3")];
+//        objs.forEach(function (item) {//item就是每一个元素
+//            item.addEventListener("click",function (e) {
+//                console.log(this.id+"===="+e.eventPhase);//可以把事件的阶段显示出来(数字类型)
+//            },true);
+//        });
+
+    /*
+    *
+    * 在事件中:e.type是事件的类型(事件的名字)
+    * */
+
+    var objs=[my$("dv1"),my$("dv2"),my$("dv3")];
+    objs.forEach(function (item) {//item就是每一个元素
+        item.addEventListener("click",function (e) {
+            console.log(this.id+"===="+e.type);//可以把事件的阶段显示出来(数字类型)
+        },true);
+    });
+</script>
+
+
+</body>
+</html>

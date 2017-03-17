@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="创建多个图片" id="btn"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+//    var datas={
+//        name:["1-small.jpg","2-small.jpg","3-small.jpg"]
+//    };
+//    var arr=datas.name;//数组
+//    for(var i=0;i<arr.length;i++){
+//        console.log(arr[i]);
+//    }
+</script>
+
+<script>
+        var datas={
+            name:["1-small.jpg","2-small.jpg","3-small.jpg"]
+        };
+    my$("btn").onclick=function () {
+        //点击按钮获取层,为层中创建多个的图片标签,设置图片的src即可
+       var arr=[];
+       for(var i=0;i<datas.name.length;i++){
+           var imgName=datas.name[i];
+arr.push("<img style='margin-right: 10px' src=images/"+imgName+"/>");
+       }
+        my$("dv").innerHTML=arr.join("");
+    };
+
+</script>
+</body>
+</html>

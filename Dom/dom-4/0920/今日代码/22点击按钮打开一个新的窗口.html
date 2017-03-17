@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="button" value="打开新的窗口" id="btn1"/>
+<input type="button" value="设置新窗口" id="btn2"/>
+<script>
+    var win;
+    document.getElementById("btn1").onclick=function () {
+        //_blank在新的选项卡中打开的
+        //_self在自己的选项卡中打开的
+        //第三个参数中的属性和值之间用等号
+        //open的方法是一个新的窗口对象
+       win= window.open("23test.html","_blank","width=50,height=100,left=100,top=100,resizable=no");
+    };
+    document.getElementById("btn2").onclick=function () {
+        //win.close();//关闭新的窗口
+        //后面的四个方法,如果open中第一个参数都是外部的地址,都失效了
+        //win.moveTo(300,400);//把窗口移动到位置
+        //win.moveBy(20,20);//每次移动多少位置
+        //win.resizeTo(400,400);//窗口放大多少
+        //win.resizeBy(40,40);
+    };
+</script>
+</body>
+</html>

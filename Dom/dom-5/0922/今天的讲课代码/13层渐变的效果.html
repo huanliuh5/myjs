@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div{
+            width:300px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="dv"></div>
+<input type="button" value="渐变的效果" id="btn"/>
+<script src="common.js"></script>
+<script>
+    //点击按钮让层渐变的效果----设置层的透明度
+    //opacity:0-----1   -0.1-----如果透明度已经到达了0,此时停止计时器
+    var setId=null;
+    document.getElementById("btn").onclick=function () {
+        clearInterval(setId);//每次点击按钮的时候都先清理一次计时器
+        //获取层
+        var divObj=document.getElementById("dv");
+        //计时器
+        var opacity=1;
+        setId=setInterval(function () {
+            opacity-=0.1;
+            if(opacity<=0){
+                //清理计时器
+                clearInterval(setId);
+                return;
+            }
+            divObj.style.opacity=opacity;
+            console.log(opacity);
+        },100);
+    };
+</script>
+</body>
+</html>

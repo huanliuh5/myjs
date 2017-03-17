@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="button" value="点我" id="btn"/>
+<script src="common.js"></script>
+<script>
+
+    //为任意元素注册任意的事件的兼容代码
+    /*
+    * 参数:
+    * 触发事件的对象:
+    * 事件的类型:
+    * 事件处理程序:
+    *
+    * 事件的类型是没有on的
+    * element, type,listener
+    * */
+    function addEventListener(element,eventName,fn) {
+        if(element.addEventListener){//浏览器支持这个方法
+            element.addEventListener(eventName,fn,false);
+        }else if(element.attachEvent){//浏览器支持这个方法
+            element.attachEvent("on"+eventName,fn);
+        }else{
+            //浏览器都不支持上面的方式
+            element["on"+eventName]=fn;
+        }
+    }
+
+    addEventListener(my$("btn"),"click",function () {
+        console.log("1");
+    });
+    addEventListener(my$("btn"),"click",function () {
+        console.log("2");
+    });
+    addEventListener(my$("btn"),"click",function () {
+        console.log("3");
+    });
+
+</script>
+
+</body>
+</html>

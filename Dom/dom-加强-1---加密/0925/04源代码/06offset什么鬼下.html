@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #dv1{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+            border: 10px solid red;
+            position: relative;
+            left:14px;
+
+
+        }
+        #dv2{
+            width: 50px;
+            height: 30px;
+            background-color: green;
+            border: 10px solid blue;
+            position: absolute;
+            left:7px;
+
+
+        }
+    </style>
+</head>
+<body>
+<div id="dv1">
+
+    <div id="dv2"></div>
+</div>
+<script src="common.js"></script>
+
+<script>
+
+    //里面的层距离左侧的像素
+    //元素的offsetLeft获取的时候:
+    /*
+    * 包含:父级元素的border的宽度,不会包括自己的边框
+    * 包含:父级元素的margin-left,也包含自己的margin-left
+    * 包含:父级元素的padding-left,不包括自己的padding-left
+    *注意:父级元素脱离文档流,子级元素也脱离文档流,此时只有自己的left,不包括父级的left
+    * 注意:父级元素脱离文档流,自己元素没有脱离文档流,此时相对于父级的是0
+    *
+    *
+    * */
+    console.log(my$("dv2").offsetLeft);
+    console.log(my$("dv2").offsetTop);
+
+</script>
+
+
+<script>
+    //这种方式获取不到元素的当前位置
+    //console.log(my$("dv1").style.left);
+    //就想获取元素的当前的位置:
+    /*
+    * 元素设置位置:需要有left和top
+    *
+    * 可以使用offset系列
+    * 总结:在style标签中设置的样式的值都获取不到
+    *
+    *
+    * offset中有
+    * offsetLeft:元素在页面中的当前位置距离页面左侧的像素(不准确的)
+    * offsetTop
+    * offsetWidth
+    * offsetHeight
+    *
+    * 总结offset:获取的是数字类型的值,没有px
+    * */
+
+   // console.log(my$("dv1").style.width);
+
+    //测试:
+//    console.log(my$("dv1").offsetLeft);
+//    console.log(my$("dv1").offsetTop);
+//    console.log(my$("dv1").offsetWidth);
+//    console.log(my$("dv1").offsetHeight);
+
+
+
+
+
+</script>
+</body>
+</html>

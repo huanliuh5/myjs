@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+       //需求:查找字符串中每个字母出现的次数,并且找到出现最多次数的字母
+        var str="what are you no sha lefdfdfdfdfdffffffi";
+       //定义一个对象(键值对),用来保存每个字母及该字母出现的次数
+       var obj={};
+        for(var i=0;i<str.length;i++){
+            var key=str[i];
+            if(obj[key]){//判断该对象中有没有这个字母
+                obj[key]+=1;//该对象中有这个字母，就让该字母的次数加1
+            }else{
+                obj[key]=1;//该对象中没有这个字母,让该字母的值默认为1
+            }
+        }
+       //定义一个变量假设是出现次数最多的
+       var maxCount=0;
+       //定义一个变量用来存储出现次数最多的字母
+       var maxStr="";
+        for(var key in obj){
+//            console.log(key+"===="+obj[key]);
+            if(maxCount<obj[key]){
+                maxCount=obj[key];
+                maxStr=key;
+            }
+        }
+        console.log(maxStr+"出现的最多的次数是"+maxCount+"次");
+
+        //作业:3遍
+    </script>
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+
+</script>
+</body>
+</html>

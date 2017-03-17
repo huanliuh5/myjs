@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        /*
+        *
+        * 创建元素的三种方式:
+        * 1.document.write();//会把页面原有的内容全部覆盖
+        * 2.对象.innerHTM="标签字符串";字符串拼接,如果一次性创建多个标签，大量字符串拼接的时候会用
+        * 3.document.createElement("标签名字");返回的是一个对象
+        *
+        *
+        *
+        * */
+    </script>
+
+    <style>
+
+        div{
+            width: 300px;
+            height:200px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="创建一个文本框" id="btn"/>
+<div id="dv">
+<input type="button" value="按钮" id="btn2"/>
+</div>
+<script src="common.js"></script>
+<script>
+    var i=0;
+    my$("btn").onclick=function () {
+            i++;
+            var inputObj=document.createElement("input");
+            inputObj.type="text";
+            inputObj.value="这是文本"+i;
+            inputObj.id="txt";
+           // my$("dv").appendChild(inputObj);
+        //inertBefore方法,是把新的元素插入到一个目标元素的前面
+        //my$("dv").insertBefore(inputObj,my$("dv").firstChild);//把新的元素插入到一个目标元素的前面
+    };
+    //点击按钮的时候判断层中有没有文本框,如果有则不在创建
+
+
+</script>
+</body>
+</html>

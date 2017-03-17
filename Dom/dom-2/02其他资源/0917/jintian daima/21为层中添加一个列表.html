@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+
+<input type="button" value="设置层内容" id="btn"/>
+<div id="dv">
+
+</div>
+<script src="common.js"></script>
+<script>
+
+   //点击按钮为层中添加一个列表
+    my$("btn").onclick=function () {
+        //这种方式可以看成是动态的创建标签,动态的创建元素
+        my$("dv").innerHTML="<ul><li>乔峰</li>  <li>慕容复</li>   </ul>";
+    };
+
+</script>
+</body>
+</html>

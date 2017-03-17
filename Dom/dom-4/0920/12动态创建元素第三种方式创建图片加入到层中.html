@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="创建一个图片" id="btn"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    //点击创建一个图片加入到层中
+    my$("btn").onclick=function () {
+
+        //创建图片
+        var imgObj=document.createElement("img");
+        imgObj.src="images/liuyan.jpg";
+        //加入到层中
+        my$("dv").appendChild(imgObj);
+
+
+    };
+</script>
+</body>
+</html>

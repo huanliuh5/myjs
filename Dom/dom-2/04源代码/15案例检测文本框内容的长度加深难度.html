@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cls{
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+<!--检测密码的长度要小于6位有高量显示,如果大于等于6位背景颜色正常显示-->
+<input type="text" value="" id="txt"/>
+<script>
+
+   var txtObj=document.getElementById("txt");
+    txtObj.onkeyup=function () {
+        if(this.value.length<6){
+            this.className="cls";
+        }else{
+            this.className="";
+        }
+    };
+
+</script>
+
+
+</body>
+</html>

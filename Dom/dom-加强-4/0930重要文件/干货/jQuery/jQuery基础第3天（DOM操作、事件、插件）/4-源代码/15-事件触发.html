@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#txt").focus(function () {
+                alert("事件触发了");
+            });
+
+
+            $("#btn").on("click", function () {
+
+                //简单的触发方法
+                //$("#txt").focus();
+
+                //事件触发
+                $("#txt").trigger("focus");
+
+                //事件触发，但是不会触发浏览器的默认行为
+                //$("#txt").triggerHandler("focus");
+
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="简单事件触发" id="btn">
+<input type="text" id="txt">
+</body>
+</html>

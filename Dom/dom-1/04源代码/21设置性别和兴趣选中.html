@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+        //$每天开心,快乐,自信,就是这么帅!$
+    </script>
+</head>
+<body>
+<input type="button" value="设置性别" id="btn1"/>
+<input type="button" value="设置兴趣" id="btn2"/>
+<div id="dv">
+    <input type="radio" name="sex" value="1"/>男
+    <input type="radio" name="sex" value="2"/>女
+    <input type="radio" name="sex" value="3"/>保密
+</div>
+<div id="dv2">
+    <input type="checkbox" name="aiHao" value="4"/>吃饭
+    <input type="checkbox" name="aiHao" value="5"/>睡觉
+    <input type="checkbox" name="aiHao" value="6"/>打豆豆
+    <input type="checkbox" name="aiHao" value="7"/>处对象
+</div>
+<script>
+
+    //案例:点击案例设置性别和兴趣选项选中
+    document.getElementById("btn1").onclick=function () {
+      //获取所有的radio标签
+        var dvObj=document.getElementById("dv");
+        var inputs=dvObj.getElementsByTagName("input");
+        //如果html标签中属性和值是一样的,那么在DOM操作中,设置该属性的值应为为布尔类型,true就是选中,false就是不选中
+        inputs[1].checked=true;//第二个元素
+    };
+    document.getElementById("btn2").onclick=function () {
+        //先获取层dv2,然后根据层获取里面所有的Input标签
+        var inputs=document.getElementById("dv2").getElementsByTagName("input");
+        inputs[0].checked=true;//第一个元素
+        inputs[2].checked=true;//第三个元素
+    };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="隐藏" id="btn"/>
+<div id="dv" class="show">
+
+</div>
+<script>
+    function my$(id) {
+        return document.getElementById(id);
+    }
+    my$("btn").onclick=function () {
+        if(my$("dv").className=="show"){
+            my$("dv").className="hide";
+            this.value="显示";
+        }else{
+            my$("dv").className="show";
+            this.value="隐藏";
+        }
+    };
+
+</script>
+
+
+
+
+<script>
+//    function my$(id) {
+//        return document.getElementById(id);
+//    }
+
+    //首先元素的样式如果在style标签中设置，通过dom代码不能获取属性的值,只能获取到空
+
+//    my$("btn").onclick=function () {
+//        var divObj=my$("dv");
+//       if(divObj.style.display==""||divObj.style.display=="block"){
+//           divObj.style.display="none";
+//           this.value="显示";
+//       }else{
+//           divObj.style.display="block";
+//           this.value="隐藏";
+//       }
+//    };
+    //注意:如果在html标签中使用style属性设置元素的样式,通过DOM代码可以获取属性中的值
+    //注意:如果在style标签中设置的元素样式,那么通过DOM代码不能获取属性中的值
+
+</script>
+
+
+
+<script>
+//    function my$(id) {
+//        return document.getElementById(id);
+//    }
+//    my$("btn").onclick=function () {
+//        if(this.value=="隐藏"){
+//            my$("dv").style.display="none";
+//            this.value="显示";
+//        }else{
+//            my$("dv").style.display="block";
+//            this.value="隐藏";
+//        }
+//    };
+
+
+</script>
+</body>
+</html>

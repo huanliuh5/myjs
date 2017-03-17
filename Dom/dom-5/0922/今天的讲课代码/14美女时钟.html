@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img1" src="" alt=""/>
+<script>
+    //页面加载后要不停的获取当前的小时,秒
+    //把小时和秒进行拼接组成图片的路径
+
+    var imgObj=document.getElementById("img1");
+    function f1() {
+        var dt=new Date();//获取当前时间
+        //小时
+        var h=dt.getHours();
+        //秒
+        var s=dt.getSeconds();
+        //做判断
+        h=h<10?"0"+h:h;
+        s=s<10?"0"+s:s;
+        //获取图片标签,设置src属性
+        imgObj.src="meimei/"+h+"_"+s+".jpg";
+    }
+    f1();//一次
+    setInterval(f1,1000);
+
+</script>
+</body>
+</html>

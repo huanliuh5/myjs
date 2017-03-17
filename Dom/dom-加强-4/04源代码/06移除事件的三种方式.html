@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="button" value="点我" id="btn"/>
+
+<script>
+    //细节问题:
+
+    /*
+    * 注册事件有三种方式,移除事件也有三种方式:
+    *
+    * 注册事件用什么方法,移除事件就用对应的方法
+    *
+    *
+    *
+    * */
+</script>
+
+
+<script src="common.js"></script>
+<script>
+    //移除事件的兼容代码
+    function removeEventListener(element,eventName,fn) {
+            if(element.removeEventListener){
+                element.removeEventListener(eventName,fn,false);
+            }else if(element.detachEvent){
+                element.detachEvent("on"+eventName,fn);
+            }else {
+                element["on"+eventName]=null;
+            }
+    }
+
+    //注册事件
+    addEventListener(my$("btn"),"click",f1);
+    function f1() {
+        console.log("明天要不要留作业呢");
+        //移除事件
+        removeEventListener(my$("btn"),"click",f1);
+    }
+
+
+</script>
+
+
+
+<script>
+    //注册事件的第一种方式:
+    //移除事件的第一个方式
+//    my$("btn").onclick=f1;
+//    function f1() {
+//        console.log("被点了");
+//        my$("btn").onclick=null;
+//    }
+    /*
+     * 第一个参数:事件的名字
+     * 第二个参数:事件对应的处理函数的名字
+     * 第三个参数:false
+     *
+     * */
+    //第二种移除事件的方式:
+//    my$("btn").addEventListener("click",f1,false);
+//    function f1() {
+//        console.log("被注册了");
+//        my$("btn").removeEventListener("click",f1,false);
+//    }
+    //参数:
+
+    //第三种移除事件的方式:
+    //参数:
+    /*
+    * 事件的名字  有on
+    * 要移除事件的函数的名字
+    *
+    * */
+//    my$("btn").attachEvent("onclick",f1);
+//    function f1() {
+//       alert("十一放假就是写代码");
+//        my$("btn").detachEvent("onclick",f1);
+//    }
+
+
+    //兼容代码--注册事件就用对应的移除事件
+  /*
+  * 移除某个元素的某个事件,需要这个事件对应的函数
+  *
+  * */
+
+
+
+
+
+</script>
+
+</body>
+</html>

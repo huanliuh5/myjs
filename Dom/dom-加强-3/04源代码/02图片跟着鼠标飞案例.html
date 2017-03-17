@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        div{
+            width: 200px;
+            height: 1000px;
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+<body>
+<img src="images/tianshi.gif" id="img1" />
+<div id="dv">
+
+</div>
+<script>
+    //获取图片,脱离文档流
+    //获取事件参数
+    //通过事件参数调用clientX和clientY属性为图片的left和top设置值
+
+    var imgObj=document.getElementById("img1");
+    imgObj.style.position="absolute";
+
+    //鼠标移动,在页面中移动,document的事件
+   // document.onmousemove=function (e) {
+          //解决IE8浏览器的问题
+     //   e=e||window.event;
+        //总结:clientX和clientY获取的是鼠标在可视区域的横纵坐标,卷曲出去的距离获取不到(滚出去的距离)
+        //imgObj.style.left=e.clientX+"px";
+        //imgObj.style.top=e.clientY+"px";
+        //改成pageX和pageY
+        //辛辛苦苦大半年，一下回到解放前,pageX和pageY在IE8中不支持
+        //imgObj.style.left=e.pageX+"px";
+        //imgObj.style.top=e.pageY+"px";
+
+
+
+        //验证
+
+
+
+
+   // };
+
+</script>
+
+
+<script>
+
+
+    //可视区域的纵坐标+滚出去的Top=====pageY
+    //可视区域的横坐标+滚出去的Left====PageX
+
+
+    //鼠标在可视区的横坐标:e.clientX
+    //鼠标在可视区的纵坐标:e.clientY
+    //横着滚出去的距离:scrollLeft
+    //竖着滚出去的距离:scrollTop
+
+    //可视区域坐标+滚出去的坐标===pageXC或者pageY
+
+    //document.body谷歌支持
+    //document.documentElment  IE8支持
+
+    //验证
+    document.onclick=function (e) {
+        console.log(e.clientY+"====="+document.body.scrollTop);
+        console.log(e.pageY);
+    };
+
+
+
+</script>
+</body>
+</html>

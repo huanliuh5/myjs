@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #list li {
+            list-style-type: none;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background-color: beige;
+            text-align: center;
+            float: left;
+            margin-left: 5px;
+        }
+
+        #list li.current {
+            background-color: burlywood;
+        }
+
+        #list li a {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+<div id="menu">
+    <ul id="list">
+        <li class="current"><a href="http://www.baidu.com">首页</a>
+        </li>
+        <li><a href="javascript:void(0)">播客</a></li>
+        <li><a href="javascript:void(0)">博客</a></li>
+        <li><a href="javascript:void(0)">相册</a></li>
+        <li><a href="javascript:void(0)">关于</a></li>
+        <li><a href="javascript:void(0)">帮助</a></li>
+    </ul>
+</div>
+<script src="common.js"></script>
+<script>
+    //为a标签注册点击事件
+    var lis=my$("list").getElementsByTagName("li");
+    for(var i=0;i<lis.length;i++){
+        var aLink=getFirstElement(lis[i]);//li中第一个a标签
+        aLink.onclick=clickHandle;//点击事件
+    }
+    function clickHandle() {
+        //干掉所有li标签的类样式
+        for(var i=0;i<lis.length;i++){
+            lis[i].removeAttribute("class");
+        }
+        //a的父级元素li应用类样式
+        this.parentNode.className="current";
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

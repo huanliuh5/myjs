@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+    <style>
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+
+    //为同一个元素注册不同的事件调用同一个处理函数
+    /*
+    * 为层注册点击的事件,点击这个层之后,在控制台打印输出一句话
+    * 为层注册鼠标进入的事件,鼠标进入到层里面之后，层的背景颜色改变
+    * 为层注册鼠标离开的事件,鼠标离开层之后,层的背景颜色恢复默认
+    *
+    * */
+    my$("dv").onclick=handle;//点击事件
+    my$("dv").onmouseover=handle;//鼠标进入
+    my$("dv").onmouseout=handle;//鼠标离开
+    function handle(e) {
+        switch (e.type){
+            case "click":console.log("我被点了");break;
+            case "mouseover":this.style.backgroundColor="red";break;
+            case "mouseout":this.style.backgroundColor="";break;
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>

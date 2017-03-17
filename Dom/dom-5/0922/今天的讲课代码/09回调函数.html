@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //函数
+//        function isBigEnough(element) {//数组中元素的值
+//            return element >= 10;//如果这个返回值的结果是true,则把element这个元素值存放到新的数组中
+//        }
+//        var arr=[12, 5, 8, 130, 44];
+//
+//        //filter方法
+//        //filter方法参数:一个参数
+//        //参数:函数
+//
+//        var newArr = arr.filter(isBigEnough);
+//        console.log(newArr);
+
+        //element:元素值
+        //index:索引
+        //array:数组
+
+//        function isBig(element,index) {
+//            return index>2;
+//        }
+//
+//        var arr=[10,20,30,40,50];
+//        var newArr=arr.filter(isBig);//函数可以作为参数使用
+//        console.log(newArr);
+
+
+        //拉姆达表达式----后台语言中经常用,js中也可以用
+
+//        function f1(num1,num2) {
+//            return num1+num2;//求和
+//        }
+//        function f2(num1,num2) {
+//            return num1-num2;//求差
+//        }
+//        function f3(num1,num2) {
+//            return num1*num2;//求积
+//        }
+//        //函数,参数:两个数字和 一个函数
+//        function ff(n1,n2,fn) {
+//             return fn(n1,n2);
+//        }
+//        var result=ff(10,20,f1);
+//        console.log(result);
+    </script>
+
+    <script>
+//        function f1(num1,num2) {
+//            return num1+num2;//求和
+//        }
+//        function f2(num1,num2) {
+//            return num1-num2;//求差
+//        }
+//        function f3(num1,num2) {
+//            return num1*num2;//求积
+//        }
+        //函数,参数:两个数字和 一个函数
+//        function ff(n1,n2,fn) {
+//            return fn(n1,n2);
+//        }
+//        var result=ff(10,20,f1);
+//        console.log(result);
+
+
+//fn是一个函数
+function ff(n1,n2,fn) {
+    return fn(n1,n2);
+}
+
+    var result=ff("小杨","好帅",function () {
+        return "小杨"+"好帅";
+    });
+console.log(result);
+//       var result= ff(10,20,function () {
+//            return 10+20;
+//        });
+//        console.log(result);
+
+    </script>
+
+</head>
+<body>
+
+
+</body>
+</html>

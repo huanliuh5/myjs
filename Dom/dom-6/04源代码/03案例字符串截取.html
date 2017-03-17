@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+   <!--  <script>
+//      var str="传说中的永远十八岁的24k纯帅的小杨";
+//        str=str.substr(16);
+//        console.log(str);
+
+//        var str="传说中的永远十八岁的24k纯帅的小杨";
+//        //先找要截取的字符串的索引
+//        var index=str.indexOf("小杨");
+//        //根据字符串的索引开始截取
+//        str=str.substr(index);
+//        console.log(str);
+        //第二个案例
+        var str="传说在传智播客有个讲师叫小杨,小杨很帅,很纯洁,小杨是智慧和勇敢的化身.第一次听人这么说我不相信,于是我怀着试试看的心情来到了传智播客,见到了传说中的小杨。哇塞,小杨岂止是帅,简直就是帅的无法用言语来形容.";
+        //找小杨的字符串--调用indexOf方法,找到之后,把索引向后移动1个(2个)
+        //不停的找到,一直找到indexOf方法返回值是-1的时候就结束查找--循环
+
+        //从哪里开始找
+        var index=0;//设置该变量的值为0，表示从下标为0的位置开始查找字符串
+        //设置查找字符串关键字
+        var keyWord="小杨";
+        //查找的条件就是索引不是-1
+        //定义变量显示超找的次数
+        var i=0;
+        while((index=str.indexOf(keyWord,index))!=-1){
+            console.log(keyWord+"这个字符串第"+(i+1)+"次出现的位置是"+index);
+            i++;
+            index+=keyWord.length;
+        }
+
+        //作业:3遍
+
+      
+    </script> -->
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+        // //数组去重
+        // //思路：先创建一个空数组，用来保存最终的结果
+        //         // 循环原数组中的每个元素
+        //         // 在对每个元素进行二次循环，判断是否与有相同的元素，如果没有就将把这个元素放到新数组中
+        //         // 返回这个新数组
+        // function oSort(arr){
+        //     var result={};
+        //     var newArr=[];
+        //     for(var i=0;i<arr.length;i++){
+        //         if(!result[arr]){
+        //             newArr.push(arr);
+        //             result[arr]=1;
+        //         }
+        //     }
+        //     return newArr;
+        // }
+console.log(null instanceof Object);
+// console.log(null instanceof Null);
+console.log(typeof null);
+
+var a=10,b=20,c=30;
+++a;
+a++;
+e=++a+(++b)+(c++)+a++;
+alert(e);
+
+</script>
+</body>
+</html>

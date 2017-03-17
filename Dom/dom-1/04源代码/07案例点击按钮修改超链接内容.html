@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="修改连接" id="btn" />
+<a href="http://www.baidu.com" id="aLink">百度</a>
+<script>
+    //思路:根据id获取按钮,注册点击事件,根据id获取超链接,修改href属性值
+    document.getElementById("btn").onclick=function () {
+        var aObj=document.getElementById("aLink");
+        aObj.href="http://www.itcast.cn";
+        //如何修改行内样式标签中间的文字,需要一个属性:innerText(兼容问题)
+        aObj.innerText="传智播客";
+    };
+
+
+
+
+</script>
+</body>
+</html>

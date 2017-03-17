@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 4000px;
+            height: 4000px;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //        $(function () {
+        //            //1. 让图片居中
+        //
+        //        });
+
+        $(window).load(function () {
+
+            //获取图片的宽度和高度
+            var imgHeight = $("img").height();
+            var imgWidth = $("img").width();
+
+            var pageHeight = $(window).height();
+            var pageWidth = $(window).width();
+
+            var leftLength = (pageWidth - imgWidth) / 2;
+            var topLength = (pageHeight - imgHeight) / 2;
+
+            $("img").offset({top: topLength, left: leftLength});
+
+
+            $(document).scroll(function () {
+                var scrollTop = $(this).scrollTop();
+                var scrollLeft = $(this).scrollLeft();
+                leftLength = (pageWidth - imgWidth) / 2 + scrollLeft;
+                topLength = (pageHeight - imgHeight) / 2 + scrollTop;
+                $("img").offset({top: topLength, left: leftLength});
+            });
+
+        });
+    </script>
+</head>
+<body>
+<img src="11.jpg" alt=""/>
+</body>
+</html>

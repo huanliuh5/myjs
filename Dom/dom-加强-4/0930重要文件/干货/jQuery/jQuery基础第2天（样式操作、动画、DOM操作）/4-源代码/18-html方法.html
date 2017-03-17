@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //html(htmlStr)
+            //htmlStr:html格式的字符串
+            // 设置文本内容（能识别html标签，会新建元素）
+            //$("div").html("<a href='http://web.itcast.cn'>前端与移动开发</a>");
+
+            var result = $("div").html();
+            console.log(result);
+
+
+        });
+    </script>
+</head>
+<body>
+    <div>我是div的内容
+        <p>我是p元素的内容</p>
+        <span>我是span元素的内容</span>
+    </div>
+</body>
+</html>

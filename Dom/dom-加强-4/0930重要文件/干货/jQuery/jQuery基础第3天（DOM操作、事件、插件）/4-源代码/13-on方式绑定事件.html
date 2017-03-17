@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+
+            $("#btnAdd").click(function () {
+                $("div").append("<p>我是新增加的p元素</p>");
+            });
+//            $("p").on("click", function () {
+//                alert("事件触发了");
+//            });
+
+
+            //还是不支持动态绑定事件
+//            $("p").on("click mouseenter", function () {
+//                alert("事件触发了");
+//            });
+
+
+            //想要动态绑定事件
+            $("div").on("click", "p", function () {
+                alert("事件触发了");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="新增" id="btnAdd">
+<div>我是div元素的内容
+    <p>我是p元素的内容</p>
+    <p>我是p元素的内容</p>
+    <p>我是p元素的内容</p>
+    <span>我是span的内容</span>
+</div>
+</body>
+</html>

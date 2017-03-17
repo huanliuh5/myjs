@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        ul{
+            list-style-type: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+        //$每天开心,快乐,自信,就是这么帅!$
+    </script>
+</head>
+<body>
+<ul id="u1">
+    <li>降龙十八掌</li>
+    <li>如来神掌</li>
+    <li>九阴白骨爪</li>
+    <li>乾坤大挪移</li>
+    <li>葵花宝典</li>
+</ul>
+<script>
+    //先获取id为u1的ul,然后在这个ul中获取li
+    var ulObj=document.getElementById("u1");
+    var lis=ulObj.getElementsByTagName("li");
+    for(var i=0;i<lis.length;i++){
+       // var li=lis[i];
+        lis[i].onclick=function () {
+            //被点的这个li文字的颜色变成红色,背景颜色为绿色
+            //this.innerText="哈哈";
+            this.style.color="red";
+            this.style.backgroundColor="green";
+            //如果style中的属性在css设置中是多个单词组合，中间有-的
+            //在js中写代码的时候,把-去掉,后面单词的首字母大写
+        };
+    }
+    //点击按钮,让  层div  隐藏起来
+</script>
+</body>
+</html>

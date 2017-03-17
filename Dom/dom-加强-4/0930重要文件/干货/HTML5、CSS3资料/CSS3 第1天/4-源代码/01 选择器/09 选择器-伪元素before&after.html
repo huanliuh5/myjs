@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器 - 伪元素</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑';
+			background-color: #F7F7F7;
+		}
+
+		li {
+			font-size: 20px;
+			/*line-height: 40px;*/
+			list-style: none;
+		}
+
+
+		li .before,
+		li .after {
+			display: block;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 10px;
+		}
+
+		/*1、会添加两个子元素，这两个子元素就像普通的标签使用*/
+		/*可以指定任意CSS，必须配合content使用*/
+		/*假如父元素已经存在了子元素，那么也是不受任何影响*/
+		/*li::before,
+		li::after {*/
+			/*必须要写*/
+			/*content: '';*/
+			
+			/*新添加的元素是一个行内元素，可以根据自*/
+			/*已情况转成相应的块元素或行内块*/
+			/*display: inline-block;
+
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 10px;*/
+		/*}*/
+
+		li:before,
+		li:after {
+			content: 'test';
+			
+			display: inline-block;
+
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<span class="before">原始添加的</span>
+			<span class="after">原始添加的后面的</span>
+		</li>
+	</ul>
+</body>
+</html>

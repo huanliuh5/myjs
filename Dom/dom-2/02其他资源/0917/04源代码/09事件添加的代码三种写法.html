@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+        //$每天开心,快乐,自信,就是这么帅!$
+    </script>
+</head>
+<body>
+<!--第一种写法-->
+<input type="button" value="按钮1" id="btn1" onclick="f1();"/>
+<!--第二种写法-->
+<input type="button" value="按钮2" id="btn2"/>
+<!--第三种写法-->
+<input type="button" value="按钮3" id="btn3"/>
+<script>
+
+    //点击按钮显示对话框
+    //1===页面中所有的函数实际上都是window
+    window.id="100";
+    function f1() {
+        alert("哈哈"+this.id);//undefined,此时的this不是按钮,this是window
+        alert(this);
+    }
+    //2
+    document.getElementById("btn2").onclick=function () {
+      alert("嘎嘎"+this.id);
+    };
+    //3
+    document.getElementById("btn3").onclick=f2;
+    function f2() {
+        alert("嘿嘿"+this.id);
+    }
+</script>
+
+</body>
+</html>

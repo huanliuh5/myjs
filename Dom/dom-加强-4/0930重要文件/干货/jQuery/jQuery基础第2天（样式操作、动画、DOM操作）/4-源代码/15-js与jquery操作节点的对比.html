@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //js方式
+//            var div = document.getElementById("d1");
+//            var aNode = document.createElement("a");
+//            div.appendChild(aNode);
+//            aNode.innerHTML = "前端与移动开发";
+//            aNode.setAttribute("href", "http://web.itcast.cn");
+//            aNode.setAttribute("target", "_blank");
+
+
+            //jquery方式
+            $("#d1").append("<a href='http://web.itcast.cn' target='_blank'>前端与移动开发</a>");
+        });
+    </script>
+</head>
+<body>
+    <div id="d1"></div>
+</body>
+</html>

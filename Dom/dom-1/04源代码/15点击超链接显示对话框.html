@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<!--如何取消默认的点击事件====return false-->
+<a href="http://www.baidu.com" id="aLink">百度</a>
+<br/>
+<a href="http://www.baidu.com" id="aLink1" onclick="f1(); return false;">谷歌</a>
+<a href="http://www.baidu.com" id="aLink2" onclick="return f2();">优酷</a>
+
+<script>
+
+    function f2() {
+        alert("嘎嘎");
+        return false;
+    }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var str="传说在传智播客有个讲师叫小杨,小杨很帅,很纯洁,小杨是智慧和勇敢的化身.第一次听人这么说我不相信,于是我怀着试试看的心情来到了传智播客,见到了传说中的小杨。哇塞,小杨岂止是帅,简直就是帅的无法用言语来形容.";
+        //把字符串中所有的小杨替换成:地主
+
+        //替换的时候先查找小杨的索引,如果找不到小杨,就不用替换了,只要找到一个就替换一个
+        var count=0;
+        while (str.indexOf("小杨")!=-1){
+            str=str.replace("小杨","地主");
+            count++;
+        }
+        console.log(count);
+        console.log(str);
+
+        //作业:3遍
+
+    </script>
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+
+</script>
+</body>
+</html>

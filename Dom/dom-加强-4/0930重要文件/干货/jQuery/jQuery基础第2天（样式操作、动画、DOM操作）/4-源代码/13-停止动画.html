@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("#btnStart").click(function () {
+                $("div").slideDown(4000).slideUp(4000);
+            });
+
+            $("#btnStop").click(function () {
+                //clearQueue:是否清除队列，true,false
+                //jumpToEnd:是否跳转到当前动画的最终效果，true,false
+                //$("div").stop(false, false);
+                //$("div").stop(true, false);
+                //$("div").stop(false, true);
+                //$("div").stop(true, true);
+
+                //其实用的最多的是stop();
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="开始动画" id="btnStart">
+<input type="button" value="停止动画" id="btnStop">
+<div></div>
+</body>
+</html>

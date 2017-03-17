@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            display: none;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btnSlideDown").click(function () {
+                //1. 滑入滑出用的是slideDown和slideUp方法
+                //2. 滑入滑出的用法跟show/hide用法基本一致
+
+                //滑入滑出不传参数的时候，有动画，默认为normal
+                //$("div").slideDown();
+
+                //$("div").slideDown(1000);
+
+                //$("div").slideDown("normal");
+
+                $("div").slideDown(10000, function () {
+                    alert("动画执行完成了");
+                });
+
+            });
+
+            $("#btnSlideUp").click(function () {
+                //slideUp的用法和slideDown的用法一模一样
+                //$("div").slideUp();
+                //$("div").slideUp(1000);
+                //$("div").slideUp("fast");
+                $("div").slideUp("fast", function () {
+                    alert("动画执行完了");
+                });
+            });
+
+
+            //总结：slideDown和slideUp修改了哪个样式？
+            // height
+
+            $("#btnslideToggle").click(function () {
+                $("div").slideToggle(1000, "linear", function () {
+                    alert("动画执行完了");
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="滑入动画" id="btnSlideDown">
+<input type="button" value="滑出动画" id="btnSlideUp">
+<input type="button" value="滑入滑出切换" id="btnslideToggle">
+
+<div></div>
+</body>
+</html>

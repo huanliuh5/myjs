@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //复习获取元素的四种方式
+        document.getElementById();//根据id获取一个元素
+        document.getElementsByTagName();//根据标签的名字获取多个元素,返回的是一个数组
+        document.getElementsByClassName();//根据类样式的名字获取应用这个类样式的多个元素，返回的是一个数组
+        document.getElementsByName();//根据name属性值来获取元素，返回的是一个数组
+
+
+    </script>
+    <style>
+
+        .cls{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="text" value="" /><br/>
+<input type="text" value="" /><br/>
+<input type="text" value="" /><br/>
+<input type="text" value="" /><br/>
+<input type="text" value="" /><br/>
+<input type="text" value="" /><br/>
+<input type="button" value="哈哈" /><br/>
+<script>
+    //案例:多个文本框获取焦点高亮显示，失去焦点则失去高亮显示
+
+
+    //先获取所有的input标签,都是文本框
+    var inputs=document.getElementsByTagName("input");
+    //循环遍历,为每个text标签注册获取焦点的事件
+    for(var i=0;i<inputs.length;i++){
+        //判断
+        if(inputs[i].type=="text"){
+            inputs[i].onfocus=focusHandle;//获取焦点
+            inputs[i].onblur=blurHandle;//失去焦点
+        }
+    }
+    function focusHandle() {
+        //this.style.backgroundColor="red";//style属性的方式
+        //this.className="cls";//类样式的方式
+        //this.setAttribute("class","cls");
+        this.setAttribute("class","cls");
+    }
+    function blurHandle() {
+        //this.style.backgroundColor="";//恢复成默认的颜色
+        //this.className="";
+        //this.setAttribute("class","");
+        this.removeAttribute("class");
+    }
+
+</script>
+
+</body>
+</html>

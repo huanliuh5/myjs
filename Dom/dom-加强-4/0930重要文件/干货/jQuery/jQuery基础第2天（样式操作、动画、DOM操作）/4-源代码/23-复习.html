@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+1. 样式操作（★★★★★）
+    1.1 css操作
+        设置单个样式：css(name, value)
+        设置多个样式：css(obj)  {"name":"value","name":"value"...}
+        获取样式：css(name)  注意：如果是多个元素的时候，返回的第一个元素对应的样式
+    1.2 class操作
+        addClass(name) : 添加类
+        removeClass(name) : 移除类
+        hasClass(name)  :判断类
+        toggleClass(name)  ：切换类
+
+2. 动画（☆）
+    2.1 三组简单动画（★★）
+        show/hide
+        slideDown/slideUp/slideToggle
+        fadeIn/fadeOut/fadeToggle/fadeTo
+
+        参数：
+        show([speed], [callback])
+            speed :毫秒值，字符串（不推荐）
+
+    2.2 自定义动画
+        animate(obj, speed, [easing], [callback])
+            obj : {"name":"value","name":"value"...}
+            easing:swing(摇摆)  linear(匀速)
+
+    2.3 动画队列，每一个元素都有一个动画队列
+    2.4 停止动画
+        stop(clearQueue, jumpToEnd)
+            clearQueue:是否清空动画队列
+            jumpToEnd:是否跳转到当前动画的最终效果
+
+3. 节点操作(★★★★★)
+    3.1 创建一个jquery对象
+        $("")
+    3.2 添加节点
+        append
+        prepend
+        after
+        before
+    3.3 html方法
+        html() 不传参数：获取，能获取到标签
+        html(htmlStr) :设置内容，能识别html标签
+    3.4 清空（清理门户）
+        empty()：推荐
+        html("")：不推荐
+    3.5 删除（自杀）
+        remove()
+    3.6 克隆
+        clone() : 深度赋值
+        clone(true) : 事件也复制
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="修改图片大小" id="btn"/>
+<br />
+<img src="images/liuyan.jpg" width="300" height="450" id="img1"/>
+
+
+<script>
+
+    //案例:页面中有一个按钮,还有一个图片,图片的宽是300，高是450，点击按钮修改图片的宽和高(宽和高都是图片的html属性,不涉及style样式中的width和height)
+
+    //先获取按钮,根据id来获取,为按钮注册点击事件,获取图片,设置图片的宽和高
+
+    document.getElementById("btn").onclick=function () {
+        //获取图片元素,元素可以看成是对象,这个元素中的属性就看成是对象的属性
+        var imgObj=document.getElementById("img1");
+        imgObj.width="500";
+        imgObj.height="1100";
+//        document.getElementById("img1").width="500";
+//        document.getElementById("img1").height="1100";
+    };
+
+</script>
+
+</body>
+</html>

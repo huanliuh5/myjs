@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        //预解析:
+        /*
+        * 1.预解析的时候把函数的声明和变量的声明提前了
+        * 2.分段的script标签中函数重名不影响预解析
+        * 3.函数中的变量声明提前的时候,不会把声明提前到函数的外面,而是提前到函数内部的最上面
+        *
+        *
+        * */
+
+//        var num=10;
+//        function f1() {
+//            var num;
+//
+//            console.log(num);//10  20   报错  undefined
+//            num=20;
+//        }
+//        f1();
+
+
+
+//
+//        var a = 18;
+//        function f1(){
+//            var b=9;
+//            console.log(a);//undefined
+//            console.log(b);//9
+//            var a = '123';
+//        }
+//        f1();
+//
+//        function f1() {
+//            var a;
+//            a=b=c=9;
+//            console.log(a);//9
+//            console.log(b);//9
+//            console.log(c);//9
+//        }
+//        f1();
+//        console.log(c);//9
+//        console.log(b);//9
+ //       console.log(a);//9----报错
+
+//        var myFun;
+//        myFun(10,20);//报错,-------------------------------
+//        myFun=function (a,b) {
+//            return a+b;
+//        }
+
+//        var str;
+//        function f1() {
+//            console.log(str);
+//            return 10+20;
+//
+//        }
+//        f1();
+//        str="hello";
+//
+
+    </script>
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+
+</script>
+</body>
+</html>

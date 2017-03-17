@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width:200px;
+            height:100px;
+            background-color: pink;
+            margin-top: 50px;
+            position: absolute;
+        }
+
+        #dv2{
+            width:200px;
+            height:200px;
+            background-color: green;
+            top:100px;
+            left:100px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="设置动画效果" id="btn"/>
+<div id="dv"></div>
+<div id="dv2"></div>
+<script>
+
+    function my$(id) {
+        return document.getElementById(id);
+    }
+    //根据元素和属性获取该属性的值,该函数返回的是字符串类型
+    function getStyle(element,attr) {
+        return element.currentStyle?element.currentStyle[attr]:window.getComputedStyle(element,null)[attr]||0;
+    }
+
+    //匀速动画,每次移动的步数都是相同的
+
+    //缓动动画的函数的封装
+    //1.元素
+    //2.属性
+    //3.目标位置
+    /*
+    * attr 是属性
+    * target是属性对应的目标的值
+    *
+    * left 200
+    * top 100
+    * width 300
+    *
+    * json是键值对(对象)
+    * 键值对中的数据 都是成对的
+    * 如何把键值对中所有的属性和对应的值显示出来
+    * for-in循环
+    * for(var key in json){
+    *   key=====键
+    *   json[key]====key这个键对应的值
+    * }
+    * */
+
+    function animate(element,json,fn) {
+        clearInterval(element.setId);
+        element.setId=setInterval(function () {
+            var flag=true;//假设当前位置和目标位置一致了
+            for(var attr in json){
+                if(attr=="opacity"){//透明度
+                    //opacity:0,0.1,0.2,0.3------1
+                    var current=getStyle(element,attr)*100||0;
+                    var target=json[attr]*100;
+                    var step=(target-current)/10;//如果是目标小于当前,step的值是负数
+                    step=step>0?Math.ceil(step):Math.floor(step);
+                    current+=step;
+                    element.style[attr]=current/100;
+                }else if(attr=="zIndex"){//层级判断
+                    element.style[attr]=json[attr];
+                }else{//正常的属性
+                    var current=parseInt(getStyle(element,attr))||0;
+                    var target=json[attr];
+                    var step=(target-current)/10;//如果是目标小于当前,step的值是负数
+                    step=step>0?Math.ceil(step):Math.floor(step);
+                    current+=step;
+                    element.style[attr]=current+"px";
+                }
+                if(current!=target){
+                   flag=false;
+                }// end if
+            }// end for
+            if(flag){//如果当前位置和目标位置一致则清理计时器
+               clearInterval(element.setId);
+                if(fn){//证明用户传入了一个函数
+                    fn();
+                }// end if
+            }// end if
+            console.log("current:"+current+",target:"+target+",step:"+step+",attr:"+attr+"属性的值:"+json[attr]);
+        },20);
+    }
+
+
+    my$("btn").onclick=function () {
+        animate(my$("dv"),{"left":200,"top":100,"width":100,"height":100,"opacity":0.3,"zIndex":1000}) ;
+    };
+
+
+
+
+
+
+
+
+
+
+//    my$("btn1").onclick=function () {
+//        animate(my$("dv"),{"left":400,"top":300,"width":500,"height":100},function () {
+//            animate(my$("dv"),{"left":50,"top":20,"width":50,"height":50},function () {
+//                animate(my$("dv"),{"left":300,"width":100,"height":100});
+//            });
+//        });
+//    };
+
+</script>
+
+</body>
+</html>

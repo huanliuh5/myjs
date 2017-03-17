@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+//            $("#btnAnimate").click(function () {
+//                $("div").animate({
+//                    "width":"100px",
+//                    "height":"100px",
+//                    "left":"400px",
+//                    "top":"400px"
+//                }, 1000);
+//            });
+
+            $("#btnAnimate").click(function () {
+                $("div").animate({
+                    "width":"100px"
+                }, 1000, function () {
+                    $("div").animate({
+                        "height":"100px"
+                    }, 1000, function () {
+                        $("div").animate({
+                            "left":"400px"
+                        },1000);
+                    });
+                });
+
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="自定义动画" id="btnAnimate">
+<div></div>
+</body>
+</html>

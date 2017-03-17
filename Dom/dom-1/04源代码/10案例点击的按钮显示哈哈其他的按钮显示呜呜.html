@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="呜呜..."/>
+<input type="button" value="呜呜..."/>
+<input type="button" value="呜呜..."/>
+<input type="button" value="呜呜..."/>
+<input type="button" value="呜呜..."/>
+<input type="text" value="我是文本框"/>
+<script>
+    //案例:点击按钮显示哈哈,其他按钮显示呜呜
+    //思路,获取所有的按钮,每个按钮都要注册点击的事件
+    //获取的是所有的input标签
+    var inputs=document.getElementsByTagName("input");//括号里要的标签的名字
+    //遍历
+    for(var i=0;i<inputs.length;i++){
+        //判断input标签中type是不是按钮
+        if(inputs[i].type=="button"){
+            inputs[i].onclick=function () {//每个按钮都要注册点击的事件
+                //获取所有的按钮,设置里面的value都是哈哈----排他
+                for(var j=0;j<inputs.length;j++){
+                    if(inputs[j].type=="button"){
+                        inputs[j].value="呜呜...";
+                    }
+                }
+                //在这行代码之前
+                this.value="哈哈";
+            };
+        }
+    }
+</script>
+</body>
+</html>

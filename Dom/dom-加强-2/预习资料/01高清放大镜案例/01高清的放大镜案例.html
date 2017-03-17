@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>哈哈</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 350px;
+            height: 350px;
+            margin: 100px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .big {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 360px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+
+        .mask {
+            width: 175px;
+            height: 175px;
+            background: rgba(255, 255, 0, 0.4);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            cursor: move;
+            display: none;
+        }
+
+        .small {
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="small"><!--小层-->
+        <img src="images/small.png" width="350" alt=""/>
+        <div class="mask"></div><!--遮挡层-->
+    </div>
+    <div class="big"><!--大层-->
+        <img src="images/big.jpg" width="800" alt=""/><!--大图-->
+    </div>
+</div>
+<script>
+    //先找box层,目的找到里面的小层，遮挡层，大层
+    var box=document.getElementById("box");
+    //小层(小图片的层)
+    var small= box.children[0];
+    //获取遮挡层
+    var mask=small.children[1];
+    //获取大层
+    var big=box.children[1];
+    //获取图片的元素
+    var img=big.children[0];
+    //为显示小图片的层注册鼠标进入的事件,鼠标进入后显示遮挡的黄色的层,还有大层
+    small.onmouseover=function () {
+        //显示遮挡层
+        mask.style.display="block";
+        //显示大层
+        big.style.display="block";
+    };
+    //鼠标离开小层,遮挡层和大层隐藏
+    small.onmouseout=function () {
+        //显示遮挡层
+        mask.style.display="none";
+        //显示大层
+        big.style.display="none";
+    };
+    //为小层注册鼠标移动的事件,让遮挡层跟着鼠标移动
+    small.onmousemove=function (e) {
+        var left=e.clientX-mask.offsetWidth/2;
+        var top=e.clientY-mask.offsetHeight/2;
+        //如果当前移动的元素的父级元素设置了margin-left和margin-top,那么也会影响效果
+        var x=left-100;
+        var y=top-100;
+        x=x<0?0:x;
+        y=y<0?0:y;
+        //如果x的值大于小层减去遮挡层的距离(最大距离),设置为最大距离
+        x=x>small.offsetWidth-mask.offsetWidth?small.offsetWidth-mask.offsetWidth:x;
+        y=y>small.offsetHeight-mask.offsetHeight?small.offsetHeight-mask.offsetHeight:y;
+        //设置坐标
+        mask.style.left=x+"px";
+        mask.style.top=y+"px";
+
+        //遮挡层的移动距离/大图的移动距离=遮挡层的最大的移动距离/大图的最大的移动距离
+        //var 大图的移动距离=x*可以求的/small.offsetWidth-mask.offsetWidth
+        //大图的移动距离=遮挡层的移动距离*大图的最大的移动距离/遮挡层的最大的移动距离
+
+        //遮挡层的最大的移动距离
+        var maskMaxMove=small.offsetWidth-mask.offsetWidth;
+        //大图的最大的移动距离
+        var imgMaxMove=img.offsetWidth-big.offsetWidth;
+        //大图的横着移动的距离
+        var mLeft=x*imgMaxMove/maskMaxMove;
+        //大图的竖着的移动的距离
+        var mTop=y*imgMaxMove/maskMaxMove;
+        //大图移动的时候的坐标
+        //img.style.position="absolute";
+        img.style.marginLeft=-mLeft+"px";
+        img.style.marginTop=-mTop+"px";
+    };
+
+</script>
+</body>
+</html>

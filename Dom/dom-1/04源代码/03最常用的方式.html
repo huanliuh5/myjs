@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<input type="button" value="点我" id="btn" />
+<img src="images/liuyan.jpg" id="im"/>
+<div onclick="alert('啊哈哈')" style="width:200px;height:100px;background-color: yellow"></div>
+
+<script>
+    //这种方式经常用:
+    var btnObj=document.getElementById("btn");
+    //btnObj看成是触发这个事情的事件源
+    //onclick看成是事件的名字
+    //匿名函数看成是事件处理的函数
+    btnObj.onclick=function () {
+        alert("这才是以后经常写代码的方式");
+    };
+    //进行升级的写法
+//    document.getElementById("btn").onclick=function () {
+//        alert("哈哈,完美");
+//    };
+    //解释一个名词
+    //举例子:其他的标签可以不可以有事件
+
+
+//    document.getElementById("im").onclick=function () {
+//        alert("我是球迷");
+//    };
+
+
+    //一般html中的标签都可以添加一个事件,这个事件都可以执行一个函数
+    //上面的这个过程让一个事件调用一个函数:注册事件
+
+</script>
+</body>
+</html>

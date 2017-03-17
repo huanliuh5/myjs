@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //:odd过滤选择器，获取索引为奇数的元素，下标从0开始
+            $("li:odd").css("backgroundColor", "pink");
+
+            //:even过滤选择器，获取索引为偶数的元素。
+            $("li:even").css("backgroundColor", "lightgray");
+
+            //$("li")[9];//DOM对象
+            $("li:eq(9)").css("color", "red");
+            $("li:eq(0)").css("color", "red");
+
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>我是第1个li元素</li>
+    <li>我是第2个li元素</li>
+    <li>我是第3个li元素</li>
+    <li>我是第4个li元素</li>
+    <li>我是第5个li元素</li>
+    <li>我是第6个li元素</li>
+    <li>我是第7个li元素</li>
+    <li>我是第8个li元素</li>
+    <li>我是第9个li元素</li>
+    <li>我是第10个li元素</li>
+</ul>
+</body>
+</html>

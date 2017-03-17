@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="common.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+<input type="button" value="创建表格" id="btn"/>
+<script>
+    var obj={
+        "百度":"http://www.baidu.com",
+        "谷歌":"http://www.goole.com",
+        "优酷":"http://www.youku.com",
+        "爱奇艺":"http://www.aiqiyi.com",
+        "芒果":"http://www.mangguo.com"
+
+    };
+    document.getElementById("btn").onclick=function () {
+        //创建表格---先创建table----创建tr----创建td
+        var table=document.createElement("table");
+        table.border="1";
+        document.body.appendChild(table);//把table加到body中
+        //创建5行tr
+            //第一列是名字,第二列是地址
+            for(var key in obj){
+                var tr=document.createElement("tr");
+                table.appendChild(tr);
+                var td1=document.createElement("td");
+                tr.appendChild(td1);
+                td1.innerText=key;
+                var td2=document.createElement("td");
+                tr.appendChild(td2);
+                td2.innerHTML="<a href="+obj[key]+">"+key+"</a>";
+
+            }
+    };
+
+</script>
+</body>
+</html>

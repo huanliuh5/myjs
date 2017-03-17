@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script src="plugins/jquery.change.js"></script>
+    <script>
+
+        $(function () {
+            //$("div").css("backgroundColor", "red");
+
+            $("div").changeRed();
+            //设置类操作
+            $("p").changeRed().text("我改了内容");
+
+        });
+    </script>
+</head>
+<body>
+<div></div>
+<p>我有内容</p>
+</body>
+</html>

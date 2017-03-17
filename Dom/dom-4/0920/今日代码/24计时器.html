@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+      //计时器
+      //两个参数:第一个参数,函数
+      //第二个参数:时间,1000毫秒==1秒
+//        window.setInterval(f1,50);
+//
+//        function f1() {
+//            alert("注意");
+//        }
+
+      //计时器,页面加载完毕之后,500毫秒之后开始调用函数
+      //该计时器有一个返回值,可以看成是这个计时器的id
+        var setId=setInterval(function () {
+            alert("哈哈哈");
+        },500);
+        clearInterval(setId);//作用:清理计时器,需要计时器的id
+    </script>
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+
+</script>
+</body>
+</html>

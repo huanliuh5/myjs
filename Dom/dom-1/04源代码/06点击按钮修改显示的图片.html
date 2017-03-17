@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+        //$每天开心,快乐,自信,就是这么帅!$
+    </script>
+</head>
+<body>
+<input type="button" value="修改图片" id="btn"/>
+<img src="images/liuyan.jpg" width="300" height="400" alt="哈哈" title="美女" id="im"/>
+<script>
+
+    //根据id获取按钮,注册点击事件,获取图片,修改src属性的值
+    document.getElementById("btn").onclick=function () {
+        document.getElementById("im").src="images/cangjingkong.jpg";
+        document.getElementById("im").title="老师";
+        document.getElementById("im").alt="人";
+
+    };
+    //直接点击图片更换图片
+    document.getElementById("im").onclick=function () {
+        this.src="images/boduo.jpg";
+    };
+
+</script>
+
+</body>
+</html>

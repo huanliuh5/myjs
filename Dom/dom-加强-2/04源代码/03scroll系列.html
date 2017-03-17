@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 300px;
+            height:200px;
+            border: 5px solid red;
+            background-color: pink;
+            /*word-break: keep-all;*/
+            overflow: auto;
+        }
+
+    </style>
+</head>
+<body>
+<div id="dv">
+    我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人
+</div>
+<script src="common.js"></script>
+<script>
+    //获取页面中层的高度
+//    console.log(my$("dv").style.height);//获取不到
+//    console.log(my$("dv").offsetHeight);//获取到了层的高度
+
+//    console.log(my$("dv").offsetHeight);
+//    console.log(my$("dv").scrollHeight);//层中内容的高度
+    //总结:scrollHeight是层中内容的高度,scrollWidth是层中内容的宽度
+
+    //console.log(my$("dv").scrollTop);//0,因为没有拉动滚动条--这事件没触发
+    //console.log(my$("dv").scrollHeight);
+
+    my$("dv").onscroll=function () {
+//      console.log("哈哈,我又变帅了");
+        console.log(my$("dv").scrollTop);//层中内容卷曲出去的内容
+        //scrollTop就是层中内容拉动滚动条滚出去的距离--竖直方向拉动滚动条
+        //scrollLeft是层中内容拉动滚动条滚出去的距离---左右方向拉动滚动条
+    };
+
+
+    //总结:
+    /*
+    * scrollWidth:层中内容实际的宽度
+    * scrollHeight:层中内容实际的高度
+    * scrollLeft:层中内容横向拉动滚出去的距离
+    * scrollTop:层中内容竖直拉动滚出去的距离
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    * */
+
+
+
+</script>
+</body>
+</html>

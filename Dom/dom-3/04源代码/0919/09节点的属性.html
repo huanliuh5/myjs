@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        /*
+        *
+        * 节点:html文档中所有的内容都叫节点:
+        * 标签,文字,属性
+        * 节点属性什么用?
+        *
+        *
+        *
+        * */
+    </script>
+</head>
+<body>
+<div id="dv">
+    <p>层中的第一个p标签</p>哈哈哈
+    <span>层中的第二个标签==span</span>
+    <ul id="uu">
+    <li>火箭</li>
+    <li>热火</li>
+    <li id="three">湖人</li>
+    <li>小牛</li>
+    <li>公牛</li>
+</ul>
+</div>
+
+<script src="common.js"></script>
+
+<script>
+    //获取层
+    var divObj=my$("dv");
+    //获取层中所有的子节点,遍历输出
+    for(var i=0;i<divObj.childNodes.length;i++){
+        var node=divObj.childNodes[i];//每一个子节点
+
+
+        //nodeType结果:1--标签(元素)节点2---属性,3---文本节点
+        //nodeName结果:元素节点:标签的名字,文本节点:#text
+        //nodeValue结果:元素节点:null,文本节点:文本内容
+        console.log(node.nodeType+"==="+node.nodeName+"==="+node.nodeValue);
+
+
+//        console.log(node.nodeType);//节点类型
+//        console.log(node.nodeName);//节点名字
+//        console.log(node.nodeValue);//节点的值
+    }
+
+</script>
+
+
+<script>
+    //var divObj=my$("dv");
+    //console.log(divObj.childNodes.length);//获取的当前元素中所有子节点的个数
+
+
+
+</script>
+
+
+
+
+<script>
+
+//    var liObj=my$("three");//第三个li标签
+//    //获取当前元素的前一个兄弟节点及兄弟元素
+//    console.log(liObj.previousSibling);//当前元素的前一个节点
+//    console.log(liObj.previousElementSibling);//当前元素的前一个兄弟元素
+//    //获取当前元素的后一个兄弟节点及兄弟元素
+//    console.log(liObj.nextSibling);//当前元素的后一个节点
+//    console.log(liObj.nextElementSibling);//当前元素的后一个兄弟元素
+
+
+</script>
+<script>
+    //var liObj=my$("three");
+    //先获取liObj的父节点
+    //console.log(liObj.parentNode);//父节点
+
+//    var divObj=my$("dv");
+//    console.log(divObj.parentNode);//层的父节点是body
+
+
+</script>
+</body>
+</html>

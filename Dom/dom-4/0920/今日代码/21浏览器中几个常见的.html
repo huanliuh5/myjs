@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        //window.confirm("哈哈哈");//有返回值,返回值是true或者是false
+        //如果是true证明用户点击了确定
+        //如果是false证明用户点击了取消
+        if(confirm("你确定要离开我吗?")){
+            console.log("啊,你会后悔的");
+        }else{
+            console.log("我就知道你会继续的缠着我");
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="去百度" id="btn"/>
+<script src="common.js"></script>
+<script>
+    document.getElementById("btn").onclick=function () {
+        location.href="http://www.baidu.com";//跳转页面
+    };
+</script>
+</body>
+</html>

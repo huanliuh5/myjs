@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+
+        $(function () {
+            $("body").click(function () {
+                console.log("我执行了body的click事件")
+            });
+
+            $("div").click(function () {
+                console.log("我执行了div的click事件");
+            });
+
+            $("p").click(function (e) {
+                console.log("我执行了p的click事件");
+                //e.stopPropagation();
+                return false;
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+</body>
+</html>

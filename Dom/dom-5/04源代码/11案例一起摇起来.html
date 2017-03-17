@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #dv{
+            width: 500px;
+            height:400px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="摇起来" id="btn"/>
+<div id="dv">
+    <div class="s-mine-wrapper clearfix">
+        <div class="s-code-blocks s-block-nav" data-block="nav" data-status="normal">
+            <div class="s-block-container">
+                <div class="s-mblock-title s-opacity-border4-bottom">
+                    <div class="title-content">
+                        <div class="edit-tool" style="display:none;">
+                            <div class="tool-item edit-indir" style="display: none;"><input class="tool-add-dir"
+                                                                                            type="text" maxlength="19">
+                                <div class="dir-enter">添加</div>
+                                <div class="dir-cancel">取消</div>
+                            </div>
+                            <div class="tool-item edit-add"><span class="add-icon"></span><span>添加分类</span></div>
+                            <div class="tool-item set-btn edit-comp" data-cmd="unedit">完成</div>
+                        </div>
+                        <span class="mine-title"> <div class="mine-title-icon"> <em></em> </div><span
+                                class="mine-title-text"> 我的导航 </span><span
+                                class="mine-title-num"> (<span>16</span>) </span> </span></div>
+                    <div class="s-setbar" style="display: block;" data-hassimp="" data-issimp="0">
+                        <div class="set-bar-content">
+                            <div class="set-menu">
+                                <div class="set-btn set-add" data-cmd="add" title="添加"> 添加</div>
+                                <div class="set-btn set-edit" data-cmd="edit" title="编辑"> 编辑</div>
+                                <div class="set-btn edit-class classed" style="display: inline-block;"><span
+                                        class="class-icon"></span><span>分类显示</span></div>
+                                <div class="set-btn fanli-class classed" data-cmd="fanli"><span
+                                        class="class-icon"></span><span>返利模式</span></div>
+                                <div class="set-btn set-totop" data-cmd="totop" title="置顶"
+                                     style="color: rgb(153, 153, 153);"> 置顶
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-mblock-content s-opacity-blank3 block-classed block-nav-fanli">
+                    <div class="dir-item s-opacity-blank3" data-dir="1">
+                        <div class="dir-border s-opacity-blank3"></div>
+                        <div class="white-border"></div>
+                        <div class="dir-name s-opacity-blank3"><span class="name-text">综合</span> <input type="text"
+                                                                                                        value="综合"
+                                                                                                        class="edting-dir-name"
+                                                                                                        maxlength="19">
+                        </div>
+                        <div class="dir-content s-opacity-blank3">
+                            <div class="d-nav-item s-opacity-blank3" data-nav="5812398"
+                                 data-url="http://www.cnblogs.com/"><a class="border-for-item" title="博客园"
+                                                                       href="http://www.cnblogs.com/" data-fanliurl=""
+                                                                       target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/7991.png" alt="博客园"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">博客园</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="2508012"
+                                 data-url="http://www.microsoft.com/"><a class="border-for-item" title="微软中国官方网站"
+                                                                         href="http://www.microsoft.com/"
+                                                                         data-fanliurl="" target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/9321.png" alt="微软中国官方网站"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">微软中国官方网站</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="1129555"
+                                 data-url="http://map.baidu.com/"><a class="border-for-item" title="百度地图"
+                                                                     href="http://map.baidu.com/" data-fanliurl=""
+                                                                     target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/95561.png" alt="百度地图"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">百度地图</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="10949893"
+                                 data-url="http://www.12306.cn/"><a class="border-for-item" title="铁路客服中心"
+                                                                    href="http://www.12306.cn/" data-fanliurl=""
+                                                                    target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/81407.png" alt="铁路客服中心"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">铁路客服中心</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="10207920"
+                                 data-url="http://www.apple.com.cn/"><a class="border-for-item" title="苹果官网"
+                                                                        href="http://www.apple.com.cn/" data-fanliurl=""
+                                                                        target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss2.bdstatic.com/kfoZeXSm1A5BphGlnYG/icon/7618.png" alt="苹果官网"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">苹果官网</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="4028844"
+                                 data-url="http://pan.baidu.com/"><a class="border-for-item" title="百度网盘"
+                                                                     href="http://pan.baidu.com/" data-fanliurl=""
+                                                                     target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/7656.png" alt="百度网盘"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">百度网盘</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="14248412"
+                                 data-url="http://play.baidu.com/"><a class="border-for-item" title="百度音乐盒"
+                                                                      href="http://play.baidu.com/" data-fanliurl=""
+                                                                      target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/95513.png" alt="百度音乐盒"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">百度音乐盒</span>
+                                </div>
+                            </a></div>
+                        </div>
+                        <div class="del-dir"><span class="del-dir-icon"></span><span class="del-dir-text">删除分类</span>
+                        </div>
+                    </div>
+                    <div class="dir-item s-opacity-blank3" data-dir="4">
+                        <div class="dir-border s-opacity-blank3"></div>
+                        <div class="white-border"></div>
+                        <div class="dir-name s-opacity-blank3"><span class="name-text">购物</span> <input type="text"
+                                                                                                        value="购物"
+                                                                                                        class="edting-dir-name"
+                                                                                                        maxlength="19">
+                        </div>
+                        <div class="dir-content s-opacity-blank3">
+                            <div class="d-nav-item s-opacity-blank3" data-nav="4502220"
+                                 data-url="http://www.taobao.com/"><a class="border-for-item" title="淘宝"
+                                                                      href="http://www.taobao.com/" data-fanliurl=""
+                                                                      target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/95487.png" alt="淘宝"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">淘宝</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="3567131"
+                                 data-url="http://www.360buy.com/"><a class="border-for-item fanli-item-border"
+                                                                      title="京东" href="http://www.360buy.com/"
+                                                                      data-fanliurl="http://vip.baidu.com/cps/show/goto?mallid=101&amp;product_id=0&amp;disable_goto_flag=0&amp;url=65af23ixG1F61hYZkro9MV3kP3w75o5MQ2T69rWH0Nn%252B04v8Hx48%252BidPVLh4oA&amp;sharekey=&amp;statkey=zw_super_m_101&amp;vip_frm=super_mynav"
+                                                                      target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/95475.png" alt="京东"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">京东</span><span
+                                        class="s-fanli-tag"
+                                        data-fanlimall="http://vip.baidu.com/m_101?vip_frm=super_mynav_mall"
+                                        title="最高返利80.00%"> </span></div>
+                            </a></div>
+                        </div>
+                        <div class="del-dir"><span class="del-dir-icon"></span><span class="del-dir-text">删除分类</span>
+                        </div>
+                    </div>
+                    <div class="dir-item s-opacity-blank3" data-dir="8">
+                        <div class="dir-border s-opacity-blank3"></div>
+                        <div class="white-border"></div>
+                        <div class="dir-name s-opacity-blank3"><span class="name-text">影视</span> <input type="text"
+                                                                                                        value="影视"
+                                                                                                        class="edting-dir-name"
+                                                                                                        maxlength="19">
+                        </div>
+                        <div class="dir-content s-opacity-blank3">
+                            <div class="d-nav-item s-opacity-blank3" data-nav="5248376"
+                                 data-url="http://www.tudou.com/"><a class="border-for-item" title="土豆网"
+                                                                     href="http://www.tudou.com/" data-fanliurl=""
+                                                                     target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/95503.png" alt="土豆网"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">土豆网</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="5915062"
+                                 data-url="http://www.youku.com/"><a class="border-for-item" title="优酷网"
+                                                                     href="http://www.youku.com/" data-fanliurl=""
+                                                                     target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/95489.png" alt="优酷网"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">优酷网</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="6300424"
+                                 data-url="http://video.baidu.com/v?word=%BB%F0%D3%B0%C8%CC%D5%DF"><a
+                                    class="border-for-item" title="火影忍者"
+                                    href="http://video.baidu.com/v?word=%BB%F0%D3%B0%C8%CC%D5%DF" data-fanliurl=""
+                                    target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/95582.png" alt="火影忍者"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">火影忍者</span>
+                                </div>
+                            </a></div>
+                        </div>
+                        <div class="del-dir"><span class="del-dir-icon"></span><span class="del-dir-text">删除分类</span>
+                        </div>
+                    </div>
+                    <div class="dir-item s-opacity-blank3" data-dir="10">
+                        <div class="dir-border s-opacity-blank3"></div>
+                        <div class="white-border"></div>
+                        <div class="dir-name s-opacity-blank3"><span class="name-text">理财</span> <input type="text"
+                                                                                                        value="理财"
+                                                                                                        class="edting-dir-name"
+                                                                                                        maxlength="19">
+                        </div>
+                        <div class="dir-content s-opacity-blank3">
+                            <div class="d-nav-item s-opacity-blank3" data-nav="8384964"
+                                 data-url="http://www.cmbchina.com/"><a class="border-for-item" title="招商银行"
+                                                                        href="http://www.cmbchina.com/" data-fanliurl=""
+                                                                        target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/95556.png" alt="招商银行"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">招商银行</span>
+                                </div>
+                            </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="6309271" data-url="http://www.ccb.com/">
+                                <a class="border-for-item" title="中国建设银行" href="http://www.ccb.com/" data-fanliurl=""
+                                   target="_blank">
+                                    <div class="nav-del">
+                                        <div class="del-icon"></div>
+                                    </div>
+                                    <img src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/95553.png" alt="中国建设银行"
+                                         height="16" width="16" class="nav-icon">
+                                    <div class="nav-text"><span class="nav-item-edit"></span><span
+                                            class="nav-text-content">中国建设银行</span></div>
+                                </a></div>
+                            <div class="d-nav-item s-opacity-blank3" data-nav="1167048"
+                                 data-url="http://www.cebbank.com/"><a class="border-for-item" title="光大银行"
+                                                                       href="http://www.cebbank.com/" data-fanliurl=""
+                                                                       target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/7841.png" alt="光大银行"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">光大银行</span>
+                                </div>
+                            </a></div>
+                        </div>
+                        <div class="del-dir"><span class="del-dir-icon"></span><span class="del-dir-text">删除分类</span>
+                        </div>
+                    </div>
+                    <div class="dir-item dir-blank s-opacity-blank3" data-dir="12" style="display:none;">
+                        <div class="dir-border s-opacity-blank3"></div>
+                        <div class="white-border"></div>
+                        <div class="dir-name s-opacity-blank3"><span class="name-text">未分类</span></div>
+                        <div class="dir-content s-opacity-blank3"></div>
+                    </div>
+                    <div class="dir-item s-opacity-blank3" data-dir="5">
+                        <div class="dir-border s-opacity-blank3"></div>
+                        <div class="white-border"></div>
+                        <div class="dir-name s-opacity-blank3"><span class="name-text">游戏</span> <input type="text"
+                                                                                                        value="游戏"
+                                                                                                        class="edting-dir-name"
+                                                                                                        maxlength="19">
+                        </div>
+                        <div class="dir-content s-opacity-blank3">
+                            <div class="d-nav-item s-opacity-blank3" data-nav="11441624"
+                                 data-url="http://web.sanguosha.com/"><a class="border-for-item" title="三国杀网页版"
+                                                                         href="http://web.sanguosha.com/"
+                                                                         data-fanliurl="" target="_blank">
+                                <div class="nav-del">
+                                    <div class="del-icon"></div>
+                                </div>
+                                <img src="https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/95540.png" alt="三国杀网页版"
+                                     height="16" width="16" class="nav-icon">
+                                <div class="nav-text"><span class="nav-item-edit"></span><span class="nav-text-content">三国杀网页版</span>
+                                </div>
+                            </a></div>
+                        </div>
+                        <div class="del-dir"><span class="del-dir-icon"></span><span class="del-dir-text">删除分类</span>
+                        </div>
+                    </div>
+                    <textarea id="s_minenav_textarea" style="display:none;">{"dirs": [{"dirId": "1","dirName": "综合"},{"dirId": "4","dirName": "购物"},{"dirId": "8","dirName": "影视"},{"dirId": "10","dirName": "理财"},{"dirId": "12","dirName": "未分类"},{"dirId": "5","dirName": "游戏"}],"isClassify": "1","isSimp": "0","hasSimp": "","newAdd": "","navCount": "16"}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="s-all-blank" style="display: none;">
+            <div class="blank-add-btn"> 添加</div>
+        </div>
+        <textarea id="s_minetpl_textarea" style="display:none;">{"tplOffSet": [{"id": "12","name": "我的股票","ename": "stock"},{"id": "7","name": "我的星座","ename": "xingzuo"},{"id": "20","name": "我的小说","ename": "novel"},{"id": "10","name": "我的彩票","ename": "lottery"},{"id": "15","name": "我的视频","ename": "video"}],"tplOnSet": [{"id": "1","name": "我的导航","ename": "nav"}]}</textarea>
+    </div>
+
+</div>
+<script src="common.js"></script>
+<script>
+    var setId=null;//定义变量用来保存计时器的id
+    //点击按钮注册点击事件，获取层，设置层的随机位置就可以了
+    document.getElementById("btn").onclick=function () {
+        clearInterval(setId);//每次点击按钮的时候先把计时器的id清理
+        var divObj=document.getElementById("dv");
+        divObj.style.position="absolute";
+        //计时器
+        setId=setInterval(function () {//执行计时器中的代码并获取该计时器的id
+            //设置层的随机的位置----设置层的left和top
+            divObj.style.left=parseInt(Math.random()*100+1)+"px";
+            divObj.style.top=parseInt(Math.random()*100+1)+"px";
+        },20);//100毫秒
+    };
+
+</script>
+</body>
+</html>

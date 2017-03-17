@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<script>
+
+    //点击按钮修改按钮的value属性的值
+    //1.获取按钮--根据id来获取---id唯一的标识
+    //返回的是id为btn的元素,元素可以看成是一个对象
+    var btnObj=document.getElementById("btn");
+    //2.为按钮注册一个点击的事件---匿名函数就是点击事件的处理函数
+    btnObj.onclick=function () {
+        this.value="好帅";//谁触发了这个事件，这个this就是谁
+        //btnObj.value="好帅";
+    };
+    var btnObj=document.getElementById('btn');
+    btnObj.onclick=function(){
+        this.value='好帅';
+    };
+</script>
+
+</body>
+</html>

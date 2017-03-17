@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("ul li").mouseover(function () {
+                //获取当前元素，修改背景色
+                $(this).css("background", "pink");
+                //把自己兄弟的元素改成白
+                //怎么获取自己的兄弟元素？
+                //
+                $(this).siblings("li").css("background","white");
+            });
+
+            //给ul绑定一个鼠标离开的事件，把所有的子级li全部改成白色
+            $("ul").mouseout(function () {
+                $(this).children("li").css("background", "white");
+            });
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>我是第1个li元素</li>
+    <li>我是第2个li元素</li>
+    <li>我是第3个li元素</li>
+    <li>我是第4个li元素</li>
+    <li>我是第5个li元素</li>
+    <li>我是第6个li元素</li>
+    <li>我是第7个li元素</li>
+    <li>我是第8个li元素</li>
+</ul>
+</body>
+</html>

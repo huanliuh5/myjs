@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid  black;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("#btnAppend").click(function () {
+                $("div").append($(".outer"));
+            });
+
+
+            $("#btnPrepend").click(function () {
+
+                //追加到子级的最前面
+                $("div").prepend($(".outer"));
+            });
+
+            $("#btnAfter").click(function () {
+                //添加在调用者的后面，作为兄弟元素
+                $("div").after($(".outer"));
+            });
+
+            $("#btnBefore").click(function () {
+                //添加到调用者的前面，作为兄弟元素
+                $("div").before($(".outer"));
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="append" id="btnAppend">
+<input type="button" value="prepend" id="btnPrepend">
+<input type="button" value="after" id="btnAfter">
+<input type="button" value="before" id="btnBefore">
+
+<div>
+    我是div的内容
+    <p>我是p元素的内容</p>
+</div>
+<div>
+    我是div的内容
+    <p>我是p元素的内容</p>
+</div>
+
+<p class="outer">我是外面的p元素</p>
+</body>
+</html>

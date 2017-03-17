@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        console.log(typeof $);
+        console.log($ === jQuery);
+
+
+        //1. 参数是function,入口函数
+        $(function () {
+
+        });
+
+        //2. 参数是DOM对象，把DOM对象转换成jquery对象
+        $(document).ready(function () {
+
+        });
+
+        //3. 参数是一个字符串,获取页面中的元素
+        $("div")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .odd{
+            background-color: red;
+        }
+        .even{
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="变色" id="btn" />
+<ul id="u">
+    <li>火箭</li>
+    <li>湖人</li>
+    <li>老牛</li>
+    <li>小牛</li>
+    <li>公牛</li>
+</ul>
+<p>哈哈哈</p>
+<script>
+
+
+
+
+       document.getElementById("btn").onclick=function () {
+           var ulObj=document.getElementById("u");//获取ul
+                //获取ul中所有的li,使用节点的方式来获取和设置
+           var nodes=ulObj.getElementsByTagName("li");//获取ul下的所有的子节点
+           var index=0;
+           for(var i=0;i<nodes.length;i++){
+
+                   if(index%2===0){
+                       //偶数
+                       nodes[i].className="odd";
+                   }else{
+                       //奇数
+                       nodes[i].className="even";
+                   }
+                   index++;
+
+               }
+
+
+
+       };
+</script>
+</body>
+</html>

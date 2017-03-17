@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="button" value="点我" id="btn"/>
+<script src="common.js"></script>
+<script>
+    /*
+    * 注册事件的三种方式:
+    * 1.
+    * 对象.on+事件名字=匿名函数;
+    * 例子:
+    * my$("btn").onclick=function(){};
+    * 2.
+    * 对象.addEventListener(事件的名字,事件处理函数,false);
+    * 例子:
+    * my$("btn").addEventListener("click",function () {console.log("1")},false);
+    * 3.对象.attachEvent(事件的名字,事件处理函数);
+    * 例子:
+    * my$("btn").attachEvent("onclick",function () {console.log("3");});
+    *
+    * */
+
+
+
+
+
+    //为按钮注册多个相同的事件
+    /*
+    * 参数:
+    * 1.事件的名字(事件的类型)
+    * 2.事件处理的函数(匿名函数--命名函数)
+    * 3.false
+    * 第一个参数是事件的名字,没有on
+    * */
+
+
+    //IE8不支持,谷歌支持,火狐支持
+//    my$("btn").addEventListener("click",function () {
+//        console.log("1");
+//    },false);
+//    my$("btn").addEventListener("click",function () {
+//        console.log("2");
+//    },false);
+//    my$("btn").addEventListener("click",function () {
+//        console.log("3");
+//    },false);
+
+    //
+    /*
+    * 参数:
+    * 1.事件的名字(事件的类型)
+    * 2.事件处理的函数
+    * 注意:事件的名字 有on
+    * */
+    //谷歌不支持这个方法  IE8支持
+    //事件调用的顺序有疑问.
+    my$("btn").attachEvent("onclick",function () {
+        console.log("1");
+    });
+    my$("btn").attachEvent("onclick",function () {
+        console.log("2");
+    });
+    my$("btn").attachEvent("onclick",function () {
+        console.log("3");
+    });
+
+</script>
+
+</body>
+</html>

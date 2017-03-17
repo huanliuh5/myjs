@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width:200px;
+            height:100px;
+            background-color: pink;
+            left:100px;
+            position:absolute;/*加上脱标,不会出bug*/
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+
+    //不可靠了---------
+   //console.log(my$("dv").offsetLeft);//0
+    //getComputedStyle两个参数:
+    //第一个参数；要获取的元素
+    //第二个参数:null
+    //谷歌可以使用,IE8不能用
+    //console.log(window.getComputedStyle(my$("dv"),null).left);
+    //谷歌不行,IE8可以用
+   // console.log(my$("dv").currentStyle.left);
+
+    //console.log(window.getComputedStyle(my$("dv"),null)["left"]);
+
+    //console.log(my$("dv").currentStyle["left"]);
+    //任意的元素可以获取任意的属性的值
+    function getStyle(element,attr) {
+        return element.currentStyle?element.currentStyle[attr]:window.getComputedStyle(element,null)[attr]||0;
+    }
+    console.log(getStyle(my$("dv"),"left"));
+    console.log(getStyle(my$("dv"),"top"));//这是bug
+    console.log(getStyle(my$("dv"),"width"));
+    console.log(getStyle(my$("dv"),"height"));
+
+</script>
+
+
+<script>
+
+//    console.log(my$("dv").style.width);//不能获取元素的宽
+//    console.log(my$("dv").offsetWidth);//可以获取的
+
+//    my$("dv").style["width"]="400px";
+//    console.log(my$("dv").offsetWidth);//可以获取的
+
+
+</script>
+
+</body>
+</html>

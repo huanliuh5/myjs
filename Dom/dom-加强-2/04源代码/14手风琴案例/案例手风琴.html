@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        ul {
+            list-style: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        div {
+            width: 1150px;
+            height: 400px;
+            margin: 50px auto;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+
+        div li {
+            width: 240px;
+            height: 400px;
+            float: left;
+        }
+
+        div ul {
+            width: 1300px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script src="common.js"></script>
+<script>
+    //页面加载了
+    //加载图片,以背景的方式显示图片
+    //获取所有li,为每个li标签设置背景图片
+    var lis=my$("box").children[0].children;
+    for(var i=0;i<lis.length;i++){
+        lis[i].style.backgroundImage="url(images/"+(i+1)+".jpg)";
+        //鼠标进入li和鼠标离开li
+        lis[i].onmouseover=mouseoverHandle;
+        lis[i].onmouseout=mouseoutHandle;
+    }
+    function mouseoverHandle() {//鼠标进入
+        //其他的为100
+        for(var j=0;j<lis.length;j++){
+            animate(lis[j],{"width":100});
+        }
+        //当前的li的宽度为800
+        animate(this,{"width":800});
+    }
+    function mouseoutHandle(){//鼠标离开
+        for(var j=0;j<lis.length;j++){
+            animate(lis[j],{"width":240});
+        }
+    }
+
+    //今天封装的动画函数的代码理解过程即可,最主要的是  : : : 会调用就行
+</script>
+</body>
+</html>

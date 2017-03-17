@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+    <style>
+        div{
+            width: 300px;
+            height:2000px;
+            border:5px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="dv"></div>
+    <script>
+        window.onscroll=function () {
+          console.log(window.pageYOffset);//谷歌支持,IE8不支持
+          console.log(document.documentElement.scrollTop);//IE8支持
+          console.log(document.body.scrollTop);//谷歌支持,IE8不支持
+        };
+
+        function getTop() {
+            var top= window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+            return top;
+        }
+        function getLeft() {
+            var left= window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0;
+            return left;
+        }
+//        function getScroll() {
+//            var top= window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+//            var left= window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0;
+//            var obj={};
+//            obj.left=left;
+//            obj.top=top;
+//            return obj;
+//        }
+
+//        function getScroll() {
+//            var obj={
+//                 top: window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0,
+//                left: window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0
+//            };
+//            return obj;
+//        }
+
+        function getScroll() {
+            return {
+                top: window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0,
+                left: window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0
+            };
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--shift+回车-->
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+
+
+        //会等待页面加载完成，并且等待页面中所有的文件都加载完成之后才执行。
+        window.onload = function () {
+            console.log("我是js的入口函数");
+        };
+
+
+        //会等待文档树加载完成，并不会等待图片以及文件的加载。
+        //jquery的入口函数第一种写法
+        $(document).ready(function () {
+            console.log("我是jquery的第一种入口函数的写法")
+        });
+
+        //jquery的入口函数第二种写法
+        $(function () {
+            console.log("我是jquery的第二种入口函数的写法");
+        });
+
+    </script>
+
+</head>
+<body>
+
+<img src="http://img.daimg.com/uploads/allimg/160324/1-160324232117.jpg">
+<img src="http://img.daimg.com/uploads/allimg/160318/1-16031P01P0.jpg">
+<img src="http://img.daimg.com/uploads/allimg/160318/1-16031P01332.jpg">
+<img src="http://img.daimg.com/uploads/allimg/160608/1-16060R35630.jpg" alt="">
+<img src="http://img.daimg.com/uploads/allimg/160531/1-160531224303.jpg" alt="">
+
+</body>
+</html>

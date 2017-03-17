@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            var money = 100;
+            $("#p1").on("click", {name:"zs",age:"18"}, function (e) {
+                alert(e.data.name);
+            });
+            money -= 100;
+            $("#p2").on("click", money, function (e) {
+                alert(e.data);
+            });
+        });
+    </script>
+</head>
+<body>
+<p id="p1">我是p1的内容</p>
+<p id="p2">我是p2的内容</p>
+</body>
+</html>

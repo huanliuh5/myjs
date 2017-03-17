@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cls{
+            width: 200px;
+            height:100px;
+            background-color: red;
+            border:1px solid green;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="设置样式" id="btn"/>
+<div id="dv">
+
+</div>
+<script>
+    //解决一个问题
+   //设置元素样式如果设置很多属性的值,代码写很多,怎么办
+    document.getElementById("btn").onclick=function () {
+        //如果设置元素的类样式不是用class,而是用className(特殊的地方)
+        document.getElementById("dv").className="cls";
+    };
+
+</script>
+
+</body>
+</html>

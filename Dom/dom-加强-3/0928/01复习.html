@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+
+        /*
+        * 1.如何通过document直接获取元素
+        *       1.1title:document.title  可以获取title标签中的值也可以设置
+        *       1.2body:document.body---对象
+        *       1.3html:document.documentElement---对象
+        * 2.scroll系列
+        *   scrollLeft:卷曲水平(横着)出去的距离
+        *   scrollTop:卷曲传值(竖着)出去的距离
+        *   scrollWidth:元素里面内容的宽度,不包括border
+        *   scrollHeight:元素里面内容的高度,不包括border
+        *
+        * 3.封装scrollTop和scrollLeft---针对浏览器的卷曲出去的距离
+        *   function getScroll(){
+        *       return {
+        *           left: window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0,
+        *           top:window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0
+        *       }
+        *   }
+        *
+        * 4.固定导航栏案例
+        *
+        *
+        *
+        * 5.缓动动画函数的封装
+        *
+        * 封装的函数的参数:
+        * element:任意的元素
+        * json:属性和属性的目标值
+        * fn:回调函数
+        * 增加的任意属性
+        * 增加的任意多个属性
+        * 增加了回调函数
+        * 增加了层级和透明度(把透明度处理:*100,最终的结果/100)
+        *
+        *
+        * 5.1    获取元素计算后的属性的值的方法和进行封装
+        *
+        *
+        * //        console.log(my$("dv").style.left);//不能获取
+         //        console.log(my$("dv").style["left"]);//上面.的方式可以写成下面[]的方式来设置和获取属性的值
+
+         //        //这种方式可以获取元素计算后的样式的属性的值
+         //        //下面的这个方式:谷歌浏览器支持,IE8不支持
+         //        console.log(window.getComputedStyle("元素",null).left);
+         //        //转换写法
+         //        console.log(window.getComputedStyle("元素",null)["left"]);
+         //        //下面的这个方式:谷歌浏览器不支持,IE8支持
+         //        console.log("元素".currentStyle.left);
+         //        //转换写法
+         //        console.log("元素".currentStyle["left"]);
+         //        //兼容的代码
+         //        function getStyle(element,attr) {
+         //            //首先element.currentStyle.left中可以把element.currentStyle看成是对象
+         //            //所以element.currentStyle可以用来判断有没有这个对象,实质是判断浏览器是否支持这个element.currentStyle
+         //            return element.currentStyle?element.currentStyle[attr]:window.getComputedStyle(element,null)[attr];
+         //        }
+        *
+        * 6.筋斗云案例:鼠标点的时候云彩能够停留在li标签的位置实际上是一个假象,是点击li的时候让云彩记录了此次点击li的left值(位置),离开的时候才是让云彩移动到这里
+        * 7.缓动动画函数升级
+        * 8.手风琴案例--有bug
+        * 9.开机案例---注意最后的一步是设置外层的宽度贱贱的隐藏
+        * 10.旋转木马案例---
+        *       10.1 图片散开实际上是设置每个li的位置及层级和透明度....
+        *       10.2 要熟练使用数组的四个方法
+        *       10.3 锁:定义一个布尔类型的变量,开始设置该变量的值为true,点击按钮的时候立刻设置为false,到动画结束的时候设置为true(在调用animate的回调函数中设置的)
+        *
+        *
+        * 11.图片飞的案例---存在隐藏的兼容问题
+        *  1.事件参数:为元素注册事件，在事件的处理函数中使用arguments.length的方式来获取事件中是否有参数:1个,所以，可以自己在注册事件的时候，向事件的处理的函数中传入一个参数,发现IE8浏览器中是没有这个事件参数的,不能使用e,只能使用window.event方式
+        *  my$("btn").onclick=function(e){//有一个参数
+        *       //console.log(arguments.length);//1
+        *       console.log(e);//是一个事件
+        *       clientX:可视区域的横坐标
+        *       clientY:可视区域的纵坐标
+        *       //IE8支持,谷歌支持,火狐不支持,
+        *       console.log(window.event.clientX);
+        *       //兼容的写法
+        *       e=e||window.event;
+        *
+        *
+        *  }
+        *
+        * */
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

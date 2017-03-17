@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+
+            $("#btnAnimate").click(function () {
+                $("#d1").animate({
+                    "left":"800px"
+                }, 10000, "swing");
+
+                $("#d2").animate({
+                    "left":"800px"
+                }, 10000, "linear");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="自定义动画" id="btnAnimate">
+<div id="d1"></div>
+<br>
+<div id="d2"></div>
+</body>
+</html>

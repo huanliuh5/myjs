@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+        //$每天开心,快乐,自信,就是这么帅!$
+    </script>
+</head>
+<body>
+<input type="button" value="获取元素" id="btn"/>
+<div id="dv">
+    <p>层中的第一个p标签</p>哈哈哈
+    <span>层中的第二个标签==span</span>
+    <ul id="uu">
+        <li>火箭</li>
+        <li>热火</li>
+        <li id="three">湖人</li>
+        <li>小牛</li>
+        <li>公牛</li>
+
+
+
+    </ul>
+</div>
+<script src="common.js"></script>
+
+<script>
+    //获取的是当前父级元素中的第一个子元素----兼容代码
+    function getFirstElement(element) {
+        if(element.firstElementChild){
+            //浏览器如果支持这个属性则直接返回第一个子元素
+            return element.firstElementChild;
+        }else{//浏览器不支持firstElementChild属性
+            var node=element.firstChild;//获取父元素中的第一个子节点
+            //如果node不为空,并且node的类型是1,则证明是一个标签,如果不是则继续找后面的子节点
+            while(node&&node.nodeType!=1){
+                node=node.nextSibling;//当前子节点的下一个节点
+            }
+            //如果循环结束,表示node中存储的是一个标签节点
+            return node;
+        }
+    }
+//    var ulObj=my$("uu");
+//    console.log(getFirstElement(ulObj).innerText);
+
+    //获取的是当前父级元素中的最后一个子元素---兼容代码
+    function getLastElement(element) {
+        if(element.lastElementChild){//浏览器支持这个属性则直接返回
+            return element.lastElementChild;
+        }else{//浏览器不支持这个属性
+            var node=element.lastChild;
+            while(node&&node.nodeType!=1){
+                //这个节点不是标签,继续向前找节点
+                node=node.previousSibling;
+            }
+            return node;
+        }
+    };
+   // console.log(getLastElement(ulObj).innerText);
+
+    //获取当前元素的后一个兄弟元素
+    function getNextElement(element) {
+        if(element.nextElementSibling){
+            return element.nextElementSibling;
+        }else{
+            var node=element.nextSibling;
+            while(node&&node.nodeType!=1){
+                node=node.nextSibling;
+            }
+            return node;
+        }
+
+    }
+
+    //获取当前元素的前一个兄弟元素
+    function getPreviousElement(element) {
+        if(element.previousElementSibling){
+            return element.previousElementSibling;
+        }else{
+            var node=element.previousSibling;
+            while(node&&node.nodeType!=1){
+                node=node.previousSibling;
+            }
+            return node;
+        }
+    }
+
+//    var liObj=my$("three");
+//    console.log(getNextElement(liObj).innerText);
+//    console.log(getPreviousElement(liObj).innerText);
+
+    //获取当前元素的所有的兄弟元素
+
+    function getSiblingElement(element) {
+        var elements=[];//存储的是所有兄弟元素
+        //先找当前元素的前面的所有的兄弟元素
+        var node=element.previousSibling;
+        while(node){
+            if(node.nodeType==1){//是标签
+                elements.push(node);
+            }
+            node=node.previousSibling;
+        }
+        //找当前元素的后面的所有的兄弟元素
+        node=element.nextSibling;
+        while(node){
+            if(node.nodeType==1){
+                elements.push(node);
+            }
+            node=node.nextSibling;
+        }
+        return elements;
+    }
+
+    var li=my$("three");//第三个Li标签
+    var lis=getSiblingElement(li);
+    for(var i=0;i<lis.length;i++){
+        console.log(lis[i].innerText);
+    }
+</script>
+
+
+<script>
+
+
+
+
+
+//    var ulObj=my$("uu");
+//    console.log(ulObj.firstElementChild);//获取第一个子元素,IE8中不支持
+//    console.log(ulObj.firstChild);//第一个子节点,IE8中忽略了空白的节点
+</script>
+</body>
+</html>

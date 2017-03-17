@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>哈哈</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 350px;
+            height: 350px;
+            margin: 100px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .big {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 360px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+
+        .mask {
+            width: 175px;
+            height: 175px;
+            background: rgba(255, 255, 0, 0.4);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            cursor: move;
+            display: none;
+        }
+
+        .small {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="small"><!--小层-->
+        <img src="images/small.png" width="350" alt=""/>
+        <div class="mask"></div><!--遮挡层-->
+    </div>
+    <div class="big"><!--大层-->
+        <img src="images/big.jpg" width="800" alt=""/><!--大图-->
+    </div>
+</div>
+<!--导入外部的js文件-->
+<script src="common.js"></script>
+<!--开始写代码-->
+<script>
+
+    //先获取box的层,这个层需要注册鼠标进入和离开的事件
+    var box=my$("box");//外面的层
+    //根据box来获取small层
+    var small=box.children[0];
+    //获取遮挡的层
+    var mask=small.children[1];
+    //获取大层
+    var big=box.children[1];
+    //获取大图
+    var img=big.children[0];
+    //鼠标进入到小层显示大层和遮挡层
+    small.onmouseover=function () {
+        mask.style.display="block";
+        big.style.display="block";
+    };
+    //鼠标离开小层隐藏大层和遮挡层
+    small.onmouseout=function () {
+        mask.style.display="none";
+        big.style.display="none";
+    };
+    //鼠标在small层中移动
+    small.onmousemove=function (e) {
+        var left=e.clientX-mask.offsetWidth/2;
+        var top=e.clientY-mask.offsetHeight/2;
+        var x=left-100;
+        var y=top-100;
+        console.log(x);
+        //x和y的最小值
+        x=x<0?0:x;
+        y=y<0?0:y;
+        //x和y的最大值
+        x=x>small.offsetWidth-mask.offsetWidth?small.offsetWidth-mask.offsetWidth:x;
+        y=y>small.offsetHeight-mask.offsetHeight?small.offsetHeight-mask.offsetHeight:y;
+        //设置遮挡层的left和top
+        mask.style.left=x+"px";
+        mask.style.top=y+"px";
+
+        //遮挡层的移动距离/大图的移动距离=遮挡层的最大的移动距离/大图的最大移动距离
+        //大图的移动距离=遮挡层的移动距离*大图的最大移动距离/遮挡层的最大的移动距离
+        //大图的最大移动距离
+        var imgMaxMove=img.offsetWidth-big.offsetWidth;
+        //遮挡层的最大移动距离
+        var maskMaxMove=small.offsetWidth-mask.offsetWidth;
+
+        //求大图的移动距离
+        var imgLeft=x*imgMaxMove/maskMaxMove;
+        var imgTop=y*imgMaxMove/maskMaxMove;
+
+        //设置一下大图的移动
+        img.style.marginLeft=-imgLeft+"px";
+        img.style.marginTop=-imgTop+"px";
+
+
+
+
+
+    };
+
+</script>
+</body>
+</html>

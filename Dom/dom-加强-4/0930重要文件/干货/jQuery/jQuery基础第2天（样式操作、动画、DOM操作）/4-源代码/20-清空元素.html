@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //使用empty方法不会内容泄漏
+            //只是把内容清空（清理门户）
+            //$("div").empty();
+            //$("div").html("");
+
+
+            //自杀
+            $("div").remove();
+
+        });
+    </script>
+</head>
+<body>
+<div>
+    我是div的内容
+    <p>我是p元素的内容</p>
+    <span>我是span元素的内容</span>
+</div>
+</body>
+</html>

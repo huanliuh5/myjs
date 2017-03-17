@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+
+        /*
+        * innerText和textContent 都是设置文字内容的,如果设置的内容当中有标签，也会直接的以文本的方式显示(标签的<>都会按照转义的方式进行解析)
+        * innerText和textContent都可以获取某个标签中的文字内容(不包括标签)
+        * innerHTML可以设置标签中的文字内容和标签
+        * innerHTMl获取的是文字和标签
+        *
+        * 如果想要在标签中只是设置和获取文字内容用innerText或者是textContent
+        * 如果想要在标签中设置或者获取文字和标签用innerHTML
+        *
+        * 实际上:用innerHTML也可以只是设置文字和获取文字
+        *
+        *
+        * */
+
+
+    </script>
+
+</head>
+<body>
+<input type="button" value="设置innerText" id="btn1"/>
+<input type="button" value="获取innerText" id="btn2"/>
+
+<div id="dv">
+    <p>这是一个p</p>
+</div>
+<script src="common.js"></script>
+<script>
+    //点击按钮设置层的中间的文字内容
+    my$("btn1").onclick=function () {
+        //innerText在火狐浏览器不支持.
+        //textContent谷歌和火狐浏览器都支持,IE8不支持
+       // my$("dv").textContent="床前明月光，班主去开窗,遇到一耳光,牙齿掉光光" ;
+        //my$("dv").innerText="床前明月光，班主去开窗,遇到一耳光,牙齿掉光光" ;
+        //my$("dv").innerText="<p>这是一个p</p>";
+        //my$("dv").innerHTML="<p>这是一个p</p>";
+    };
+
+    my$("btn2").onclick=function () {
+       // console.log(my$("dv").innerText);
+        console.log(my$("dv").innerHTML);
+    };
+
+
+</script>
+</body>
+</html>

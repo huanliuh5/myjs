@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="创建文本框" id="btn"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+        //点击按钮创建多个文本框添加到层中
+//    my$("btn").onclick=function () {
+//        //循环遍历创建多个字符串
+//        var str="";//字符串变量用来存储多个文本框标签的字符串
+//        for(var i=0;i<10;i++){//大量字符串拼接
+//            str+="<input type='text' value='' /><br/>";
+//        }
+//      my$("dv").innerHTML=str;
+//    };
+</script>
+<script>
+    my$("btn").onclick=function () {
+        //循环遍历创建多个字符串
+        var arr=[];//字符串变量用来存储多个文本框标签的字符串
+        for(var i=0;i<10;i++){//大量字符串拼接
+            arr.push("<input type='text' value='' /><br/>");
+        }
+        my$("dv").innerHTML=arr.join("");
+    };
+
+</script>
+</body>
+</html>

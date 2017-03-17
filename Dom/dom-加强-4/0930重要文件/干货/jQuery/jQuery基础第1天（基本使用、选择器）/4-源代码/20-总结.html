@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+1. 怎么使用jquery？
+2. DOM对象与jquery对象的转换
+    DOM-->jquery   :   $(domObj)
+    jquery-->DOM   :   $li[0], $li.get(0)
+
+3. 基本选择器
+    id选择器   $("#id")
+    类选择     $(".class")
+    标签       $("tagName");
+    并集选择器：$("selector1,selector2")
+    (交集)标签指定式选择器：
+            li.class
+            li#id
+
+4. 层级选择器
+    子代选择器：$("selector1>selector2")
+    后代选择器: $("selector1 selector2")
+
+5. 过滤选择器
+    :odd   奇数
+    :even  偶数
+    :eq(index)   相等
+
+6. 筛选选择器
+    children(["selector"])
+    find("selector");
+    siblings(["selector"]);
+    parent()
+    next()
+    index()
+    eq(index)
+
+</body>
+</html>

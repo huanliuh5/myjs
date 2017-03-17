@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="隐藏" id="btn"/>
+<div>
+    <ul id="uu">
+        <li>卡卡西</li>
+        <li>大蛇丸</li>
+        <li>自来也</li>
+        <li>凤姐</li>
+        <li>芙蓉姐姐</li>
+    </ul>
+</div>
+<script>
+    //获取按钮注册事件，获取ul 设置类样式
+    function my$(id) {
+        return document.getElementById(id);
+    }
+    my$("btn").onclick=f1;
+    function f1() {
+        my$("uu").className="hide";
+    };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+//        $(document).ready(function () {
+//
+//        });
+
+        $(function () {
+            //设置单个样式
+            //css(name, value)
+            // name:需要设置的样式名  value:对应的样式值
+//            $("li").css("backgroundColor", "pink");
+//
+//            $("li").css("color", "red");
+//
+//            $("li").css("fontSize", "24px");
+
+
+            //同时设置多个样式
+            //css(obj)
+            $("li").css({
+                "backgroundColor":"pink",
+                "color":"red",
+                "fontSize":"24px"
+            });
+
+            $("li").eq(0).css("fontSize", "32px");
+
+
+            //获取样式
+            //css(name)
+            //name:需要获取的样式名
+            //注意：获取的时候，如果有多个元素，返回的是第一个元素的样式
+            var fontSize = $("li").css("fontSize");
+            console.log(fontSize);
+        });
+
+    </script>
+</head>
+<body>
+<ul>
+    <li>内裤</li>
+    <li>五分裤</li>
+    <li>七分裤</li>
+    <li>九分裤</li>
+    <li>牛仔裤</li>
+    <li>运动裤</li>
+</ul>
+</body>
+</html>

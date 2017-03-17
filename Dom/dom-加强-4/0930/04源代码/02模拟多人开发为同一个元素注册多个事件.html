@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="button" value="揍我" id="btn"/>
+
+<script src="common.js"></script>
+
+<script>
+
+//    console.log(my$("btn").onclick);//null
+//    console.log(my$("btn")["onclick"]);//null
+
+    my$("btn").onclick=function () {
+        console.log("搜噶");
+    };
+    //1.这个代码的类型是什么
+    //2.这行能够证明这个事件已经有内容了
+    //console.log(typeof my$("btn")["onclick"]);//函数代码
+
+    //如何判断一个事件里面是否有处理函数了
+    //可以通过typeof判断类型是否为function
+
+    if(my$("btn")["onclick"]==null){
+        console.log("该事件没有被注册,没有处理函数");
+    }else{
+        console.log("有的");
+        my$("btn")["onclick"]();
+    }
+</script>
+
+
+
+
+
+<script>
+//    my$("btn").onclick=function () {
+//        console.log("哈哈,我又变帅了");
+//    };
+    //转变一下
+//    my$("btn")["on"+"click"]=function () {
+//        console.log("这也可以");
+//    };
+//    my$("btn")["on"+"mouseover"]=function () {
+//        this.style.backgroundColor="yellow";
+//    };
+//    my$("btn")["on"+"mouseout"]=function () {
+//        this.style.backgroundColor="";
+//    };
+
+
+
+
+//    var obj={
+//        sayHi:function () {
+//            console.log("萨瓦迪卡....阿涅哈斯诶呦");
+//        }
+//
+//    };
+//    obj.sayHi();
+//    obj["sayHi"]();
+
+</script>
+
+
+
+
+<!--<script src="test1.js"></script>-->
+<!--<script src="test2.js"></script>-->
+<script>
+
+    //第三个人
+//    my$("btn").onclick=function () {
+//        console.log("就这么走路，我已经被揍了3次了");
+//    };
+
+    /*
+    * 多个人同时为一个按钮注册自己的点击事件
+    * 如何解决同一个元素注册多个相同的事件,不被覆盖的问题?
+    * 需要写一个函数进行封装---解决的思路
+    *
+    * //事件:
+    * 触发事件的对象
+    * 事件的名字(事件的类型)
+    * 事件处理的函数
+    *
+    *
+    * */
+</script>
+
+</body>
+</html>

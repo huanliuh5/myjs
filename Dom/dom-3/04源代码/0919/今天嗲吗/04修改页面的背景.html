@@ -1,0 +1,60 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>哈哈,我又变帅了</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-image: url(images/1.jpg);
+        }
+        #mask {
+            background-color:  rgba(255,255,255,0.3);
+            height: 200px;
+            text-align: center;
+        }
+        #mask img {
+            width: 200px;
+            margin-top: 35px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="mask">
+    <img src="images/1.jpg" alt="">
+    <img src="images/2.jpg" alt="">
+    <img src="images/3.jpg" alt="">
+</div>
+<script src="common.js"></script>
+
+<script>
+
+    //console.log(document.title);//获取的title标签中的值
+   // document.title="人生就是一场戏";
+
+
+
+
+    //先根据id获取层,再根据这个层获取层中的所有的图片标签(元素),为每个图片标签注册事件(图片标签可以叫元素，可以叫对象)
+    var imgObjs=my$("mask").getElementsByTagName("img");
+    for(var i=0;i<imgObjs.length;i++){
+        imgObjs[i].onclick=clickHandle;
+    }
+    function clickHandle() {
+        //如何获取body标签--特殊--可以直接通过document.body来获取
+        document.body.style.backgroundImage="url("+this.src+")";
+        //title
+    }
+</script>
+
+</body>
+</html>

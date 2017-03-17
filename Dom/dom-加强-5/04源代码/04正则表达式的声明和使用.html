@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+
+        /*
+        *
+        * 正则表达式一般都写在""中   "\d{5}" 其他语言中的写法
+        * 在js中的正则的写法:  /正则表达式/ 举例子:  /\d{5}/
+        *
+        * 正则表达式的对象的创建和声明
+        * 第一种写法: 通过构造函数的方式来创建正则表达式对象
+        * var reg= new RegExp();
+        * var reg=new RegExp(/正则表达式/);
+        * 第二种写法: 以字面量的方式来创建正则
+        * var reg= /正则表达式/;
+        * */
+        //创建对象
+//        var reg=new RegExp(/\d{3}/);//字符串中的数字出现了3次
+//        //调用方法进行匹配
+//        var result=reg.test("我今天吃了345个面45包2");
+//        console.log(result);
+//        var reg=new RegExp(/[0-9]{1,4}/);
+//        console.log(reg.test("我有450个女朋友"));
+//        var reg=/\d{3}/;
+//        console.log(reg.test("我的QQ是110"));
+
+        //此时:正则表达式匹配的是这一坨字符串中只要有三个数字在一起就可以匹配,true
+        //console.log(/\d{3}/.test("哈哈哈被我征服了吧,798"));
+
+        //此时:正则表达式匹配的是这一拖字符串是不是三个数字在一起的:严格的匹配
+        //console.log(/^\d{3}$/.test("哈哈哈被我征服了吧,798"));
+
+        //console.log(/^\d{3}$/.test("798"));
+
+
+//        console.log(/./.test("除了回车换行以为的任意字符"));//true
+//        console.log(/.*/.test("0个到多个"));//true
+//        console.log(/.+/.test("1个到多个"));//true
+//        console.log(/.?/.test("哈哈"));//true ---
+//        console.log(/[0-9]/.test("9527"));//true
+//        console.log(/[a-z]/.test("what"));//true
+//        console.log(/[A-Z]/.test("Are"));//true
+//        console.log(/[a-zA-Z]/.test("干啥子"));//false
+//        console.log(/[0-9a-zA-Z]/.test("9ebg"));//true
+//        console.log(/(b|a)ra/.test("abra"));//true-----以后少写
+//        console.log(/[a-z]{2,3}/.test("ar"));//true
+
+
+//        console.log(/\d/.test("998"));//true
+//        console.log(/\d*/.test("998"));//true
+//        console.log(/\d+/.test("998"));//true
+//        console.log(/\d{0,}/.test("998"));//true
+//        console.log(/\d{2,3}/.test("998"));//true
+//        console.log(/\D/.test("eat"));//true=======
+//        console.log(/\s/.test("  "));//true
+//        console.log(/\S/.test("嘎嘎"));//true-
+//        console.log(/\w/.test("hi9527哦"));//true
+//        console.log(/\W/.test("$%^"));//true
+
+       // console.log(/<br [/]>/.test("哈哈,今天又帅了<br />"));
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

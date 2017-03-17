@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            width: 4000px;
+            height: 4000px;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+
+        $(window).scroll(function () {
+
+            //获取垂直滚动条的滚动距离
+            var result = $(this).scrollTop();
+
+
+            var leftResult = $(this).scrollLeft();
+            console.log("top:"+result+",left:"+leftResult);
+        });
+
+        $(function () {
+
+            $("#btnset").click(function () {
+                $(window).scrollTop(100);
+                $(window).scrollLeft(100);
+            });
+        });
+
+
+
+    </script>
+</head>
+<body>
+<input type="button" value="设置滚动条的距离" id="btnset">
+</body>
+</html>

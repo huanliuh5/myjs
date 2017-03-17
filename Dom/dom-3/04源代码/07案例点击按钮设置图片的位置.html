@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height:500px;
+            border: 2px solid red;
+        }
+        img{
+            width: 300px;
+            height:500px;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="设置位置" id="btn"/>
+<div id="dv">
+    <img src="images/liuyan.jpg" alt="美铝" id="img1" />
+</div>
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick=function () {
+
+        //改变图片的大小
+        my$("img1").style.width="500px";
+        my$("img1").style.height="800px";
+        my$("dv").style.width="500px";
+        my$("dv").style.height="800px";
+        //设置图片的位置的同时改变图片的大小
+
+        //改变位置
+        my$("dv").style.left="200px";
+        my$("dv").style.top="100px";
+        my$("dv").style.position="absolute";
+
+        //透明度
+        my$("dv").style.opacity=0.2;//特殊，可以直接是数字类型
+
+        my$("dv").style.zIndex=10;//也是数字的
+
+    };
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+            position: absolute;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="button" value="移动到800" id="btn"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick=function () {
+        animate(my$("dv"),800);
+    };
+    function animate(element,target) {
+        clearInterval(element.setId);
+        element.setId=setInterval(function () {
+            var current=element.offsetLeft;
+            var step=(target-current)/10;
+            //抽了
+            //step=current<target?step:-step;
+            step=step>0?Math.ceil(step):Math.floor(step);
+            current+=step;
+            element.style.left=current+"px";
+            if(current==target){
+                clearInterval(element.setId);
+            }
+//            if(current!=target){
+//                element.style.left=current+"px";
+//               //满足条件的代码
+//            }else{
+//                clearInterval(element.setId);
+//            }
+            console.log("current:"+current+"target:"+target+"step:"+step);
+        },20);
+    }
+
+</script>
+</body>
+</html>

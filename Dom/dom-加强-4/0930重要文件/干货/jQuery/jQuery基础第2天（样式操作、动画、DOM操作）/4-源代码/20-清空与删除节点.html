@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+
+            //内存泄漏
+            //$("div").html("");
+
+
+            //清空元素,本身还在（清理门户）
+            //empty()
+            //$("div").empty();
+
+
+            //remove()
+            //删除元素（自杀）
+            $("div").remove();
+        });
+    </script>
+</head>
+<body>
+<div>
+    我是div的内容
+    <p>我是p的内容</p>
+    <span>我是span的内容</span>
+</div>
+</body>
+</html>

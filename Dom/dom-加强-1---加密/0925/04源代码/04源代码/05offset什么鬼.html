@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #dv1{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+            position: absolute;
+            left:100px;
+        }
+    </style>
+</head>
+<body>
+<div id="dv1"></div>
+<script src="common.js"></script>
+<script>
+    //这种方式获取不到元素的当前位置
+    //console.log(my$("dv1").style.left);
+    //就想获取元素的当前的位置:
+    /*
+    * 元素设置位置:需要有left和top
+    *
+    * 可以使用offset系列
+    * 总结:在style标签中设置的样式的值都获取不到
+    *
+    *
+    * offset中有
+    * offsetLeft:元素在页面中的当前位置距离页面左侧的像素(不准确的)
+    * offsetTop
+    * offsetWidth
+    * offsetHeight
+    *
+    * 总结offset:获取的是数字类型的值,没有px
+    * */
+
+   // console.log(my$("dv1").style.width);
+
+    //测试:
+    console.log(my$("dv1").offsetLeft);
+    console.log(my$("dv1").offsetTop);
+    console.log(my$("dv1").offsetWidth);
+    console.log(my$("dv1").offsetHeight);
+
+
+
+
+
+</script>
+</body>
+</html>

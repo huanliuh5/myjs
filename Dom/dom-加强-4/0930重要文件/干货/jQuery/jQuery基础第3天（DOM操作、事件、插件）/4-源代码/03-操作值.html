@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //console.log($("#txt").val());
+            //var result = $("#txt").attr("value");
+            //console.log(result);
+
+            //$("#txt").val("我是nll");
+
+//            var result = $("#hobby").val();
+//            console.log(result);
+
+//            $("#hobby").val("2");
+
+            //$("#descript").val("我是内容");
+
+            $("#btn").click(function () {
+                var result = $("#hobby").val();
+                console.log(result);
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="获取值" id="btn">
+<input type="text" value="我是内容" id="txt">
+<select id="hobby" multiple>
+    <option value="1">篮球</option>
+    <option value="2">足球</option>
+    <option value="3">气球</option>
+</select>
+
+<textarea id="descript" cols="30" rows="10"></textarea>
+</body>
+</html>

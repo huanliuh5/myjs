@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+1. 样式操作(★★★★★)
+    1.1 css操作
+        设置单个样式：css(name, value)
+        设置多个样式：css(obj)  {"name":"value","name":"value",...}
+        获取样式：css(name)  :注意：如果是多个元素，获取操作返回的是第一个元素对应的样式。
+    1.2 class操作
+        添加类：addClass(name)
+        移除类：removeClass(name)
+        判断类：hasClass(name)
+        切换类：toggleClass(name)
+
+2. 动画
+    2.1 三组基本动画
+        show/hide
+        slideDown/slideUp/slideToggle
+        fadeIn/fadeOut/fadeTogger/fadeTo
+
+        show([speed],[callback])
+        speed:可以是毫秒值，可以是字符串
+    2.2 自定义动画
+        animate(obj, speed, [easing], [callback])
+
+</body>
+</html>

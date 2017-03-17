@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="创建列表" id="btn"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    //点击按钮创建列表
+    var names=["小黑","小白","嘿嘿","白白","卡卡西"];
+    //获取按钮，注册点击事件,创建ul,循环遍历创建li
+    my$("btn").onclick=function () {
+        var str="<ul>";
+        for(var i=0;i<names.length;i++){
+            str+="<li>"+names[i]+"</li>";
+        }
+        str+="</ul>";
+      my$("dv").innerHTML=str;
+    };
+</script>
+</body>
+</html>

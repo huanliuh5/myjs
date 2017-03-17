@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+</head>
+<body>
+<script>
+    //后期的时候可能会经常的用到浏览器的scrollTop和scrollLeft,所以,要封装
+    //由于各个浏览器的兼容问题,所以,获取浏览器的scrollTop和scrollLeft有可能方式不一样,所以封装的同时还要考虑兼容的问题
+
+//    function getScrollLeft() {
+//        var left=  window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0;
+//        return left;
+//    }
+//    function getScrollTop() {
+//        var top= window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+//        return top;
+//    }
+
+    //确实不好,太麻烦了
+
+//    function getScroll() {
+//        var left=  window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0;
+//        var top= window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+//        var obj={};
+//        obj.left=left;
+//        obj.top=top;
+//        return obj;
+//    }
+//
+
+
+//    function getScroll() {
+//        var obj={};
+//        obj.left=  window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0;
+//        obj.top= window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+//        return obj;
+//    }
+
+//    function getScroll() {
+//        var obj={
+//            left: window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0,
+//            top: window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0
+//        };
+//        return obj;
+//    }
+
+
+    function getScroll() {
+       return   {
+            left: window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0,//获取的浏览器的scrollLeft
+            top: window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0//获取的浏览器的scrollTop
+        };
+    }
+
+    //下面的代码需要理解,对象熟练之后自己玩
+//
+//    var scroll={
+//        left: window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0,
+//        top: window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0
+//
+//    };
+
+
+
+
+</script>
+
+</body>
+</html>

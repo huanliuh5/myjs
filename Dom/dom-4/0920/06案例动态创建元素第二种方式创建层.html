@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="创建一个层" id="btn"/>
+
+<script src="common.js"></script>
+
+<script>
+   //点击按钮创建一个层,设置层的位置,
+    my$("btn").onclick=function () {
+        //如果标签元素加到层中的时候,为了不让body中内容覆盖，所以需要累加字符串
+      document.body.innerHTML+="<div id='dv'></div>";
+        //代码执行到这里的时候,层已经有了
+        my$("dv").style.width="300px";
+        my$("dv").style.height="200px";
+        my$("dv").style.backgroundColor="red";
+        my$("dv").style.left="300px";
+        my$("dv").style.top="100px";
+        my$("dv").style.position="absolute";
+    };
+
+</script>
+</body>
+</html>

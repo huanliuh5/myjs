@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type=text/css> div {
+        font-size: 12px;
+        font-family: arial
+    }
+
+    .baidu {
+        font-size: 14px;
+        line-height: 24px;
+        font-family: arial
+    }
+
+    a, a:link {
+        color: #0000cc;
+    }
+
+    .baidu span {
+        color: #6f6f6f;
+        font-size: 12px
+    }
+
+    a.more {
+        color: #008000;
+    }
+
+    a.blk {
+        color: yellow;
+        font-weight: bold;
+    }</style>
+    <script>
+        /*
+        * 动态创建元素
+        * 创建元素三种方式:
+        * 1.document.write("字符串类型的标签拼接");
+        * 2.对象元素.innerHTML="字符串类型的标签拼接";
+        * 3.document.createElement("标签名字");
+        *
+        *
+        *
+        * */
+    </script>
+</head>
+<body>
+<input type="button" value="创建一个p标签" id="btn" />
+
+<script src="common.js"></script>
+<script>
+    //获取按钮，注册事件，创建p标签
+    my$("btn").onclick=function () {
+        //第一种方式创建p标签
+        document.write("<p>这是一个p标签</p>");
+        //缺点:把页面中原有的内容全部干掉.
+
+    };
+</script>
+
+
+
+<script language="JavaScript" type="text/JavaScript" src="http://news.baidu.com/ns?word=title%3A%E5%87%A4%E5%A7%90&tn=newsfcu&from=news&cl=2&rn=5&ct=0"></script>
+</body>
+</html>

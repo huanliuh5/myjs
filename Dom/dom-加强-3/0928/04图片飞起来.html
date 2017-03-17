@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+
+        div{
+            width: 200px;
+            height: 1000px;
+            border: 1px solid red;
+        }
+        img{
+
+            position: absolute;
+            margin-left: -120px;
+            margin-top: -100px;
+        }
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+
+
+<img src="images/tianshi.gif" id="img1" />
+<div id="dv">
+
+</div>
+<script src="common.js"></script>
+<script>
+    //设置图片脱离文档流
+    var imgObj=document.getElementById("img1");
+
+    document.onmousemove=function (e) {
+        imgObj.style.left=eventTools.getPageX(e)+120+"px";
+        imgObj.style.top=eventTools.getPageY(e)+100+"px";
+    };
+</script>
+</body>
+</html>

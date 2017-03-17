@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+        //递归:自己抽自己,把自己抽晕了,就停止了
+        //递归:函数中调用自己，要有结束条件，递归
+        //一般少用,效率不高
+//        var i=0;
+//        function f1() {
+//            i++;
+//            if(i<5){
+//                console.log("从前有个山，山里有个庙，庙里有个老和尚,老和尚给小和尚说书");
+//                f1();
+//            }
+//        }
+//        f1();
+
+
+        //求5个数的累加和
+//        function addNum(num) {
+        //            if(num==1){
+        //                return 1;
+        //            }
+        //            return num+addNum(num-1);//5+4  4+3  3+2 2+1
+        //        }
+        //        var result=addNum(5);
+        //        console.log(result);
+
+        //求一个数字 各个位的数的和
+        function getEveryNum(num) {
+             if(num<10){
+                 return num;
+             }
+             return parseInt(num%10+getEveryNum(num/10));
+        }
+
+        var result=getEveryNum(124);// parseInt(12%10+12/10)
+        console.log(result);
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

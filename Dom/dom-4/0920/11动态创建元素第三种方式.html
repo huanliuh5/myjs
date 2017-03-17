@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="创建一个文本框" id="btn"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    //点击创建一个文本框
+    my$("btn").onclick=function () {
+        //创建的是input标签,不是文本框
+        var inputObj=document.createElement("input");
+        inputObj.id="txt";//设置该对象的id属性和值
+        inputObj.value="我是文本框";
+        inputObj.type="text";//设置input标签为文本框
+        my$("dv").appendChild(inputObj);//切记:一定要创建标签后立刻，马上，必须加入到元素中
+
+
+    };
+</script>
+</body>
+</html>

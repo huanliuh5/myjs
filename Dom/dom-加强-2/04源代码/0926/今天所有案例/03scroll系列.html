@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 300px;
+            height:200px;
+            border:5px solid red;
+            overflow: auto;
+            /*word-break: keep-all;*/
+        }
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<div id="dv">
+    我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人我喜欢男人
+</div>
+<script src="common.js"></script>
+<script>
+    console.log(my$("dv").offsetHeight);//层的高度,
+    console.log(my$("dv").scrollTop+"==="+my$("dv").scrollHeight);
+    my$("dv").onscroll=function () {
+      //console.log(this.scrollTop);
+        //层的高度是offsetHeight
+        //层中文字内容的高度是scrollHeight
+        //滚动条拉动的时候卷出去的距离
+        console.log(my$("dv").scrollTop+"==="+my$("dv").scrollHeight);
+    };
+
+</script>
+
+</body>
+</html>

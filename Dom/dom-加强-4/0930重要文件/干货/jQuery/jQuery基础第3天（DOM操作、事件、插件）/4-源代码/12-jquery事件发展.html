@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+//            $("p").click(function () {
+//                alert("事件触发了");
+//            });
+//
+//            $("p").mouseenter(function () {
+//                alert("事件触发了");
+//            });
+
+
+//            $("p").bind("click mouseenter", function () {
+//                alert("事件触发了");
+//            });
+
+            $("#btnAdd").click(function () {
+                $("div").append("<p>我是新增加的p元素</p>");
+            });
+
+
+            //支持动态创建元素绑定事件
+            $("div").delegate("p", "click", function () {
+                alert("事件触发了");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="新增" id="btnAdd">
+    <div>我是div元素的内容
+        <p>我是p元素的内容</p>
+        <p>我是p元素的内容</p>
+        <p>我是p元素的内容</p>
+        <span>我是span的内容</span>
+    </div>
+</body>
+</html>

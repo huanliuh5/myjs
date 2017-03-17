@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .parentWrap {
+            width: 200px;
+            text-align: center;
+        }
+
+        .parentWrap > li {
+            border: 1px solid #999;
+            background-color: #e0ecff;
+        }
+
+        .groupTitle {
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .parentWrap ul {
+            background-color: #fff;
+            display: none;
+        }
+
+        .friends > li {
+            background: white;
+            height: 28px;
+            line-height: 28px;
+            border-bottom: 1px solid #999;
+            cursor: default;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //1. 点击span，div展示或者隐藏
+            $(".groupTitle").click(function () {
+
+                //判断下一个兄弟的显示状态
+                var isShow = $(this).next().css("display");
+                if(isShow === "block") {
+                    $(this).next().hide();
+                }else {
+                    //让下一个兄弟展示
+                    $(this).next().show()
+                            .parent()
+                            .siblings()
+                            .children("ul").hide();
+                }
+            });
+
+
+            //2. 点击好友，高亮选择
+            $(".friends>li").click(function () {
+                //先让所有的li背景色改成白色
+                $(".friends>li").css("background", "white");
+                //让当前li背景色改成绿色
+                $(this).css("background", "green");
+            });
+        });
+    </script>
+</head>
+
+<body>
+<ul class="parentWrap">
+    <li>
+        <span class="groupTitle">我的好友</span>
+        <ul class="friends">
+            <li>小1 - 好友</li>
+            <li>小2 - 好友</li>
+            <li>小3 - 好友</li>
+            <li>小4 - 好友</li>
+            <li>小5 - 好友</li>
+        </ul>
+    </li>
+    <li>
+        <span class="groupTitle">土豪们</span>
+        <ul class="friends">
+            <li>小1 - 好友</li>
+            <li>小2 - 好友</li>
+            <li>小3 - 好友</li>
+            <li>小4 - 好友</li>
+            <li>小5 - 好友</li>
+        </ul>
+    </li>
+    <li>
+        <span class="groupTitle">程序猿</span>
+        <ul class="friends">
+            <li>小1 - 好友</li>
+            <li>小2 - 好友</li>
+            <li>小3 - 好友</li>
+            <li>小4 - 好友</li>
+            <li>小5 - 好友</li>
+        </ul>
+    </li>
+    <li>
+        <span class="groupTitle">美工妹子</span>
+        <ul class="friends">
+            <li>小1 - 好友</li>
+            <li>小2 - 好友</li>
+            <li>小3 - 好友</li>
+            <li>小4 - 好友</li>
+            <li>小5 - 好友</li>
+        </ul>
+    </li>
+</ul>
+</body>
+
+</html>

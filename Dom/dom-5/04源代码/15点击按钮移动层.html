@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height:100px;
+            background-color: green;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<input type="button" value="移动" id="btn"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    //获取按钮,注册点击事件,获取层
+    //计时器,设置层的style.left值,每次增加
+    var setId=null;
+    my$("btn").onclick=function () {
+        clearInterval(setId);//放置用户手欠一直不停的点击按钮,所以,每次点击按钮的时候先把原来的计时器清理掉
+        var divObj=my$("dv");//层移动到800px就结束了
+        divObj.style.position="absolute";//层移动需要脱离文档流
+        var left=0;//定义变量,目的是每次移动多少像素
+        setId=setInterval(function () {
+            left+=9;//每次移动9px
+            if(left>=800){
+                //停止计时器,并且可以直接设置left值为800;
+                clearInterval(setId);//清理
+                left=800;
+            }
+            divObj.style.left=left+"px";
+        },20);
+    };
+</script>
+</body>
+</html>

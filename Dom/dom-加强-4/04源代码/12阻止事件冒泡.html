@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <style>
+
+        #dv1{
+            width: 150px;
+            height:150px;
+            background-color: red;
+        }
+        #dv2{
+            width: 100px;
+            height:100px;
+            background-color: green;
+        }
+        #dv3{
+            width: 80px;
+            height:80px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body id="bd">
+
+<div id="dv1">
+    <div id="dv2">
+        <div id="dv3">
+
+        </div>
+    </div>
+</div>
+<script src="common.js"></script>
+<script>
+    my$("dv1").onclick=function () {
+         console.log(this.id);
+    };
+    my$("dv2").onclick=function () {
+        console.log(this.id);
+    };
+    my$("dv3").onclick=function (e) {
+        console.log(this.id);
+        //1
+        //e.stopPropagation();//谷歌和火狐浏览器支持
+        //2
+        //window.event.cancelBubble=true;//IE8中阻止事件冒泡的写法
+        e=e||window.event;
+        if(e.stopPropagation){
+            e.stopPropagation();
+        }else{
+            e.cancelBubble=true;
+        }
+    };
+    //如果用户点击了最里面的层,其他层的事件不再执行---阻止事件冒泡
+    //阻止事件冒泡的写法:
+    //浏览器之间写法不一样
+
+</script>
+<script>
+
+    /*
+    * 事件冒泡:
+    * A元素中有一个B元素,A元素和B元素注册了相同的事件,如果B元素的事件触发了,那么A元素的事件也会被触发:
+    *
+    *
+    *
+    *
+    * */
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style></style>
+</head>
+<body>
+
+</body>
+<script>
+    //indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+    function getIndex(str,keyWords){
+        var index=0;
+        var i=0;
+        while((index=str.indexOf(keyWords,index)!=-1)){
+            i++;
+            console.log(keyWords+"出现第"+i+"次的索引是"+index);
+            index+=keyWords.length;
+        }
+    }
+
+    var str="传说在传智播客有个讲师叫小杨,小杨很帅,很纯洁,小杨是智慧和勇敢的化身.第一次听人这么说我不相信于是我怀着试试看的心情来到了传智播客,见到了传说中的小杨。哇塞,小杨岂止是帅简直就是帅的无法用言语来形容."
+    var keyWords="小杨";
+    getIndex(str,keyWords);
+//    function getNewStr(str,keyWords){
+//        while(str.indexOf(keyWords)!=-1){
+//            str=str.indexOf(keyWords,"美女");
+//        }
+//        return str;
+//    }
+//    console.log(getNewStr(str,keyWords));
+</script>
+</html>

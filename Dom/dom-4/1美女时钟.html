@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<img src="" id="im" />
+<script>
+
+
+
+    //页面加载后就执行
+    window.onload=function () {
+        function f1() {
+            //获取当前的时间
+            var dt=new Date();
+            //获取对应的小时
+            var h=dt.getHours();
+            //获取对应的秒
+            var sec=dt.getSeconds();
+            //设置小时和秒数小于10的时候做一个拼接0的处理
+            h=h<10?"0"+h:h;
+            sec=sec<10?"0"+sec:sec;
+            //获取的是图片的标签
+            var imgObj=document.getElementById("im");
+            //设置图片标签的路径
+            imgObj.src="meimei/"+h+"_"+sec+".jpg";
+        }
+        f1();
+        //在计时器中获取当前的时间
+        setInterval(f1,1000);
+    };
+
+
+</script>
+</body>
+</html>

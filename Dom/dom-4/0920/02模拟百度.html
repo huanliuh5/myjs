@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 450px;
+            margin: 200px auto;
+        }
+
+        #txt{
+            width: 350px;
+        }
+        #pop {
+            width: 350px;
+            border: 1px solid red;
+        }
+
+        #pop ul {
+            margin: 10px;
+            padding: 0px;
+            width: 200px;
+            list-style-type: none;
+
+        }
+        #pop ul li {
+
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="box">
+    <input type="text" id="txt">
+    <input type="button" value="搜索" id="btn">
+</div>
+
+<script src="common.js"></script>
+<script>
+    var keyWords = ["今天天气很好","今后都是人","今天走了","我都是好孩子","三里屯美女很多","苍茫的天涯我的爱","hello"];
+    document.getElementById('txt').onkeyup=function(){
+
+        //判断页面中是否有层
+        if(document.getElementById('dv')){
+            document.body.removeChild(document.getElementById('dv'));
+        }
+        var tempArray=[];
+        for(var i=0;i<keyWords.length;i++){
+            var item=keyWords[i];//获取字符串
+            if(item.indexOf(this.value)===0){
+                tempArray.push(item);
+            }
+        }
+        if(this.value.length===0||tempArray.length===0){
+            if(document.getElementById('dv')){
+                document.body.removeChild(document.getElementById('dv'));
+            }
+            return;
+        }
+        //创建一个层
+        var dvObj=document.createElement('div');
+        dvObj.id='dv';
+        //层显示到文本框的下面
+        //层脱离文档流
+        dvObj.style.position='absolute';
+        dvObj.style.width='300px';
+        //dvObj.style.height='120px';
+        dvObj.style.border='1px solid red';
+        dvObj.style.left=this.offsetLeft+'px';
+        dvObj.style.top=this.offsetTop+this.offsetHeight+2+'px';
+
+        //把层添加到body中
+        document.body.appendChild(dvObj);
+        for(var i=0;i<tempArray.length;i++){
+            //创建p标签
+            var pObj=document.createElement('p');
+            pObj.style.cursor='pointer';
+            pObj.style.margin='3px';
+            //把数组中的数据显示到p标签中
+            pObj.innerText=tempArray[i];
+            //设置p标签的高亮显示的效果
+            pObj.onmouseover=function(){
+                this.style.backgroundColor='yellow';
+            };
+            pObj.onmouseout=function(){
+                this.style.backgroundColor='';
+            };
+            //把p标签添加到层中
+            dvObj.appendChild(pObj);
+        }
+
+    };
+</script>
+<script>
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        /*
+         * 样式操作:2种方式:
+         * 1. 标签.style.属性=值;
+         * 2. 标签.className="值";
+         *
+         * 事件注册的代码可以有三种写法:
+         * 1.在html标签中直接写js
+         * 2.在DOM操作中为标签的事件赋值匿名的函数
+         * 3.在DOM操作中为标签的事件赋值命名的函数
+         *
+         *
+         * 几个特殊的属性在DOM操作中设置的值只能为true或者是false
+         * 1.disabled 可以禁用文本框
+         * 2.checked
+         * 3.selected
+         *
+         * 如果一个元素的样式是通过style属性设置的,那么在DOM操作中是可以直接获取的
+         * <div style="display:none"> document.getElementById(id).style.display;
+         * 如果一个元素的样式是通过style标签设置的,那么在DOM操作中不能直接获取
+         * <style>
+         *
+         *     div{
+         *        display:none;
+         *     }
+         * </style>
+         * document.getElementById(id).style.display;是无法获取到里面属性的值
+         * 获取到的值是： 空
+         * 使用类样式的方式来解决
+         *
+         * 如果在DOM操作中使用到了大量的字符串拼接了,使用数组的方式来追加
+         *
+         * innerHTML和innerText的区别:
+         * innerHTML可以设置和获取标签和文本内容
+         * innerText可以设置和获取文本内容
+         *
+         * innerText和textContenTet的区别:
+         * innerText属性IE8支持,低版本的火狐浏览器不支持
+         * textContent属性火狐支持,IE8不支持
+         *
+         * innerHTML和innerText小区别
+         * 如果仅仅是设置文字内容,使用innerHTML要好于innerText
+         *
+         * innerText和textContent的兼容的代码,里面的判断方式叫能力检测
+         * 是判断这个属性在某个浏览器中支持还是不支持
+         * textContent在IE8中没有这个属性，所以在IE8中测试的时候，这个属性的值为undefined, 所以当一个浏览器中没有这个属性的时候，判断这个属性的类型是不是undefined即可
+         * 如果是undefined说明浏览器不支持这个属性,否则支持
+         *
+         * 自定义属性:
+         * 三个方法:
+         * setAttribute("属性名字","属性的值");
+         * getAttribute("属性的名字");返回的是属性的值
+         * removeAttribute("属性的名字")移除该属性,
+         * removeAttribute和属性="";
+         * div.className="";
+         * 前者干净,后者还有属性名字,值没了(在浏览器中去查看)
+         *
+         * lastElementChild  当前元素中最后的一个子元素
+         *
+         * */
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

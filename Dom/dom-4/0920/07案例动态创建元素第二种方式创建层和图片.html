@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="创建一个层" id="btn"/>
+
+<script src="common.js"></script>
+
+<script>
+   //点击按钮在页面中创建一个层,在层中创建一个图片,设置图片的大小
+    my$("btn").onclick=function () {
+        document.body.innerHTML+="<div id='dv'></div>";
+        my$("dv").style.border="2px solid red";
+        my$("dv").style.width="300px";
+        //加入图片
+        my$("dv").innerHTML="<img id='img1' src='images/liuyan.jpg' />";
+        //获取图片设置图片的宽和高及alt属性值
+        my$("img1").width="300";
+        my$("img1").height="500";
+        my$("img1").alt="好美";
+        my$("img1").title="好漂亮";
+
+
+    };
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 450px;
+            margin: 200px auto;
+        }
+
+        #txt{
+            width: 350px;
+        }
+        #pop {
+            width: 350px;
+            border: 1px solid red;
+        }
+
+        #pop ul {
+            margin: 10px;
+            padding: 0px;
+            width: 200px;
+            list-style-type: none;
+
+        }
+        #pop ul li {
+
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="box">
+    <input type="text" id="txt">
+    <input type="button" value="搜索" id="btn">
+</div>
+
+<script src="common.js"></script>
+
+<script>
+    var keyWords = ["今天天气很好","今后都是人","今天走了","我都是好孩子","三里屯美女很多","苍茫的天涯我的爱","hello"];
+
+    //先获取文本框，注册键盘抬起的事件
+    my$("txt").onkeyup=function () {
+        //先获取文本框的内容
+        var tValue=this.value;
+        var arr=[];
+        //遍历keyWords数组，查询是否有这个词的内容
+        for(var i=0;i<keyWords.length;i++){
+            if(keyWords[i].indexOf(tValue)==0){
+                //如果数据存在则添加到一个临时的数组中
+                arr.push(keyWords[i]);
+            }
+        }
+       //创建层--->会不会创建很多次===隐藏的一个坑
+        if(my$("dv")){
+            document.body.removeChild(my$("dv"));
+        }
+        //如果临时的数组没有数据，并且文本框也没有数据,不需要创建这个层
+        if(arr.length==0||this.value.length==0){
+            //把创建的层删掉
+            if(my$("dv")){
+                document.body.removeChild(my$("dv"));
+            }
+            return;//主要是解决内在的错误
+        }
+
+        //开始创建层
+        var dvObj=document.createElement("div");
+        dvObj.id="dv";//如果要删除或者判断这个层的存在需要用到
+        dvObj.style.width="300px";
+        dvObj.style.height="200px";//临时
+        dvObj.style.border="1px solid red";
+        //脱离文档流
+        dvObj.style.position="absolute";
+        dvObj.style.left=this.offsetLeft+"px";
+        dvObj.style.top=this.offsetTop+this.offsetHeight+"px";
+        document.body.appendChild(dvObj);
+        //需要通过元素的offsetLeft获取------>会在讲关于特效的某些知识点的时候说
+        //遍历临时的数组了
+        for(var j=0;j<arr.length;j++){
+            //创建p标签,立刻加入到层中
+            var pObj=document.createElement("p");
+            dvObj.appendChild(pObj);
+            pObj.innerText=arr[j];
+            pObj.style.margin="5px";
+            pObj.style.cursor="pointer";
+            //为每一个p标签注册鼠标进入和离开的事件
+            pObj.onmouseover=function () {
+                this.style.backgroundColor="yellow";
+            };
+            pObj.onmouseout=function () {
+                this.style.backgroundColor="";
+            };
+        }
+
+    };
+
+
+
+</script>
+<script>
+
+//    document.getElementById('txt').onkeyup=function(){
+//
+//        //判断页面中是否有层
+//        if(document.getElementById('dv')){
+//            document.body.removeChild(document.getElementById('dv'));
+//        }
+//        var tempArray=[];
+//        for(var i=0;i<keyWords.length;i++){
+//            var item=keyWords[i];//获取字符串
+//            if(item.indexOf(this.value)===0){
+//                tempArray.push(item);
+//            }
+//        }
+//        if(this.value.length===0||tempArray.length===0){
+//            if(document.getElementById('dv')){
+//                document.body.removeChild(document.getElementById('dv'));
+//            }
+//            return;
+//        }
+//        //创建一个层
+//        var dvObj=document.createElement('div');
+//        dvObj.id='dv';
+//        //层显示到文本框的下面
+//        //层脱离文档流
+//        dvObj.style.position='absolute';
+//        dvObj.style.width='300px';
+//        //dvObj.style.height='120px';
+//        dvObj.style.border='1px solid red';
+//        dvObj.style.left=this.offsetLeft+'px';
+//        dvObj.style.top=this.offsetTop+this.offsetHeight+2+'px';
+//
+//        //把层添加到body中
+//        document.body.appendChild(dvObj);
+//        for(var i=0;i<tempArray.length;i++){
+//            //创建p标签
+//            var pObj=document.createElement('p');
+//            pObj.style.cursor='pointer';
+//            pObj.style.margin='3px';
+//            //把数组中的数据显示到p标签中
+//            pObj.innerText=tempArray[i];
+//            //设置p标签的高亮显示的效果
+//            pObj.onmouseover=function(){
+//                this.style.backgroundColor='yellow';
+//            };
+//            pObj.onmouseout=function(){
+//                this.style.backgroundColor='';
+//            };
+//            //把p标签添加到层中
+//            dvObj.appendChild(pObj);
+//        }
+//
+//    };
+</script>
+<script>
+
+
+
+
+</script>
+</body>
+</html>

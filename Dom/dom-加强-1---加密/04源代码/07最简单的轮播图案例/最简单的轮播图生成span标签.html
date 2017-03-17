@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        ul {
+            list-style: none
+        }
+
+        img {
+            vertical-align: top
+        }
+
+        .box {
+            width: 730px;
+            height: 454px;
+            margin: 100px auto;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .inner {
+            width: 730px;
+            height: 454px;
+            background-color: pink;
+
+            position: relative;
+        }
+
+        .inner ul {
+            width: 1000%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .inner li {
+            float: left;
+        }
+
+        .square {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .square span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 16px;
+            cursor: pointer;
+        }
+
+        .square span.current {
+            background-color: orangered;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="inner">
+        <ul>
+            <li><a href="#"><img src="images/1.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/2.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/5.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/6.jpg" alt=""/></a></li>
+        </ul>
+        <div class="square">
+
+        </div>
+    </div>
+</div>
+<script src="common.js"></script>
+<script>
+    //移动的时候是移动的整个的ul,ul外面显示图片的层不移动
+    //每个图片在移动的时候宽是inner层的宽
+    //鼠标进入到每一个小按钮的时候(span),先设置当前鼠标进入的小按钮的背景颜色,应用current类样式,其他的小按钮都应该清除current类样式--排他
+    //调用动画函数,(要移动的元素,移动的目标)animate(ul,图片的个数*外面层的宽度)
+
+
+    //1.先获取要用到的所有的span标签
+    //1.1最先获取的是最外面的层
+    var box=my$("box");
+    //1.2 继续获取box层中的第一个子元素
+    var inner=box.children[0];
+    //1.2.1 获取inner层中的ul标签
+    var ul=inner.children[0];
+    //获取图片移动的宽度-----就是inner层的宽度
+    var imgWidth=inner.offsetWidth;//====坑====offsetWidth的值能获取,能不能修改
+
+    //1.3继续获取inner层中的square层
+    var square=inner.children[1];
+    //动态的创建span标签6个,并且设置第一个span标签有类样式,并且把创建好的span标签全部的放在square层中
+    //第一种方式:innerHTML,
+    // 第二种方式:document.createElement()
+    //第三种方式:只创建一个span标签,剩下的全部克隆
+    for(var i=0;i<6;i++){
+        var spanObj=document.createElement("span");
+       // spanObj.style.marginRight="5px";
+        //立刻马上加到square标签中
+        square.appendChild(spanObj);
+        spanObj.innerHTML=(i+1);
+    }
+    square.children[0].className="current";//设置第一个span标签的类样式
+
+    //所有的span标签都有了
+
+
+
+
+
+
+
+    //1.4根据square层获取里面所有的span标签
+    var spans=square.children;
+    //遍历所有的span标签,添加事件
+    for(var i=0;i<spans.length;i++){
+        //spans[i].setAttribute("index",i);
+        spans[i].index=i;
+        spans[i].onmouseover=function () {
+            //先干掉所有span标签的类样式
+            for(var j=0;j<spans.length;j++){
+                spans[j].removeAttribute("class");
+            }
+            //设置当前的span标签的类样式
+            this.className="current";
+            //设置整个的ul移动
+            //获取的是当前鼠标进入的span标签中自定义属性的值,需要转数字类型
+            //var pic=parseInt(this.getAttribute("index"));
+            var pic=parseInt(this.index);
+            console.log(this.index);
+            var target=-pic*imgWidth;
+            animate(ul,target);
+        };
+    }
+
+    /*
+    * 坑:
+    * 1.offsetWidth的值能否赋值
+    * 2.index的值设置的时候可不可以不用setAtribute
+    * 3.里面的span标签能否动态的创建出来
+    *
+    * */
+</script>
+</body>
+</html>
+
+

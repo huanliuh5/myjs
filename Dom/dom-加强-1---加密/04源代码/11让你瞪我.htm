@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    
+    img
+    {
+        position:absolute;/*完全脱离*/
+        width:200px;
+        height:150px;
+        }
+        div{
+            height: 2000px;
+            border:1px solid red;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="bird.png" id="im" />
+<div></div>
+<script>
+    //首先要为document注册鼠标移动的事件
+    //所有的事件中都有一个事件的参数
+    document.onmousemove=function (evt) {
+         //获取鼠标的横坐标和纵坐标
+        //根据事件来获取的
+        //console.log(arguments.length);
+        //console.log(evt);//事件参数是一个对象
+        //console.log(evt.clientX+"====="+evt.clientY);
+        document.getElementById("im").style.left=evt.clientX+"px";
+        document.getElementById("im").style.top=evt.clientY+"px";
+    };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+            left:100px;
+            top:0;
+            /*如果这里不写absolute,也没有设置top的默认值为0,可能会获取不到top的值*/
+            /*position: absolute;*/
+        }
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+//    console.log(my$("dv").style.left);
+//    console.log(my$("dv").offsetLeft);
+//    使用双引号属性的方式
+//    console.log(my$("dv").style["left"]);
+//    console.log(my$("dv")["offsetLeft"]);
+
+    //字符串类型:有px,谷歌浏览器支持
+    //console.log(window.getComputedStyle(my$("dv"),null).left);
+    //字符串类型:有px,IE8浏览器支持
+    //console.log(my$("dv").currentStyle.left);
+
+    //使用属性的方式获取元素的left
+    //console.log(window.getComputedStyle(my$("dv"),null)["left"]);
+    //console.log(my$("dv").currentStyle["left"]);
+    //兼容写法
+    //var left=window.getComputedStyle(my$("dv"),null)["left"]||my$("dv").currentStyle["left"]||0;
+    //console.log(left);
+
+    //封装获取属性的样式函数
+    function getStyle(element,attr) {
+        return element.currentStyle?element.currentStyle[attr]:window.getComputedStyle(element,null)[attr]||0;
+    }
+//测试
+    console.log(getStyle(my$("dv"),"left"));
+    console.log(getStyle(my$("dv"),"top"));
+    console.log(getStyle(my$("dv"),"width"));
+    console.log(getStyle(my$("dv"),"height"));
+</script>
+</body>
+</html>

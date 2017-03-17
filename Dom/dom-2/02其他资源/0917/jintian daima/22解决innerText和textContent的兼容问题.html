@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<input type="button" value="获取innerText" id="btn"/>
+<input type="button" value="设置innerText" id="btn2"/>
+<div id="dv">
+哇哈哈哈
+</div>
+<script src="common.js"></script>
+<script>
+
+    //解决兼容不同浏览器的代码.在代码中做的判断---能力检测
+    //innerText是IE支持,textContent是火狐支持
+    my$("btn").onclick=function () {
+      //console.log(my$("dv").textContent);//IE8不支持
+        if((typeof my$("dv").textContent)=="undefined"){
+            //此时是IE8浏览器
+            console.log(my$("dv").innerText);
+        }else{
+            //此时是谷歌或者是火狐
+            console.log(my$("dv").textContent);
+        }
+    };
+
+    my$("btn2").onclick=function () {
+      //把内容写入到层中
+        if((typeof my$("dv").textContent)=="undefined"){
+            my$("dv").innerText="哈哈";
+        }else{
+            my$("dv").textContent="哈哈";
+        }
+    };
+
+</script>
+
+</body>
+</html>

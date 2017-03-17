@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            display: none;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("#btnFadeIn").click(function () {
+                //1. 淡入淡出用fadeIn和fadeOut方法
+                //2. 淡入淡出使用和滑入滑出一模一样
+                //$("div").fadeIn();
+                //$("div").fadeIn(1000);
+                $("div").fadeIn(1000, function () {
+                    alert("动画执行完了");
+                });
+            });
+
+            $("#btnFadeOut").click(function () {
+                $("div").fadeOut(function () {
+                    alert("动画执行完了");
+                });
+            });
+
+            $("#btnFadeToggle").click(function () {
+                $("div").fadeToggle();
+            });
+
+            $("#btnFadeTo").click(function () {
+                $("div").fadeTo(1000, 0.5, function () {
+                    alert("动画执行完了");
+                });
+            });
+
+
+            //总结：修改的是opacity
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="淡入" id="btnFadeIn">
+<input type="button" value="淡出" id="btnFadeOut">
+<input type="button" value="淡入淡出切换" id="btnFadeToggle">
+<input type="button" value="淡到" id="btnFadeTo">
+<div></div>
+</body>
+</html>

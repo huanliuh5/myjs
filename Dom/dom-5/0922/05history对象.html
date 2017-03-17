@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="跳转" id="btnTiaoZhuan"/>
+
+<input type="button" value="前进" id="btnGo"/>
+<script src="common.js"></script>
+<script>
+
+
+    /*
+    *
+    * 页面中很少有 按钮或者操作，让用户点击 然后后退或者前进
+    * 在某些公司的内部的管理的系统中会用到,OA
+    *
+    *
+    * */
+
+
+
+    //先跳转到别的页面,从别的页面后退回来,就会有前进的记录了
+    my$("btnTiaoZhuan").onclick=function () {
+        window.location.href="06test.html";
+    };
+
+
+
+    //浏览器中必须有过跳转的记录,
+    my$("btnGo").onclick=function () {
+        window.history.forward();//前进的意思
+    };
+</script>
+</body>
+</html>

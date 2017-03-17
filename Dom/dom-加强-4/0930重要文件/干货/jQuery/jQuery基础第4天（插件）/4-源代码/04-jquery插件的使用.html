@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+    </style>
+    <!--1. 引入jquery文件-->
+    <script src="jquery-1.12.4.js"></script>
+    <!--2. 引入jquery插件的js文件-->
+    <script src="plugins/jquery.color.js"></script>
+    <script>
+        $(function () {
+
+            //3.使用jquery插件
+            $("#btn").click(function () {
+                //jquery.color.js
+                $("div").animate({
+                    "backgroundColor":"#FFC0CB"
+                }, 1000);
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="渐变" id="btn">
+<div></div>
+</body>
+</html>

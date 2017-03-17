@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+1. 操作属性
+    attr(name, value):设置单个属性
+    attr(obj) ：同时设置多个属性
+    attr(name) :获取属性（获取到的是第一个元素对应的属性）
+
+    checked、selected、disable:不能用attr方法，用prop。
+
+2. 操作值与内容
+    val()  ： 操作了value属性
+        val() :不传参数，获取
+        val(value):设置值
+    text() : 相当于innerText
+        text() : 获取，忽略掉标签
+        text(value) : 给标签转义
+    html() : 相当于innerHTML
+        html() :获取，包括标签
+        html(value) : 设置，能识别html标签
+
+3. 操作宽度与高度
+    width()
+        width() : 获取，返回的数值型
+        width(value) :设置高度，value也是number
+    height()
+
+    css() "100px"
+
+4. 操作位置
+    offset()
+        offset() :不传参数，获取，浏览器最左上角，body  {top:100,left:100}
+        offset(obj) :设置，参数格式：{top:100,left:100}
+    position()
+        postion() :获取，相对于有定位的父元素的位置。
+        不能设置
+
+</body>
+</html>

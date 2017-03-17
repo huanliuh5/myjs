@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            background: #ccc;
+        }
+
+        label {
+            width: 40px;
+            display: inline-block;
+        }
+
+        span {
+            color: red;
+        }
+
+        .container {
+            margin: 100px auto;
+            width: 400px;
+            padding: 50px;
+            line-height: 40px;
+            border: 1px solid #999;
+            background: #efefef;
+        }
+
+        span {
+            margin-left: 30px;
+            font-size: 12px;
+        }
+
+        .wrong {
+            color: red
+        }
+
+        .right {
+            color: green;
+        }
+
+        .defau {
+            width: 200px;
+            height: 20px;
+        }
+
+        .de1 {
+            background-position: 0 -20px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="container" id="dv">
+    <label>Q Q</label><input type="text" id="qq"><span></span><br/>
+    <label>手机</label><input type="text" id="phone"><span></span><br/>
+    <label>邮箱</label><input type="text" id="e-mail"><span></span><br/>
+    <label>座机</label><input type="text" id="telephone"><span></span><br/>
+    <label>姓名</label><input type="text" id="fullName"><span></span><br/>
+</div>
+<script>
+
+    //每个文本框都有失去焦点的事件,如果验证成功,文本框后面的span标签要有文字显示及颜色设置
+    //每个文本框都有事件,都要有相应的正则表达式进行验证
+
+    //element---对象---标签元素
+    //reg---每个标签自己的正则表达式
+    function checkTxt(element,reg) {
+        element.onblur=function () {
+            if(reg.test(element.value)){
+                //匹配了
+                element.nextElementSibling.innerHTML="正确";
+                element.nextElementSibling.style.color="green";
+            }else{
+                //匹配不成功
+                element.nextElementSibling.innerHTML="让你得瑟,错了吧";
+                element.nextElementSibling.style.color="red";
+            }
+        };
+    }
+
+    //获取每一个文本框对象,文本框自己的正则表达式
+    //先获取元素
+    //QQ
+    var qq=document.getElementById("qq");
+    var qqReg=/^[1-9][0-9]{4,11}$/;
+    //手机号码
+    var phone=document.getElementById("phone");
+    var phoneReg=/^1([358][0-9][0-9]{8})|([4][7][0-9]{8})|([7][0781][0-9]{8})$/;
+    //邮箱
+    var eMail=document.getElementById("e-mail");
+    var emailReg=/^[0-9a-zA-Z_.-]+[@][0-9a-zA-Z_-]+([.][a-zA-Z]+){1,2}$/;
+    //座机
+    var telephone=document.getElementById("telephone");
+    var telephoneReg=/^0[0-9]{2,3}[-][0-9]{7,8}$/;
+    //姓名
+    var fullName=document.getElementById("fullName");
+    var fullNameReg=/^[\u4e00-\u9fa5]{2,6}$/;
+
+
+    //qq
+    checkTxt(qq,qqReg);
+    checkTxt(phone,phoneReg);//手机的
+    checkTxt(eMail,emailReg);//邮箱
+    checkTxt(telephone,telephoneReg);//座机号码
+    checkTxt(fullName,fullNameReg);//姓名
+
+</script>
+
+
+
+</body>
+</html>

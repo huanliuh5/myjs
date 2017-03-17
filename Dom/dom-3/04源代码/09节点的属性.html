@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        /*
+        *
+        * 节点:html文档中所有的内容都叫节点:
+        * 标签,文字,属性
+        * 节点属性什么用?
+        *
+        *
+        *
+        * */
+    </script>
+</head>
+<body>
+<div id="dv">
+    <p>层中的第一个p标签</p>哈哈哈
+    <span>层中的第二个标签==span</span>
+    <ul id="uu">
+        <li>火箭</li>
+        <li>热火</li>
+        <li id="three">湖人</li>
+        <li>小牛</li>
+        <li>公牛</li>
+    </ul>
+</div>
+
+<script src="common.js"></script>
+
+<script>
+    //获取当前元素,根据id方式获取====可以以ul为例
+    var ul=my$("uu");
+    //获取当前元素的父节点
+    console.log(ul.parentNode);
+
+    //获取当前元素的所有子节点,并显示所有子节点的nodeType和nodeName
+    for(var i=0;i<ul.childNodes.length;i++){
+        var nodes=ul.childNodes[i];
+        console.log(nodes.nodeType+"==="+nodes.nodeName);
+    }
+    //获取当前元素中的第一个子节点及第一个子元素
+        console.log(ul.firstChild);
+        console.log(ul.firstElementChild);
+    //获取当前元素中的最后一个子节点及最后一个子元素
+    console.log(ul.lastChild);//节点
+    console.log(ul.lastElementChild);//元素
+
+    //获取当前子元素的前一个子节点及前一个子元素
+    console.log(my$("three").previousSibling);
+    console.log(my$("three").previousElementSibling)
+    //获取当前子元素的后一个子节点及后一个子元素
+    console.log(my$("three").nextSibling);
+    console.log(my$("three").nextElementSibling);
+
+
+
+
+
+//    var ulObj=my$("uu");
+//    console.log(ulObj.firstChild);//获取当前父元素中的第一个子节点
+//    console.log(ulObj.firstElementChild);
+//    console.log(ulObj.lastChild);//获取当前元素中的最后一个子节点
+//    console.log(ulObj.lastElementChild);
+
+</script>
+
+<script>
+    //var divObj=my$("dv");
+    //根据属性的名字来获取属性节点
+//    var attr=divObj.getAttributeNode("id");
+//    console.log(attr.nodeType);//2
+//    console.log(attr.nodeName);//id
+//    console.log(attr.nodeValue);//dv
+    //console.log(attr);
+
+
+</script>
+
+<script>
+//    var divObj=my$("dv");
+//    console.log(divObj.parentNode);//父节点
+//    console.log(divObj.childNodes);//获取子节点
+//    //获取子节点的个数
+//    console.log(divObj.childNodes.length);
+    //获取某个节点的前一个兄弟节点
+//    console.log(my$("three").previousSibling);
+//console.log(my$("three").previousElementSibling);
+////获取某个节点的后一个兄弟节点
+//    console.log(my$("three").nextSibling);
+//    console.log(my$("three").nextElementSibling);
+</script>
+
+
+<script>
+    //获取层
+//    var divObj=my$("dv");
+//    //获取层中所有的子节点,遍历输出
+//    for(var i=0;i<divObj.childNodes.length;i++){
+//        var node=divObj.childNodes[i];//每一个子节点
+//
+//
+//        //nodeType结果:1--标签(元素)节点2---属性,3---文本节点
+//        //nodeName结果:元素节点:标签的名字,文本节点:#text
+//        //nodeValue结果:元素节点:null,文本节点:文本内容
+//        console.log(node.nodeType+"==="+node.nodeName+"==="+node.nodeValue);
+//
+//
+////        console.log(node.nodeType);//节点类型
+////        console.log(node.nodeName);//节点名字
+////        console.log(node.nodeValue);//节点的值
+//    }
+
+</script>
+
+
+<script>
+    //var divObj=my$("dv");
+    //console.log(divObj.childNodes.length);//获取的当前元素中所有子节点的个数
+
+
+
+</script>
+
+
+
+
+<script>
+
+//    var liObj=my$("three");//第三个li标签
+//    //获取当前元素的前一个兄弟节点及兄弟元素
+//    console.log(liObj.previousSibling);//当前元素的前一个节点
+//    console.log(liObj.previousElementSibling);//当前元素的前一个兄弟元素
+//    //获取当前元素的后一个兄弟节点及兄弟元素
+//    console.log(liObj.nextSibling);//当前元素的后一个节点
+//    console.log(liObj.nextElementSibling);//当前元素的后一个兄弟元素
+
+
+</script>
+<script>
+    //var liObj=my$("three");
+    //先获取liObj的父节点
+    //console.log(liObj.parentNode);//父节点
+
+//    var divObj=my$("dv");
+//    console.log(divObj.parentNode);//层的父节点是body
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 4000px;
+            width: 4000px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 1000px;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("div").on("click", function (e) {
+                console.log(e);
+                console.log(e.currentTarget === this);
+                console.log(e.target === this);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        我是div的内容
+    </div>
+</body>
+</html>

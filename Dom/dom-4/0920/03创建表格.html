@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="button" value="创建表格" id="btn"/><br />
+<input type="button" value="添加一行" id="btnAdd"/><br />
+<div id="box"></div>
+<script src="Common.js"></script>
+<script>
+
+    var heads=["姓名","科目","分数","操作"];
+    var datas = [
+        {"name":"乔峰","subject":"语文1","score":99.8},
+        {"name":"张三丰","subject":"语文2","score":80.8},
+        {"name":"张无忌","subject":"语文3","score":70.8},
+        {"name":"梅超风","subject":"语文4","score":100},
+        {"name":"黄老邪","subject":"语文5","score":60},
+        {"name":"凤姐","subject":"语文6","score":70},
+        {"name":"芙蓉姐姐","subject":"语文7","score":89.8}
+    ];
+
+    //获取层中的table;
+    //        dvObj.getElementById("tb");
+    //        dvObj.getElementsByTagName("table")[0];
+    //        getFirstElementByParent(dvObj);
+    //添加一行
+    my$("btnAdd").onclick=addClickHandle;
+    function addClickHandle() {
+
+        //获取层,还要获取层中的table
+        //然后获取table中tbody,然后创建tr,然后把tr添加到tbody中,然后tbody添加到table中
+        var dvObj=my$("box");
+
+        //根据的是common.js中的函数来获取table
+        var table=getFirstElement(dvObj);
+        //获取table中的第一个tbody
+        var tbody=table.getElementsByTagName("tbody")[0];
+        //创建tr
+        var tr=document.createElement("tr");
+        tbody.appendChild(tr);
+        //创建td----因为三个td中都是文本框,所以,循环先创建三个td
+        for(var i=0;i<3;i++){
+            var td=document.createElement("td");
+            tr.appendChild(td);
+            //td中间有文本框
+            td.innerHTML="<input value='' type='text' style='width:60px' />";
+        }
+        //创建td
+        var td=document.createElement("td");
+        tr.appendChild(td);
+        //在td中添加2个超链接
+        td.innerHTML="<a href='javascript:void(0);'>确定</a>&nbsp;<a href='javascript:void(0)'>取消</a>";
+        //取消删除这个一行
+        //找td中的最后一个元素就是:取消
+        var linkCancel=getLastElementByParent(td);
+        linkCancel.onclick=function () {//取消
+            this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+        };
+        //确定功能
+        var linkOk=getFirstElementByParent(td);
+        linkOk.onclick=function () {
+            var name=tr.children[0].children[0].value;
+            var subject=tr.children[1].children[0].value;
+            var score=tr.children[2].children[0].value;
+            datas.push({"name":name,"subject":subject,"score":score});
+
+            //刷新的功能---就是创建表格的代码重新写一遍
+            clickHandle();
+        };
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //获取按钮,注册点击事件---创建表格,把表格添加到层中
+    my$("btn").onclick=clickHandle;
+    //按钮的点击事件
+    function clickHandle() {
+        //获取层
+        var boxObj=my$("box");
+        if(my$("tb")){
+            boxObj.removeChild(my$("tb"));
+        }//如果这个table已经存在了，就删除，之后再创建
+
+
+
+        //创建表格
+        var table=document.createElement("table");
+        table.id="tb";//将来判断删除操作
+        table.border="1";//设置边框,是html中自带的属性
+        table.style.width="400px";//===============================
+        table.style.borderCollapse="collapse";//合并边框
+        //把表格添加到层中
+        boxObj.appendChild(table);
+        //创建thead添加到table中,在thead中创建tr,在tr中创建th
+        var thead=document.createElement("thead");
+        //thead添加到table中
+        table.appendChild(thead);
+        //创建tr
+        var tr=document.createElement("tr");
+        tr.style.backgroundColor="#cccccc";//============================
+        tr.style.height="40px";//设置行高//===================================
+        thead.appendChild(tr);
+        //循环遍历数组.创建th
+        for(var i=0;i<heads.length;i++){
+            var th=document.createElement("th");
+            //添加到tr中
+            tr.appendChild(th);
+            //设置th中显示的内容
+            setInnerText(th,heads[i]);
+        }
+        //兼容IE7的写法:tbody 在IE中
+        //创建tbody--在tbody中创建tr,然后创建td
+        var tbody=document.createElement("tbody");
+
+        tbody.style.textAlign="center"; //=====================================================
+        //加到table中
+        table.appendChild(tbody);
+        for(var i=0;i<datas.length;i++){
+            //此循环创建的是行-------tr
+            var tr=document.createElement("tr");
+            tbody.appendChild(tr);//tr添加到tbody中
+            //创建td-----循环的方式,对象{}的形式遍历用for-in循环
+            var dt=datas[i];//dt就是一个对象,就是大括号的这种形式---对象---for-in遍历
+            for(var key in dt){
+                var td=document.createElement("td");
+                tr.appendChild(td);//直接把td添加到tr中
+                setInnerText(td,dt[key]);
+            }
+            //创建操作----删除的操作
+            //可以点击---a标签---td
+            //创建td,创建a标签,然后把a添加到td中,td添加到tr中
+            var td=document.createElement("td");
+            tr.appendChild(td);//这一个td就加到了tr中
+            //创建a标签
+            var link=document.createElement("a");
+            td.appendChild(link);//把a添加到了td中
+            link.href="javascript:void(0)";
+            setInnerText(link,"删除");
+            link.onclick=deleteHandle;//删除的操作
+        }
+    };
+
+    function deleteHandle() {
+        this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+    }
+
+
+</script>
+
+</body>
+</html>

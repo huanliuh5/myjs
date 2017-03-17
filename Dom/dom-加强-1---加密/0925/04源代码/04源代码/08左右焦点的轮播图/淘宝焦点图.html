@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body, ul, ol, li, img {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            width: 520px;
+            height: 280px;
+            padding: 5px;
+            position: relative;
+            border: 1px solid #ccc;
+            margin: 100px auto 0;
+        }
+
+        .ad {
+            width: 520px;
+            height: 280px;
+            /*overflow: hidden;*/
+            position: relative;
+        }
+
+        #box img {
+            width: 520px;
+        }
+
+        .ad ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .ad ol li {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            background: #fff;
+            float: left;
+            margin-right: 10px;
+            cursor: pointer;
+            _display: inline;
+        }
+
+        .ad ol li.current {
+            background: yellow;
+        }
+
+        .ad ul li {
+            float: left;
+        }
+
+        .ad ul {
+            position: absolute;
+            top: 0;
+            width: 2940px;
+        }
+
+        .ad ul li.current {
+            display: block;
+        }
+
+        #focusD {
+            display: none;
+        }
+
+        #focusD span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+        #focusD #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="box" class="all">
+    <div class="ad">
+        <ul id="imgs">
+            <li><img src="images/01.jpg"/></li>
+            <li><img src="images/02.jpg"/></li>
+            <li><img src="images/03.jpg"/></li>
+            <li><img src="images/04.jpg"/></li>
+            <li><img src="images/05.jpg"/></li>
+        </ul>
+    </div>
+    <div id="focusD"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+</div>
+<script src="common.js"></script>
+<script>
+    /*
+    * 要获取id为box的层,注册鼠标进入的事件和离开的事件,显示和隐藏焦点层
+    * 1.先获取id为box的层
+    * 2.获取ul让其移动,ul在应用ad类样式的层中
+    * 2.1先获取应用类样式的ad层,然后获取里面的ul.
+    * 2.2还要获取ul中所有的li-----具体原因先不写
+    * 3.还要获取ad类样式层的宽度------为了每次移动图片的宽度
+    * 4.获取焦点层:-----为了显示和隐藏
+    * 5.获取左边的按钮,和右边的按钮,注册点击事件,都要移动图片
+    *
+    * */
+
+    //先获取id为box的层,
+    var box=my$("box");
+    //直接获取焦点的层
+    var focusD=my$("focusD");
+    //注册鼠标进入的事件
+    box.onmouseover=function () {
+        focusD.style.display="block";
+    };
+    //鼠标离开的事件
+    box.onmouseout=function () {
+        focusD.style.display="none";
+    };
+
+    //获取ul，移动
+    var ul=my$("imgs");
+    //获取外面的显示图片的层
+    var ad=box.children[0];
+    var imgWidth=ad.offsetWidth;
+    //右边按钮
+    var pic=0;
+    //获取所有li,
+    var lis=ul.children;
+    my$("right").onclick=function () {
+        if(pic<lis.length-1){
+            //让ul向左移动,
+            pic++;
+            animate(ul,-pic*imgWidth);
+            console.log(pic);
+        }
+    };
+    //左边按钮
+    my$("left").onclick=function () {
+        //让ul向右移动,
+        if(pic>0){
+            //让ul向左移动,
+            pic--;
+            animate(ul,-pic*imgWidth);
+            console.log(pic);
+        }
+    };
+
+
+
+</script>
+</body>
+</html>

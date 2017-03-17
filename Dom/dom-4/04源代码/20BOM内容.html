@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+       /*
+       *
+       * JavaScript三部分:
+       * ECMAScript标准
+       * DOM:文档对象模型
+       * BOM:浏览器对象模型
+       * 1.BOM中顶级对象:window
+       * 2.window.location.href="地址";
+       *
+       * 浏览器中的顶级对象是window
+       * 文档中的顶级对象是document
+       * */
+
+        //检测window到底是不是顶级对象
+        //document是否属于window
+        //window可以看成是皇上
+        //document可以看成是太监
+
+        //先证明页面所有的内容都是属于window的
+//        var num=10;
+//       window.id="gagag";
+//        window.console.log(window.num);
+//       function f1() {
+//           console.log("我是一头小毛轮");
+//           console.log(this.id);//是什么
+//       }
+//       window.f1();
+       //window.alert("来打我,给你机会,我跑了");
+
+        //证明document确实没有window厉害
+
+        //document.console.log("嘎嘎");
+    </script>
+    <script>
+//        var num=10;
+//        window.console.log(window.num);//window一般都可以省略
+//
+
+    </script>
+</head>
+<body>
+<div id="bd"></div>
+<script src="common.js"></script>
+<script>
+    var divObj= window.document.getElementById("bd");
+    console.log(divObj);
+</script>
+</body>
+</html>

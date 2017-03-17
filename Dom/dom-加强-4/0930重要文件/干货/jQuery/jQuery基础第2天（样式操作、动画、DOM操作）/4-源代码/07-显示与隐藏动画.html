@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            display: none;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btnShow").click(function () {
+
+                //不传参数，没有动画效果
+                //$("div").show();
+
+
+                //show(speed)
+                //speed:指动画在执行时间内完成,单位:毫秒值
+                //$("div").show(2000);
+
+                //speed可以传固定字符串
+                // fast(200) 、 normal(400) 、 slow(600)
+                // 其他不识别的字符串，(默认为normal)
+                //$("div").show("fj");
+
+
+                //show(speed, [callback])
+                //speed :同上
+                //callback:动画执行完成后执行
+                $("div").show(10000, function () {
+                    alert("动画执行完成了");
+                });
+            });
+
+            $("#btnHide").click(function () {
+                //hide用法跟show用法一模一样
+                //$("div").hide();
+
+                //$("div").hide(1000);
+
+                //$("div").hide("nll");
+
+                $("div").hide(10000, function () {
+                    alert("我执行完了");
+                });
+            });
+
+
+            //总结：show/hide 改变的元素的样式有哪些？
+            // height、width、opacity
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示动画" id="btnShow">
+<input type="button" value="隐藏动画" id="btnHide">
+<div></div>
+</body>
+</html>

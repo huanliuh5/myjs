@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table border="1" id="tb">
+    <tr>
+        <td> 猪八戒：</td>
+        <td>我想吃馒头！</td>
+    </tr>
+</table>
+昵称：<input type="text" id="txt"/><br/>
+<textarea id="textContent" rows="10" cols="15"></textarea><br/>
+<input type="button" value="评论" id="btn1"/>
+</table>
+<script src="common.js"></script>
+<script>
+    //获取评论的按钮,注册点击的事件
+    my$("btn1").onclick=function () {
+        //获取昵称和评论内容
+        var txtValue=my$("txt").value;
+        var textContent=my$("textContent").value;
+        //创建tr,然后创建两个td,把td加到tr中,tr加到table中
+        //先获取表格
+        var table=my$("tb");
+        var tr=document.createElement("tr");
+        table.appendChild(tr);
+        //创建td
+        var td1=document.createElement("td");
+        tr.appendChild(td1);
+        setInnerText(td1,txtValue);//昵称添加到第一个td中
+        var td2=document.createElement("td");
+        tr.appendChild(td2);
+        setInnerText(td2,textContent);//把评论内容加到第二个td中
+        //把昵称赋值给第一个td的中间
+        //加一点点内容--清空昵称和评论内容
+        my$("txt").value="";
+        my$("textContent").value="";
+
+    };
+
+    //
+
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="设置样式" id="btn" />
+<div id="dv"></div>
+<script>
+    //练习:页面上有一个按钮,有一个层,层的宽为200px,高为100px,背景颜色为pink
+    //点击按钮,设置层的宽为400px,高为200px,背景颜色为green
+
+    document.getElementById("btn").onclick=function () {
+      //获取层
+
+        //第一个地方:innerText(兼容问题)---
+        //设置元素样式如果设置很多属性的值,代码写很多,怎么办
+        var dvObj=document.getElementById("dv");
+        dvObj.style.width='400px';
+        dvObj.style.height='200px';
+        dvObj.style.backgroundColor="green";
+    };
+</script>
+</body>
+</html>

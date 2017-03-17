@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<img src="images/1-small.jpg" alt="" id="img1">
+<img src="images/2-small.jpg" alt="" id="img2">
+<img src="images/3-small.jpg" alt="" id="img3">
+<img src="images/3-small.jpg" alt="" id="img4">
+<script>
+
+    //页面中三个图片,点击每个图片弹出一个对话框
+    //根据id获取每个图片,注册点击事件,弹框
+//    document.getElementById("img1").onclick=function () {
+//        alert("1");
+//    };
+//    document.getElementById("img2").onclick=function () {
+//        alert("1");
+//    };
+//    document.getElementById("img3").onclick=function () {
+//        alert("1");
+//    };
+
+    //如何获取页面中多个相同的标签,document.getElementsbyTagname
+    //返回的是一个多个的元素,看成是一个多个元素的数组,看成是一个由多个对象组成的数组
+    var imgObjs=document.getElementsByTagName("img");
+    //需要进行遍历
+    for(var i=0;i<imgObjs.length;i++){//循环的代码页面加载的时候就执行了
+        imgObjs[i].onclick=function () {
+            //事件的处理函数---事件触发的时候执行
+            alert("点的时候才执行");
+        };
+    }
+
+</script>
+
+</body>
+</html>

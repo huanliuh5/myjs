@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        /*
+        * JS中对象
+        * 内置对象:系统自带的
+        * Array Object String Number Date Math
+        *
+        * Date对象中的方法
+        *
+        *
+        *
+        * */
+//        var dt=new Date();
+//        console.log(dt);
+//        var dt=new Date("2015-3-7");
+//        console.log(dt);
+//        var dt=Date.now();
+//        console.log(dt);
+
+//        var dt=+new Date();//只有日期对象有这种方式创建对象
+//        console.log(dt);
+//        var dt=new Date(2012,3,4);
+//        console.log(dt);
+
+
+       // var dt=new Date("2015-3-7");//有两种理解方式:
+        //1.创建时间的对象
+        //2.把一个字符串类型的时间转换成了日期类型的时间
+        //var n=Number("23");
+
+
+//        var dt=new Date("2016-12-31");
+//        console.log(dt.valueOf());//可以把这个时间转换成毫秒
+
+        var dt=new Date();
+        console.log(dt.toLocaleDateString());//日期
+        console.log(dt.toLocaleString());//日期和时间
+        console.log(dt.toLocaleTimeString());
+        console.log(dt.toTimeString());
+
+
+    </script>
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+
+</script>
+</body>
+</html>

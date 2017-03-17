@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+     /*
+     * js(ECMAScript)讲4天,一共5天
+     * DOM基础讲5天,
+     * js(ECMAScript)第五天内容
+     * DOM加强(事件,特效的案例)
+     *
+     *
+     * */
+
+        /*
+        *
+        * 字符串不可变
+        *
+        *
+        * */
+
+       // var str="你快吗乐?";
+        //证明不可变
+        //字符串可以看成是一个数组
+       // console.log(str.length);
+//        for(var i=0;i<str.length;i++){
+//            console.log(str[i]);
+//        }
+//        var str="小杨好帅";
+//        str[3]="坏";
+//     //字符串不可变
+//        console.log(str);
+
+
+//        var str="我喜欢女人";
+//        str="我喜欢动物";//重新赋值
+//        console.log(str);
+
+
+
+//        var str="每天都吃饭,好累哦";
+//        str=str.charAt(3);//获取指定位置的字符串
+//        console.log(str);
+
+
+
+//        var str="每天都吃饭,好累哦".charAt(3);//获取指定位置的字符串
+//     console.log(str);
+
+//        console.log("每天都吃饭,好累哦".charAt(3));
+//
+//
+//        [10,20,30,40,50].push(100);
+
+
+//        var str="hello";
+//     //获取指定字符串的ASCII值
+//        console.log(str.charCodeAt(2));
+    </script>
+
+    <script>
+
+        /*
+        * charAt(索引);.返回值是新的字符串,该方法的意义:获取指定位置的字符串
+        * charCodeAt(索引);,返回值是指定位置字符串的ASCII码值,
+        * concat(要拼接的字符串);返回的是新的字符串,意义:拼接字符串的方法
+        * slice(开始的索引，要结束的索引);截取字符串的
+         * substring(开始的索引,要结束的索引);截取字符串的,区别:可以只有一个参数,从开始位置截取到最后
+         * substr(开始的索引,要截取字符串的长度);
+         *
+         * trim()切掉两边的空格
+         *
+         * toLocaleUpperCase(); 小写转大写
+         *toLocaleLowerCase();大写转小写
+         *
+         *indexOf(要找的字符串,开始查找的索引),返回找到的字符串的索引,找不到则返回-1
+         *
+         *
+        * */
+
+//        var str1="今年开始";
+//        var str2="吃饭";
+//        var str=str1.concat(str2,"哈哈哈","嘎嘎");
+//        console.log(str);
+
+
+       // console.log("如果我是个女人".concat("我一定会嫁给小杨"));
+//        var str="班主任你吃饭了吗";
+//        str=str.slice(2,5);//从指定索引开始到指定索引前结束
+//        console.log(str);
+
+//        var str="明天不放假,所以作业很多";
+//        str=str.substring(2,5);//同上
+//        console.log(str);
+//        var str="准备好了吗,我要开始下课了";
+//        str=str.substring(3);
+//        console.log(str);
+//
+//        var str="你们晚上会吃饭吗";
+//        str=str.substr(2,5);//指定的索引开始截取,截取的是5个长度
+//        console.log(str);
+
+
+
+//        var str="   我   了  个   去    ";
+//        str=str.trim();//切掉字符串两边的空格
+//        //就要把字符串中的所有的空格全部干掉,别想了,正则表达式的时候会知道怎么做的
+//
+//        console.log("====="+str+"=======");
+
+
+//        var str="HELLO";
+//        //str=str.toLocaleUpperCase();
+//        str=str.toLocaleLowerCase()
+//        console.log(str);
+
+//        var str="真的只是讲一个吗";
+//        var index=str.indexOf("帅",0);//从指定位置开始查找某个字符串,如果找到则返回对应字符串的索引,如果找不到则返回-1
+//        console.log(index);
+
+        var str="传说在传智播客中有一个小杨,小杨好帅,好纯洁,好勇敢...";
+        var index=str.indexOf("小杨",0);
+        console.log(index);
+
+    </script>
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+
+</script>
+</body>
+</html>

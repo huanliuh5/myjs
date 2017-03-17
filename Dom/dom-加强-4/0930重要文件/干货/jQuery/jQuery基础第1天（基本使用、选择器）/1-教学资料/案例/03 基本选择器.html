@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            /**
+             * 总结：
+             *  1. id选择器   $("#id")     通过id来获取对应的元素
+             *  2. 类选择器   $(".class"); 通过class来获取一类元素。
+             *  3. 标签选择器 $("标签名");  通过标签来获取对应元素。
+             *
+             *  jQuery其实兼容CSS1到CSS3中的选择器。
+             *  4. 并集选择器   $("selector1,selector2,..."); 获取多个选择器的并集
+             *  5. 交集选择器   $("selector1selector2")       获取多个选择器的交集
+             *
+             *  这5个选择跟CSS里面的选择器是一模一样的。
+             */
+
+            //抗日开始，action
+
+
+            //首先，司令官发表讲话
+            //司令官官比较大，要把司令官变得大一点。
+            // id选择器
+            // 格式：$("#id")
+            // 作用：通过id来获取页面中的元素
+            // jQuery设置页面样式的方法：css(name, value);  name:需要设置的样式名   value:需要设置的样式值
+            $("#slg").css("font-size", "32px");
+
+
+            //团长回去讲话
+            //团长官也比较大,要把团中弄大一点，但是团长官能大过司令官吗？？我们要把团战弄二
+            // 类选择器
+            // 格式：$(".class");
+            // 作用：获取页面中一类元素，通过class属性来获取
+            $(".tz").css("font-size", "24px");
+
+
+            //接下来，要上战场，全军出击!!
+            //要把所有的并都派上去,上战场，前线的兵背景色都是粉红色。
+            // 标签选择器
+            // 格式；$("标签名");
+            // 通过标签来获取对应元素
+            $("li").css("background-color", "pink");
+
+            //在战场上发现有人惦着锅，伙夫和卫生员是没有战斗力的，应该撤下来。
+            //需要把伙夫和卫生员的背景色改成白色。
+            $(".hf").css("background-color", "white");
+            $(".wsy").css("background-color", "white");
+
+            //伙夫和卫生员也想着要帮忙为抗日做贡献。
+            // 并集选择器
+            // 格式：$("selector1,selector2,...");
+            // 功能：获取多个选择器的并集
+            $(".hf,.wsy").css("background-color", "blue");
+
+
+            //现在，突然发现老打败仗。为什么呢？现在在国共联合军里面出现内奸。
+            //现在把联合军里面的内奸找出来，不能干扰到老百姓
+            // 交集选择器
+            // 格式： $("selector1selector2");注意，中间没有任何的空格
+            // 获取两个选择器之间的交集。
+            $("li.nj").css("text-decoration", "line-through");
+            $("li.nj").css("background", "gray");
+
+
+
+        });
+    </script>
+</head>
+<body>
+<div>
+    <ul>
+        <li id="slg">国共联合司令官</li>
+    </ul>
+
+    <!-- 独立团 -->
+    <ul id="dlt">
+        <li class="tz">独立团团长-李云龙</li>
+        <li>狙击手</li>
+        <li>士兵</li>
+        <li>士兵</li>
+        <li>士兵</li>
+        <li class="hf">伙夫</li>
+        <li class="wsy">卫生员</li>
+
+    </ul>
+
+    <!-- 358团 -->
+    <ul id="t358">
+        <li class="tz">358团团长-楚云飞</li>
+        <li>狙击手</li>
+        <li class="nj">士兵</li>
+        <li>士兵</li>
+        <li>士兵</li>
+        <li class="hf">伙夫</li>
+        <li class="wsy">卫生员</li>
+    </ul>
+</div>
+<div>
+    <p class="nj">老百姓</p>
+    <p class="nj">老百姓</p>
+</div>
+</body>
+</html>

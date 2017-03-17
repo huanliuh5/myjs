@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div{
+            width: 200px;
+            height:100px;
+            background-color: yellow;
+            margin-bottom: 20px;
+        }
+        .cls{
+            border:2px solid red;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="设置层的类样式" id="btn1"/>
+<input type="button" value="移除层的类样式" id="btn2"/>
+<div id="dv" fdsfsf="fsdfdsf"></div>
+
+<script>
+    //removeAttribute("class") 方法移除某个标签的属性,属性直接被干掉
+    document.getElementById("btn1").onclick=function () {
+      var divObj=document.getElementById("dv");
+        divObj.className="cls";
+    };
+
+    document.getElementById("btn2").onclick=function () {
+        var divObj=document.getElementById("dv");
+        //divObj.className="";
+        divObj.removeAttribute("class");//更干净
+    };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+
+
+    </script>
+
+</head>
+<body>
+<input type="button" value="修改图片的title属性值" id="btn"/><br/>
+<img src="images/1-small.jpg" title="美女1" />
+<img src="images/2-small.jpg" title="美女2" />
+<img src="images/3-small.jpg" title="美女3" />
+
+<script>
+    //点击按钮,修改每个图片的title属性值
+    //根据id为btn来获取页面的元素--按钮,按钮这个元素可以看成是一个对象
+    //为该对象注册点击的事件,按钮触发这个事件,事件的名字叫单击,事件的处理函数是后面的匿名函数
+    document.getElementById("btn").onclick=function () {
+        //获取所有的图片标签,每一个图片标签可以看成是一个对象,设置该对象中的title属性
+        //根据标签的名字获取对应的元素,返回的是一个数组，这个数组中有好多的元素
+        //每个元素看成是一个对象，所以就是对象的数组
+        var imgObjs=document.getElementsByTagName("img");
+        //设置每个图片标签,所以要遍历--for循环
+        for(var i=0;i<imgObjs.length;i++){
+            imgObjs[i].title="美女啊";
+        }
+
+    };
+
+</script>
+</body>
+</html>

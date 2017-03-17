@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<script>
+
+    //判断可视区域的宽度或者高度
+    //一般都可以直接判断宽度
+    //如果页面可视区域的宽度>960  就是电脑浏览的页面
+
+    //如果页面可视区域的宽度>640  就是平板电脑浏览的页面
+
+    //否则页面的宽度就是小于640  手机浏览的页面
+
+    //clientWidth和clientHeight   是通过对象.方式来使用
+
+    //页面的可视区域的宽:document.body.clientWidth||document.documetElement.clientWidth||window.innerWidth
+
+    //页面的可视区域的高:document.body.clientHeight||document.documetElement.clientHeight||window.innerHeight
+
+
+    //直接判断可视区域的宽度,来直接显示是用什么设备来浏览页面的(思路)
+
+
+
+//封装clentWidth和clientHeight
+
+    //获取可视区域的宽和高
+    function getClient() {
+        return{
+            width: window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+            height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+        }
+
+    }
+
+    //如何知道是什么设备浏览的
+
+//    console.log(getClient().width);
+//    console.log(getClient().height);
+
+
+    //浏览器的可视区的宽度或者高度改变的时候就可以触发
+    window.onresize=function () {
+       if(getClient().width>960){
+           console.log("此时您是使用的电脑的来浏览俺们的页面的");
+       }else if(getClient().width>640){
+           console.log("此时您是使用的平板来浏览俺们的页面的");
+       }else{
+           console.log("此时您是使用的手机来浏览俺们的页面的");
+       }
+    };
+
+</script>
+
+</body>
+</html>

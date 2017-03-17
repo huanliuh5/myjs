@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="button" value="选中" id="btn" />
+<select name="" id="s1">
+    <option value="1">北京</option>
+    <option value="1">上海</option>
+    <option value="1">首尔</option>
+    <option value="1">东京</option>
+    <option value="1">重庆</option>
+</select>
+<script>
+    document.getElementById("btn").onclick=function () {
+        document.getElementById("s1").getElementsByTagName("option")[1].selected=true;//非空字符串转布尔结果是true
+    };
+    /*
+    * checked
+    * selected
+    * 在DOM操作中,写js代码的时候用的是true或者是false
+    *
+    * */
+
+</script>
+</body>
+</html>

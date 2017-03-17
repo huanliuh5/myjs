@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+        .basic {
+            background-color: pink;
+            color: red;
+            font-size: 32px;
+        }
+
+        .bigger {
+            font-size: 40px;
+        }
+
+
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+
+            $("#btn1").click(function () {
+                $("li").addClass("basic");
+            });
+
+            $("#btn2").click(function () {
+
+                //addClass(name)
+                //name：需要添加的类
+                $("li:eq(0)").addClass("bigger");
+            });
+
+            $("#btnRemove").click(function () {
+
+                //removeClass(name)
+                //value:需要移除的类
+                $("li").eq(0).removeClass("bigger");
+            });
+
+            $("#btnHas").click(function () {
+                //hasClass(name)
+                //name：需要判断的类
+                var result = $("li").eq(0).hasClass("bigger");
+                console.log(result);
+            });
+
+            //场景切换
+            $("#btnToggle").click(function () {
+                //需求：如果有basic样式，移除它，如果没有，就添加
+                /*
+                if($("li").hasClass("basic")) {
+                    $("li").removeClass("basic");
+                }else {
+                    $("li").addClass("basic");
+                }
+                */
+
+                //toggleClass(name)
+                //name:需要切换的类
+                $("li").toggleClass("basic");
+            });
+
+
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="添加基本样式" id="btn1">
+<input type="button" value="变大" id="btn2">
+<input type="button" value="移除" id="btnRemove">
+<input type="button" value="判断" id="btnHas">
+<input type="button" value="场景切换" id="btnToggle">
+
+
+<ul>
+    <li>沙滩裤</li>
+    <li>五分裤</li>
+    <li>七分裤</li>
+    <li>七分裤</li>
+    <li>牛仔裤</li>
+    <li>运动裤</li>
+</ul>
+</body>
+</html>

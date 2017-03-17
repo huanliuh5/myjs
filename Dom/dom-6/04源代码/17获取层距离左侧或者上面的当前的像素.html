@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height:100px;
+            background-color: red;
+            margin-top: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<input type="button" value="移动到400" id="btn1"/>
+<input type="button" value="移动到800" id="btn2"/>
+<div id="dv"></div>
+<script>
+    //层的位置=当前的位置+每次移动的步数
+
+    document.getElementById("btn1").onclick=function () {
+        var dvObj=document.getElementById("dv");
+        animate(dvObj,400);
+//        var setId=setInterval(function () {
+//            //需要一个当前位置
+//            var current=dvObj.offsetLeft;
+//            //需要一个目标位置
+//            var target=400;
+//            //需要一个每次移动多少像素(步数)
+//            var step=5;
+//            current+=step;
+//            if(current>target){//当前的位置大于了目标的位置
+//               //停止移动---清理计时器
+//                clearInterval(setId);
+//                dvObj.style.left=target+"px";
+//            }else{
+//                dvObj.style.left=current+"px";//移动的位置
+//            }
+//            console.log("走着"+current);
+//        },30);
+    };
+    document.getElementById("btn2").onclick=function () {
+        var dvObj=document.getElementById("dv");
+        animate(dvObj,800);
+    };
+
+    function animate(element,target) {
+        clearInterval(element.setId);
+         element.setId=setInterval(function () {
+            //需要一个当前位置
+            var current=element.offsetLeft;
+            //需要一个目标位置
+            //var target=400;
+            //需要一个每次移动多少像素(步数)
+            var step=9;
+            //判断
+            step=current<target?step:-step;
+            current+=step;
+            //如果目标位置-当前位置>步数  继续的移动
+            //如果目标位置-当前位置<步数  直接为目标位置
+            if(Math.abs(target-current)<Math.abs(step)){//当前的位置大于了目标的位置
+                //停止移动---清理计时器
+                clearInterval(element.setId);
+                element.style.left=target+"px";
+            }else{
+                element.style.left=current+"px";//移动的位置
+            }
+            console.log("走着"+current);
+        },30);
+    }
+
+</script>
+
+
+<script>
+//        document.getElementById("btn").onclick=function () {
+//            var dvObj=document.getElementById("dv");
+//          console.log(dvObj.offsetLeft);
+//        };
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+
+        $(window).load(function () {
+            var result = $("img").css("height");
+            console.log(result);
+        });
+
+
+        $(function () {
+
+//            var height = $("img").height();
+//            console.log(height);
+
+
+
+            //获取高度
+            $("#btnHeight").click(function () {
+                //var result = $("div").css("height");
+                //console.log(result);
+
+                var height = $("div").height();
+                console.log(height);
+            });
+
+            $("#btnWidth").click(function () {
+                var width = $("div").width();
+                console.log(width);
+            });
+
+
+
+            $("#btnSetHeight").click(function () {
+                $("div").height(100);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="获取高度" id="btnHeight">
+<input type="button" value="获取宽度" id="btnWidth">
+<input type="button" value="设置高度" id="btnSetHeight">
+<div></div>
+<img src="01.jpg">
+</body>
+</html>

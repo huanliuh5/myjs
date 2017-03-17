@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+<body>
+<form action="http://www.baidu.com" method="post" id="fm">
+    <input type="text" name="name" value="" style="width: 300px;" id="txt" />
+    <input type="submit" name="name" value="提交" id="sm" />
+</form>
+<div id="dv" style="width: 300px; height: 200px; background-color: Green;">
+</div>
+<script type="text/javascript">
+    //为表单标签注册submit事件,此时设置取消默认事件,那么点击按钮提交没用
+    document.getElementById('fm').onsubmit = function () {
+        return false;//取消默认事件
+    };
+    document.getElementById('dv').onclick = function () {
+       //document.getElementById("sm").click();//提交按钮的点击事件
+       document.getElementById("fm").submit();//表单form的提交事件
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cls{
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+<!--检测密码的长度要小于6位有高量显示,如果大于等于6位背景颜色正常显示-->
+<input type="button" value="检测密码长度" id="btn"/>
+<input type="text" value="" id="txt"/>
+<script>
+
+    //点击按钮检测密码的长度.是否符合6位有高量显示
+    document.getElementById("btn").onclick=function () {
+        var txtObj=document.getElementById("txt");
+        if(txtObj.value.length<6){
+            txtObj.className="cls";
+        }else{
+            txtObj.className="";
+        }
+    };
+</script>
+
+
+</body>
+</html>

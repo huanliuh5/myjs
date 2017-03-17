@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+            position: absolute;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="button" value="移动到800" id="btn1"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    my$("btn1").onclick=function () {
+        animate(my$("dv"),{"left":800,"top":400});
+    };
+    //获取任意元素的任意属性
+
+    function getStyle(element,attr) {
+        return element.currentStyle?element.currentStyle[attr]:window.getComputedStyle(element,null)[attr]||0;
+    }
+    //left:100
+    //width:100
+    //{"left":"100"}
+    function animate(element,json) {
+        clearInterval(element.setId);
+        element.setId=setInterval(function () {
+            var flag=true;//假设全部都到达目标
+            for(var attr in json){
+                var current=parseInt(getStyle(element,attr))||0;
+                var target=json[attr];
+                var step=(target-current)/10;
+                step=step>0?Math.ceil(step):Math.floor(step);
+                current+=step;
+                element.style[attr]=current+"px";
+                if(current!=target){
+                    flag=false;
+                }
+            }
+            if(flag){
+                clearInterval(element.setId);
+            }
+            console.log("current:"+current+"target:"+target+"step:"+step);
+
+        },20);
+    }
+
+</script>
+</body>
+</html>

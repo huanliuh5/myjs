@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        div {
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+            background-color: green;
+            opacity: 1;
+            margin-top: 50px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="动画" id="btn"/>
+<div id="dv" ></div>
+<script>
+
+    //获取按钮,注册点击事件
+    //获取层-div
+    //计时器-----设置层距离左侧的像素逐渐的增加----600px就结束
+    document.getElementById("btn").onclick=function () {
+        var divObj= document.getElementById("dv");
+        //先脱离文档流---脱标
+        divObj.style.position="absolute";
+        //计时器---隔多少秒就移动一次
+        var left=0;
+        var timeId=setInterval(function () {
+            //改变层的left
+            left+=11;
+            if(left>=600){
+                left=600;
+                clearInterval(timeId);//清除计时器
+            }
+            divObj.style.left=left+"px";//效果不好-----在特效的时候我们处理
+        },30);
+    };
+
+
+
+
+</script>
+</body>
+</html>

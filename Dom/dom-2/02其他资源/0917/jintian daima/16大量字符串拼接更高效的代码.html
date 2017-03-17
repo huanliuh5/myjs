@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="text" value="" />
+<input type="text" value="" />
+<input type="text" value="" />
+<input type="text" value="" />
+<input type="text" value="" />
+<input type="button" value="显示字符串内容" id="btn" />
+<script src="common.js"></script>
+
+<script>
+
+
+    //获取按钮注册点击事件,获取所有的文本框,获取每个文本框的值,加一个竖线,最后输出
+    my$("btn").onclick=function () {
+        var arr=[];
+        var inputs=document.getElementsByTagName("input");
+        for(var i=0;i<inputs.length;i++){
+            if(inputs[i].type=="text"){
+               arr.push(inputs[i].value);
+            }
+        }
+        console.log(arr.join("|"));
+    };
+</script>
+<script>
+//    //获取按钮注册点击事件,获取所有的文本框,获取每个文本框的值,加一个竖线,最后输出
+//    my$("btn").onclick=function () {
+//        var str="";
+//      var inputs=document.getElementsByTagName("input");
+//        for(var i=0;i<inputs.length-1;i++){
+//            if(inputs[i].type=="text"){
+//                str+=inputs[i].value+"|";
+//            }
+//        }
+//        console.log(str+inputs[inputs.length-1-1].value);
+//    };
+</script>
+</body>
+</html>

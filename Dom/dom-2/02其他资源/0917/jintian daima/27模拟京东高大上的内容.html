@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #list {
+            list-style-type: none;
+        }
+        #list li {
+            float: left;
+            width: 300px;
+        }
+        #list div {
+            width: 150px;
+            height: 100px;
+            background-color: #0099cc;
+            display: none;
+        }
+        #list div.hide {
+            display: none;
+        }
+        #list div.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul id="list">
+    <li>手机京东
+        <!--这个位置需要有别的标签-->
+
+        <div>111</div>
+    </li>
+    <li>关注京东
+        <div>222</div>
+    </li>
+</ul>
+<script src="common.js"></script>
+<script>
+
+   //先获取ul再获取li,为每个li注册鼠标进入和离开的事件
+    var lis=my$("list").getElementsByTagName("li");
+    for(var i=0;i<lis.length;i++){
+        lis[i].onmouseover=mouseoverHandle;
+        lis[i].onmouseout=mouseoutHandle;
+    }
+    function mouseoverHandle() {//鼠标进入的事件
+        this.lastElementChild.className="show";
+    }
+   function mouseoutHandle() {//鼠标离开的事件
+       this.lastElementChild.className="hide";
+   }
+
+
+</script>
+</body>
+</html>

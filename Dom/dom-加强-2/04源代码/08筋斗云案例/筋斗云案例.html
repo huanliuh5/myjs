@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        ul {
+            list-style: none
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        .nav {
+            width: 800px;
+            height: 42px;
+            margin: 100px auto;
+            background: url(images/rss.png) right center no-repeat;
+            background-color: #fff;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .nav li {
+            width: 83px;
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .nav span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 83px;
+            height: 42px;
+            background: url(images/cloud.gif) no-repeat;
+        }
+
+        ul {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <span id="cloud"></span>
+    <ul id="navBar">
+        <li>北京校区</li>
+        <li>上海校区</li>
+        <li>广州校区</li>
+        <li>深圳校区</li>
+        <li>武汉校区</li>
+        <li>关于我们</li>
+        <li>联系我们</li>
+        <li>招贤纳士</li>
+    </ul>
+</div>
+<script src="common.js"></script>
+<script>
+    //鼠标移动到li标签上之后,云彩移动到当前li的位置
+    //鼠标如果离开li标签之后,云彩会移动到上一次云彩的位置
+    //鼠标点击li标签,云彩就停留到这个li标签的位置
+
+    //首先要获取云彩
+    var cloud=my$("cloud");
+    //获取ul中所有li
+    var lis=my$("navBar").children;
+    //为每个li注册三个事件
+    for(var i=0;i<lis.length;i++){
+        lis[i].onmouseover=mouseoverHandle;//鼠标进入
+        lis[i].onclick=clickHandle;//鼠标点击
+        lis[i].onmouseout=mouseoutHandle;//鼠标离开
+    }
+    function mouseoverHandle() {//鼠标进入
+            //让云彩渐渐地移动到当前鼠标进入的li的位置
+        // 让云彩的left移动到li的left位置
+        animate(cloud,this.offsetLeft);
+    }
+    var lastLeft=0;
+    function clickHandle() {//鼠标点击
+            lastLeft=this.offsetLeft;
+    }
+    function mouseoutHandle() {//鼠标离开
+            animate(cloud,lastLeft);
+    }
+
+
+
+    //要获取元素,通过id获取,要使用缓动动画函数
+
+
+</script>
+</body>
+</html>

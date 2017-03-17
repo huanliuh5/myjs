@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {margin:0; padding: 0;}
+        ul {
+            list-style-type: none;
+        }
+        .box {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .hd {
+            height: 45px;
+        }
+        .hd span {
+            display:inline-block;
+            width: 90px;
+            background-color: pink;
+            line-height: 45px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .hd span.current {
+            background-color: purple;
+        }
+        .bd li {
+            height: 255px;
+            background-color: purple;
+            display: none;
+        }
+        .bd li.current {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<div class="box" id="box">
+    <div class="hd">
+        <span class="current">体育</span>
+        <span>娱乐</span>
+        <span>新闻</span>
+        <span>综合</span>
+    </div>
+    <div class="bd">
+        <ul>
+            <li class="current">我是体育模块</li>
+            <li>我是娱乐模块</li>
+            <li>我是新闻模块</li>
+            <li>我是综合模块</li>
+        </ul>
+    </div>
+</div>
+<script src="common.js"></script>
+<script>
+
+    //先获取id为box的层
+        //获取所有的span标签
+    var divObj=document.getElementById("box");
+    var spanObjs=divObj.getElementsByTagName("span");
+    //为每一个span添加点击的事件,并且移除所有的span标签的类样式
+    for(var i=0;i<spanObjs.length;i++){
+        spanObjs[i].onclick=clickHandle;
+        spanObjs[i].setAttribute("index",i);
+    }
+    //同时为自己添加这个类样式
+    function clickHandle() {
+        //再次遍历一遍所有的span，移除每一个class样式
+        for(var j=0;j<spanObjs.length;j++){
+            spanObjs[j].removeAttribute("class");
+        }
+        //设置自己当前被点击的这个span类样式
+        this.setAttribute("class","current");
+        //对li标签进行设置
+        //先获取所有的li标签,移除每一个li标签的样式
+        var liObjs=divObj.getElementsByTagName("li");
+        for(var k=0;k<liObjs.length;k++){
+            liObjs[k].removeAttribute("class");
+        }
+        //最后设置span标签对应的li标签的样式
+        var index=parseInt(this.getAttribute("index"));
+        liObjs[index].setAttribute("class","current");
+
+    };
+
+
+</script>
+</body>
+</html>

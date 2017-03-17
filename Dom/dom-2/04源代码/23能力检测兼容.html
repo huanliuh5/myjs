@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<input type="button" value="获取innerText" id="btn1"/>
+<input type="button" value="设置innerText" id="btn2"/>
+<div id="dv">
+    哇哈哈哈
+</div>
+<script src="common.js"></script>
+<script>
+    /*
+    *
+    * innerText和textContent  是属性
+    *
+    * 可以设置值 也可以获取值
+    * 设置的时候要判断浏览器是否支持innerText
+    * 获取的时候要判断浏览器是否支持innerText
+    *
+    * */
+    //获取innerText或者是获取textContent
+    function getInnerTxt(element) {//element表示的标签
+        return element.innerText?element.innerText:element.textContent;
+    }
+    //设置innerText或者是设置textContent
+    function setInnerText(element,value) {
+        if(element.innerText){
+            element.innerText=value;
+        }else{
+            element.textContent=value;
+        }
+    }
+
+    my$("btn1").onclick=function () {
+      //获取
+        console.log(getInnerTxt(my$("dv")));
+    };
+    my$("btn2").onclick=function () {
+        setInnerText(my$("dv"),"哈哈哈哈");
+    };
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            height: 200px;
+            background-color: pink;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+
+    <!--1. 引包-->
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //2. 入口函数,在jquery里面都是方法的调用，很少有赋值的操作
+        $(document).ready(function() {
+            //3. 功能实现
+            //alert("我执行了吗?");
+
+
+            //第一种：没有注册上事件
+            //第二种：事件注册上了，但是事件逻辑有问题
+
+
+            //3.1 展示div
+            //获取到展示div这个按钮并且注册点击事件
+            $("#btnShowdiv").click(function () {
+                //for循环没了，隐式迭代：偷偷地遍历
+                $("div").show(1000);
+            });
+            //3.2 设置内容
+            $("#btnSetContent").click(function () {
+                //innerText = "我设置了内容";
+                $("div").text("我设置了内容");
+            });
+        });
+
+        //没有对比，就没有伤害，有了对比，处处戳中要害
+    </script>
+</head>
+<body>
+<input type="button" value="展示div" id="btnShowDiv">
+<input type="button" value="设置内容" id="btnSetContent">
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

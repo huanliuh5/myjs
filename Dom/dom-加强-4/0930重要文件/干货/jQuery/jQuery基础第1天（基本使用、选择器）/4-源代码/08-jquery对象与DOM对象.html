@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            //1. DOM对象：使用js的方法获取到的元素都是DOM对象。
+//            var cloth = document.getElementById("cloth");//DOM对象
+//            cloth.style.backgroundColor = "red";
+//            var lis = document.getElementsByTagName("li");//DOM对象集合
+
+
+            //2. jQuery对象：使用jQuery中的方法获取到的页面中的元素就是jQuery对象
+            //js命名规范：字母、数字、下划线、$
+            //var $li = $("li");
+            //$li.text("我修改了内容");
+
+
+            //3. jquery对象其实就是DOM对象的包装集(包装了DOM对象的集合)
+
+
+            //4. DOM对象不能调用jquery对象的方法
+            //var cloth = document.getElementById("cloth");//DOM对象
+            //cloth.text("我会修改内容吗");
+            //DOM对象转换成jquery对象(我有钱！！)
+            //$(cloth).text("我会修改内容吗");
+
+
+            //5. jquery对象不能调DOM对象的方法
+            var $li = $("li");
+            //$li.innerText = "我会修改内容吗";
+            //console.log($li);
+            //$li.getAttribute("id");
+            //console.log($li);
+            //console.log($li[0]);
+            //jQuery对象转换成DOM对象
+            //$li[3].style.backgroundColor = "red";
+            //$li.get(3).style.backgroundColor = "pink";
+            console.log($li);
+
+
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li id="cloth">衣服</li>
+    <li>裤子</li>
+    <li>袜子</li>
+    <li>内裤</li>
+</ul>
+</body>
+</html>

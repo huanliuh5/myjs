@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 320px;
+            height: 336px;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //属性操作使用attr方法
+            //参数和css操作一模一样
+
+
+            $("#btnSet").click(function () {
+
+                //attr(name, value)
+                //name:需要设置的属性  value:对应的属性值
+                //$("img").attr("title", "哎哟，真的不错");
+
+
+                //同时设置多个属性
+                $("img").attr({
+                    "title":"我修改了属性",
+                    "alt":"亲，你的图破了"
+                });
+
+
+
+
+
+
+            });
+
+            $("#btnGet").click(function () {
+                //获取属性
+                var result = $("img").attr("title");
+                console.log(result);
+            });
+
+
+            $("#btnCheck").click(function () {
+                $("#ck").prop("checked", true);
+                console.log($("#ck").prop("checked"));
+            });
+
+            $("#btnUnCheck").click(function () {
+                $("#ck").prop("checked", false);
+                console.log($("#ck").prop("checked"));
+                //disable/selected/checked
+            });
+
+
+            $("#btnRemove").click(function () {
+                $("img").removeAttr("title");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="设置属性" id="btnSet">
+<input type="button" value="获取属性" id="btnGet">
+<input type="button" value="移除属性" id="btnRemove">
+<input type="button" value="选中" id="btnCheck">
+<input type="button" value="不选中" id="btnUnCheck">
+<br>
+<img src="01.jpg" title="哎哟，不错哦" >
+
+<input type="checkbox" name="ck" id="ck">
+</body>
+</html>

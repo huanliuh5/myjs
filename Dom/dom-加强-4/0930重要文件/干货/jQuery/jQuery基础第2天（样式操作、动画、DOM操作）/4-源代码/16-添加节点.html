@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btnAppend").click(function () {
+                //如何去创建一个元素？
+                //$(htmlStr)
+                //创建一个jQuery对象
+                //var $p = $("<p>我是新建的p元素</p>");
+
+
+                //append(jQueryObj)
+                //功能：添加到子代里的最后面。
+                //$("div").append($p);
+
+                //append(htmlStr)
+                //功能：添加到子代里的最后面。
+                //$("div").append("我是新建的p元素");
+
+
+                //注意：如果传进来的jQuery对象是页面中存在的元素，它会这个对象干掉（剪切）
+                var $p = $("p");
+                $("div").append($p);
+            });
+
+            $("#btnPrepend").click(function () {
+                $("div").prepend($("p"));
+            });
+
+            $("#btnAfter").click(function () {
+                $("div").after($("p"));
+            });
+
+            $("#btnBefore").click(function () {
+                $("div").before($("p"));
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="append添加节点" id="btnAppend">
+<input type="button" value="prepend添加节点" id="btnPrepend">
+<input type="button" value="after添加节点" id="btnAfter">
+<input type="button" value="before添加节点" id="btnBefore">
+<div>我是第一个div</div>
+<div>我是第二个div</div>
+<p>我是外面的元素</p>
+</body>
+</html>

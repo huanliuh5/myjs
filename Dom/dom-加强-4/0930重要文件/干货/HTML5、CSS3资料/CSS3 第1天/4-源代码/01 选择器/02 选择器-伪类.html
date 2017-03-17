@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器 - 伪类</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #F7F7F7;
+		}
+
+		ul {
+			width: 560px;
+			padding: 0;
+			margin: 100px auto;
+			list-style: none;
+			border-right: 1px solid #CCC;
+			border-bottom: 1px solid #CCC;
+			overflow: hidden;
+		}
+
+		li {
+			width: 79px;
+			height: 80px;
+			text-align: center;
+			line-height: 80px;
+			border-left: 1px solid #CCC;
+			border-top: 1px solid #CCC;
+			background-color: #FFF;
+			font-size: 24px;
+			font-weight: bold;
+			color: #333;
+			float: left;
+		}
+
+		/*:表示的是伪类选择器的语法格式*/
+
+		/*伪类里新增了 位置选择器*/
+
+		/*选中父元素的第一个子无素*/
+		li:first-child {
+			color: red;
+		}
+		
+		/*选中父元素的最后一个子元素*/
+		li:last-child {
+			color: red;
+		}
+		
+		/*选中父元素的最后一个子元素*/
+		li:nth-child(3) {
+			color: red;
+		}
+		
+		/*选中父元素的偶数子元素*/
+		li:nth-child(even) {
+			color: blue;
+		}
+		
+		/*选中父元素的奇数元素*/
+		li:nth-child(odd) {
+			color: yellow;
+		}
+		
+		/*选中父元素7的倍数元素*/
+		li:nth-child(7n) {
+			color: green;
+		}
+		
+		/*选中父元素7的倍数的前一个元素*/
+		li:nth-child(7n-1) {
+			color: green;
+		}
+
+		/* 1 */
+
+		/* n 2*/
+		/* n 1 */
+		/* n 0 */
+
+		/* n 取值从0开始，很重要！！！ */
+
+		/*li:nth-child(-1n+3) {
+			color: pink;
+		}*/
+		
+		/*计算的起点是倒着开始*/
+		li:nth-last-child(-1n+3) {
+			color: red;
+		}
+
+		/*不合法*/
+		/*li:nth-child(3-1n) {
+			color: black;
+		}*/
+
+		li:first-child {
+			color: red;
+		}
+
+		/*1、找E父元素*/
+		/*2、必须是E*/
+
+
+		/*div
+		.demo
+
+		div.demo
+
+		div#demo
+
+		span[]
+		
+		li:*/
+
+		/*a:link
+		a:active*/
+
+		span:first-child {
+			color: blue;
+		}
+
+		span[data-flag="festival"] {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<p>ddd</p>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+		<li>11</li>
+		<li>12</li>
+		<li>13</li>
+		<li>14</li>
+		<li>15</li>
+		<li>16</li>
+		<li>17</li>
+		<li>18</li>
+		<li>19</li>
+		<li>20</li>
+		<li>21</li>
+		<li>22</li>
+		<li>23</li>
+		<li>24</li>
+		<li>25</li>
+		<li>26</li>
+		<li>27</li>
+		<li>28</li>
+		<li>29</li>
+		<li>30</li>
+		<li>31</li>
+		<li>32</li>
+		<li>33</li>
+		<li>34</li>
+		<li>35</li>
+	</ul>
+</body>
+</html>

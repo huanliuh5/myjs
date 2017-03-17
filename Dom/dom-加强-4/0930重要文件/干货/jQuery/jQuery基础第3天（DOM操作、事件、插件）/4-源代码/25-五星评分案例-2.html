@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>五角星评分案例</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .comment {
+            font-size: 40px;
+            color: teal;
+        }
+
+        .comment li {
+            float: left;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            var wjx_s = "★";
+            var wjx_k = "☆";
+
+            //1. 处理鼠标一上来的事件
+            //1.1 给所有的li注册mouseenter事件
+            $(".comment>li").mouseenter(function () {
+                //1.2 让自己变成实心，让前面的兄弟变成实心
+                //prevAll和nextAll  会改变jQuery对象里面DOM对象
+                $(this).text(wjx_s).prevAll("li").text(wjx_s).end().nextAll().text(wjx_k);
+            });
+
+            $(".comment>li").click(function () {
+                $(this).addClass("bj").siblings().removeClass("bj");
+            });
+
+            $(".comment").mouseleave(function () {
+                $(this).children("li").text(wjx_k);
+
+                $(".comment>.bj").text(wjx_s).prevAll().text(wjx_s);
+            });
+        });
+    </script>
+</head>
+
+<body>
+<ul class="comment">
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+</ul>
+</body>
+
+</html>

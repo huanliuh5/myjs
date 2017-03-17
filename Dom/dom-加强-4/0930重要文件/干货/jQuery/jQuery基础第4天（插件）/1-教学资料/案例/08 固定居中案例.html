@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 4000px;
+            height: 4000px;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+//        window.onload = function () {
+//            
+//        };
+        $(window).load(function () {
+            var imgWidth = $("img").width();
+            var imgHeight = $("img").height();
+            var windowWidth = $(window).width();
+            var windowHeight = $(window).height();
+            console.log(imgWidth+","+imgHeight+","+windowWidth+","+windowHeight);
+            var left = (windowWidth - imgWidth)/2;
+            var top = (windowHeight - imgHeight)/2;
+            $("img").offset({left:left,top:top});
+
+
+            $(window).scroll(function () {
+                var scrollTop = $(window).scrollTop();
+                var scrollLeft = $(window).scrollLeft();
+                var left = (windowWidth - imgWidth)/2 + scrollLeft;
+                var top = (windowHeight - imgHeight)/2 + scrollTop;
+                $("img").offset({left:left,top:top});
+            });
+        });
+    </script>
+</head>
+<body>
+<img src="images/08.jpg" alt=""/>
+</body>
+</html>

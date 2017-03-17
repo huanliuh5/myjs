@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<input type="button" value="设置p背景颜色" id="btn1"/>
+<input type="button" value="设置span背景颜色" id="btn2"/>
+<div id="dv">
+    <p>这是第一个p</p>
+    <span>这是span标签</span>
+    <p>这是第二个p</p>
+    <span>这是span标签</span>
+    <p>这是第三个p</p>
+    <span>这是span标签</span>
+
+</div>
+<script src="common.js"></script>
+<script>
+   //获取按钮,注册点击事件,获取层,获取层中的所有的子节点
+   var childNodes=my$("dv").childNodes;
+    my$("btn1").onclick=function () {
+        //判断这个节点是不是p,如果是则设置背景颜色
+        for(var i=0;i<childNodes.length;i++){
+            //判断nodeType==1&&nodeName=="P"
+            if(childNodes[i].nodeType==1&&childNodes[i].nodeName=="P"){
+                childNodes[i].style.backgroundColor="pink";
+            }
+        }
+    };
+   my$("btn2").onclick=function () {
+        //判断这个节点是不是span,如果是则设置背景颜色
+       //判断nodeType==1&&nodeName=="SPAN"
+       for(var i=0;i<childNodes.length;i++){
+           //判断nodeType==1&&nodeName=="SPAN"
+           if(childNodes[i].nodeType==1&&childNodes[i].nodeName=="SPAN"){
+               childNodes[i].style.backgroundColor="green";
+           }
+       }
+   };
+</script>
+</body>
+</html>

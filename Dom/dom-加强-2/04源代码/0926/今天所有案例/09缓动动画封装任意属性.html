@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+            position: absolute;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="button" value="移动到800" id="btn1"/>
+<input type="button" value="向下400" id="btn2"/>
+<input type="button" value="宽为400" id="btn3"/>
+<input type="button" value="高为30" id="btn4"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    my$("btn1").onclick=function () {
+        animate(my$("dv"),"left",800);
+    };
+    my$("btn2").onclick=function () {
+        animate(my$("dv"),"top",400);
+    };
+    my$("btn3").onclick=function () {
+        animate(my$("dv"),"width",400);
+    };
+    my$("btn4").onclick=function () {
+        animate(my$("dv"),"height",30);
+    };
+    //获取任意元素的任意属性
+
+    function getStyle(element,attr) {
+        return element.currentStyle?element.currentStyle[attr]:window.getComputedStyle(element,null)[attr]||0;
+    }
+    function animate(element,attr,target) {
+        clearInterval(element.setId);
+        element.setId=setInterval(function () {
+            var current=parseInt(getStyle(element,attr));
+            var step=(target-current)/10;
+            step=step>0?Math.ceil(step):Math.floor(step);
+            current+=step;
+            element.style[attr]=current+"px";
+            if(current==target){
+                clearInterval(element.setId);
+            }
+            console.log("current:"+current+"target:"+target+"step:"+step);
+        },20);
+    }
+
+</script>
+</body>
+</html>

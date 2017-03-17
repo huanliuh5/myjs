@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        #d1 {
+            background-color: pink;
+        }
+        #d2 {
+            background-color: red;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("#btn").on("click", function () {
+                $("#d1").slideUp(4000).slideDown(4000);
+                $("#d2").slideUp(4000).slideDown(4000);
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="开始动画" id="btn">
+<div id="d1">我是第一个div</div>
+<div id="d2">我是第二个div</div>
+</body>
+</html>

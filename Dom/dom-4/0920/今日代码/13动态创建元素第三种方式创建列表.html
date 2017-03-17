@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+        //$每天开心,快乐,自信,就是这么帅!$
+    </script>
+</head>
+<body>
+<input type="button" value="创建列表" id="btn"/>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    var names=["中午","不吃饭","你会饿吗","会想我吗"];
+    //点击按钮 创建列表ul-li
+    my$("btn").onclick=function () {
+        //先创建ul--立刻加入到层中
+        var ulObj=document.createElement("ul");
+        my$("dv").appendChild(ulObj);
+        //遍历数组创建li,立刻加入到ul中
+        for(var i=0;i<names.length;i++){
+            var liObj=document.createElement("li");
+            ulObj.appendChild(liObj);//li加入到ul中
+            setInnerText(liObj,names[i]);
+        }
+    };
+
+
+</script>
+</body>
+</html>

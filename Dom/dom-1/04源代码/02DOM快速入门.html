@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        /*
+        *
+        * JavaScript知识
+        * JavaScript分三个内容:
+        * 1.ECMAScript标准
+        * 2.DOM---Document Object Model
+        * 3.BOM---
+        *
+        * DOM是什么?文档对象模型:整个页面看成是文档,页面中所有的html标签及节点(空白)
+        * 把页面中的标签看成是对象,最终演变成了一个节点树的模型---树状图
+        * DOM的作用:操作页面元素
+        *
+        * HTML:作用:展示页面的内容
+        * XML:作用:侧重于存储数据
+        * API:可以理解成是一组操作页面封装好的的方法(工具)
+        * document:看成页面中的顶级对象
+        *
+        *
+        *
+        * */
+
+
+        function f1() {
+            alert("阿涅哈斯诶呦");
+        }
+
+
+    </script>
+</head>
+<body>
+<!--如果这么操作页面中的元素,html代码和js代码混合了,不利于后期的维护和扩展-->
+<!--html中可以嵌入js的代码,但是并不是非常的推荐-->
+<input type="button" value="按钮" onclick="alert('今天月亮会更圆');"/>
+<!--开始把js代码进行抽取-->
+<input type="button" value="按钮2" onclick="f1();"/>
+<!--再次进行抽取-->
+<input type="button" value="按钮3" id="btn" /><!--id可以在任何的标签中加入这个属性,值是这个属性的唯一标识,id属性和值是页面中的唯一标识,可以理解成我们的身份证号码-->
+
+<script>
+    function f2() {
+        alert("这是一个帅个");
+    }
+    //第三种写法:
+    //返回的是id为btn的这个元素,这个元素可以看成是一个对象
+    var btnObj=document.getElementById("btn");//这行代码应该方法html中标签的后面
+    //浏览器解析到下面这个代码的时候，把f2函数存储到了onclick中,然后,onclick是一个事件,当这个点击事件被点击的时候(触发)才开始调用这个函数.
+    btnObj.onclick=f2;
+</script>
+
+</body>
+</html>

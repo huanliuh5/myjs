@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("div").eq(0).animate({
+                    "left":"600px"
+                }, 10000, "swing");
+
+                $("div").eq(1).animate({
+                    "left":"600px"
+                }, 10000, "linear");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="奔跑吧" id="btn">
+    <div></div>
+    <br>
+    <div></div>
+</body>
+</html>

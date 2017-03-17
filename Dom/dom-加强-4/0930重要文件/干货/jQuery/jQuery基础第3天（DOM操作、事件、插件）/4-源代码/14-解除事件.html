@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("div").on("click", function () {
+                alert("事件触发了");
+            });
+
+            $("div").on("click", "p", function () {
+                alert("p元素触发的");
+            });
+
+
+            $("#btnOff").on("click", function () {
+
+                //off(types):解除事件绑定
+                //$("div").off("click");
+
+                //off()解除所有事件
+                //$("p").off();
+
+                $("div").off("click", "**");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="解除事件绑定" id="btnOff">
+<div>
+    我是div的内容
+    <p>我是p元素的内容</p>
+</div>
+</body>
+</html>

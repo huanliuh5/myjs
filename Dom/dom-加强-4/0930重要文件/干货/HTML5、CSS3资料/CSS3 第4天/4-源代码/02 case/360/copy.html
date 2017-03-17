@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>360</title>
+	<link rel="stylesheet" href="./css/copy.css">
+</head>
+<body>
+	<div id="fullpage">
+		<!-- 第一屏 -->
+		<div class="section first">
+			<!-- LOGO -->
+			<div class="logo"></div>
+			<!-- 文字 -->
+			<div class="text">
+				<img src="./images/text_1.png" alt="">
+				<img src="./images/text_2.png" alt="">
+				<img src="./images/text_3.png" alt="">
+				<img src="./images/text_4.png" alt="">
+				<img src="./images/text_5.png" alt="">
+				<img src="./images/text_6.png" alt="">
+				<img src="./images/text_7.png" alt="">
+				<img src="./images/text_8.png" alt="">
+			</div>
+			<!-- 其它信息 -->
+			<div class="extra"></div>
+		</div>
+		<!-- 第二屏 -->
+		<div class="section second">
+			<!-- 盾牌 -->
+			<div class="shield">
+				<img src="./images/shield_1.png" alt="">
+				<img src="./images/shield_2.png" alt="">
+				<img src="./images/shield_3.png" alt="">
+				<img src="./images/shield_4.png" alt="">
+				<img src="./images/shield_5.png" alt="">
+				<img src="./images/shield_6.png" alt="">
+				<img src="./images/shield_7.png" alt="">
+				<img src="./images/shield_8.png" alt="">
+				<img src="./images/shield_9.png" alt="">
+			</div>
+			<!-- 其它信息 -->
+			<div class="extra"></div>
+		</div>
+		<!-- 第三屏 -->
+		<div class="section third">
+			<!-- 火箭 -->
+			<div class="rocket"></div>
+			<!-- 其它信息 -->
+			<div class="extra"></div>
+			<!-- 圆 -->
+			<div class="circle"></div>
+		</div>
+		<!-- 第四屏 -->
+		<div class="section fourth">
+			<!-- 搜索 -->
+			<div class="search">
+				<!-- 搜索框 -->
+				<div class="searchbar"></div>
+				<!-- 关键字 -->
+				<div class="keys"></div>
+				<!-- 结果 -->
+				<div class="result-wrap">
+					<div class="result">
+						<!--  -->
+					</div>
+				</div>
+			</div>
+			<!-- 其它信息 -->
+			<div class="extra">
+				
+			</div>
+		</div>
+		<!-- 第五屏 -->
+		<div class="section fifth">
+			<!-- 其它信息 -->
+			<div class="extra"></div>
+			<!-- 浏览器 -->
+			<div class="broswer">
+				<!-- 四条线 -->
+				<div class="lineleft"></div>
+				<div class="lineright"></div>
+				<div class="linetop"></div>
+				<div class="linebottom"></div>
+				<!-- 工具栏 -->
+				<div class="toolbar"></div>
+				<!-- 边框线 -->
+				<div class="wrap">
+					<div class="box"></div>
+				</div>
+				<!-- 任务栏 -->
+				<div class="task"></div>
+				<!-- 底线 -->
+				<div class="line"></div>
+			</div>
+		</div>
+	</div>
+	<!--  -->
+	<script src="./js/jquery.min.js"></script>
+	<!--  -->
+	<script src="./js/jquery.fullPage.min.js"></script>
+	<script>
+
+		$('#fullpage').fullpage({
+		 	sectionsColor : ['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+		 	afterLoad: function (arc, key) {
+		 		// console.log(arc, key);
+
+		 		// 将所有屏的current移除
+		 		$('.section').removeClass('current');
+
+		 		// 设置延时
+		 		setTimeout(function () {
+		 			// 当前屏的DOM元素
+		 			$('.section').eq(key - 1).addClass('current');
+		 		}, 50);
+		 	}
+		});
+
+	</script>
+</body>
+</html>

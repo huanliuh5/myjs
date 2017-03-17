@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="隐藏" id="btn"/>
+<div id="dv">
+
+</div>
+<script>
+   // 案例:点击按钮显示和隐藏层
+    //获取按钮,注册点击事件,获取层,
+    document.getElementById("btn").onclick=function () {
+        //获取层
+        var dvObj=document.getElementById("dv");
+        if(this.value=="隐藏"){
+            dvObj.style.display="none";
+            this.value="显示";
+        }else{
+            //此时是显示
+            dvObj.style.display="block";
+            this.value="隐藏";
+        }
+    };
+
+
+</script>
+
+</body>
+</html>

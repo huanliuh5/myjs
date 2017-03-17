@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为梦想而奋斗</title>
+    <style>
+        div{
+            width: 200px;
+            height: 2000px;
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<div></div>
+<script>
+
+    var eventTools={
+        //获取的事件参数(事件对象)
+        getEvt:function (e) {
+            return e||window.event;
+        },
+        //根据事件参数获取可视区域的横坐标
+        getClientX:function (e) {
+            return this.getEvt(e).clientX;
+        },
+        //根据事件参数获取可视区域的纵坐标
+        getClientY:function (e) {
+            return this.getEvt(e).clientY;
+        },
+        //根据事件参数获取可视区域+卷曲出去的横坐标
+        getPageX:function (e) {
+            return this.getClientX(e)+(window.pageXOffset||document.documentElement.scrollLeft||document.body.scrollLeft||0);
+        },
+        getPageY:function (e) {
+            return this.getClientY(e)+(window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0);
+        }
+    };
+
+    document.onclick=function (e) {
+        //显示可视区域的横坐标和可视区域的纵坐标
+        //console.log(eventTools.getClientX(e)+"======"+eventTools.getClientY(e));
+        //此时测试谷歌浏览器没有问题
+       // console.log(eventTools.getClientY(e)+"===="+document.documentElement.scrollTop);
+        //console.log(eventTools.getPageY(e));
+    }
+
+
+</script>
+
+</body>
+</html>

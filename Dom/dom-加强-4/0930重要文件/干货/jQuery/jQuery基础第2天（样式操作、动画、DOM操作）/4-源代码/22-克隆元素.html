@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+
+
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+
+            $("p").click(function () {
+                alert("我执行点击事件");
+            });
+
+
+            var $p = $("p").clone(true);
+
+            $p.html("我修改了内容");
+
+            $("div").append($p);
+        });
+    </script>
+</head>
+<body>
+<div>我是div的内容</div>
+<p>我是p元素的内容
+    <span>我是span的内容</span>
+</p>
+</body>
+</html>

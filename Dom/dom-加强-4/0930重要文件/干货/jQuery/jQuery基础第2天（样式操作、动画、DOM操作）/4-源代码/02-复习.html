@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+1. jquery基本概念
+    1.1 为什么要学jquery
+        兼容性
+        代码很简单
+    1.2 什么是jquery？
+        jquery就是一个js库，js文件、common.js
+    1.3 学习jquery，学什么
+        学习方法
+    1.4 jquery的基本使用（重点）
+        引包、入口函数、功能实现
+
+2. 详细解释
+    2.1 版本问题
+        大版本：1.x(兼容IE678) 2.x 3.0
+        同一个版本：
+            压缩版：生产
+            未压缩版：学习、开发
+        我们：1.x 未压缩
+    2.2 引包错误
+        $ is not defined
+    2.3 入口函数
+        $(document).ready(function() {})
+        $(function(){})
+    2.4 $的实质：function
+    2.5 DOM对象与jquery对象的转换（难点）
+        DOM-->jquery   $(domObj)
+        jquery-->DOM   $li[0]  $li.get(0)
+    2.6 区分jquery与JavaScript
+        JavaScript才是根本，jquery是工具
+
+3. 选择器（重点）
+    3.1 基本选择器
+        id选择器
+        类选择器
+        标签选择器
+        并集选择器  ： $("s1,s2")
+        标签指定式选择器 :   $("s1s2")
+
+    3.2 层级选择器
+        子代选择器  ：$("s1>s2")
+        后代选择器  : $("s1 s2")
+
+    3.3 过滤选择器
+        奇数过滤选择器： :odd
+        偶数过滤选择器:  :even
+        相等过滤选择器： :eq(index)
+
+    3.4 筛选选择器
+        children([selector])
+        find([selector])
+        parent()
+        siblings([selector])
+        next()
+        eq(index)
+    3.5 获取索引
+        index()
+
+</body>
+</html>

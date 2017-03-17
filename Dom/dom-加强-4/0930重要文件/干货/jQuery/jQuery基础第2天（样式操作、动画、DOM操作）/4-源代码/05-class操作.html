@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .basic {
+            background-color: pink;
+            color: red;
+            font-size: 24px;
+        }
+
+        .bigger {
+            font-size: 32px;
+        }
+
+
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+//        $(document).ready(function () {
+//
+//        });
+
+        $(function () {
+
+            $("#btnAdd").click(function () {
+
+                //添加类
+                //addClass(name)
+                //name：需要添加的类
+                $("li").addClass("basic");
+
+            });
+            $("#btnBig").click(function () {
+                $("li").eq(0).addClass("bigger");
+            });
+
+            $("#btnGet").click(function () {
+                console.log($("li").css("fontSize"));
+            });
+
+
+            $("#btnRemove").click(function () {
+
+                //移除类
+                //removeClass(name)
+                //需要移除的类名
+                $("li").eq(0).removeClass("bigger");
+            });
+
+            $("#btnHas").click(function () {
+                var result = $("li").hasClass("basic");
+                console.log(result);
+            });
+
+
+            $("#btnToggle").click(function () {
+//                var result = $("li").hasClass("basic");
+//                if(result) {
+//                    $("li").removeClass("basic");
+//                }else {
+//                    $("li").addClass("basic");
+//                }
+
+
+                $("li").toggleClass("basic");
+            });
+
+
+        });
+
+    </script>
+</head>
+<body>
+<input type="button" value="添加类" id="btnAdd">
+<input type="button" value="变大" id="btnBig">
+<input type="button" value="获取样式" id="btnGet">
+<input type="button" value="移除样式" id="btnRemove">
+<input type="button" value="判断样式" id="btnHas">
+<input type="button" value="场景切换" id="btnToggle">
+
+<ul>
+    <li>内裤</li>
+    <li>五分裤</li>
+    <li>七分裤</li>
+    <li>九分裤</li>
+    <li>牛仔裤</li>
+    <li>运动裤</li>
+</ul>
+</body>
+</html>

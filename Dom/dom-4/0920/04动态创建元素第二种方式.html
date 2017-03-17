@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="button" value="创建一个p" id="btn" />
+<div id="dv">
+
+</div>
+<script src="common.js"></script>
+<script>
+    //点击按钮创建一个列表加入到层中,鼠标放到每一个li上都有高亮显示
+    my$("btn").onclick=function () {
+        my$("dv").innerHTML="<ul> <li>班长喜欢代码</li> <li>学习委员喜欢班长</li> <li>班主任喜欢小杨</li></ul>";
+        //层中有ul---li
+        var ulObj=getFirstElement(my$("dv"));//获取层中第一个子元素
+        var liObjs=ulObj.children;//获取ul中所有的子元素
+        //遍历ul中所有li子元素
+        for(var i=0;i<liObjs.length;i++){
+            //为每个li注册鼠标进入事件
+            liObjs[i].onmouseover=mouseoverHandle;
+            //没每个li注册鼠标离开事件
+            liObjs[i].onmouseout=mouseoutHandle;
+        }
+    };
+    function mouseoverHandle() {
+        this.style.backgroundColor="red";
+    }
+    function mouseoutHandle() {
+        this.style.backgroundColor="";
+    }
+
+
+</script>
+</body>
+</html>

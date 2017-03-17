@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid  black;
+        }
+    </style>
+
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //如果创建一个jquery对象
+            //<a href="http://web.itcast.cn" target="_blank">前端与移动开发学院</a>
+
+            //$(htmlStr)
+            //功能：创建一个jquery对象
+            //htmlStr:html格式的字符串
+            //var $a = $('<a href="http://web.itcast.cn" target="_blank">前端与移动开发学院</a>');
+
+            //append(obj)
+            //功能：追加到子级的最后面
+            //$("div").append($a);
+
+
+            //append(htmlStr)
+            //功能：新建一个jquery对象，并且追加到子级的最后面
+            //$("div").append('<a href="http://web.itcast.cn" target="_blank">前端与移动开发学院</a>');
+
+
+            //append(obj)
+            //如果这个对象是页面中存在的元素，发生的是剪切的操作。
+            var $p = $("#outer");
+            $("div").append($p);
+
+        });
+    </script>
+</head>
+<body>
+<div>
+    我是div的内容
+    <p>我是p元素的内容</p>
+</div>
+<div>
+    我是div的内容
+    <p>我是p元素的内容</p>
+</div>
+
+<p id="outer">我是外面的p元素</p>
+
+
+</body>
+</html>

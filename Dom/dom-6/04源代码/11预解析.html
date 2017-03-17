@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+      //先声明，然后才能调用
+
+//        sayHi();//先调用
+//        //后声明
+//      function sayHi() {
+//          console.log("阿涅哈斯诶呦");
+//      }
+
+        //把函数的声明提前
+    </script>
+
+    <script>
+//        var num=100;
+//        console.log(num);//100 还是 报错  还是undefined
+//        num =200;
+
+        //预解析把变量的声明和函数的声明提前了
+    </script>
+
+    <script>
+
+//        showMessage();//调用
+//        function showMessage() {
+//            console.log("小杨你为啥那么帅");
+//        }
+//        showMessage();
+
+    </script>
+    <script>
+//        showMessage();
+//        function showMessage() {
+//            console.log("就这么任性");
+//        }
+
+        //预解析的时候会出现分段问题:
+        //script标签互不影响
+    </script>
+</head>
+<body>
+
+<script src="common.js"></script>
+<script>
+
+</script>
+</body>
+</html>

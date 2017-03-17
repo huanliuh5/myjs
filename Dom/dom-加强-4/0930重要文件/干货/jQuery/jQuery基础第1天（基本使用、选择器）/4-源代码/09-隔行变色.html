@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 1. DOM对象：使用js的方法获取到页面中的元素就是DOM对象
+            // 2. jQuery对象：使用jquery对象获取到页面中的元素就是jQuery对象
+            // 3. jquery是DOM对象的包装集。
+            // 4. DOM对象和jquery对象不能混着用。
+            // 5. DOM对象转jquery对象：我有钱  $(domObj)
+            // 6. jqeury对象转DOM对象:$li
+                //1. $li[0]
+                //2. $li.get(0)
+
+
+            //1. 找人
+            //var lis = document.getElementsByTagName("li");
+            var lis = $("li");
+            for(var i = 0; i < lis.length; i++) {
+
+                //jquery对象转换成DOM对象
+                var li = lis[i];
+
+                if(i % 2 == 0) {
+                    li.style.backgroundColor = "pink";
+                } else {
+                    li.style.backgroundColor = "lightgray";
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li>我是第1个li元素</li>
+    <li>我是第2个li元素</li>
+    <li>我是第3个li元素</li>
+    <li>我是第4个li元素</li>
+    <li>我是第5个li元素</li>
+    <li>我是第6个li元素</li>
+    <li>我是第7个li元素</li>
+    <li>我是第8个li元素</li>
+    <li>我是第9个li元素</li>
+    <li>我是第10个li元素</li>
+</ul>
+</body>
+</html>

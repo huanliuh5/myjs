@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>五角星评分案例</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .comment {
+            font-size: 40px;
+            color: teal;
+        }
+
+        .comment li {
+            float: left;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            var wjx_s = "★";
+            var wjx_k = "☆";
+
+
+            //1. 找li注册mouseenter事件
+            $(".comment>li").mouseenter(function () {
+                //3. 让当前元素编程实心五角星，前面的兄弟变成实心五角星，后面的兄弟变成空心
+                //prevAll() 获取前面的所有兄弟
+                //nextAll() 获取后面的所有兄弟
+
+                $(this).text(wjx_s).prevAll().text(wjx_s);
+                $(this).nextAll().text(wjx_k);
+            }).click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+
+
+
+
+            //2. 离开ul的时候，让所有的li变成空心
+            $(".comment").mouseleave(function () {
+                $(this).children().text(wjx_k);
+
+                $(this).children(".active").text(wjx_s).prevAll().text(wjx_s);
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+<ul class="comment">
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+</ul>
+</body>
+
+</html>

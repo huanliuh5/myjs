@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        *
+        * return false 取消超链接的默认的点击事件
+        * */
+
+    </script>
+</head>
+<body>
+<a href="images/1.jpg" id="aLink">切换图片</a>
+<img src="images/1-small.jpg" id="img1"/>
+
+<script>
+
+    //点击超链接让下面的图片标签显示对应的大图,同时，超链接不在跳转
+    //超链接点击,让图片标签的src改变,取消超链接的默认的点击事件
+    document.getElementById("aLink").onclick=function () {
+        //获取图片
+        var imgObj=document.getElementById("img1");
+        imgObj.src=this.href;
+        return false;//取消超链接的默认的点击事件
+    };
+
+
+
+</script>
+</body>
+</html>

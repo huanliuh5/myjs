@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height:100px;
+            background-color: pink;
+            margin-bottom: 10px;
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+        //$每天开心,快乐,自信,就是这么帅!$
+    </script>
+</head>
+<body>
+<input type="button" value="隐藏" id="btn"/>
+<div></div>
+<div></div>
+<div></div>
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick=function () {
+        var divObj=document.getElementsByTagName("div");
+        for(var i=0;i<divObj.length;i++){
+            if(divObj[i].className=="hide"){
+                divObj[i].className="show";
+                this.value="隐藏";
+            }else{
+
+                divObj[i].className="hide";
+                this.value="显示";
+            }
+        }
+
+    };
+
+
+</script>
+</body>
+</html>
