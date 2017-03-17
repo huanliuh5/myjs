@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+       /*
+       *   圆的面积-参数半径,返回值面积
+       *
+       *
+       *
+       *
+       *
+       *
+       *
+       *
+       *
+       * */
+
+//        function getS(r) {
+//            //面积:PI*r*r
+//            return Math.PI*Math.pow(r,2);
+//            //三种方式找该方法的用法:
+//            /*
+//            * 1.Ctrl+鼠标左键
+//            * 2.百度或者谷歌
+//            * 3.MDN--------最推荐
+//            *
+//            *
+//            * */
+//        }
+//
+//        console.log(getS(5));
+
+
+        //判断这个数字是不是质数
+        //这个数字只能被1和自身整除
+        //从2开始
+//        var num=7;
+//        function isPrime(number) {
+//            var flag=true;//假设是一个质数
+//            for(var i=2;i<number;i++){
+//               if(number%i==0){
+//                        //从没执行过
+//                    flag=false;
+//                   break;
+//                }
+//            }
+//            return flag;
+//
+//        }
+//        if(isPrime(parseInt(prompt("请输入一个数字")))){
+//           console.log("真的是一个质数");
+//        }else{
+//            console.log("不是的");
+//        }
+
+
+//       var num=7;
+//       function isPrime(number) {
+//           var flag=true;//假设是一个质数
+//           for(var i=2;i<=parseInt(number/2);i++){
+//               if(number%i==0){
+//                   //从没执行过
+//                   flag=false;
+//                   break;
+//               }
+//           }
+//           return flag;
+//
+//       }
+//       if(isPrime(parseInt(prompt("请输入一个数字")))){
+//           console.log("真的是一个质数");
+//       }else{
+//           console.log("不是的");
+//       }
+
+//       var num=7;
+//       function isPrime(number) {
+//           var flag=true;//假设是一个质数
+     //     for(var i=2;i<=parseInt(Math.sqrt(number));i++){
+//               if(number%i==0){
+//                   //从没执行过
+//                   flag=false;
+//                   break;
+//               }
+//           }
+//           return flag;
+//
+//       }
+//       if(isPrime(parseInt(prompt("请输入一个数字")))){
+//           console.log("真的是一个质数");
+//       }else{
+//           console.log("不是的");
+//       }
+
+
+        //计算输入的年月日 显示多少天
+        /*
+        * 2016年3月1日  61天
+        *
+        * 要有一个判断年份是不是如年的一个过程
+        *
+        * 把输入的月份之前的所有的月份的天数相加,然后再加上当前的输入的日期
+        *
+        * */
+//       function isLeapYear(year) {
+//           return (year%4==0&&year%100!=0||year%400==0);
+//       }
+       //判断年份是不是闰年
+       function isLeapYear(year) {
+            if(year%4==0&&year%100!=0||year%400==0){
+                return true;
+            }
+            return false;
+        }
+        function getDays(year,month,day) {
+            //先把天数保存起来
+            var days=day;
+            if(month==1){//判断月份是不是一月份
+               return days;//如果是一月份直接把天数返回
+            }
+            //累加当前月份之前所有月份的天:2015年2月23日
+            var months=[31,28,31,30,31,30,31,31,30,31,30,31];//从索引0开始
+            for(var i=0;i<month-1;i++){
+                days+=months[i];
+            }
+            //还要判断当前输入的月份是不是大于二月份,并且是闰年
+            if(month>2&&isLeapYear(year)){
+                days++;
+            }
+            return days;
+
+        }
+
+console.log(getDays(2015,3,2));
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

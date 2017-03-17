@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    //    console.log("呵呵","哈哈",1,2,3,4,5,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4);
+    //    function log (n1){
+    //
+    //    }
+
+    //在函数中有一个arguments 这个东西是函数的实参列表
+    //    function fun() {
+    //只能在函数内使用
+    //伪数组就是不具备数组方法的一种数组形式
+    //        console.log(arguments);
+    //        console.log(arguments.length);
+    //        console.log(arguments[0]);
+    //    }
+    //
+    //    fun(1, 2, 3, 4, 5, 6, 7);
+    //    fun(1, 2);
+
+
+    //我想书写一个函数，无论用户传入什么实参，都要在这个参数前面加一个字符串  这是我的
+    //    function getMine(){
+    //        //遍历arguments。对所有的实参进行操作
+    //        for (var i = 0; i < arguments.length; i++) {
+    //            console.log("这是我得"+arguments[i]);
+    //        }
+    //
+    //    }
+    //    getMine("萝卜","黄瓜","钱")
+
+    //重载
+    //    function fun(n1) {
+    //        console.log(n1);
+    //    }
+    //    function fun(n1, n2) {
+    //        console.log("呵呵");
+    //    }
+    //    function fun(n1, n2, n3) {
+    //        console.log("哈哈");
+    //    }
+
+    //函数无法重名，也就没有重载的概念了
+    //我们可以通过arguments来模拟重载
+        function fun() {
+            //检测传入的实参个数
+            if (arguments.length == 1) {
+                console.log("我有一个参数");
+            } else if (arguments.length == 2) {
+                console.log("我有二个参数");
+            } else {
+                console.log("参数个数超过了两个");
+            }
+        }
+
+        fun(100);
+        fun(100, 200);
+        fun(100, 200, 300);
+
+    //    设置一个函数，不设置形参，打印所有实参
+    function fun() {
+        console.log(arguments);
+        for (var i = 0; i < arguments.length; i++) {
+            console.log(arguments[i]);
+        }
+    }
+    fun(1, 2, 3, 4, 5);
+
+
+</script>
+</body>
+</html>

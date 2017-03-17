@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        /*
+        *
+        * 写一个函数计算100个数字的和
+        * 如何更好的解决这个问题
+        * 答:用arguments对象
+        *arguments对象：可以获取用户调用函数的时候传入的参数的个数(参数也可以获取)
+        *
+        * 后期我们会经常问,当想知道这个函数中有几个参数,或者是有没有参数的时候
+        *
+        * */
+        function add() {
+            //console.log(arguments.length);//能够获取用户调用函数时候传入的参数的个数
+            //arguments可以看成是所有参数的组合的一个数组
+            //console.log(arguments[5]);
+            var sum=0;
+            for(var i=0;i<arguments.length;i++){
+                //console.log(arguments[i]);
+                sum+=arguments[i];
+            }
+            return sum;
+        }
+
+        var sum=add(10,20,30,50,20,10000);
+console.log(sum);
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

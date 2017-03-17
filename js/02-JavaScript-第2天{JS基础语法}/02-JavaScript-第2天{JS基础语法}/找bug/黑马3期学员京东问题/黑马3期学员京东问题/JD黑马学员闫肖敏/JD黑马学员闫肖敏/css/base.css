@@ -1,0 +1,395 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+/*各浏览器显示不同，去掉蓝色边框*/
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+/*去掉行内替换元素空白缝隙*/
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+/*防止拖动 影响布局*/
+textarea {
+    resize: none;
+}
+
+/*去掉行内替换元素空白缝隙*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*宋体 unicode */
+    color: #666;
+    background: #fff;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*京东色*/
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+/*顶部工具栏开始*/
+.shortcut{
+    /*height: 30px;*//*此处已经设置清除浮动*/
+    line-height: 30px;
+    background:#F1F1F1;
+}
+.shortcut .fr{
+    background-color:#F1F1F1;
+}
+/*顶部工具左侧li标签样式*/
+.shortcut .shortdown{
+    padding-right:25px;
+    position:relative;/*子绝父相-i标签中脱标*/
+}
+.shortcut .shortdown i{
+    width: 15px;
+    height: 8px;
+    position:absolute;
+    top:12px;
+    right:8px;
+    overflow:hidden;
+}
+.shortcut .shortdown s{
+    /*width: 15px;*/
+    /*height: 15px;*/
+    font:400 15px/15px "consolas";
+    position:absolute;/*调整s标签位置*/
+    top:-7px;
+    right:0px;
+}
+/*顶部工具栏右侧样式*/
+.shortcut li{
+    float: left;
+    padding:0 10px;
+}
+.shortcut .spacer{
+    padding:0px;
+    margin-top:9px;
+    width: 1px;
+    height: 12px;
+    background:#DDD;
+}
+.shortcut .tel-li{
+    padding-left:27px;
+    position:relative;
+}
+.shortcut .tel-icon{
+    width: 15px;
+    height: 20px;
+    background:url("../images/jd2015img.png") no-repeat 0 0;
+    position:absolute;
+    top:5px;
+    left:7px;
+}
+/*顶部工具栏结束*/
+/*广告栏上设置开始*/
+.topbanner {
+    height: 80px;
+    background: #1879EC;
+}
+.banner-header{
+    position:relative;
+}
+.banner-header .close-btn{
+    width: 19px;
+    height: 19px;
+    background:url("../images/5507956eN735de046.png") no-repeat 0 0;
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+.close-btn:hover{
+    background:url("../images/5507956eN735de046.png") no-repeat 0 -19px;
+}
+/*广告栏上设置结束*/
+/*header设置开始*/
+.header{
+    /*height: 100px;*/
+    /*background:red;*/
+}
+/*设置logo样式*/
+.logo{
+    width: 362px;
+    padding: 20px 0px;
+}
+.logo a{
+    display: inline-block;
+    width: 270px;
+    height: 60px;
+    background:url("../images/logo-201305.png") no-repeat;
+    text-indent:-1000px;
+}
+/*设置搜索框样式*/
+.search{
+    padding-top:25px;
+}
+/*搜索文本框*/
+.search .txt {
+    width: 450px;
+    height: 32px;
+    border: 2px solid #B61D1D;
+    float: left;
+    font:400 14px/32px "Microsoft yahei";
+    padding-left:4px;
+
+}
+/*搜索按钮*/
+.search .search-btn{
+    width: 80px;
+    height: 36px;
+    background-color:#B61D1D;
+    font:400 16px/36px "Microsoft yahei";
+    color:#fff;
+    float : left;
+    cursor:pointer;
+}
+/*设置购物车样式*/
+.buycar{
+    width: 139px;
+    height: 34px;
+    background-color:#F9F9F9;
+    margin-top:25px;
+    margin-right:65px;
+    position:relative;
+}
+.buycar a{
+    line-height: 34px;
+    padding-left:43px;
+}
+/*设置小推车*/
+.buycar .icon1{
+    width: 18px;
+    height: 16px;
+    background:url("../images/jd2015img.png") no-repeat 0 -90px;
+    position:absolute;
+    top:10px;
+    left:19px;
+}
+/*设置大于号*/
+.buycar .icon2{
+    font:400 13px/13px "sisum";
+    float:right;
+    margin-top:10px;
+    margin-right:9px;
+}
+/*设置0*/
+.buycar .icon3{
+    /*width: 18px;*//*去除固定宽度以便客户输入数值过大时宽度背景不够*/
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    background:#C81623;
+    position:absolute;
+    top:-3px;
+    left:107px;/*此处应设置left而不是right值因客户输入数值过大会拓宽右边宽度而不是左边*/
+    color:#fff;
+    border-radius:7px 7px 7px 0;/*设置不规则元素，可设置该属性改变其为任意形状*/
+    padding:0 5px;/*撑开图标*/
+
+}
+/*设置热词样式*/
+.hotwords{
+    width: 538px;
+}
+.hotwords li{
+    float: left;
+    margin-top:8px;
+    margin-right: 11px;
+}
+/*header设置结束*/
+
+/*设置底部样式开始*/
+.footer{
+    height: 494px;
+}
+/*底部第一部分*/
+.service{
+    /*height: 296px;*/
+}
+.service .slogen{
+    height: 54px;
+    background-color:#F5F5F5;
+    padding:20px 0;
+    position:relative;
+}
+.slogen span{
+    position:absolute;
+    left:50%;/*设置缩小浏览器时各图片从中间开始缩放*/
+}
+.slogen .slogen-item1{
+    margin-left:-604px;
+    /*用margin-left而不是left*/
+}
+.slogen .slogen-item2{
+    margin-left:-304px;
+}
+.slogen .slogen-item3{
+    margin-left:0px;
+}
+.slogen .slogen-item4{
+    margin-left:305px;
+}
+.service .info{
+    height: 203px;
+}
+.info dl{
+    float:left;
+    width: 199px;
+    padding-top:25px;
+}
+.info .last-dl{
+    width: 100px;
+}
+.info dt{
+    font:400 16px "microsoft yahei";
+    margin-bottom: 10px;
+}
+.info dd{
+    line-height: 20px;
+}
+/*地图区域设置*/
+.coverage{
+    width: 202px;
+    height: 169px;
+    margin-top:13px;
+    margin-right:44px;
+    /*width: 313px;*/
+    /*height: 203px;*/
+    float:right;
+    background:url("../images/20130330B_1.png") no-repeat 0 -131px;
+}
+.coverage .coverage-dt{
+    margin:12px 0px 15px 17px;
+    font:400 16px "simsun";
+}
+.coverage .coverage-dd{
+    margin-left:17px;
+}
+.coverage .coverage-dd p{
+    line-height: 19px;
+}
+.coverage .coverage-dd a{
+    /*float:right;*//*设置p标签text-align:right,不用设置float*/
+}
+/*底部第二部分*/
+.bottom{
+    border-top:1px solid #E5E5E5;
+    height: 196px;
+    /*background:blue;*/
+}
+.links{
+    margin-top: 23px;
+    text-align: center;
+    margin-bottom: 13px;
+}
+.links a{
+    padding:0 12px;
+}
+.copyright{
+    text-align: center;
+}
+.authentication{
+    text-align: center;
+    margin-top:13px;
+}
+.authentication img{
+    margin-right: 13px;
+}
+/*设置底部样式结束*/

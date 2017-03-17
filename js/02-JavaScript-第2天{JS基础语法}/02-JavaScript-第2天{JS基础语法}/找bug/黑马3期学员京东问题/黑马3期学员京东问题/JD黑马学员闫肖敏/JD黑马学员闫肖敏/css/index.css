@@ -1,0 +1,264 @@
+/*mainnav设置开始*/
+.mainnav{
+    height: 44px;
+    border-bottom:2px solid #B1191A;
+}
+/*下拉列表标题设置*/
+.categories{
+    /*height: 470px;*/
+ width: 210px;
+    height: 44px;
+    background-color: #B1191A;
+    float: left;
+    z-index: 2;
+    position: relative;
+/*这里的代码没有写,所以出现问题了*/
+}
+.cate-dt a{
+    display: block;
+    width: 190px;
+    height: 44px;
+    background-color:#B1191A;
+    color:#fff;
+    font:400 16px/44px "microsoft yahei";
+    padding:0 10px;
+}
+/*剩下的商品分类*/
+.cate-dd{
+    width: 209px;
+    /*height: 470px;*/
+    border-left:1px solid #B61D1D;
+    background-color:#C81623;
+    z-index: 2;
+    position:relative;
+    margin-top:2px;
+}
+.cate-item{
+    line-height: 31px;
+    color:#fff;
+    position:relative;
+}
+.cate-item h3{
+    padding-left:9px;
+}
+.cate-item a{
+    color:#fff;
+}
+.cate-item i{
+    position:absolute;
+    top:0px;
+    right:12px;
+    font-size:14px;
+}
+/*导航项*/
+.navitems{
+    height: 44px;
+    line-height: 44px;
+}
+.navitems li{
+    float: left;
+    /*padding:0 20px;*/
+    position: relative;
+}
+.navitems a{
+    padding:0 20px;
+    display:inline-block;
+    font-size:16px;
+    /*width: 100%;*/
+    /*height: 100%;*/
+}
+.navitems em{
+    width: 36px;
+    height: 18px;
+    background:url("../images/57cd2852N89da6ac5.jpeg") no-repeat;
+    position:absolute;
+    top:0px;
+    right:-15px;
+}
+/*mainnav设置结束*/
+/*主体部分设置开始*/
+/*轮播图设置*/
+.slider{
+    width: 730px;
+    height:454px;
+    margin-top:12px;
+    margin-left:220px;/*修改代码*/
+    float:left;
+    position:relative;
+}
+.slider ul{
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    margin-left:-64px;
+}
+.slider li{
+    float:left;
+    width: 18px;
+    height: 18px;
+    border-radius:9px;
+    background-color:#3E3E3E;
+    text-align:center;
+    margin-right:4px;
+}
+.slider a{
+    color:#fff;
+}
+.slider li:hover{
+    background-color:#B61B1F;
+}
+.arrow a{
+    width: 28px;
+    height: 62px;
+    position:absolute;
+    top:50%;
+    margin-top:-31px;
+    /*left:0px;*//*此处不应该同一设置left而是分别设置两个a标签的left值*/
+    background-color:rgba(0,0,0,.2);
+    color:#fff;
+    font:400 22px/62px "simsum";
+    text-align:center;
+}
+.arrow .arrow-left{
+    left:0;
+}
+.arrow .arrow-right {
+    right:0;
+}
+/*额外部分设置*/
+.extra{
+    width: 250px;
+    margin-top:12px;
+    float:right;
+}
+.news{
+    width: 248px;
+    height: 163px;
+    border:1px solid #E4E4E4;
+    border-bottom:0;
+}
+.news-mc{
+    height: 32px;
+    border-bottom:1px dashed #E4E4E4;
+
+    position:relative;
+}
+.news-mc h2{
+    line-height: 32px;
+    padding-left:15px;
+    font-size:14px;
+}
+.news-mc .news-a{
+    position:absolute;
+    top:8px;
+    right:12px;
+}
+.news-md ul{
+    margin-top:5px;
+}
+.news-md li{
+    line-height: 24px;
+    padding-left:15px;
+}
+.news-md span{
+    font-weight:700;
+    margin-right:5px;
+}
+.lifeservice{
+    /*width: 252px;/!*设置以便能有4个li标签在同一行*!/*/
+    height: 208px;
+    border:1px solid #E4E4E4;
+    overflow: hidden;
+}
+.lifeservice ul{
+    width: 252px;
+    /*overflow: hidden;*/
+}
+.lifeservice li{
+    width: 62px;
+    height: 70px;
+    float:left;
+    border-right:1px solid #E8E8E7;
+    border-bottom:1px solid #E8E8E7;
+    position:relative;
+}
+.lifeservice li a{
+    display:inline-block;
+    width: 62px;
+    height: 28px;
+    padding-top:42px;
+    text-align: center;
+}
+.lifeservice i{
+    width: 25px;
+    height: 25px;
+    position:absolute;
+    top:10px;
+    left:18px;
+}
+.lifeservice .ic1{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px 0px;
+}
+.lifeservice .ic2{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -25px;
+}
+.lifeservice .ic3{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -50px;
+}
+.lifeservice .ic4{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -75px;
+}
+.lifeservice .ic5{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -100px;
+}
+.lifeservice .ic6{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -125px;
+}
+.lifeservice .ic7{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -150px;
+}
+.lifeservice .ic8{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -175px;
+}
+.lifeservice .ic9{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -200px;
+}
+.lifeservice .ic10{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -225px;
+}
+.lifeservice .ic11{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -250px;
+}
+.lifeservice .ic12{
+    background:url("../images/57620a6fN77b2b8af.png") no-repeat 0px -275px;
+}
+.right-pic{
+    width: 250px;
+    height: 75px;
+    margin-top:5px;
+}
+/*主体部分设置结束*/
+/*今日推荐设置开始*/
+.todays{
+    margin-top:5px;
+    margin-bottom:5px;
+    /*height: 151px;*/
+}
+.todays-left{
+    width: 210px;
+    height: 151px;
+    background:url("../images/clock.png") no-repeat;
+}
+.todays-right{
+    width: 1000px;
+}
+.todays-right ul{
+    width: 4000px;
+}
+.todays-right li{
+    float: left;
+    width: 250px;
+    height: 164px;
+    margin-right:2px;
+}
+/*今日推荐设置结束*/

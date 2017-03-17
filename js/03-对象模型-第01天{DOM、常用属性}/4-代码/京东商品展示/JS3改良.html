@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #box {
+            width: 360px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        #box img {
+            vertical-align: middle;
+        }
+
+        #box ul {
+            overflow: hidden;
+            border-top: 1px solid #ccc;
+        }
+
+        #box li {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <img src="images/01big.jpg" id="bigImg" alt=""/>
+    <ul id="itemList">
+        <li><img src="images/01.jpg" alt="1"/></li>
+        <li><img src="images/02.jpg" alt="2"/></li>
+        <li><img src="images/03.jpg" alt="3"/></li>
+        <li><img src="images/04.jpg" alt="4"/></li>
+        <li><img src="images/05.jpg" alt="5"/></li>
+    </ul>
+</div>
+<script>
+    var bigImg = document.getElementById("bigImg");
+    //点击小图片 让大图片 切换为 小图片对应的大图片
+    //给小图片绑定事件
+    //找人（获取小图片）
+    //document.getElementsByTagName("img")
+    //我们要的是ul里面的img 而不是页面上所有的img
+    var ul = document.getElementById("itemList");
+    var imgs = ul.getElementsByTagName("img");//小图片
+    //给小图片绑定事件
+    for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];//每一个元素(每个小图片)
+        //给每一个小图片注册事件
+        //事件源.事件 = function(){ 事件处理程序 };
+        img.onclick = function () {
+            //console.log(i);//i在事件执行的时候已经跑到了最后
+            //console.log(img);//img在事件执行的时候也跑到了最后
+            //console.log(this);//对象方法中的this永远指向 这个方法所属的那个对象
+            //console.log(this.alt);
+            changePic(this.alt);
+        };
+    }
+    function changePic(imgName) {
+        bigImg.src = "images/0" + imgName + "big.jpg";
+    }
+</script>
+</body>
+</html>

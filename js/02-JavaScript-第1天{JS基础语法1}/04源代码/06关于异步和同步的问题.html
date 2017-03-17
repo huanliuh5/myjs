@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--介绍的内容====了解的-->
+    <script>
+        /*
+        *
+        * 异步:多个人同时做多件事
+        * 同步:一个人有顺序的做多件事
+        *
+        * 同步:代码有顺序的去执行
+        * 异步:同时在执行---需要一对属性和值
+        * */
+
+
+    </script>
+<!--async属性的值可以省略,因为属性和值都是同一个-->
+    <!--<script src="main.js" async="async"></script>-->
+    <!--<script>-->
+        <!--alert("1");-->
+    <!--</script>-->
+
+    <!--<script>-->
+        <!--alert("2");-->
+    <!--</script>-->
+    <!--defer属性的值可以省略,原因:属性和值都是一个-->
+    <!--<script src="main.js" defer="defer"></script>-->
+    <!--<script>-->
+    <!--alert("1");-->
+    <!--</script>-->
+
+    <!--<script>-->
+    <!--alert("2");-->
+    <!--</script>-->
+    <script>
+
+        /*
+        *
+        * async:在执行js代码的同时下载外部的js文件,如果下载完了就立刻执行
+        * defer:在所有的js代码都执行完毕之后再下载再执行
+        *
+        * */
+
+    </script>
+</head>
+<body>
+<script>
+    alert("1");
+</script>
+<p>这是一个P</p>
+<script src="main.js" defer="defer"></script>
+<script>
+    alert("2");
+</script>
+<script>
+    alert("3");
+</script>
+<p>这是一个P</p>
+<script>
+    alert("4");
+</script>
+</body>
+</html>

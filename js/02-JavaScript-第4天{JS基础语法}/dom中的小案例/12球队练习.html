@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .odd{
+            background-color: red;
+        }
+        .even{
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="变色" id="btn" />
+<ul id="u">
+    <li>火箭</li>
+    <li>湖人</li>
+    <li>老牛</li>
+    <li>小牛</li>
+    <li>公牛</li>
+</ul>
+<script>
+    document.getElementById("btn").onclick=function () {
+        var uObj=document.getElementById("u");
+        var index=0;
+        for(var i=0;i<uObj.childNodes.length;i++){
+            var liNode=uObj.childNodes[i];
+            if (liNode.nodeType===1){
+                if (index%2===0) {
+                    liNode.className = "odd";
+                }else{
+                    liNode.className="even";
+                }
+                index++;
+            }
+        }
+    };
+</script>
+</body>
+</html>

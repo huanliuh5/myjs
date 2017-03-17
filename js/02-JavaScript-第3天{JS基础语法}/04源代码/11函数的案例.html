@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+//        1.求m-n之间所有数的和
+        function getSum(m,n) {
+            var sum=0;
+            for(var i=m;i<=n;i++){
+                sum+=i;
+            }
+            return sum;
+        }
+        var sum=getSum(10,45); //10,45所有数字的和
+        console.log(sum);
+//        2.求数组中的最大值
+        function getArrayMax(arr) {
+            var max=Number.MIN_VALUE;//假设这个变量的值是最大的
+            for(var i=0;i<arr.length;i++){
+                if(max<arr[i]){
+                    max=arr[i];
+                }
+            }
+            return max;
+        }
+        var array=[10,-10,0,34,100,400];
+        console.log(getArrayMax(array));
+//        3.求数组中的和
+
+        function getArraySum(array){
+            var sum=0;//变量求和
+            for(var i=0;i<array.length;i++){
+                sum+=array[i];
+            }
+
+            return sum;//结果返回
+        }
+//调用
+//        var arr=[10,20,30];
+//        var result=getArraySum(arr);
+//        console.log(result);
+
+        var result=getArraySum([10,20,30]);//官方的文档中经常这么写
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

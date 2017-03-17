@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--1 数组的作用 存放多个数据-->
+<!--2 数组的元素-->
+<!--3 索引   arr[0]  arr["0"]-->
+<!--4 数组的长度 数组元素的个数  arr.length-->
+<!--5 数组中最后一项的索引  arr.length-1-->
+<!--6 新项的索引 arr.length-->
+<!--7 长度的使用：-->
+<!--8 遍历方式-->
+
+
+<script>
+    //1 正向遍历
+    //    var arr = [1, 2, 3, 4, 5];
+    //        for (var i = 0; i < arr.length; i++) {
+    //            //在for循环中将i看作索引使用
+    //            console.log(arr[i]);
+    //        }
+
+    //2 反向遍历
+    //    for (var i = arr.length - 1; i >= 0; i--) {
+    //        console.log(arr[i]);
+    //    }
+
+
+    //冒泡排序
+    var num = 0;
+    var arr = [1, 3, 2, 4, 5];
+    //外层循环控制轮数 每一轮取出一个最大值
+    for (var i = 0; i < arr.length - 1; i++) {
+        var isSorted = true;
+        //内层循环控制每轮比較的次数
+        for (var j = 0; j < arr.length - 1 - i; j++) {
+            //去随机数
+            num = Math.floor(Math.random() * 2);
+            //根据num的值随机交换
+            if (num == 0) {
+                //比大小
+//            if (arr[j] > arr[j + 1]) {
+                //降序
+//            if (arr[j] < arr[j + 1]) {
+//                交换
+                var temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                //发生了交换。不能跳出
+//                isSorted = false;
+            }
+        }
+        //检测跳出
+//        if (isSorted) {
+//            break;
+//        }
+    }
+
+    console.log(arr);
+
+
+</script>
+</body>
+</html>

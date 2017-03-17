@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+
+//        var stu={
+//            name:"小黑",
+//            age:89
+//        };
+//        console.log(stu.name);
+//        console.log(stu["name"]);
+//
+//        //JSON格式的数据=====
+//        var datas={
+//            "name":"小白",
+//            "age":"34",
+//
+//        };
+
+    </script>
+
+    <script>
+
+        //1.普通的对象的遍历---for-in
+//
+//        var stu={
+//            name:"佐助",
+//            age:18,
+//            sex:"男",
+//            sayHi:function () {
+//                console.log("哈哈哈");
+//            }
+//        };
+
+//        var n="name";
+//        console.log(stu[n]);
+//        console.log(stu.n);
+
+
+
+//        console.log(stu.name);
+//        console.log(stu["age"]);
+//        console.log(stu["sex"]);
+        //可以使用for-in循环  遍历   对象的属性===键值对
+//        for(var 变量名 in 对象的名字){
+//        }
+//        for(var key in stu){
+//            console.log(key+"======"+stu[key]);
+//        }
+        //对象.属性 可以获取和设置对象属性的值
+        //但是,如果是for-in循环遍历对象所有的属性和属性对应的值的时候,对象[键]
+        //2.JSON格式的数据遍历---for--in
+
+        var json={
+            "周星驰":"images/1.jpg",
+            "周润发":"images/2.jpg",
+            "李小龙":"images/3.jpg"
+        };
+        for(var key in json){
+            document.write("<img src="+json[key]+" title="+key+"/>")
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

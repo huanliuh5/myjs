@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>模仿京东</title>
+    <!--设置页面顶端图标-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <!--引用css链接-->
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<!--页面顶部工具栏====================开始-->
+   <!--该层设置通栏-->
+   <div class="shortcut">
+       <!--该层栏版心-->
+       <div class="w">
+           <!--设置左浮动列表-->
+           <ul class="fl">
+               <li class="dropdown">送至：北京
+                   <!--设置倒三角-->
+                   <i><s>◇</s></i>
+               </li>
+           </ul>
+           <!--设置右浮动列表-->
+           <ul class="fr">
+               <li>
+                   <!--你好，请登录红色显示-->
+                   <a href="#" class="col-red">你好，请登录</a>
+                   &nbsp;&nbsp;<!--设置中间空格-->
+                   <a href="#">免费注册</a>
+               </li>
+               <li class="spacer"></li><!--设置竖线-->
+               <li><a href="#">我的订单</a></li>
+               <li class="spacer"></li><!--设置竖线-->
+               <li class="dropdown">
+                   <a href="#">我的京东
+                    <!--倒三角设置-->
+                   <i><s>◇</s></i></a>
+               </li><!--加倒三角下拉菜单-->
+               <li class="spacer"></li><!--设置竖线-->
+               <li><a href="#">京东会员</a></li>
+               <li class="spacer"></li><!--设置竖线-->
+               <li><a href="#">企业采购</a></li>
+               <li class="spacer"></li><!--设置竖线-->
+               <li class="dropdown tel-icon">
+                   <a href="#">
+                       <!--电话icon设置-->
+                       <em><!--电话图标--></em>
+                   手机京东
+                       <!--倒三角设置-->
+                       <i><s>◇</s></i></a>
+               </li><!--加倒三角下拉菜单  加电话图标-->
+               <li class="spacer"></li><!--设置竖线-->
+               <li class="dropdown">
+                   <a href="#">关注京东
+                       <!--设置倒三角-->
+                   <i><s>◇</s></i></a>
+               </li><!--加倒三角下拉菜单-->
+               <li class="spacer"></li><!--设置竖线-->
+               <li class="dropdown">
+                   <a href="#">客户服务
+                       <!--设置倒三角-->
+                   <i><s>◇</s></i></a>
+               </li><!--加倒三角下拉菜单-->
+               <li class="spacer"></li><!--设置竖线-->
+               <li class="dropdown">
+                   <a href="#">网站导航
+                       <!--设置倒三角-->
+                   <i><s>◇</s></i></a>
+               </li><!--加倒三角下拉菜单-->
+           </ul>
+       </div>
+   </div>
+<!--页面顶部工具栏====================结束-->
+
+
+
+<!--页面顶部广告======================开始-->
+   <div class="topbanner">
+       <div class="w banner-head">
+           <!--广告页面-->
+           <a href="#">
+               <img src="images/57c7eef0N2fdef5dd.jpg" alt=""/>
+           </a>
+           <!--广告关闭按钮-->
+           <a href="javascript:void(0)" class="close-bn"></a>
+       </div>
+   </div>
+<!--页面顶部广告======================结束-->
+
+
+
+<!--页面搜索栏========================开始-->
+   <div class="searchbar clearfix w">
+       <!--京东logo-->
+       <div class="logo">
+           <a href="#">京东logo</a>
+       </div>
+       <!--搜索条-->
+       <div class="search">
+           <input type="text" class="sl" value="台式机"/><!--文本框-->
+           <input type="button" class="sr" value="搜索"/><!--搜索按钮-->
+       </div>
+       <!--购物车-->
+       <div class="shoppingcar">
+           <a href="#">我的购物车</a>
+           <em></em><!--购物车图标-->
+           <i>&gt;</i><!--右指箭头-->
+           <s>0</s><!--0-->
+       </div>
+       <!--热点词-->
+       <div class="hotwords">
+           <ul>
+               <li><a href="#" class="col-red">京东超市</a></li>
+               <li><a href="#">家电秒杀</a></li>
+               <li><a href="#">买3免1</a></li>
+               <li><a href="#">1元拿走</a></li>
+               <li><a href="#">明星直播</a></li>
+               <li><a href="#">阿迪达斯</a></li>
+               <li><a href="#">笔袋</a></li>
+               <li><a href="#">1元专享</a></li>
+               <li><a href="#">长袖T恤男</a></li>
+           </ul><!--热点词列表-->
+       </div>
+   </div>
+<!--页面搜索栏========================结束-->
+
+
+
+
+<!--页面主导航========================开始-->
+<!--开始写主导航通栏-->
+<div class="mainnav clearfix">
+    <div class="w">
+        <!--开始写左边导航-->
+        <div class="fl categorise">
+            <div cate-dt>
+                <a href="#" class="dropdown">
+                    全部商品分类
+                    <em><s>◇</s></em>
+                </a>
+            </div>
+            <div class="cate-dd">
+                <div class="cate-item">
+                    <h3><a href="#">家电商品</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">手机、数码、京东通信</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">电脑办公</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">家居、家具、家装、厨房</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">男装、女装、童装、内衣</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">个护化妆、清洁用品、宠物</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">鞋靴、箱包、珠宝、奢侈品</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">运动户外、钟表</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">汽车、汽车用品</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">母婴、玩具乐器</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">食品、酒类、生鲜、特产</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">医药保健</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">图书、音像、电子书</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">彩票、旅行、充值、票务</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-item">
+                    <h3><a href="#">理财、众筹、白条、保险</a></h3>
+                    <i>&gt;</i>
+                </div>
+
+            </div>
+
+        </div>
+        <!--开始写右边导航-->
+        <ul class="fl r-nav">
+            <li><a href="#">服装城</a></li>
+            <li><a href="#">美妆馆</a></li>
+            <li>
+                <a href="#">京东超市</a>
+                <!--开始写周年庆角标-->
+                <i></i>
+            </li>
+            <li><a href="#">生鲜</a></li>
+            <li><a href="#">全球购</a></li>
+            <li><a href="#">闪购</a></li>
+            <li><a href="#">团购</a></li>
+            <li><a href="#">拍卖</a></li>
+            <li><a href="#">金融</a></li>
+        </ul>
+    </div>
+
+</div>
+<!--页面主导航========================结束-->
+
+
+
+<!--轮播图、新闻==============================开始-->
+<div class="main w clearfix">
+    <!--开始写轮播图-->
+    <div class="slider fl">
+        <a href="#">
+            <img src="images/57c7a58fNbb21541c.jpg" alt="">
+        </a>
+        <ul>
+            <li class="backg-red"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+        </ul>
+        <div class="arrow">
+            <a href="javascipt:void(0)" class="arrow-l">&lt;</a>
+            <a href="javascipt:void(0)" class="arrow-r">&gt;</a>
+        </div>
+    </div>
+    <!--开始写额外部分-->
+    <div class="extra fr">
+        <!--开始写新闻-->
+        <div class="t-news">
+            <div class="news-dt">
+               <h2 class="fl">京东快报</h2>
+               <div class="more fr">
+                   <a href="#">更多&nbsp;&gt;</a>
+               </div>
+            </div>
+            <div class="news-dd">
+                <ul>
+                    <li><a href="#"><span>[特惠]</span>&nbsp;&nbsp;自营红酒 满199减100</a></li>
+                    <li><a href="#"><span>[特惠]</span>&nbsp;&nbsp;浙江地区订单配送可能延迟</a></li>
+                    <li><a href="#"><span>[特惠]</span>&nbsp;&nbsp;手机爆款24期免息 领券减200</a></li>
+                    <li><a href="#"><span>[特惠]</span>&nbsp;&nbsp;贵州扶贫馆 高原香茗邀你赏</a></li>
+                    <li><a href="#"><span>[特惠]</span>&nbsp;&nbsp;IT开学季 机械键盘低至99元</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--开始写服务栏-->
+        <div class="m-service">
+            <ul>
+                <li><a href="#"><i class="ser-ico1"></i>话费</a></li>
+                <li><a href="#"><i class="ser-ico2"></i>机票</a></li>
+                <li><a href="#"><i class="ser-ico3"></i>电影票</a></li>
+                <li><a href="#"><i class="ser-ico4"></i>游戏</a></li>
+                <li><a href="#"><i class="ser-ico5"></i>彩票</a></li>
+                <li><a href="#"><i class="ser-ico6"></i>加油卡</a></li>
+                <li><a href="#"><i class="ser-ico7"></i>酒店</a></li>
+                <li><a href="#"><i class="ser-ico8"></i>火车票</a></li>
+                <li><a href="#"><i class="ser-ico9"></i>众筹</a></li>
+                <li><a href="#"><i class="ser-ico10"></i>理财</a></li>
+                <li><a href="#"><i class="ser-ico11"></i>礼品</a></li>
+                <li><a href="#"><i class="ser-ico12"></i>白条</a></li>
+            </ul>
+
+        </div>
+        <!--开始写右下边图片-->
+        <div class="b-pic">
+            <a href="#"><img src="images/57c8cfd5Nc489a9bc.png" alt=""></a>
+        </div>
+    </div>
+</div>
+<!--轮播图、新闻==============================结束-->
+
+<!--今日推荐==========================开始-->
+<div class="todays w clearfix">
+    <div class="todays-lpic fl">
+        <a href="#">
+            <img src="images/clock.png" alt="">
+        </a>
+    </div>
+    <div class="todays-rslider fl">
+        <ul>
+            <li><a href="#"><img src="images/1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/4.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</div>
+<!--今日推荐==========================结束-->
+
+
+
+
+<!--页面底部========================开始-->
+<div class="footer">
+<!--页面底部上半部分-->
+<div class="t-footer">
+    <!--开始写条幅栏-->
+    <div class="slogan">
+        <span class="slogan-item1"><img src="images/service_items_1.png" alt=""></span>
+        <span class="slogan-item2"><img src="images/service_items_2.png" alt=""></span>
+        <span class="slogan-item3"><img src="images/service_items_3.png" alt=""></span>
+        <span class="slogan-item4"><img src="images/service_items_4.png" alt=""></span>
+    </div>
+    <!--开始写service-->
+    <div class="service w">
+        <dl>
+            <dt>购物指南</dt>
+            <dd><a href="#">购物流程</a></dd>
+            <dd><a href="#">会员介绍</a></dd>
+            <dd><a href="#">生活旅行/团购</a></dd>
+            <dd><a href="#">常见问题</a></dd>
+            <dd><a href="#">大家电</a></dd>
+            <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+            <dt>配送方式</dt>
+            <dd><a href="#">上门自提</a></dd>
+            <dd><a href="#">211限时达</a></dd>
+            <dd><a href="#">配送服务查询</a></dd>
+            <dd><a href="#">配送费收取标准</a></dd>
+            <dd><a href="#">海外配送</a></dd>
+        </dl>
+        <dl>
+            <dt>支付方式</dt>
+            <dd><a href="#">货到付款</a></dd>
+            <dd><a href="#">在线支付</a></dd>
+            <dd><a href="#">分期付款</a></dd>
+            <dd><a href="#">邮局汇款</a></dd>
+            <dd><a href="#">公司转账</a></dd>
+        </dl>
+        <dl>
+            <dt>售后服务</dt>
+            <dd><a href="#">售后政策</a></dd>
+            <dd><a href="#">价格保护</a></dd>
+            <dd><a href="#">退款说明</a></dd>
+            <dd><a href="#">返修/退换货</a></dd>
+            <dd><a href="#">取消订单</a></dd>
+        </dl>
+        <dl class="last-dl">
+            <dt>特色服务</dt>
+            <dd><a href="#">夺宝岛</a></dd>
+            <dd><a href="#">DIY装机</a></dd>
+            <dd><a href="#">延保服务</a></dd>
+            <dd><a href="#">京东E卡</a></dd>
+            <dd><a href="#">京东通信</a></dd>
+            <dd><a href="#">京东JD+</a></dd>
+        </dl>
+        <!--开始写地图-->
+        <div class="coverage">
+            <div class="cov-dt">
+                京东自营覆盖区县
+            </div>
+            <div class="cov-dd">
+                <p class="p1">
+                    京东已向全国2654个区县提供自营
+                    <br>
+                    配送服务，支持货到付款、POS机
+                    <br>
+                    刷卡和售后上门服务。
+                </p>
+                <p class="p2 ar"><a href="#">查看详情&nbsp;&gt;</a></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--页面底部下半部分-->
+<div class="b-footer w ac">
+    <!--开始写友情链接-->
+    <div class="friendlinks">
+        <a href="#">关于我们</a>|
+        <a href="#">联系我们</a>|
+        <a href="#">商家入驻</a>|
+        <a href="#">营销中心</a>|
+        <a href="#">手机京东</a>|
+        <a href="#">友情链接</a>|
+        <a href="#">销售联盟</a>|
+        <a href="#">京东社区</a>|
+        <a href="#">京东公益</a>|
+        <a href="#">English Site</a>|
+        <a href="#">Contact Us</a>
+    </div>
+    <!--开始写版权-->
+    <div class="copyright">
+        <a href="#"><img src="images/hui.png" alt="">京公网安备 11000002000088号</a>&nbsp;&nbsp;|&nbsp;&nbsp;京ICP证070359号&nbsp;&nbsp;|&nbsp;&nbsp;<a
+            href="#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>&nbsp;&nbsp;|&nbsp;&nbsp;新出发京零 字第大120007号<br>
+        互联网出版许可证编号新出网证(京)字150号&nbsp;&nbsp;|&nbsp;&nbsp;<a href="3">出版物经营许可证</a>&nbsp;&nbsp;|&nbsp;&nbsp;网络文化经营许可证京网文[2014]2148-348号&nbsp;&nbsp;|&nbsp;&nbsp;违法和不良信息举报电话：4006561155<br>
+        Copyright © 2004 - 2016&nbsp;&nbsp;京东JD.com 版权所有&nbsp;&nbsp;|&nbsp;&nbsp;消费者维权热线：4006067733<br>
+        京东旗下网站：<a href="#">京东钱包</a>
+    </div>
+    <!--开始写认证-->
+    <div class="authentication">
+        <a href="#"><img src="images/54b8871eNa9a7067e.png" alt=""></a>
+        <a href="#"><img src="images/54b8872dNe37a9860.png" alt=""></a>
+        <a href="#"><img src="images/56a89b8fNfbaade9a.jpg" alt=""></a>
+        <a href="#"><img src="images/54b8875fNad1e0c4c.png" alt=""></a>
+        <a href="#"><img src="images/5698dc03N23f2e3b8.jpg" alt=""></a>
+        <a href="#"><img src="images/5698dc16Nb2ab99df.jpg" alt=""></a>
+    </div>
+</div>
+</div>
+<!--页面底部========================结束-->
+
+
+
+
+</body>
+</html>

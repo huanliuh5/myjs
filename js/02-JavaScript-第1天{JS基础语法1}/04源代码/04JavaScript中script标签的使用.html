@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        * JS的代码在页面中有三种写法:
+        * 内部引用:在页面中写一对script标签,里面写js代码
+        * 外部引用:在页面中写一对script标签,通过src引入外部的js文件
+        * 内嵌引用:在html标签中直接写js代码
+        *
+        *
+        * 内部引入目前现阶段最常用
+        * 外部引入的情况在做项目的时候用
+        * 内嵌很少用
+        * 内部引入写js代码的时候,如果有一对script标签中代码有错误了,该对script标签中出错的代码后面的代码不会执行,但是不会影响后面的script标签中的代码
+        *
+        * */
+
+    </script>
+    <!--第一种内部引入的方式-->
+<script>
+
+    //可以写js代码
+    alert("哈哈,我又变帅了
+            alert("每天都要吃饭，好累哦");
+</script>
+    <script>
+        alert("哈哈,我还活着");
+    </script>
+    <!--第二种外部引入的方式-->
+    <script src="01_24kcs.js"></script><!--切记:不要在这个对标签中写任何的js代码,没有效果的-->
+</head>
+<body>
+<!--第三种内嵌引入-->
+<input type="button" value="点我啊,来啊" onclick="window.location.href='http://www.itcast.cn'" />
+
+<script src="01_24kcs.js"></script>
+</body>
+</html>

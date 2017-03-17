@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    //求n-m之间所有数的和
+    //1 如果函数使用不熟练，没有关系，可以先实现功能，然后在使用函数包裹
+    //2 计算1-100的和
+    //    function getSum(n, m) {
+    //        var sum = 0;
+    //        for (var i = n; i <= m; i++) {
+    //            sum += i;
+    //        }
+    //        return sum;
+    //    }
+    //    console.log(getSum(200, 300));
+
+
+    //求圆的面积
+    //    function getMainJi(r){
+    //        var mianji = r * r * Math.PI;
+    //        return mianji;
+    //    }
+
+
+    //求圆的周长
+    //    function getZC(r){
+    ////        var zc = 2 * r * Math.PI;
+    ////        return zc;
+    //        return 2 * r * Math.PI;
+    //    }
+
+
+    //求2个数中的最大值
+    function getMaxOf2(n1, n2) {
+        //1 判断两个数谁大
+//        if (n1 > n2) {
+//            return n1;
+//        } else {
+//            return n2;
+//        }
+        return n1 > n2 ? n1 : n2;
+    }
+//    console.log(getMaxOf2(10, 20));
+
+
+    //求3个数中的最大值
+    //在函数内调用另一个函数
+    function getMaxOf3(n1, n2, n3) {
+        //1 先找出前两个数中的最大值
+        var max = getMaxOf2(n1, n2);
+        //2 再用最大值和n3比較
+        getMaxOf2(max, n3);
+
+        //合并后
+        return getMaxOf2(getMaxOf2(n1, n2), n3);
+    }
+
+    console.log(getMaxOf3(5, 3, 8));
+
+
+</script>
+</body>
+</html>

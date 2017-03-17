@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    //写一个可以求1-100所有数的和的函数，并且打印结果
+    //    function getSum() {
+    //        //1 求和的遍历
+    //        var sum = 0;
+    //        //2 获取1-100所有数
+    //        for (var i = 1; i <= 100; i++) {
+    //            //3 求和
+    //            sum += i;
+    //        }
+    //        console.log(sum);
+    //    }
+    //    getSum();
+    //
+    //
+    //    //写一个可以求200-300所有数的和的函数，并且打印结果
+    //    function getSum2() {
+    //        //1 求和的遍历
+    //        var sum = 0;
+    //        //2 获取1-100所有数
+    //        for (var i = 200; i <= 300; i++) {
+    //            //3 求和
+    //            sum += i;
+    //        }
+    //        console.log(sum);
+    //    }
+    //    getSum2();
+
+    //参数分为两种，形参：形式上的参数,作用就是占位置，给实参占位置    实参：实际的参数
+    //写一个可以求1-100所有数的和的函数，并且打印结果
+    function getSum(n, m) {
+        //1 求和的遍历
+//        console.log(n);
+        var sum = 0;
+        //2 获取1-100所有数
+        for (var i = n; i <= m; i++) {
+            //3 求和
+            sum += i;
+        }
+        //返回值，可以将一个函数内的变量的值返回到函数外
+        //一个函数只能有一个返回值
+        return sum;
+
+//        alert("今天天气不错");
+//        return;
+    }
+    console.log(getSum(1, 100));
+
+
+    //可以通过函数的调用语句接受这个返回值
+    //    var num = getSum(1,100);
+    //    console.log(num);
+
+    //    console.log(getSum(200, 300));
+</script>
+</body>
+</html>

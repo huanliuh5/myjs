@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    //二维数组就是一个数组中的一个元素是一个新数组
+    var arr = [1, 2, 3, [9, 9, 9], 4, 5, 6];
+
+    //掌握二维数组的遍历
+    for (var i = 0; i < arr.length; i++) {
+        //因为数组中又保存了数组，所有我们需要检测每个元素的类型
+        //如果某一项是数组，需要再次遍历
+        if (arr[i] instanceof Array == true) {
+//        if (Object.prototype.toString.call(arr[i]) == "[object Array]") {
+            //单独遍历
+            var newArr = arr[i];
+            for (var j = 0; j < newArr.length; j++) {
+                console.log(newArr[j]);
+            }
+        } else {
+            console.log(arr[i]);
+        }
+    }
+</script>
+
+</body>
+</html>

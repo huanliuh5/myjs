@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+//        function f1() {
+//            console.log("哈哈");
+//        }
+//        function f1() {
+//            console.log("嘎嘎");
+//        }
+//        f1();
+
+
+
+
+
+
+        /*
+        *
+        * 命名函数:函数定义的时候有名字.
+        * 匿名函数:函数定义的时候没有名字.
+        *
+        *
+        * */
+
+//        function f1() {
+//            console.log("今天学了函数");
+//        }
+//        f1();
+//
+////匿名函数在定义的时候一般都赋值给一个变量
+//        var fun=function () {
+//            console.log("又学习了另一种定义函数的方式");
+//        };
+////匿名函数如何调用,因为匿名函数赋值给了一个变量,注意:这个变量里面存储的就是一个函数
+////这个变量此时就是一个函数
+////变量名();就是匿名函数的调用
+//        fun();
+
+        //函数定义两种方式:
+        /*
+        * 函数的声明
+        * 函数表达式
+        *
+        *
+        * */
+//        var ff=function () {
+//            console.log("嘎嘎");
+//        };
+//        ff();
+
+//        function f1(n1,n2) {
+//            return n1+n2;
+//        }
+//        var result=f1(10,20);
+//console.log(result);
+
+
+//        var ff=function (n1,n2) {
+//            return n1+n2;
+//        };
+//        var sum=ff(10,20);
+//console.log(sum);
+
+//这个函数属于命名函数
+
+//        var getSub=function (num1,num2) {
+//            return num1-num2;
+//        };
+//        var sub=getSub(10,20);
+//        console.log(sub);
+
+//        var f1=function (n1,n2) {
+//            return n1+n2;
+//        };
+//        var result1=f1(10,20);
+//        console.log(result1);//30 -10
+////变量的重新赋值
+//        f1=function (n1,n2) {
+//            return n1-n2;
+//        };
+//        var result2=f1(10,20);
+//        console.log(result2);//30 -10
+
+        //函数可以很方便的调用:逆天:在定义的同时直接调用函数
+
+//(function f1() {console.log("阿涅哈斯诶呦");})();//看到认识即可,后期比较多,系统写的
+
+//(function () {console.log("山无棱，天地合，才敢喜欢男人");})();
+//匿名函数定义的同时直接调用===一次性的
+//(function (n1,n2) {console.log(n1+n2);})(10,29);
+
+//var x=1;
+//var y=0;
+//var z=0;
+//var add=function (n){n=n+1;return n}
+//y=add(x);//2
+//add=function(n){n=n+3;return n;}
+//z=add(x);//4
+//alert(y+','+z);//执行结果？2,4
+//
+function aa()
+{
+    alert("aaa");
+    return function(){alert("bbb");};
+}
+//alert(aa);//函数的代码
+
+
+//var s=function(){alert("bbb");};
+//alert(s);
+
+//alert(aa());
+//var ff=function(){alert("bbb");};
+//var s=ff();
+alert(aa()());
+
+
+
+
+
+
+
+
+//
+//        function f1() {
+//            console.log("天茫茫");
+//        }
+//        console.log(f1);//直接输出的是f1函数的代码
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

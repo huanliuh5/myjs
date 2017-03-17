@@ -1,0 +1,1 @@
+1、设置main里slider里图片时margin-left是12而不是220。

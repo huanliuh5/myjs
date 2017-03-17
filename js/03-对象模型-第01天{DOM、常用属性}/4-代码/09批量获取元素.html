@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<script>
+    //通过id获取
+    var btn = document.getElementById("btn");
+    //console.log(btn);
+    //通过标签名获取
+    //get Elements By Tag Name 获取 （好多）元素 通过 标签 名
+    //会找页面上所有的这一类型的标签
+    var inputs = document.getElementsByTagName("input");
+    console.log(inputs);
+    //通过id直接获取到单个元素对象
+    //通过标签名获取到的是一个容器 容器里面放的才是一个一个的元素对象
+    //这个容器 本质上不是数组 但是具有数组的一些特性 1有length 2他的属性有一些用的是数值
+    //我们管这种东西叫做伪数组
+
+    var arr = [1, 2, 3];
+    console.log(arr);
+
+    //getElement  获取到的都是单个元素对象
+    //getElements 获取到的都是伪数组 伪数组里面装的才是一个一个的元素对象
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+/*各浏览器显示不同，去掉蓝色边框*/
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+/*去掉行内替换元素空白缝隙*/
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+/*防止拖动 影响布局*/
+textarea {
+    resize: none;
+}
+
+/*去掉行内替换元素空白缝隙*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, microsoft yahei; /*宋体 unicode */
+    color: #666;
+    background: #fff;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*京东色*/
+.col-red {
+    color: #C81623 !important;
+}
+.backg-red{
+    background-color: #B61B1F !important;
+}
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+/*页面顶部工具栏====================开始*/
+/*顶部通栏*/
+.shortcut{
+    height: 30px;
+    line-height: 30px;
+    background-color: #F1F1F1;
+}
+/*倒三角下拉菜单图标*/
+.shortcut .dropdown{
+    padding-right: 29px;
+    position: relative;
+}
+.shortcut i{
+    position: absolute;
+    height: 9px;
+    width: 15px;
+    top: 12px;
+    right: 8px;
+    overflow: hidden;
+}
+.shortcut s{
+    position: absolute;
+    font: 400 15px/15px "consolas";
+    top: -7px;
+}
+/*顶部工具栏右边======开始*/
+.shortcut li {
+    float: left;
+    padding: 0 10px;
+    position: relative;
+}
+/*设置间隔条*/
+.shortcut .spacer{
+    padding: 0;
+    margin-top: 9px;
+    height: 12px;
+    width: 1px;
+    background-color: #DDDDDD;
+}
+/*设置电话图标*/
+.shortcut .tel-icon{
+    padding-left: 26px;
+}
+.shortcut .tel-icon em{
+    position: absolute;
+    height: 20px;
+    width: 15px;
+    background: url("../images/jd2015img.png") no-repeat;
+    top: 5px;
+    left: 6px;
+}
+/*顶部工具栏右边=======结束*/
+/*页面顶部工具栏====================结束*/
+
+
+
+
+
+/*页面顶部广告栏=================开始*/
+/*广告栏背景色*/
+.topbanner{
+    height: 80px;
+    background-color: #1879EC;
+}
+/*广告图加载*/
+.topbanner .banner-head{
+    position: relative;
+}
+/*关闭广告按钮*/
+.topbanner .close-bn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 19px;
+    width: 19px;
+    background: url("../images/5507956eN735de046.png") no-repeat;
+}
+.topbanner .close-bn:hover{
+    background: url("../images/5507956eN735de046.png") no-repeat 0 -19px;
+}
+/*页面顶部广告栏=================结束*/
+
+
+
+
+
+/*页面顶部搜索栏 logo search 购物车 热词========================开始*/
+/*logo部分*/
+.searchbar .logo{
+    float: left;
+    height: 100px;
+    width: 362px;
+}
+.searchbar .logo a{
+    display: block;
+    height: 60px;
+    width: 270px;
+    background: url("../images/logo-201305.png") no-repeat;
+    text-indent: -20000px;
+    margin-top: 20px;
+}
+/*搜索文本、按钮部分  */
+.searchbar .search{
+    float: left;
+    padding-top: 25px;
+}
+      /*搜索文本*/
+.searchbar .search .sl{
+    float: left;
+    height: 32px;
+    width: 450px;
+    border: 2px solid #B61D1D;
+    border-right: 0 none;
+    padding-left: 4px;
+    font: 400 14px/32px "微软雅黑";
+    color: #aaa;
+}
+      /*搜索按钮*/
+.searchbar .search .sr{
+    float: left;
+    height: 36px;
+    width: 82px;
+    background-color: #B61D1D;
+    font: 400 16px/36px "微软雅黑";
+    color: #FFFFFF;
+}
+/*购物车部分*/
+.searchbar .shoppingcar{
+    float: right;
+    margin-right: 65px;
+    margin-top: 25px;
+    border: 1px solid #DFDFDF;
+    background-color: #F9F9F9;
+    height: 34px;
+    width: 96px;
+    line-height: 34px;
+    padding-left: 43px;
+    position: relative;
+}
+      /*购物车icon*/
+.shoppingcar em{
+    background: url("../images/jd2015img.png") no-repeat 0 -90px;
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    height: 16px;
+    width: 18px;
+}
+      /*购物车箭头*/
+.shoppingcar i{
+    margin-left: 15px;
+    font: 400 13px/13px "simsun";
+}
+      /*购物车 0标注*/
+.shoppingcar s{
+    position: absolute;
+    top: -4px;
+    left: 104px;
+    height: 14px;
+    /*为了图标宽度能自由变大*/
+    padding: 0 4px;
+    background-color: #B61D1D;
+    border-radius: 7px 7px 7px 0;
+    font: 400 6px/14px "微软雅黑";
+    color: #fff;
+    text-align: center;
+}
+/*热点词列表*/
+.searchbar .hotwords{
+    float: left;
+    margin-top: 9px;
+}
+.hotwords li{
+    float: left;
+    margin-right: 10px;
+}
+/*页面顶部搜索栏 logo search 购物车 热词========================结束*/
+
+
+
+
+/*页面底部========================开始*/
+/*开始写底部上半部分*/
+/*开始写条幅*/
+.t-footer .slogan{
+    height: 54px;
+    background-color: #F5F5F5;
+    padding: 20px 0;
+    position: relative;
+}
+.slogan span{
+    position: absolute;
+    left: 50%;
+}
+.slogan .slogan-item1{
+     margin-left: -605px;
+ }
+.slogan .slogan-item2{
+    margin-left: -305px;
+}
+.slogan .slogan-item4{
+    margin-left: 305px;
+}
+.slogan .slogan-item5{
+    margin-left: 605px;
+}
+
+/*开始写服务栏*/
+.t-footer .service{
+    height: 202px;
+    border-bottom: 1px solid #E5E5E5;
+}
+.t-footer .service dl{
+    width: 199px;
+    float: left;
+    padding-top: 25px;
+}
+.t-footer .service dt{
+    font-size: 16px;
+    height: 28px;
+}
+.t-footer .service dd{
+    height: 20px;
+}
+.t-footer .service .last-dl{
+    width: 100px;
+}
+/*开始写地图*/
+.t-footer .service .coverage{
+    height: 170px;
+    width: 190px;
+    margin-top: 13px;
+    margin-right: 40px;
+    background: url("../images/20130330B_1.png") no-repeat 0 -131px;
+    float: right;
+    padding-left: 18px;
+    padding-top: 12px;
+}
+.t-footer .service .coverage .cov-dt{
+    font-size: 16px;
+    height: 37px;
+}
+.t-footer .service .coverage .cov-dd{
+    line-height: 18px;
+}
+
+
+
+/*开始写底部下半部分*/
+.b-footer{
+    height: 196px;
+}
+/*开始写友情链接*/
+.b-footer .friendlinks{
+    padding-top: 24px;
+    height: 25px;
+}
+.b-footer .friendlinks a{
+    padding: 0 12px;
+}
+/*开始写版权*/
+.b-footer .copyright{
+    line-height: 20px;
+}
+/*开始写认证*/
+.b-footer .authentication{
+    margin-top: 10px;
+}
+.b-footer .authentication a{
+    padding: 0 6px;
+}
+/*页面底部========================结束*/
+
+
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+        /*
+        * 存储的数据不同所以就有了不同的数据类型
+        * JavaScript数据类型:
+        * 基本的数据类型:Number String Undefined NUll Boolean(bool)
+        * 复杂的数据类型:object Array Date .....Function
+        *
+        *
+        * Number数据类型:整数,小数(浮点型数据(单精度浮点-float,双精度浮点-double))
+        * String:字符串----双引号,单引号也可以
+        * undefined数据类型:只有一个值,undefined
+        * Null数据类型,只有一个值,null-------现在不讲,基本包装数据类型对象
+        * boolean数据类型:只有两个值，true(1),false(0)
+        *
+        * undeinfed:什么情况值是undefined
+        *1. 当一个变量声明了,没有赋值(初始化)---undefined
+        * 2.当一个函数没有明确返回值的时候,结果就是undefined==后期再演示
+        * */
+
+//        var  num;
+        //        console.log(num);
+
+        //需求:如何查看这个变量是什么类型?
+        // typeof===
+        //typeof用法:
+        //两种:
+        /*
+        *
+        * 1. typeof(变量名);
+        * 2.typeof 变量名
+        * 返回的是当前变量的数据类型
+        *
+        * */
+//        var num=10;
+//        var flag=true;
+//        var str="哈哈,我又变帅了";
+//        var nll=null;
+//        var def;
+//        console.log(typeof num);
+//        console.log(typeof (flag));
+//        //当一个变量的值是null,表示该变量不是普通的变量,是一个对象,对象为空,对象的类型是object,所以结果为object
+//        console.log(typeof nll);//会有问题
+//        console.log(typeof def);
+
+        //下面代码只是一个演示,为什么先不说,----没讲对象
+//        var obj=new Object();
+//        console.log(typeof  obj);
+
+
+        //总结:typeof用法,作用:需要掌握
+        //扩展:变量能否被使用?
+        //当一个变量的值是undefined或者是null，此时这个变量是不能参与运算
+        //在使用变量之前,先对变量做一个判断.
+//        var num;
+//        if((typeof num)=='undefined'||num==null){
+//            //没有意义的
+//            console.log("不可以参与运算");
+//        }else{
+//            console.log("可以参与运算");
+//        }
+
+//        var num1=0.1;
+//        var num2=0.2;
+//        console.log(num1+num2);
+//        var num=0x10;/*如果在程序中看到了0x开头的就是十六进制*/
+//        console.log(num);
+
+//        var max=Number.MAX_VALUE;
+//        console.log(max);//Number数据类型中的最大值
+//        var min=Number.MIN_VALUE;
+//        console.log(min);//Number数据类型中的最小值
+        //在其他的语言中:整数int===最大值:2147483647-----   负2147483648
+
+
+
+
+        /*
+        *
+        * js中的数据类型:
+        * Number,String,null,undefined,boolean
+        * object
+        * 识别变量是什么类型:typeof
+        * 变量什么时候的值是undefine: 声明了没有赋值
+        *
+        * */
+
+//        var num=10;
+//        var result=10+"哈哈哈哈";
+//        console.log(result);
+        //需求；用变量参数计算,变量是一个数字
+        //判断这个变量是不是一个数字
+//        var num=10;
+//        var result=isNaN(num);//用来判断变量是不是一个数字
+//        //如果是数字则为false,如果不是数字则为true
+//        console.log(result);
+
+
+
+        /*
+        *
+        *
+        * 字符串类型---String,1.字符串不可变
+        *
+        *
+        * */
+        var str="卡卡西";
+        str="佐助";
+        console.log(str);
+
+
+
+        //扩展:
+        /*
+        * 其他语言中:有一个数据类型每次只能存储一个字母,或者一个数字，或者一个特殊符号.或者一个中文-----字符类型---用单引号 char ch='你';
+        *
+        * */
+
+
+//字符串的长度(个数如何获取)
+//        var str="what are you no sha lei";
+//        console.log(str.length);//str.length  length是str变量点出来的,叫属性
+
+        alert("\\");
+        /*
+        *
+        * 转义符:常见的
+        * \\  \
+        * \'  '
+        * \"   "
+        * \t    水平制表符====tab键
+        * \b  退格
+        *
+        *
+        * */
+
+//    alert("我今天学习了一个\"");
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

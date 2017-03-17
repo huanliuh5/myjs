@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="demo1">
+    <input type="button" value="按钮" id="btn"/>
+    <input type="button" value="按钮"/>
+</div>
+<div id="demo2">
+    <input type="button" value="按钮"/>
+    <input type="button" value="按钮"/>
+</div>
+<script>
+    //获取demo1
+    var demo1 = document.getElementById("demo1");
+    //获取页面上所有的input标签
+    //var inputs = document.getElementsByTagName("input");
+    //现在只要demo1里面的input标签
+    //让demo1去调用getElementsByTagName就可以只获取demo1里面的input标签
+    //var inputs = demo1.getElementsByTagName("input");
+    //getElementsByTagName即可以被document调用 也可以被元素对象调用
+    //被document调用 表示获取页面上所有的这一类型的标签
+    //被元素对象调用 表示获取这个元素内部所有这一类型的标签
+    //console.log(inputs);
+    //var btn = demo1.getElementById("btn");
+    //getElementById只能被document调用 因为id在页面上是唯一的 没必要限定范围
+    //console.log(btn);
+</script>
+</body>
+</html>

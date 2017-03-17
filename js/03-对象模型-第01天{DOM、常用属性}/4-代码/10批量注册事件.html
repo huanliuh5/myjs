@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<script>
+    var inputs = document.getElementsByTagName("input");
+    //批量注册事件
+    //注册事件的时候要注册到单个元素对象的身上 注册到容器上是不行的
+    //单个的元素对象 就好比 雪糕
+    //容器就好比 就好比 冰箱
+    /*inputs.onclick = function () {
+     alert("别点我");
+     };*/
+    //虽然这个容器不是数组 但是他有 length属性 而且他里面的那些元素的属性名也都是数值
+    //所以我们也可以对它进行遍历
+    for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];//里面的一个一个的元素对象
+        //事件源.事件 = function(){ 事件处理程序 };
+        input.onclick = function () {
+            alert("别点我");
+        };
+    }
+    //即使只有一个元素 getElements获取到的也是一个伪数组 只不过这个伪数组里面只装了一个元素对象
+    //即使只有一个元素对象 我们要绑定事件的时候 也要把这个元素对象取出来
+    //不能在伪数组身上绑定事件
+</script>
+</body>
+</html>

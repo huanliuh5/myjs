@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    //统计数组中每个元素出现的次数
+    var arr = [1, 2, 2, 2, 2, 3, 2, 1, 2, 3, 1, 2, 3, 1, 3];
+    //最终得到一个不重复的元素数组 [1,2,3];
+    //1 结果数组 可以直接放入第一项
+    var resultArr = [arr[0]];
+    //2 操作原数组中的每一项
+    for (var i = 1; i < arr.length; i++) {
+        //有变量控制，假设当前的第i项可以放入
+        var flag = true;
+        //3 用arr[i]去跟resultArr中的每一项比較，如果有了，就不用放入
+        for (var j = 0; j < resultArr.length; j++) {
+            //4 检测是否存在arr[i]
+            if (arr[i] == resultArr[j]) {
+//                resultArr[resultArr.length] = arr[i];
+                //5 如果相等，就将放入的条件更改为false
+                flag = false;
+                //6 有任何一项相等，后面就不需要继续判断了，直接跳出
+                break;
+            }
+        }
+        //7 在比較resultArr中所有项之后判断是否放入结果数组
+        if (flag) {
+            //8 添加进去
+            resultArr[resultArr.length] = arr[i];
+        }
+    }
+
+    //出现过的元素 resultArr
+
+    //根据resultArr中的每个元素去统计出现的次数
+    var countArr = [];
+    var count = 0;
+    //遍历resultArr.外循环每一次得到一个要比較的元素
+    for (var i = 0; i < resultArr.length; i++) {
+        //resultArr[i]
+        count = 0;
+        for (var j = 0; j < arr.length; j++) {
+            //比較每一个值
+            if (resultArr[i] == arr[j]) {
+                count++;
+            }
+        }
+        //将count放入到countArr中
+        countArr[countArr.length] = count;
+    }
+    console.log(resultArr);
+    console.log(countArr);
+
+
+</script>
+</body>
+</html>

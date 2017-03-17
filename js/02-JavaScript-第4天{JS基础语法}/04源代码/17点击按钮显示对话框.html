@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+
+</head>
+<body>
+<!--第一种写法:-->
+<input type="button" value="点我" onclick="alert('哈哈,我又变帅了');"/>
+<!--第二种写法:-->
+<input type="button" value="点我" id="btn"/>
+
+<script>
+    document.getElementById("btn").onclick=function () {
+        alert("为什么这么帅");
+    };
+
+</script>
+</body>
+</html>

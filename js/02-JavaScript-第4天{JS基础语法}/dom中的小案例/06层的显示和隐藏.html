@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<script>
+</script>
+<input type="button" value="隐藏" id="btn" onclick="showOrHide(this);"/>
+<div id="dv">除日日当午,地雷埋下土!</div>
+<script>
+    function showOrHide(btn) {
+        var dvObj=document.getElementById("dv");
+        console.log(dvObj.className);//空
+        //if(dvObj.className===""||dvObj.className==="show")
+        if(dvObj.className==="hide"){
+            dvObj.className="show";
+            btn.value="隐藏";
+        }else{
+            dvObj.className="hide";
+            btn.value="显示";
+        }
+    }
+</script>
+</body>
+</html>

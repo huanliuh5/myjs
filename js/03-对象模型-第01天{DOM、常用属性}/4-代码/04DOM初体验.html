@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<img src="images/kitty.png" id="demo" alt=""/>
+<script>
+    //把小猫变成老虎（把图片的路径改成老虎的路径）
+    //要做事先找人
+    var demo = document.getElementById("demo");
+    //get Element By Id 获取 元素 通过 id 通过id获取元素
+    //根据id到页面上找标签 然后将这个标签包装成对象并返回
+    //log 日志 以标签的形式展示对象
+    //console.log(demo);
+    //directory 目录 以对象的形式展示元素
+    console.dir(demo);
+    console.log(demo.src);
+    console.log(typeof demo.src);
+    demo.src = "images/tiger.png";
+</script>
+</body>
+</html>

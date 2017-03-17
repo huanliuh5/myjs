@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    var arr = [1, 2, 2, 2, 2, 3, 2, 1, 2, 3, 1, 2, 3];
+    //最终得到一个不重复的元素数组 [1,2,3];
+    //1 结果数组 可以直接放入第一项
+//    var resultArr = [arr[0]];
+    var resultArr = [];
+    //2 操作原数组中的每一项
+    for (var i = 0; i < arr.length; i++) {
+        //有变量控制，假设当前的第i项可以放入
+        var flag = true;
+        //3 用arr[i]去跟resultArr中的每一项比較，如果有了，就不用放入
+        for (var j = 0; j < resultArr.length; j++) {
+            //4 检测是否存在arr[i]
+            if (arr[i] == resultArr[j]) {
+//                resultArr[resultArr.length] = arr[i];
+                //5 如果相等，就将放入的条件更改为false
+                flag = false;
+                //6 有任何一项相等，后面就不需要继续判断了，直接跳出
+                break;
+            }
+        }
+        //7 在比較resultArr中所有项之后判断是否放入结果数组
+        if (flag) {
+            //8 添加进去
+            resultArr[resultArr.length] = arr[i];
+        }
+    }
+    console.log(resultArr);
+
+</script>
+</body>
+</html>

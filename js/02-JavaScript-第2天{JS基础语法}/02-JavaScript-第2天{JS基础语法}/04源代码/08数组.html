@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        /*
+         * 数组:一坨数据的组合
+         * JS中的数组:超强综合体,
+         *
+         * 数组的长度:这个数组中存储了多少个数据,5个数据,数组的长度就是5
+         * 数组的元素:数组中的每个数据(值)
+         * 数组的下标(索引):用来获取数组元素的
+         * 数组的下标是从0开始的,到数组的长度减1结束
+         *
+         *
+         * 数组的声明及初始化
+         * 语法:
+         * 数据类型 数组名=[值1,值2,值3];//字面量的方式来声明数组
+         * var array=[10,45,100];
+         * 数组中每个元素用逗号隔开
+         * var array=[10,true,"你好"];
+         *
+         * var num=10;字面量的方式来创建变量
+         *
+         *
+         *
+         *
+         * */
+
+        //var arr=[1,2,3,4,434,2,323,232323];
+        //数组的长度:8
+        //数组的索引(下标)从0开始到7结束
+        //如何获取数组中的数据=====如何设置数组中的数据
+        //通过下标的方式来设置或者获取数组中元素的值
+        //语法:数组名[下标];
+        //        var num=arr[4];//获取
+        //        console.log(num);
+        //        //设置
+        //        arr[4]=50;
+        //        console.log(arr[4]);//或者
+
+        //1.请创建一个数组,里面存储5个人的名字
+        //请通过索引(下标)的方式获取第三个人的名字
+        //请通过索引(下标)的方式修改第五个人的名字并输出
+
+        //        var names=["乔峰","卡卡西","黑崎一护","凤姐","小月月"];
+        //        names[names.length]="哈哈哈";
+        //        console.log(names.length);//如何获取数组的长度:数组名.length
+        //        console.log(names[2]);
+        //        names[4]="rousi";
+        //        console.log(names[4]);
+        //
+        //        //2.请创建一个数组,里面存储6个整数
+        //        var nums=[10,20,30,40,50,60];
+
+
+        /*
+         *
+         * 数组的长度可以改变
+         * 数组的下标(索引)从0开始到数组的长度减1 数组中最后一个元素:数组名[数组名.length-1]
+         * 数组最后一个元素后面再追加一个元素
+         * 数组名[数组名.lenght]=值;
+         * arr[arr.length]=100;
+         *
+         * */
+
+
+
+
+        //var array=[10,20,30,40];//创建数组....字面量
+        //通过数组的下标(索引)来访问数组中的元素或者设置数组中的元素值
+
+
+        //数组中第一种创建方式:字面量的方式来创建数组
+        // var array=[1,2,2,3];
+        //数组中第二种创建方式:以构造函数的方式来创建数组
+        //        var array1=new Array();//空数组
+        //        var arrrar2=new Array(5);//空数组,长度是5
+        //以构造函数的这种方式创建数组,如果小括号中写了一个值,是表示数组的长度
+        //var array=new Array(10,20,30,40,50);
+        //console.log(array);
+        //数组中的所有的数据,想要一次性的显示出来,可以直接使用console.log(数组名);
+        //alert(数组名);
+
+
+        // var arr=new Array(12,true,"哈哈",100);
+
+        // console.log(arr);//验证或者是调试的时候可以直接输出
+
+        //如何把数组中的每一个元素都显示出来呢?
+
+        //通过循环来遍历数组
+        //遍历数组:循环的方式找到每一个数组
+        //
+        //        var arr=[10,20,30,40,50];
+        //        //改变第四个元素的值为100
+        //        arr[3]=100;
+        //        //为数组中添加一个元素,1000
+        //        arr[arr.length]=1000;
+        //        for(var i=0;i<arr.length;i++){
+        //            console.log(arr[i]);
+        //        }
+
+        //案例:求一个数组中的最大值，最小值，和。平均值
+//        var arr = [10, 20, 30, 40, 50, 5];
+//        var sum = 0;//求和的变量
+//        var max = arr[0];//假设这个变量是最大值(假设数组中的第一个元素是最大值)
+//        var min = arr[0];//假设这个变量是最小值
+//        for (var i = 0; i < arr.length; i++) {
+//            sum += arr[i];//求和
+//            if (max < arr[i]) {
+//                max = arr[i];
+//            }// end if
+//
+//            if (min > arr[i]) {
+//                min = arr[i];
+//            }
+//        }
+//        console.log("最大值:" + max);
+//        console.log("最小值:" + min);
+//        console.log("和为:" + sum + ",平均值" + (sum / arr.length));
+        //练习:求一个数组中所有偶数的和,所有奇数的和
+
+//        var arr=[20,30,43,13,7];
+//        var evenSum=0;//偶数和
+//        var oddSum=0;//奇数和
+//        for(var i=0;i<arr.length;i++){
+//            if(arr[i]%2==0){
+//                //偶数
+//                evenSum+=arr[i];
+//            }else{
+//                //奇数
+//                oddSum+=arr[i];
+//            }
+//        }
+//        console.log("偶数和为:"+evenSum);
+//        console.log("奇数和为:"+oddSum);
+
+
+        //快餐:有4个圆,半径分别是4，7，3,5请求出每个圆的面积
+        //定义一个数组,用来存储4个园的半径
+        //园的面积:pi*r*r
+
+       // console.log(Math.PI);
+
+//        var banJings=[4,7,3,5];
+//        for(var i=0;i<banJings.length;i++){
+//            var s=Math.PI*banJings[i]*banJings[i];
+//            console.log(s);
+//        }
+
+
+
+
+
+
+
+
+
+
+        //        var num1=10;
+        //        var num2=20;
+        //        var num3=30;
+        //        var maxNum=num1>num2?num1:num2;
+        //        maxNum=maxNum>num3?maxNum:num3;
+        //        console.log(maxNum);
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

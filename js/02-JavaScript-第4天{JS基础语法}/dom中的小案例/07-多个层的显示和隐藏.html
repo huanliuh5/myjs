@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            background-color: cadetblue;
+            float: left;
+            margin-right: 20px;
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+    <script>
+        //$永远都是24k纯帅的十八岁的杨哥$
+    </script>
+</head>
+<body>
+<input type="button" value="隐藏" onclick="hide();" />
+<p style="float: none"></p>
+<div>我是最勇敢的</div>
+<div>我是最纯洁的</div>
+<div>我是最帅的</div>
+<script>
+    function hide() {
+        var dvObjs=document.getElementsByTagName("div");
+        //console.log(dvObjs);//多个div对象
+        for(var i=0;i<dvObjs.length;i++){
+            //dvObjs[i].className="hide";
+            if (dvObjs[i].className==="hide"){
+                dvObjs[i].className="show";
+            }else{
+                dvObjs[i].className="hide";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        //1.计算出1—100之间所有不能被3整除的整数的和大于(或等于)2000的数字
+
+        var sum=0;
+        for(var i=1;i<=100;i++){
+            if(i%3==0){
+                continue;
+            }
+            //代码如果能执行到这里,就证明这个数字不能被3整除
+            sum+=i;
+            if(sum>=2000){
+                console.log("和为"+sum);
+                console.log("这个数字是"+i);
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

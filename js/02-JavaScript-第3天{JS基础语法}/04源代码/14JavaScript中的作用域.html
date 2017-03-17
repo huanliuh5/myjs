@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        //代码块:一对大括号里的代码
+//        {
+//            var num=10;
+//            console.log(num);//10
+//        }
+//        console.log(num);//10
+//
+//        if(true){
+//            var num=100;
+//        }
+//        console.log(num);
+        //if大括号中的定义的变量外部可以访问
+//
+//        for(var i=0;i<100;i++){
+//            var num=1000;
+//        }
+//        console.log(i);//
+//        console.log(num);
+        //for循环中定义的变量外部可以反问
+        //while循环中定义的变量外部可以访问
+//        while(true){
+//            var num=10000;
+//            break;
+//        }
+//        console.log(num);
+//        function f1() {
+//            var num=100;
+//        }
+//        f1();
+//        console.log(num);//num没有定义
+
+        //函数中定义的变量,外部无法访问
+
+
+
+
+//        var n=10;
+//        if(n>5){
+//            n=100;
+//        }
+//        console.log(n);//
+
+//        for(var i=0;i<100;i++){
+//            for(var j=0;j<10;j++){
+//                var n=100;
+//                n=n+200;
+//                var num=10;
+//            }
+//            var n=num+100;
+//        }
+//        console.log(i);//100
+
+//
+//        function f1() {
+//            var n=10;
+//            var num=n+100;
+//        }
+//        f1();
+        //console.log(num);//1.100  2. 110  3. undefined  4.报错
+        //console.log(n);//
+
+//        var n=1000;//是一个全局变量
+//        function f1() {
+//            n=10;//变量重新赋值了
+//            var num=n+10;
+//        }
+//        f1();
+//        console.log(n);//报错还是10 还是1010 还是1000
+//        //console.log(num);
+
+        //变量:局部变量和全局变量
+        /*
+        * 在函数中定义的变量叫:局部变量,这个变量只能在函数中使用
+        * 在函数外面定义的变量叫(直接在script标签中定义的变量(这个变量不在函数中)):全局变量,这个变量可以在页面的任何地方都可以使用
+        *
+        *
+        * */
+
+    </script>
+
+    <script>
+//        var num=10;
+//        function f1() {
+//            num=9;
+//            var n=100;
+//        }
+//
+//        f1();
+//        console.log(n);
+      //作用域:变量的使用范围
+    </script>
+    <script>
+       // console.log(num);   9
+//
+//        var num=10;
+//        function f2() {
+//            console.log(num);
+//        }
+//        f2();
+
+//        var num1=10;
+//        function f1() {
+//            var num2=100;
+//        }
+//        for(var i=0;i<100;i++){
+//            var sum=10;
+//        }
+//        console.log(i);
+//        console.log(sum);
+
+//        var num=10;
+//        number=100;//不推荐使用
+//        function f1() {
+//            console.log(num);//10
+//            console.log(number);//100
+//        }
+//        f1();
+
+        /*
+        * 变量:局部变量和全局变量
+        * 全局变量:普通的全局变量和全局隐式变量
+        * 如果定义了一个全局变量,用var定义的是普通的全局变量
+        * 如果没有使用var定义的变量叫全局隐式变量
+        * 全局变量一般也不推荐使用
+        *
+        * 垃圾回收器:专门负责清理内存(如果有一些变量在程序中不用了,垃圾回收器帮着我们清理这个变量占用的内存)
+        * */
+//
+//        function f1() {
+//            var num=10;
+//        }
+//
+//
+//        f1();//
+
+        //啦啦啦
+
+
+//        var str="小黑";//str是全局变量
+//        function f1() {
+//            function f2() {//定义===作用域链=====浅显的====面向对象的时候.原型
+//
+//                console.log(str);
+//            }
+//            f2();//调用
+//        }
+//        f1();//调用f1
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

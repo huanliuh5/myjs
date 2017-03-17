@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //函数
+    function fn(arg1, arg2) {
+        var sum = arg1 + arg2;
+        return sum;
+    }
+    //对象
+    var obj = new Object();
+    obj.name = "zs";
+    obj.age = 18;
+    obj.sayHi = function () {
+        console.log("大家好，我是" + this.name);
+    };
+    //字面量
+    var obj = {
+        name: "zs",
+        age: 18,
+        sayHi: function () {
+            console.log("大家好，我是" + this.name);
+        }
+    };
+
+
+</script>
+</body>
+</html>

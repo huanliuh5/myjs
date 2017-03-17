@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    var arr = [1, 2, 3, 4, 5];
+    //使用typeof arr 得到object 不准确
+    //console.log(typeof arr);
+
+    //使用Array.isArray 检测数组，如果是数组类型，返回true  html5提供的 ie9以下不支持
+    //console.log(Array.isArray(arr));
+
+    //instanceof 实例  如果arr是数组返回true
+    //console.log(arr instanceof Array);
+
+    //第三种最强，但是写起来比較麻烦
+    var str = Object.prototype.toString.call(arr);
+    //得到的结果是一个字符串 [object Array]
+    console.log(str);
+    console.log(typeof str);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        /*
+        * break是一个关键字
+        * break:在switch-case中可以跳出当前的结构
+        * 另一个作用:
+        * 在循环中如果遇到break;则跳出当前的循环
+        *
+        *
+        *
+        * */
+
+
+
+        //求1-100之间第一个能被7整除的数字
+        var sum=0, i=0;
+        while(i<=100){
+            // if(i%7==0){
+            //     console.log(i);
+            //     break;
+            // }
+            // i++;
+            if(i%2!=0){
+                sum+=i;
+
+                
+                break;
+            }
+            i++;
+            console.log(sum);
+        }
+//        var i=8;//计数器
+//        while (i<=100){
+//            if(i%7==0){
+//                console.log(i);
+//                break;//找到了
+//            }
+//            i++;
+//        }
+        //求1-100之间所有的奇数的和
+
+        // var i=0;//计数器
+        // var sum=0;
+        // while (i<=100){
+        //     if(i%2!=0){
+        //         //奇数
+        //         sum+=i;
+        //        i++;
+        //         continue;
+        //     }
+        //     i++;
+        // }
+        // console.log(sum);
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

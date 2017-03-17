@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //案例:交换两个变量的值
+        //三种方式:
+
+        //第一种方式:借助第三方变量来交换
+//        var num1=10;
+//        var num2=20;
+//        var temp=num1;
+//        num1=num2;
+//        num2=temp;
+//        console.log(num1);
+//        console.log(num2);
+
+        //第二种方式:进行计算
+
+//        var num1=10;
+//        var num2=20;
+//        num1=num1+num2;//num1此时30;
+//        num2=num1-num2;//num2此时10;
+//        num1=num1-num2;//num1此时20;
+//        console.log(num1);
+//        console.log(num2);
+
+        //前两种必须掌握
+        //第三种:位运算交换
+    var num1=10;
+    var num2=20;
+    num1=num1^num2;//num1此时30;
+    num2=num1^num2;//num2此时10;
+    num1=num1^num2;//num1此时20;
+    console.log(num1);
+    console.log(num2);
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

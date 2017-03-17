@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+       //请定义一个数组,把该数组中的所有元素的值反转的方式输出
+
+        var arr=[10,20,30,40,50];
+       //第二种方式:循环控制的是交换的次数
+       for(var i=0;i<parseInt(arr.length/2);i++){
+           var temp=arr[i];
+           arr[i]=arr[arr.length-1-i];
+           arr[arr.length-1-i]=temp;
+       }
+       console.log(arr);
+
+       //第一种方式
+//       for(var i=arr.length-1;i>=0;i--){
+//           console.log(arr[i]);
+//       }
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+/*全部商品分类===================================开始*/
+.mainnav{
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 2px solid #B1191A;
+}
+.categories{
+    /*float:left;*/
+/*加入代码===开始*/
+  width: 210px;
+    height: 44px;
+    background-color: #B1191A;
+    float: left;
+    z-index: 2;
+  /*加入代码===结束*/
+    position: relative;
+}
+.categories .dt{
+    float: left;
+}
+/*===========左侧全部商品分类标题=======*/
+.categories .dt a {
+    display: block;
+    width: 200px;
+    height: 44px;
+    background-color: #B1191A;
+    font-size: 14px;
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+/*全部商品分类下的分类列表*/
+.categories .dd{
+    width: 209px;
+    /*height: 470px;*/
+    background-color: #C81623;
+    border-left: 1px solid #B1191A;
+    /*float: left;*/
+    z-index: 2;
+    position: relative;
+    margin-top: 2px;
+    top: 44px;
+
+}
+.categories .dd h3{
+
+
+}
+.cate-item{
+    position: relative;
+    line-height: 31px;
+}
+.cate-item a{
+    color: #fff;
+    font: 400 14px/31px "宋体";
+    display: block;
+    height: 31px;
+    width: 199px;
+    padding-left: 10px;
+}
+.cate-item a:hover{
+    background-color: #fff;
+    color: #333333;
+}
+.cate-item i{
+    font: 400 9px/14px "宋体";
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+
+
+/*========右侧导航列表==========*/
+.navitems{
+    float: left;
+}
+.navitems li{
+    float: left;
+    position: relative;
+}
+.navitems li a{
+    display: block;
+    font-size: 14px;
+    padding: 0 20px;
+}
+.navitems span{
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 18px;
+    background: url("../images/znq.jpeg") no-repeat 0 0;
+    top: -5px;
+    right: -15px;
+}
+/*全部商品分类===================================结束*/
+
+/*主体部分============================开始*/
+.main{
+    height: 470px;
+    /*background-color: pink;*/
+}
+/*轮播图=================开始*/
+.slider{
+    width: 730px;
+    height: 454px;
+    background-color: darkseagreen;
+    float: left;
+    margin-left: 220px;
+    margin-top: 16px;
+    position: relative;
+}
+.slider ul{
+    position: absolute;
+
+    bottom: 8px;
+    left: 50%;
+    margin-left: -110px;
+    /*background-color: blueviolet;*/
+}
+.slider ul li{
+    float: left;
+    height: 18px;
+    /*line-height: 18px;*/
+    width: 18px;
+    background-color: darkseagreen;
+    margin-right: 4px;
+    text-align: center;
+    border-radius: 9px;
+    color: #ffffff;
+}
+.slider ul .red{
+    background-color: #B61B1F;
+}
+/*轮播图中的左右箭头*/
+.slider .arrow a{
+    width: 28px;
+    height: 62px;
+    background-color: blue;
+    position: absolute;
+    opacity: .2;
+    top: 50%;
+    margin-top: -14px;
+    font: 400 22px/62px "宋体";
+    color: white;
+    text-align: center;
+}
+.slider .arrow a:hover{
+    opacity: .4;
+}
+.arrow-left{
+    left: 0px;
+}
+.arrow-right{
+    right: 0px;
+}
+/*轮播图=================结束*/
+/*额外部分=================开始*/
+.extra{
+    width: 250px;
+    /*height: 454px;*/
+    /*background-color: burlywood;*/
+    float: right;
+    margin-top: 16px;
+}
+/*额外上面新闻部分*/
+.extra .news{
+    width: 248px;
+    height: 163px;
+    /*background-color: peru;*/
+    border: 1px solid #E4E4E4;
+    border-bottom: 0 none;
+}
+/*新闻里面的京东快报*/
+.news-top{
+    height: 32px;
+    border-bottom: 1px dashed #E4E4E4;;
+}
+.news-top h2{
+    font: 700 16px/32px "宋体";
+    margin-left: 15px;
+    float: left;
+}
+.news-top .a{
+    float: right;
+    margin-top: 7px;
+    margin-right: 12px;
+}
+/*新闻下面的列表*/
+.news-bot ul{
+    margin-left: 15px;
+}
+.news-bot ul li{
+    height: 24px;
+    line-height: 24px;
+}
+.news-bot ul span{
+    font-weight: 700;
+    margin-right: 10px;
+}
+/*右侧生活服务部分*/
+.extra .lifeserv{
+    width: 248px;
+    height: 208px;
+    /*background-color: paleturquoise;*/
+    border: 1px solid #E8E8E7;
+}
+.extra .lifeserv a{
+    display: block;
+    width: 62px;
+    height: 66px;
+    border-right: 1px solid #E8E8E7;
+}
+
+.extra .right-pic{
+    width: 250px;
+    height: 74px;
+    background-color: lightgreen;
+}
+/*额外部分=================结束*/
+/*主体部分============================结束*/

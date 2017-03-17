@@ -1,0 +1,424 @@
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+/*各浏览器显示不同，去掉蓝色边框*/
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+/*去掉行内替换元素空白缝隙*/
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+/*防止拖动 影响布局*/
+textarea {
+    resize: none;
+}
+
+/*去掉行内替换元素空白缝隙*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*宋体 unicode */
+    color: #666;
+    background: #fff;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*京东色*/
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+/*顶部通栏====================开始*/
+.shortcut{
+    height:30px;
+    line-height: 30px;
+    background-color: #f1f1f1;
+    min-width: 1210px;
+}
+/*解决右侧鼠标拖拉出现的空白部分*/
+.shortcut .fr{
+    background-color: #f1f1f1;
+}
+/*小三角的父元素li的类名*/
+.shortcut .shortdown{
+    position: relative;
+    padding-right: 25px;
+}
+
+.shortcut s{
+    width: 15px;
+    height: 16px;
+    font: 400 15px/16px "consolas";
+    position: absolute;
+    top: -7px;
+    /*right: 2px;*/
+}
+
+.shortcut i{
+    width: 15px;
+    height: 8px;
+    /*background-color: pink;*/
+    position: absolute;
+    top: 13px;
+    right: 6px;
+    overflow: hidden;
+}
+
+.shortcut li{
+    float: left;
+    padding: 0 10px;
+}
+.shortcut .tel {
+    padding-left: 27px;
+    position: relative;
+}
+.shortcut .tel em{
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    background: url("../images/jd2015img.png") no-repeat 0 0;
+}
+.shortcut .tel em:hover{
+    background: url("../images/jd2015img.png") no-repeat 0 -25px;
+}
+
+.shortcut .spacer{
+    padding: 0px;
+    border: 1px solid #DDD;
+    height:12px;
+    margin-top: 9px;
+}
+/*顶部通栏====================结束*/
+
+/*banner部分======================开始*/
+.banner{
+    width: 100%;
+    background-color: #1879EC;
+}
+/*小叉叉的设置*/
+.banner .w{
+    position: relative;
+}
+.banner .close{
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 5px;;
+    right: 5px;
+    background: url("../images/5507956eN735de046.png") no-repeat 0 0;
+}
+.banner .close:hover{
+    background: url("../images/5507956eN735de046.png") no-repeat 0 bottom;
+}
+/*banner部分======================结束*/
+
+/*logo部分===========================开始*/
+.logo{
+    /*/!*background-color: pink;*!/*/
+    /*height: 99px;*/
+}
+/*左侧logo*/
+.logo .l-logo{
+    float: left;
+    width: 363px;
+    height: 60px;
+    /*background-color: red;*/
+    padding: 20px 0;
+}
+.logo .l-logo a{
+
+    display: block;
+    width: 270px;
+    height: 60px;
+    background: url("../images/logo-201305.png") no-repeat;
+    text-indent: -2000px;
+}
+/*中间search*/
+.logo .search{
+    /*width: 538px;*/
+    /*height: 36px;*/
+    /*background-color: green;*/
+    float: left;
+    margin-top: 25px;
+}
+
+.logo .search .txt{
+    width: 450px;
+    height: 32px;
+    border: 2px solid #B61D1D;
+    border-right: 0 none;
+    float: left;
+    font: 400 14px/32px "微软雅黑";
+    padding-left: 4px;
+    color: #9A9A9A;
+}
+.logo .search .btn{
+    background-color: #B61D1D;
+    width: 82px;
+    height: 36px;
+    float: left;
+    font: 400 16px/36px "微软雅黑";
+    color: #fff;
+    cursor: pointer;
+}
+/*右侧购物车*/
+.logo .r-car{
+    width: 139px;
+    height: 34px;
+    float:right;
+    border: 1px solid #DFDFDF;
+    margin-top: 25px;
+    margin-right: 65px;
+    text-align: center;
+    position: relative;
+    /*padding-left: 40px;*/
+}
+.logo .r-car a{
+    line-height: 34px;
+}
+/*购物车小推车*/
+.r-car .icon-car{
+    width: 18px;
+    height: 16px;
+    position: absolute;
+    background: url("../images/jd2015img.png") 0 -90px no-repeat;
+    top: 8px;
+    left: 12px;
+}
+/*购物车大于号*/
+.icon-big{
+   position: absolute;
+   top: 10px;
+    right: 10px;
+}
+
+/*0部分*/
+.icon0{
+    background-color: red;
+    /*width: 14px;*/
+    height: 14px;
+    position: absolute;
+    top: -5px;
+    left: 101px;
+    border-radius: 7px 7px 7px 0;
+    padding: 0 4px;
+}
+.hotwords{
+    height: 32px;
+    width: 538px;
+    /*background-color: yellowgreen;*/
+    float: left;
+    line-height: 32px;
+}
+.hotwords li{
+    float: left;
+    padding-right:10px;
+}
+.hotwords .first{
+    color: #B1191A;
+}
+
+/*footer部分====================================开始*/
+.footer{
+    height: 490px;
+    /*background: red;*/
+    margin-top: 20px;
+}
+/*service内容部分设置*/
+.footer .service{
+    height: 294px;
+    border-bottom: 1px solid #F5F5F5;
+    /*background-color: pink;*/
+}
+/*service中多快好省部分开始=====*/
+.footer .service .service-item{
+    background-color: #F5F5F5;
+    height: 92px;
+    /*background-color: yellowgreen;*/
+    line-height: 92px;
+    position: relative;
+}
+.service .service-item img{
+    position: absolute;
+    left: 50%;
+    top: 20px;
+
+}
+.service .service-item .pic1{
+    margin-left: -559px;
+}
+.service .service-item .pic2{
+    margin-left: -259px;
+}
+.service .service-item .pic3{
+    margin-left: 45px;
+}
+.service .service-item .pic4{
+    margin-left: 349px;
+}
+.footer .service .copyright{
+    height: 202px;
+    background-color: cadetblue;
+}
+/*service中多快好省部分结束=====*/
+
+/*footer中dl部分============开始*/
+.footer .service dl{
+    float: left;
+    width: 199px;
+    margin-top: 15px;
+}
+.footer .service .last-dl{
+    width: 100px;
+}
+.footer .service dt{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+/*footer中dl部分============结束*/
+/*footer中右侧小地图部分开始*/
+.footer .service .coverage{
+    width: 188px;
+    height: 169px;
+    float: right;
+    background: url("../images/20130330B_1.png") no-repeat 0 bottom;
+    margin-top: 10px;
+    margin-right: 40px;
+    padding-left: 15px;
+}
+.service .coverage .dt{
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 22px;
+}
+.service .coverage .dd{
+
+}
+/*footer中右侧小地图部分结束*/
+
+/*footer中的bottom部分========开始*/
+.footer .bottom{
+    /*padding-top: 23px;*/
+    height: 196px;
+    text-align: center;
+    /*background-color: green;*/
+}
+/*links开始*/
+.links{
+    margin-top: 23px;
+    margin-bottom: 16px;
+}
+.links a{
+    padding: 0 10px;
+
+}
+
+/*权威部分*/
+.authentification{
+    margin-top: 13px;
+}
+.authentification img{
+    margin-right: 15px;
+}
+/*footer中的bottom部分========结束*/
+
+/*footer部分====================================结束*/

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+
+
+        //对象有特征(属性)和行为(方法)
+        //自定义构造函数创建对象
+        //创建对象调用这个构造函数的时候会做四件事件
+        /*
+        * 开辟空间创建对象
+        * 把this设置为当前的对象
+        * 设置属性和方法的值
+        * 返回创建的对象
+        *
+        *
+        * */
+//        function Student(name,age,sex) {
+//            this.name=name;
+//            this.age=age;
+////            this.dog=[];
+//            this.sex=sex;
+//            this.sayHi=function (msg) {
+//               console.log("我的名字"+this.name+"年龄:"+this.age+"性别:"+this.sex+msg);
+//            };
+//        }
+//        var stu=new Student("小黑",23,true);
+//        stu.name="小白";
+//        console.log(stu.name);
+//        console.log(stu.age);
+//        console.log(stu.sex=stu.sex?"男":"女");
+//        stu.sayHi("哈哈哈");
+        //this指的就是当前的对象
+
+        //如何访问对象的属性的值?
+        //对象.属性的名字
+        //stu["属性的名字"]=值;
+//        console.log(stu.name);//小黑
+//        stu.name="小白";
+//        console.log(stu.name);
+//        stu["name"]="大白";
+//        console.log(stu["name"]);//======后期非常多
+
+        //属性是点出来的,也可以放在[]中用双引号括起来进行赋值和取值
+//        var obj=new Object();
+//
+//        //为对象动态添加属性
+//        for(var i=0;i<5;i++){
+//            obj["name"+i]="小白"+i;
+//        }
+//        console.log(obj["name0"]);
+//        console.log(obj["name1"]);
+//        console.log(obj["name2"]);
+//        console.log(obj["name3"]);
+//        console.log(obj["name4"]);
+
+
+//        var obj=new Object();
+//        obj.name="卡卡西";
+//        obj.sayHi=function () {
+//            console.log(this.name);
+//        };
+//
+//        obj.sayHi();
+
+        //以下内容纯属巧合,=====只是在代码中看一眼===先不解释===属于BOM中
+
+        function f1() {
+            console.log(this);//此时这个this就是window
+        }
+        f1();
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

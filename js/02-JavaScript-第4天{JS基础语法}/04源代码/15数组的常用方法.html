@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        /*
+        * 1.如何判断这个变量是不是数组?
+        * instanceof
+        * 方法isArray 返回值是布尔类型---静态方法(数据类型.方法())
+        * join方法:为每个数组元素中间加一个字符串内容，返回新的字符串
+        * push方法:把一个元素追加到数组的最后
+        * shift方法:删除第一个元素
+        * pop方法；删除最后一个元素
+        * unshift方法:把元素插入到数组的第一个元素之前
+        * reverse方法；反转的
+        *
+        * 实例方法,实例---对象. 通过创建对象之后    对象.出来的方法
+        * stu.sayHi();
+        * Student.say();
+        * */
+//        var arr=[10,20,30];
+//        console.log(Array.isArray(arr));
+//        console.log(arr instanceof  Array);
+//        if(arr instanceof  Array){
+//            console.log("是数组");
+//        }
+
+//        var names=["卡卡西","凤姐","佐助"];
+//        var str=names.join("|");
+//        console.log(str);
+
+
+//        var arr=[10,20,30,40,50];
+//        var num=arr.push(100);//返回值是数组的长度
+//        console.log(num);
+//        console.log(arr);
+
+
+//        var myFish = [10,20,30,40];
+//
+//        console.log('调用 shift 之前: ' + myFish);
+//
+//
+//        var shifted = myFish.shift();
+//
+//        console.log('调用 shift 之后: ' + myFish);
+//
+//        console.log('被删除的元素: ' + shifted);
+
+//        var arr=[10,20,30,40,50];
+//        var result=arr.pop();
+//        console.log(result);
+//        console.log(arr);
+
+        var arr=[10,20,30,40,50];
+        arr.reverse();//反转的
+        console.log(arr);
+//        var result=arr.unshift(100);
+//        console.log(result);
+//        console.log(arr);
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

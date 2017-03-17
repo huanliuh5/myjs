@@ -1,0 +1,183 @@
+﻿/*nav开始*/
+.nav{
+    height: 44px;
+    border-bottom:2px solid #B1191A;
+}
+.categories{
+    width: 210px;
+    height: 44px;
+    background-color: #B1191A;
+    float: left;
+    z-index: 2;
+    position: relative;
+}
+.nav .new{
+/*后加的代码===开始*/
+ width: 210px;
+    height: 44px;
+    background-color: #B1191A;
+    float: left;
+    z-index: 2;
+   /*后加的代码===结束*/
+    position: relative;
+}
+.nav .cate a{
+    display: block;
+    width: 200px;
+    padding-left: 10px;
+    font-size: 14px;
+    background-color: #C81623;
+    color: #ffffff;
+    height: 44px;
+    line-height: 44px;
+}
+.nav li{
+    float: left;
+    line-height: 44px;
+    /*margin: 0 20px;*/
+    font-size:14px;
+    position: relative;
+}
+.nav li a{
+    padding: 0 20px;
+    height: 44px;
+    display: block;
+}
+.nav ul img{
+    position: absolute;
+    top: -2px;
+    right: -16px;
+}
+/*全部商品剩余部分*/
+.cate-dd{
+    height: 470px;
+    width: 209px;
+    border-left:1px solid #B61D1D;
+    position: relative;
+    z-index: 99;
+    margin-top: 2px;
+    background-color: #C81623;
+}
+.cate-dd .items{
+    font-size: 13px;
+    height: 31px;
+    line-height: 31px;
+    position: relative;
+    padding-left: 10px;
+}
+.cate-dd a{
+    color: #ffffff;
+}
+.cate-dd i{
+    color: #ffffff;
+    position: absolute;
+    top: 1px;
+    right: 8px;
+}
+/*nav结束*/
+/*silder开始*/
+.slider{
+    width: 730px;
+    /*height: 454px;*/
+    margin-left: 220px;/*改成220px*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*background-color:red;*/
+    position: relative;
+}
+/*下部小圆点*/
+.slider .circile{
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    /*background-color: purple;*/
+    margin-left:-66px;
+}
+.slider .circile li{
+    float: left;
+    margin: 0 2px;
+    height: 18px;
+    width: 18px;
+    background-color: #3E3E3E;
+    color: #FFEBDD;
+    border-radius: 9px;
+    text-align: center;
+    line-height: 18px;
+    opacity: .8;
+}
+.slider .circile li:hover{
+    background-color: #C81623;
+}
+.slider i{
+    background-color: #3E3E3E;
+    color: #ffffff;
+    display: block;
+    line-height: 62px;
+    text-align: center;
+    opacity: .5;
+    font-size: 22px;
+    font-family:"宋体";
+}
+.slider a{
+    width: 28px;
+    height: 62px;
+    display: inline-block;
+}
+.slider .i1{
+    position: absolute;
+    top:50%;
+    left: 0;
+    margin-top: -31px;
+}
+.slider .i2{
+    position: absolute;
+    top:50%;
+    right: 0;
+    margin-top: -31px;
+}
+.extra{
+    width: 250px;
+    height: 454px;
+    margin-top: 10px;
+    /*background-color: yellow;*/
+}
+/*额外部分*/
+.news{
+    width: 248px;
+    height: 163px;
+    border: 1px solid #E4E4E4;
+    border-bottom:0;
+}
+.news .mt{
+    border-bottom:1px dashed #E4E4E4;
+    height: 32px;
+}
+.news .mt h2{
+    float: left;
+    font:400 16px/32px "微软雅黑";
+    padding-left:15px;
+}
+.news .mt a{
+    float: right;
+    line-height: 32px;
+    padding-right:;
+    margin: 5px 12px 0 0;
+}
+.news .mc{
+    width: 248px;
+    height: 130px;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+.news .mc li{
+    height: 24px;
+    line-height: 24px;
+}
+.news .mc span{
+    margin-right:5px;
+    font-weight: 700;
+}
+.extra .life{
+    height: 208px;
+}
+/*silder结束*/

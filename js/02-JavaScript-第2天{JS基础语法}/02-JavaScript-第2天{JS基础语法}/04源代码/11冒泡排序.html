@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+
+        /*
+        *
+        * 冒泡排序:
+        *
+        * 把数组中的数据按照一定规则的顺序输出;
+        *
+        * var arr=[20,319,32392,32,321,19];
+        * */
+
+
+
+        var arr=[10,40,20,30,60,100,1];
+        //外层循环控制比较的轮数
+        for(var i=0;i<arr.length-1;i++){
+           //里层循环控制比较的次数
+            for(var j=0;j<arr.length-1-i;j++){
+                //判断,是否小于,成立则交换位置-====判断
+                if(arr[j]<arr[j+1]){
+                    var temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }
+
+        for(var i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+    </script>
+
+</head>
+<body>
+
+
+</body>
+</html>

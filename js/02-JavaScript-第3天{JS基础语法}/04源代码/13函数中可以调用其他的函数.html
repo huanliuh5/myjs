@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+//        function f1() {
+//            console.log("清明时节雨纷纷");
+//        }
+//        function f2() {
+//            console.log("孤家寡人欲断魂");
+//        }
+//        function f3() {
+//            f1();
+//            f2();
+//            console.log("借问美女何处寻");
+//            console.log("牧童遥指三里屯");
+//        }
+
+        //函数中是可以调用其他函数的
+       // f3();//只调用这一个函数,就可以把f1和f2也调用了
+    </script>
+
+    <script>
+        //求一个数字的阶乘---用函数来做
+        function jieCheng(num) {
+            //阶乘:就是这个数(包含这个数)和这个数字之前所有的数字相乘的结果(没有0)
+            var result=1;
+            for(var i=1;i<=num;i++){
+                result*=i;
+            }
+            return result;
+        }
+//        var jieGuo=jieCheng(5);
+//        console.log(jieGuo);
+
+        //求一个数字的阶乘的和----用函数做
+        //5的阶乘和 :1的阶乘+2的阶乘+3的阶乘+4的阶乘+5的阶乘
+
+        function getSum(num) {
+            var sum=0;
+            for(var i=1;i<=num;i++){
+                sum+=jieCheng(i);//函数中调用其他的函数
+            }
+            return sum;
+        }
+        //1+2+6+24+120
+        var sum=getSum(5);
+        console.log(sum);
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

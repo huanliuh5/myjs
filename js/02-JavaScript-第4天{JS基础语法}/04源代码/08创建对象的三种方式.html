@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        /*
+        *
+        * 创建对象三种方式:
+        * 1. new Object();
+        * 2.自定义构造函数
+        * 3.字面量的方式创建对象
+        * var 变量={属性:值};
+        *
+        * 创建数组的方式:
+        * var arr=new Array();
+        * var arr=[];字面量的方式
+        *
+        *
+        * */
+
+        var stu={
+            name:"纲手",
+            age:54,
+            sex:"女",
+            sayHi:function () {
+                console.log("简直不能容忍别,我以五代火影的名字弄死你");
+                console.log("名字:"+this.name+"年龄:"+this.age+"性别:"+this.sex);
+            },
+            fire:function () {
+                console.log("吃俺老孙一棒");
+            }
+        };
+        console.log(stu.name);
+        console.log(stu.age);
+        console.log(stu.sex);
+        stu.sayHi();
+        stu.fire();
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

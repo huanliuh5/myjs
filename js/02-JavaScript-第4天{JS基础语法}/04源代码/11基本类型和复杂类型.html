@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        /*
+        *
+        * JavaScript中的数据类型可以分为:基本类型和复杂类型
+        * 基本类型(简单类型--值类型):Number,String,Boolean,undefined,null
+        * 基本类型的值存储在栈空间中
+        * 复杂类型(引用类型):Object Array ,Date ,Math
+        * 复杂类型的对象存储在堆空间中，对象的地址(引用)存储在栈空间中
+        *
+        * */
+
+
+//        var num1=10;
+//        var num2=num1;
+//        num2=20;
+//        console.log(num1);//10
+//        console.log(num2);//10
+
+//        function Student(name,age) {
+//            this.name=name;
+//            this.age=age;
+//        }
+//        var stu1=new Student("小黑",20);
+//        var stu2=stu1;
+//        console.log(stu1.name);//小黑
+//        console.log(stu2.name);//小黑
+
+//
+        //基本类型传值传递的是 : 值
+        var num1=100;
+        function f1(number) {
+            console.log(number);//100
+            number=200;
+            console.log(number);//200
+        }
+
+        f1(num1);
+        console.log(num1);//100
+
+        //复杂类型传值的时候 传递的是 值还是地址(引用)
+//
+        function Student(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+        var stu1=new Student("小白",20);
+        function f1(stu2) {
+            stu2.name="卡卡西";
+            console.log(stu2.name);//卡卡西
+        }
+        f1(stu1);
+        console.log(stu1.name);//卡卡西
+
+
+    </script>
+
+    <script>
+
+        /*
+        * 基本类型的值存储在栈空间
+        * 复杂类型的对象的地址(引用)存储在栈空间,对象存储在堆空间
+        *
+        * 基本类型传递的时候传递的是值  基本类型赋值的时候赋值的值
+        * 复杂类型传递的时候传递的是 地址(引用) 复杂类型赋值的时候赋值的是地址(引用)
+        *
+        * C语言----->指针(地址)------->
+         *
+        * */
+
+        function reverseArray(array) {
+            for(var i=0;i<parseInt(array.length/2);i++){
+                var temp=array[i];
+                array[i]=array[array.length-1-i];
+                array[array.length-1-i]=temp;
+            }
+
+        }
+        var arr=[10,20,30,40,50];
+        reverseArray(arr);
+        console.log(arr);
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+/*各浏览器显示不同，去掉蓝色边框*/
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+/*去掉行内替换元素空白缝隙*/
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+/*防止拖动 影响布局*/
+textarea {
+    resize: none;
+}
+
+/*去掉行内替换元素空白缝隙*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*宋体 unicode */
+    color: #666;
+    background: #fff;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*京东色*/
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+
+/*设置顶部工具栏样式=================开始*/
+.shortcut {
+    /*height: 30px;*/
+    line-height: 30px;
+    background-color: #f1f1f1;
+}
+.shortcut .shortdown{
+    padding-right: 25px;
+    position:relative;
+}
+.shortdown s{
+    width: 15px;
+    height: 16px;
+    font: 400 15px/16px "consolas";
+    position: absolute;
+    top: -7px;
+}
+.shortdown i{
+    width: 15px;
+    height: 8px;
+    /*background-color: red;*/
+    position: absolute;
+    top:12px;
+    right:8px;
+    overflow: hidden;
+}
+.shortcut li{
+    float: left;
+    padding:0 10px;
+}
+.shortcut .spacer{
+    padding: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #DDDDDD;
+    margin-top: 9px;
+
+}
+.shortcut .tel-li{
+    padding-left: 27px;
+    position: relative;
+}
+.shortcut .tel-icon{
+    width: 15px;
+    height: 20px;
+    background: url("../images/jd2015img.png") 0 0 no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+/*设置顶部工具栏样式=================结束*/
+
+/*设置顶部广告栏样式================开始*/
+.topbanner{
+    height: 80px;
+    background-color: #1879EC;
+}
+/*设置a标签的父级元素*/
+.banner-header{
+    position: relative;
+}
+/*设置a标签如何显示图标*/
+.banner-header .close-btn{
+    width: 19px;
+    height: 19px;
+    background: url("../images/5507956eN735de046.png") 0 0 no-repeat;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.banner-header .close-btn:hover{
+    background: url("../images/5507956eN735de046.png") 0 -19px no-repeat;
+}
+/*设置顶部广告栏样式================结束*/
+
+
+/*设置中间header部分样式===============开始*/
+.header{
+    /*height: 100px;*/
+    /*background-color: pink;*/
+}
+/*logo部分*/
+.header .logo{
+    width: 362px;
+    /*height: 100px;*/
+    /*background-color: red;*/
+    float: left;
+
+}
+.header .logo a{
+    width: 270px;
+    height: 60px;
+    display: block;
+    background: url("../images/logo-201305.png");
+    text-indent: -2000px;
+    margin: 20px 0;
+}
+/*搜索框部分*/
+.header .search{
+    width: 538px;
+    /*height: 61px;*/
+    background-color: green;
+    margin-top: 25px;
+    float: left;
+}
+/*文本框*/
+.header .txt{
+    width: 450px;
+    height: 32px;
+    border: 2px solid #B61D1D;
+    float: left;
+    padding-left: 4px;
+    float: left;
+}
+/*搜索按钮*/
+.header .search-btn{
+    width: 80px;
+    height: 36px;
+    background-color: #B61D1D;
+    font: 400 16px/36px "microsoft yahei";
+    color: #fff;
+    float:left;
+}
+/*购物车部分*/
+.header .shoppingcar{
+    width: 139px;
+    height: 34px;
+    background-color: #F9F9F9;
+    border: 1px solid #DFDFDF;
+    margin-top: 25px;
+    margin-right: 65px;
+    float: right;
+    position: relative;
+}
+.header .shoppingcar a{
+    line-height: 34px;
+    /*padding-left: 40px;*/
+    margin-left: 40px;
+}
+.header .shoppingcar .icon1{
+    width:18px;
+    height:16px;
+    background: url("../images/jd2015img.png") 0 -58px no-repeat;
+    position: absolute;
+    top:10px;
+    left:17px;
+}
+.header .shoppingcar .icon2{
+    font: 400 13px/13px simsun;
+    float: right;
+    margin-top:10px;
+    margin-right:10px;
+}
+.header .shoppingcar .icon3{
+    /*width:16px;*/
+    height:14px;
+    line-height:14px;
+    text-align: center;
+    color: #fff;
+    background-color: #C81623;
+    border-radius: 7px 7px 7px 0;
+    padding:0 4px;
+    position: absolute;
+    top:-5px;
+    right:30px;
+    
+}
+/*热词部分*/
+.header .hotwords{
+    width: 538px;
+    height: 30px;
+    /*background-color: yellow;*/
+    float: left;
+}
+.header .hotwords li{
+    float: left;
+    margin-top:5px;
+    padding-right:10px;
+}
+/*设置中间header部分样式===============结束*/
+
+
+
+
+/*底部布局============================开始*/
+.footer{
+    /*height:500px;*/
+    /*background-color: red;*/
+}
+/*上部分内容布局*/
+.service{
+    height:296px;
+    /*background-color: green;*/
+}
+.service .slogan{
+    height:54px;
+    background-color: #F5F5F5;
+    padding:20px 0;
+    position: relative;
+}
+.service .slogan-item{
+    /*设置图片脱标，然后left为50%，这样浏览器缩小时图片会居中显示*/
+    position: absolute;
+    left:50%;
+}
+.service .slogan1{
+     margin-left: -604px;
+}
+.service .slogan2{
+    margin-left: -304px;
+}
+.service .slogan3{
+    margin-left: 0;
+}
+.service .slogan4{
+    margin-left: 305px;
+}
+.service .info{
+    height:202px;
+    /*background-color: pink;*/
+}
+.service .info dl{
+    width:199px;
+    float: left;
+}
+.service .info .last-dl{
+    width:100px;
+}
+.service .info dt{
+    font: 400 16px/24px "microsoft yahei";
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.service .info dd{
+    height:20px;
+}
+.service .coverage{
+    width: 210px;
+    height:170px;
+    /*background-color: green;*/
+    margin-top:15px;
+    margin-right:50px;
+    background: url("../images/20130330B_1.png") 0 -131px no-repeat;
+    float: right;
+}
+.cover-dt{
+    font: 400 16px/24px "microsoft yahei";
+    margin-top: 5px;
+    margin-left:10px;
+}
+.cover-dd{
+    margin-top:15px;
+    padding-left:20px;
+}
+/*下部分内容布局*/
+.bottom{
+    height:196px;
+    /*background-color: yellow;*/
+    border-top:1px solid #E5E5E5;
+}
+.bottom .links{
+    text-align: center;
+    margin-top:20px;
+}
+.bottom .links a{
+    margin:0 5px;
+}
+.bottom .copyright{
+    text-align: center;
+    margin-top: 15px;
+}
+.authentication{
+    text-align: center;
+    margin-top:15px;
+
+}
+.authentication a{
+    margin-right:10px;
+}
+/*底部布局============================结束*/
+

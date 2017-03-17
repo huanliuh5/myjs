@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<script>
+    //var btn = document.getElementById("btn");
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i];
+        //事件源.事件 = function(){ 事件处理程序 };
+        input.onclick = function () {
+            alert("哈哈");
+        };
+    }
+
+
+</script>
+</body>
+</html>

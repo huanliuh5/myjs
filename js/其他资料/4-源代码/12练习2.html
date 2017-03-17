@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    //求一组数中的最大值
+    //    function getMax(arr){
+    //        //1 找基准
+    //        var max = arr[0];
+    //        //2 用基准值去跟每一项比較
+    //        for (var i = 1; i < arr.length; i++) {
+    //            //3 检测max和当前项的大小
+    //            if(max<arr[i]){
+    //                //4 将当前元素的值赋值给max
+    //                max = arr[i];
+    //            }
+    //        }
+    //        return max;
+    //    }
+    //    var arr = [1,2,3,4,5];
+    //    console.log(getMax(arr));
+
+
+    //求一组数中的最小值
+    //    function getMin (arr){
+    //        var min = arr[0];
+    //        for (var i = 1; i < arr.length; i++) {
+    //            if(min>arr[i]){
+    //                min = arr[i];
+    //            }
+    //        }
+    //        return min;
+    //    }
+    //    console.log(getMin([1, 2, 3, 4, 5]));
+
+
+    //翻转数组，返回一个新数组
+    //    var arr = [1, 2, 3, 4, 5];
+    //
+    //    function fanZ(arr) {
+    //        var arrNew = [];
+    //        //遍历原有数组
+    //        for (var i = arr.length - 1; i >= 0; i--) {
+    //            //每一个arr中的项都作为arrNew的新项使用
+    //            arrNew[arrNew.length] = arr[i];
+    //        }
+    //        return arrNew;
+    //    }
+    //    console.log(fanZ(arr));
+
+
+    //对数组排序，从小到大
+    //    var arr = [5, 4, 3, 2, 1];
+    //    function sorted(arr) {
+    //        for (var i = 0; i < arr.length - 1; i++) {
+    //            //假设已经比較好了
+    //            var flag = true;
+    //            for (var j = 0; j < arr.length - 1 - i; j++) {
+    //                if (arr[j] > arr[j + 1]) {
+    //                    //交换
+    //                    var temp = arr[j];
+    //                    arr[j] = arr[j + 1];
+    //                    arr[j + 1] = temp;
+    //                    //阻止跳出
+    //                    flag = false;
+    //                }
+    //            }
+    //            if (flag) {
+    //                break;
+    //            }
+    //        }
+    //        return arr;
+    //    }
+    //    //传入的数组被函数内部的代码直接修改，就不需要返回了
+    //    var arrNew = sorted(arr);
+    //    console.log(arr);
+    //    console.log(arrNew);
+    //
+    //    arr[0] = 1000;
+    //    console.log(arrNew);
+
+    //求n的阶乘
+//    function getJC(n) {
+//        var ji = 1;
+//        //得到1-n之间所有数
+//        for (var i = 1; i <= n; i++) {
+//            ji *= i;
+//        }
+//        return ji;
+//    }
+//    console.log(getJC(7));
+
+    //求1!+2!+3!+....+n!
+
+    //判断一个数是否是质数
+
+    //求斐波那契数列Fibonacci中的第n个数是多少？      1 1 2 3 5 8 13 21...
+
+
+    //    var arr = [1, 2, 3, 4, 5];
+    //    function change(arrIn) {
+    //        arrIn[0] = 1000;
+    //        //不需要返回
+    //        //return arrIn;
+    //    }
+    //    //当我们传递一个引用类型值为参数的时候，这时不需要返回这个引用类型，因为会直接修改
+    //
+    //    //    var arrNew = change(arr);
+    //    //直接就改了arr的第一个值
+    //    change(arr);
+    //    console.log(arr);
+
+
+    //基本类型
+    //    var num = 1000;
+    //    function change(n) {
+    //        n -= 100;
+    //        //必须返回
+    //        return n;
+    //    }
+    //    //当我们使用基本类型作为参数时，由于是复制，不会修改实参，我们需要在计算进行返回
+    //    var result = change(num);
+    //    console.log(result);
+    //    console.log(num);
+
+
+    function fun(n,m){
+        var sum = n+m;
+        console.log(sum);
+        return sum;
+    }
+
+//    console.log(fun());
+    console.log(fun(1, 2) / 2);
+    console.log(fun(4, 5) * 2);
+
+</script>
+</body>
+</html>

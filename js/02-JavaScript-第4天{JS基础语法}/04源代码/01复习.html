@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+        /*
+         * 函数:把一些重用的代码进行封装,在使用这些代码的位置直接调用函数即可.(函数名())
+         * 函数作用；代码重用
+         *
+         * 函数的定义:function 函数名(){}
+         * 如:
+         * function f1(){}
+         * 函数的调用:函数名();
+         * 如:
+         * f1();
+         *
+         *
+         * 函数的四种常见的方式:
+         * 1.无参数无返回值的函数
+         *        function f1(){console.log("嘎嘎");}
+         * 2.无参数有返回值的函数
+         *        function f2(){return 10;}
+         * 3.有参数无返回值的函数
+         *        function f3(n1,n2){ console.log("哈哈");}
+         * 4.有参数有返回值的函数
+         *        function f4(n1,n2){return n1+n2;};
+         * 函数在定义的时候如果函数名后面的小括号里有变量,变量就叫参数
+         *        如:function f5(n1,n2){},此时n1和n2都是参数
+         * 函数在定义的时候如果函数的大括号里有return,那么就叫有返回值的函数\
+         *        如:function f6(n1,n2){return n1+n2;} n2+n2结果是返回值
+         * 函数参数:
+         * 函数定义的时候里面的参数叫形参
+         *        如:function f7(n1,n2){}n1和n2就是形参
+         * 函数调用的时候里面传入的参数叫实参
+         *        如:function f8(n1,n2){return n1+n2}
+         *        f8(10,20);此时是函数调用,10和20是实参
+         *        var num1=10,num2=20;
+         *        f8(num1,num2);此时是函数调用,num1和num2是实参
+         * 函数返回值:
+         * 如果函数定义的时候没有return,那么这个函数没有返回值,如果定义变量接收这个函数，函数的返回值接收后，输出的结果是undefined
+         *        function f9(n1,n2){ n1+n2;} 没有return ,没有返回值,
+         *        console.log(f9(10,20));此时是undefined
+         * 如果一个变量声明了没有初始化结果是undefined
+         *        var n; console.log(n);是undefined
+         * 如果函数内部有return,但是后面没有任何的返回内容，那么这个函数也没有返回值，所以,结果是undefined
+         *        function f10(n1,n2){return ;}
+         *        console.log(f10(10,20));此时是undefined
+         * 所以,如果一个函数没有明确的返回值，那么定义变量接收了这个函数,此时输出这个变量的结果就是undefined
+         *
+         * 函数参数注意问题:实参和形参的个数可以不一致
+         *        function f11(n1,n2,n3){return n1,n2,n3}
+         *        f11(10,20);实参和形参个数不同
+         * 函数的名字不能重名,一旦重名，之前的函数会被覆盖
+         *    function f1(n1,n2,n3){}
+         *    function f1(n1,n2,n3,n4){}
+         *    f1(10,20,30);第一个f1被干掉
+         * 函数中可以调用其他的函数--可以参考阶乘和的案例
+         * function f1(){
+         *  alert("哈哈");
+         * }
+         * JavaScript中的作用域:
+         * 变量分类:
+         * 全局变量和局部变量
+         * function f1(){var num=10;}
+         * 全局变量:该变量声明的时候是在script标签中但是是在函数的外面
+         * 全局变量在页面的任何位置都可以使用,只有关闭浏览器或者卸载页面才会被释放
+         * 局部变量:在函数内部声明的变量
+         * 局部变量在函数内的大括号中使用,这是这个局部变量的作用域,当函数调用结束后，该局部变量会被释放
+         * 总结:
+         * 全局变量作用域在整个页面
+         * 局部变量作用域在当前的函数的大括号里
+         *
+         * 函数定义的方式:
+         * 两种:
+         * 函数的声明及函数表达式的方式
+         * 命名函数:
+         * 有名字的函数叫命名函数
+         * 匿名函数:
+         * 没有名字的函数叫匿名函数
+         * 匿名函数定义及调用
+         * 如:     别忘记后面的 分号
+         * var ff=function(){};
+         * ff();//ff此时不是一个普通的变量而是一个函数
+         *
+         * (function(){console.log("哈哈");})();一次性
+         * arguments对象
+         * arguments可以看成是一个数组
+         * arguments作用:可以获取任何函数中用户在调用的时候传入的参数值及参数的个数
+         * arguments.length可以获取参数的个数
+         *
+         * function getS(){
+         *  arguments.length
+         * }
+         * 函数的真正的参数的个数不是在定义的时候，而是在调用的时候----
+         *
+         *
+         *
+         *
+         *
+         * */
+//
+//        function aa(){
+//            alert("aaa");
+//            return function (){alert("bbb");};
+//        }
+      //  alert(aa);//函数的代码显示出来
+      //    alert(aa());
+      //   alert(aa()());//aaa  bbb
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

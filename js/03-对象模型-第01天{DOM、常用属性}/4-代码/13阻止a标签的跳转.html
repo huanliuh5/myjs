@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<a href="http://www.baidu.com">a标签的默认行为就是跳转</a>
+<a href="http://www.baidu.com" onclick="return false">阻止a标签的默认行为</a>
+<!--return false之后点击这个a标签就不会跳转了
+1要把false返回给浏览器
+2必须是return false其他的"" 0 都不行-->
+<br/>
+<a href="http://www.baidu.com" onclick="return testAge(17);">未满十八岁禁止入内</a>
+<a href="http://www.baidu.com" id="demo">demo</a>
+<script>
+    var demo = document.getElementById("demo");
+    //<标签 事件=" 事件处理程序 " >
+    //事件源.事件 = function(){ 事件处理程序 };
+    demo.onclick = function () {
+        //return testAge(17);
+        return false;//让事件处理程序返回false就可以了
+    };
+
+    function testAge(age) {
+        if (age >= 18) {
+            alert("欢迎");
+        } else {
+            alert("走开");
+            return false;
+        }
+    }
+
+    //<a href="#"></a>
+    //虽然不会刷新 但是仍然会移动到当前窗口的顶端
+    //<a href="###"></a>
+    //###虽然不会移动 但是在某些后台语言中会当作注释 影响后续内容
+    //<a href="javascript:;"></a>
+    //<a href="javascript:void(0);"></a>
+    //javascript伪协议
+    //return false
+    //协议 指的是互联网上真正存在的协议 http https ftp
+    //伪协议 并不是互联网上真正存在的协议 而是为了让浏览器和组件交互而使用的一种协议
+    //tencent:// javascript:
+
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+﻿/*页面主导航========================开始*/
+/*开始写主导航通栏*/
+.mainnav{
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 2px solid #B1191A;
+    overflow: visible;
+}
+
+/*下面这一块代码加上*/
+.categorise{
+width: 210px;
+    height: 44px;
+    background-color: #B1191A;
+    float: left;
+    z-index: 2;
+    position: relative;
+}
+
+
+/*开始写左边导航*/
+.mainnav .categorise .dropdown{
+    display: block;
+    height: 44px;
+    width: 190px;
+    font: 400 14px/44px "微软雅黑";
+    padding: 0 10px;
+    background-color: #B1191A;
+    color: #fff;
+    position: relative;
+}
+/*开始写下拉菜单倒三角*/
+.mainnav .categorise em{
+    position: absolute;
+    height: 12px;
+    width: 16px;
+    top: 18px;
+    right: 12px;
+    overflow: hidden;
+}
+.mainnav .categorise s{
+    position: absolute;
+    font: 400 16px "consolas";
+    top: -9px;
+    display: none;
+}
+.categorise .cate-dd{
+    width: 209px;
+    border-left: 1px solid #B61D1D;
+    background-color: #C81623;
+    margin-top: 2px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 1px;
+}
+.categorise .cate-item{
+    position: relative;
+}
+.categorise .cate-dd h3{
+    padding-left: 10px;
+    font: 400 14px/31px "microsoft yahei";
+}
+.categorise .cate-dd h3 a{
+    color: #fff;
+}
+.categorise .cate-dd i{
+    color: #fff;
+    font: 400 9px/14px "simsun";
+    position: absolute;
+    top: 9px;
+    right: 12px;
+}
+
+
+/*开始写右边导航*/
+.mainnav .r-nav li{
+    float: left;
+    font-size: 15px;
+    position: relative;
+}
+.mainnav .r-nav li a{
+    padding: 0 20px;
+}
+.mainnav .r-nav i{
+    position: absolute;
+    top: 0;
+    right: -16px;
+    height: 18px;
+    width: 36px;
+    background: url("../images/57cd2852N89da6ac5.jpeg") no-repeat;
+}
+/*页面主导航========================结束*/
+
+
+/*轮播图、新闻==============================开始*/
+.main{
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+.slider{
+    margin-left: 220px;
+    height: 454px;
+    width: 730px;
+    position: relative;
+}
+.slider ul{
+    position: absolute;
+    left: 50%;
+    margin-left: -64px;
+    bottom: 8px;
+}
+.slider li{
+    float: left;
+    height: 18px;
+    width: 18px;
+    margin-right: 4px;
+    background-color: #3E3E3E;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 9px;
+}
+.slider li a{
+    color: #fff;
+}
+/*开始写轮播图箭头*/
+.slider .arrow a{
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    height: 62px;
+    width: 28px;
+    color: #fff;
+    font: 400 22px/62px "simsun";
+    text-align: center;
+    background-color: rgba(0,0,0,.2);
+}
+.slider .arrow .arrow-l{
+    left: 0;
+}
+.slider .arrow .arrow-r{
+    right: 0;
+}
+/*开始写额外部分*/
+.extra{
+    width: 250px;
+}
+/*开始写新闻*/
+.extra .t-news{
+    height: 163px;
+    width: 248px;
+    border: 1px solid #E4E4E4;
+}
+.extra .t-news .news-dt{
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px dashed #E4E4E4;
+}
+.extra .t-news .news-dt h2{
+    padding-left: 15px;
+    font-size: 15px;
+}
+.extra .t-news .news-dt a{
+    font-size: 10px;
+    margin-right: 16px;
+}
+.extra .t-news .news-dd{
+    padding-left: 15px;
+    padding-top: 5px;
+    line-height: 24px;
+}
+.extra .t-news .news-dd span{
+    font-weight: 700;
+    margin-right: 5px;
+}
+/*开始写服务栏*/
+.extra .m-service{
+    height: 208px;
+    width: 248px;
+    border: 1px solid #E4E4E4;
+    border-top: 0 none;
+    overflow: hidden;
+}
+.extra .m-service ul{
+    width: 252px;
+}
+.extra .m-service li{
+    float: left;
+    border-right: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+    position: relative;
+}
+.extra .m-service a{
+    height: 24px;
+    width: 62px;
+    display: block;
+    padding-top: 46px;
+    text-align: center;
+}
+.extra .m-service i{
+    position: absolute;
+    height: 24px;
+    width: 25px;
+    top: 13px;
+    left: 18px;
+}
+.extra .m-service .ser-ico1{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 0;
+}
+.extra .m-service .ser-ico2{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -26px;
+}
+.extra .m-service .ser-ico3{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -51px;
+}
+.extra .m-service .ser-ico4{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -75px;
+}
+.extra .m-service .ser-ico5{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -100px;
+}
+.extra .m-service .ser-ico6{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -126px;
+}
+.extra .m-service .ser-ico7{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -150px;
+}
+.extra .m-service .ser-ico8{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -175px;
+}
+.extra .m-service .ser-ico9{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -201px;
+}
+.extra .m-service .ser-ico10{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -226px;
+}
+.extra .m-service .ser-ico11{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -250px;
+}
+.extra .m-service .ser-ico12{
+    background: url("../images/57620a6fN77b2b8af.png") no-repeat 0 -275px;
+}
+
+
+/*开始写右下角图片*/
+.extra .b-pic{
+    margin-top: 5px;
+    height: 75px;
+    width: 250px;
+}
+/*轮播图、新闻==============================结束*/
+
+
+/*今日推荐==========================开始*/
+.todays{
+    margin-bottom: 30px;
+}
+/*开始写左边图片*/
+.todays-lpic{
+    height: 151px;
+    width: 210px;
+}
+/*开始写今日推荐轮播图*/
+.todays-rslider{
+    width: 1000px;
+    overflow: hidden;
+}
+.todays-rslider ul{
+    width: 6000px;
+    /*height: 164px;*/
+    /*background-color: #005AA0;*/
+}
+.todays-rslider li{
+    float: left;
+    margin-right: 1px;
+    height: 164px;
+    width: 250px;
+}
+/*今日推荐==========================结束*/

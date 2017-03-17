@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .cls {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="显示盒子" id="btn"/>
+
+<div id="box"></div>
+<script>
+    //点击按钮通过js给box设置类名
+    //找人 找按钮
+    var btn = document.getElementById("btn");//按钮
+    var box = document.getElementById("box");//盒子
+    //给按钮注册事件
+    btn.onclick = function () {
+        //给box设置类名
+        //console.dir(box);
+        //className 对应的就是标签中的 class
+        //class在js中是保留字 不能用 所以用className来替代
+        box.className = "cls";
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+    <script>
+       //斐波那契数列
+        
+        
+//       function getF(num) {
+//           var n1=1;
+//           var n2=1;
+//           var sum=0;
+//           for(var i=3;i<=num;i++){
+//               sum=n1+n2;
+//               n1=n2;
+//               n2=sum;
+//           }
+//           return sum;
+//       }
+//
+//        var result=getF(8);
+//       console.log(result);
+
+        //通过一个函数判断这个年份是不是闰年
+
+        //是不是闰年
+        function isLeapYear(year) {
+            if((year%4==0&&year%100!=0)||year%400==0){
+               return true;
+            }else{
+                return false;
+            }
+        }
+       //var flag=isLeapYear(2000);
+        if(isLeapYear(2100)){
+            console.log("是闰年啊...怎么了");
+        }else{
+            console.log("不是啊");
+        }
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

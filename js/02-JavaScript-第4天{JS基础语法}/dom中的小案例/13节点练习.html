@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #list li {
+            list-style-type: none;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background-color: beige;
+            text-align: center;
+            float: left;
+            margin-left: 5px;
+        }
+
+        #list li.current {
+            background-color: burlywood;
+        }
+
+        #list li a {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+<div id="menu">
+    <ul id="list">
+        <li class="current"><a href="http://www.baidu.com">首页</a></li>
+        <li><a href="javascript:void(0)">播客</a></li>
+        <li><a href="javascript:void(0)">博客</a></li>
+        <li><a href="javascript:void(0)">相册</a></li>
+        <li><a href="javascript:void(0)">关于</a></li>
+        <li><a href="javascript:void(0)">帮助</a></li>
+    </ul>
+</div>
+<script>
+    var ulObj = document.getElementById("list");
+    var lis = ulObj.children;//获取所有的li标签
+    for (var i = 0; i < lis.length; i++) {
+        //获取li标签中的第一个元素
+        var li = getFirstElelment(lis[i]);
+        li.onclick = linkClick;
+    }
+    //超链接单击事件
+    function linkClick() {
+        for(var i=0;i<lis.length;i++){
+            lis[i].removeAttribute("class");
+        }
+        this.parentNode.setAttribute("class","current");
+    }
+    //能力检测获取第一个元素标签
+    function getFirstElelment(element) {
+        if(element.firstElementChild){
+            return element.firstElementChild;
+        }else{
+            var node=element.firstChild;
+            while(node&&node.nodeType!==1){
+                node=element.nextSibling;
+            }
+            return node;
+        }
+    }
+
+
+    //    //获取到想要的dom对象
+    //    var ul = document.getElementById("list");
+    //    var list = ul.children;
+    //
+    //    for(var i = 0; i < list.length; i++) {
+    //        //
+    //        var li = list[i];
+    //
+    //        //获取第一个子元素 link
+    //        var link = getFirstElement(li);
+    //        //注册事件
+    //        link.onclick = linkClick;
+    //    }
+    //
+    //    function linkClick (){
+    //        //点击的是a标签，要设置li的样式
+    //
+    //        //移除所有li的class属性
+    //        for (var i = 0; i < list.length; i++) {
+    //            var li = list[i];
+    //            li.removeAttribute("class");
+    //        }
+    //
+    //        //设置当前对应的li的类样式
+    //        this.parentNode.setAttribute("class","current");
+    //    }
+
+
+    //    function getFirstElement(parent) {
+    //        if (parent.firstElementChild) {
+    //            return parent.firstElementChild;
+    //        }else{
+    //            var node = parent.firstChild;
+    //            while(node && node.nodeType !== 1) {
+    //                node = node.nextSibling;
+    //            }
+    //            return node;
+    //        }
+    //
+    //    }
+   function linkClick (){
+        var li =  this.parentNode;
+        li.className = "current";
+        var lists = getSiblings(li);
+        for(var i = 0; i < lists.length; i++) {
+            var li = lists[i];
+            li.className = "";
+        }
+    }
+</script>
+</body>
+</html>

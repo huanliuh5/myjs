@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<script>
+    //事件三要素
+    //事件源 事件 事件处理程序
+    //广告
+    //事件源 关闭按钮
+    //事件 点击
+    //事件处理程序 让广告消失的程序
+    //商品切换
+    //事件源 小图片
+    //事件 鼠标经过
+    //事件处理程序 让上面的大图片去切换
+    //点击按钮弹出弹窗alert
+
+    //事件源 按钮
+    //事件 点击
+    //事件处理程序 弹出一个弹窗
+    //事件源.事件 = function(){ 事件处理程序 };
+    //要做事先找人
+    var btn = document.getElementById("btn");
+    btn.onclick = function () {
+        //事件处理程序
+        alert("别点我");
+        console.log(this);//对象方法中的this永远指向当前方法所属的那个对象
+        //对于我们这里就是btn
+        console.log(btn);
+    };
+</script>
+</body>
+</html>
